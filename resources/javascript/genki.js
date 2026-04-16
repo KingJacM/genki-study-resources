@@ -1412,6 +1412,9 @@
 
         localStorage.Results = JSON.stringify(lessonsResults);
 
+        // sync results to cloud
+        if (window.GenkiSync) GenkiSync.push();
+
         // refresh the exercise list with the new results
         Genki.create.removeExerciseList();
         Genki.create.exerciseList();
