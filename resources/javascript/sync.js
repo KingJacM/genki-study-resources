@@ -45,8 +45,8 @@
 
   // Merge remote Results with local Results, keeping the higher score per exercise
   function mergeResults(local, remote) {
-    if (!remote) return local;
-    if (!local) return remote;
+    if (!remote) return { data: local, changed: false };
+    if (!local) return { data: remote, changed: true };
 
     try {
       var localObj = typeof local === "string" ? JSON.parse(local) : local;
