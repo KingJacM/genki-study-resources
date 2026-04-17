@@ -10,7 +10,7 @@
   // 3. Paste your API key and Bin ID below
   var CONFIG = {
     JSONBIN_API_KEY:
-      "$2a$10$rAp7SnqrO0NpRFgvFVX4ouPxP/yD5b.3p7rxOZG8JMw5HiMKTxMye", // Your JSONBin X-Master-Key
+      "$2a$10$6yO9LUvjhlftAiEdWkB5o.IYNUIrGJwhLHpeBo2YaUcP8RHEx1Fja", // Your JSONBin X-Master-Key
     JSONBIN_BIN_ID: "69e0f27136566621a8bdcbee", // Your Bin ID
   };
   // ====================================
