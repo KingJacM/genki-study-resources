@@ -1,18 +1,14 @@
 // # CLOUD SYNC FOR EXERCISE PROGRESS #
 // Syncs localStorage data to JSONBin.io for cross-device access.
-// Single-user setup: configure your JSONBin credentials below.
 (function (window) {
   "use strict";
 
-  // ========== CONFIGURATION ==========
   var CONFIG = {
     JSONBIN_API_KEY:
       "$2a$10$6yO9LUvjhlftAiEdWkB5o.IYNUIrGJwhLHpeBo2YaUcP8RHEx1Fja",
     JSONBIN_BIN_ID: "69e0f27136566621a8bdcbee",
   };
-  // ====================================
 
-  // Keys to sync across devices
   var SYNC_KEYS = [
     "Results",
     "GenkiEdition",
@@ -35,146 +31,150 @@
   ];
 
   if (!window.storageOK) return;
-  if (CONFIG.JSONBIN_API_KEY === "$2a$10$YOUR_API_KEY_HERE") {
-    console.log("[Sync] Not configured.");
-    return;
-  }
+  if (CONFIG.JSONBIN_API_KEY === "$2a$10$YOUR_API_KEY_HERE") return;
 
   var API_URL = "https://api.jsonbin.io/v3/b/" + CONFIG.JSONBIN_BIN_ID;
-  var isSyncing = false;
 
-  // Merge remote Results with local Results, keeping the higher score per exercise
-  function mergeResults(local, remote) {
-    if (!remote) return { data: local, changed: false };
-    if (!local) return { data: remote, changed: true };
+  // Merge Results: keep highest score per exercise
+  function mergeResultObjects(localStr, remoteStr) {
+    var localObj, remoteObj;
+    try { localObj = localStr ? JSON.parse(localStr) : {}; } catch (e) { localObj = {}; }
+    try { remoteObj = remoteStr ? JSON.parse(remoteStr) : {}; } catch (e) { remoteObj = {}; }
 
-    try {
-      var localObj = typeof local === "string" ? JSON.parse(local) : local;
-      var remoteObj = typeof remote === "string" ? JSON.parse(remote) : remote;
-      var changed = false;
+    var changed = false;
+    var editions = ["2nd", "3rd"];
+    for (var e = 0; e < editions.length; e++) {
+      var ed = editions[e];
 
-      var editions = ["2nd", "3rd"];
-      for (var e = 0; e < editions.length; e++) {
-        var ed = editions[e];
-        if (!remoteObj[ed]) continue;
-        if (!localObj[ed]) {
-          localObj[ed] = {};
-          changed = true;
-        }
-
+      // Merge remote into local
+      if (remoteObj[ed]) {
+        if (!localObj[ed]) { localObj[ed] = {}; changed = true; }
         for (var lesson in remoteObj[ed]) {
           if (remoteObj[ed].hasOwnProperty(lesson)) {
-            var remoteScore = parseInt(remoteObj[ed][lesson]);
-            var localScore = localObj[ed][lesson]
-              ? parseInt(localObj[ed][lesson])
-              : -1;
-            if (remoteScore > localScore) {
-              localObj[ed][lesson] = remoteScore;
-              changed = true;
-            }
+            var rs = parseInt(remoteObj[ed][lesson]);
+            var ls = localObj[ed][lesson] ? parseInt(localObj[ed][lesson]) : -1;
+            if (rs > ls) { localObj[ed][lesson] = rs; changed = true; }
           }
         }
       }
 
-      return { data: JSON.stringify(localObj), changed: changed };
-    } catch (err) {
-      console.warn("[Sync] Merge error:", err);
-      return { data: local || remote, changed: false };
+      // Ensure local-only data is preserved (local has scores remote doesn't)
+      // This is already handled since we start from localObj
     }
+
+    return { data: JSON.stringify(localObj), changed: changed };
   }
 
-  // Fetch remote data and merge with local
-  function pullFromCloud(callback) {
-    if (isSyncing) return;
-    isSyncing = true;
+  // Merge all sync keys: combine local + remote, preferring newest/best
+  function mergeAllData(localData, remoteData) {
+    var merged = {};
+    var hasNewData = false;
 
+    for (var i = 0; i < SYNC_KEYS.length; i++) {
+      var key = SYNC_KEYS[i];
+      var localVal = localData[key];
+      var remoteVal = remoteData[key];
+
+      if (key === "Results") {
+        var result = mergeResultObjects(localVal, remoteVal);
+        merged[key] = result.data;
+        if (result.changed) hasNewData = true;
+      } else {
+        // For settings: local wins if set, otherwise use remote
+        merged[key] = localVal !== undefined ? localVal : remoteVal;
+      }
+    }
+
+    return { data: merged, hasNewData: hasNewData };
+  }
+
+  function fetchRemote(callback) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", API_URL + "/latest", true);
     xhr.setRequestHeader("X-Master-Key", CONFIG.JSONBIN_API_KEY);
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
-      isSyncing = false;
-
-      var hasNewData = false;
-
       if (xhr.status === 200) {
         try {
           var response = JSON.parse(xhr.responseText);
-          var remoteData = response.record || {};
-
-          for (var i = 0; i < SYNC_KEYS.length; i++) {
-            var key = SYNC_KEYS[i];
-            var remoteVal = remoteData[key];
-            var localVal = localStorage[key];
-
-            if (key === "Results") {
-              var result = mergeResults(localVal, remoteVal);
-              if (result.data) localStorage.Results = result.data;
-              if (result.changed) hasNewData = true;
-            } else if (remoteVal !== undefined && !localVal) {
-              localStorage[key] = remoteVal;
-            }
-          }
-
-          console.log("[Sync] Pulled from cloud successfully.");
+          callback(response.record || {});
         } catch (err) {
-          console.warn("[Sync] Pull parse error:", err);
+          console.warn("[Sync] Parse error:", err);
+          callback({});
         }
       } else {
-        console.warn("[Sync] Pull failed:", xhr.status);
+        console.warn("[Sync] Pull failed:", xhr.status, xhr.responseText);
+        callback(null);
       }
-
-      if (callback) callback(hasNewData);
     };
     xhr.send();
   }
 
-  // Push local data to cloud
-  function pushToCloud() {
-    if (isSyncing) return;
-    isSyncing = true;
-
-    var data = {};
-    for (var i = 0; i < SYNC_KEYS.length; i++) {
-      var key = SYNC_KEYS[i];
-      if (localStorage[key] !== undefined) {
-        data[key] = localStorage[key];
-      }
-    }
-
+  function pushMerged(data, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open("PUT", API_URL, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Master-Key", CONFIG.JSONBIN_API_KEY);
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
-      isSyncing = false;
-
       if (xhr.status === 200) {
-        console.log("[Sync] Pushed to cloud successfully.");
+        console.log("[Sync] Pushed to cloud.");
       } else {
         console.warn("[Sync] Push failed:", xhr.status);
       }
+      if (callback) callback();
     };
     xhr.send(JSON.stringify(data));
   }
 
+  // Main sync: pull remote, merge with local, save locally, push merged back
+  function sync(callback) {
+    fetchRemote(function (remoteData) {
+      if (remoteData === null) { if (callback) callback(false); return; }
+
+      // Gather local data
+      var localData = {};
+      for (var i = 0; i < SYNC_KEYS.length; i++) {
+        var key = SYNC_KEYS[i];
+        if (localStorage[key] !== undefined) {
+          localData[key] = localStorage[key];
+        }
+      }
+
+      // Merge
+      var result = mergeAllData(localData, remoteData);
+
+      // Save merged data to localStorage
+      for (var j = 0; j < SYNC_KEYS.length; j++) {
+        var k = SYNC_KEYS[j];
+        if (result.data[k] !== undefined) {
+          localStorage[k] = result.data[k];
+        }
+      }
+
+      console.log("[Sync] Pulled and merged. New data:", result.hasNewData);
+
+      // Push merged data back to cloud (so both local and remote are in sync)
+      pushMerged(result.data, function () {
+        if (callback) callback(result.hasNewData);
+      });
+    });
+  }
+
+  // Expose for genki.js to call after quiz completion
   window.GenkiSync = {
-    push: pushToCloud,
-    pull: pullFromCloud,
+    push: function () { sync(); },
+    pull: function (cb) { sync(cb); },
   };
 
-  // Pull on page load. If new data was merged, reload so the page renders with updated scores.
-  // Use a flag to prevent infinite reload loops.
+  // Sync on page load. Reload once if new data arrived so scores render.
   var reloadFlag = "genkiSyncReloaded";
-  pullFromCloud(function (hasNewData) {
+  sync(function (hasNewData) {
     if (hasNewData && !sessionStorage[reloadFlag]) {
       sessionStorage[reloadFlag] = "1";
       window.location.reload();
     } else {
-      // Clear the flag so the next navigation can trigger a reload if needed
       sessionStorage.removeItem(reloadFlag);
-      pushToCloud();
     }
   });
 })(window);
