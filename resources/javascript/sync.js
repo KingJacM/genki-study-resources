@@ -5,13 +5,10 @@
   "use strict";
 
   // ========== CONFIGURATION ==========
-  // 1. Create a free account at https://jsonbin.io
-  // 2. Create a new bin with content: {"Results":"{}"}
-  // 3. Paste your API key and Bin ID below
   var CONFIG = {
     JSONBIN_API_KEY:
-      "$2a$10$6yO9LUvjhlftAiEdWkB5o.IYNUIrGJwhLHpeBo2YaUcP8RHEx1Fja", // Your JSONBin X-Master-Key
-    JSONBIN_BIN_ID: "69e0f27136566621a8bdcbee", // Your Bin ID
+      "$2a$10$6yO9LUvjhlftAiEdWkB5o.IYNUIrGJwhLHpeBo2YaUcP8RHEx1Fja",
+    JSONBIN_BIN_ID: "69e0f27136566621a8bdcbee",
   };
   // ====================================
 
@@ -37,12 +34,9 @@
     "genkiCustomCSS",
   ];
 
-  // Skip if localStorage is not available or not configured
   if (!window.storageOK) return;
   if (CONFIG.JSONBIN_API_KEY === "$2a$10$YOUR_API_KEY_HERE") {
-    console.log(
-      "[Sync] Not configured. Edit sync.js with your JSONBin credentials.",
-    );
+    console.log("[Sync] Not configured.");
     return;
   }
 
@@ -57,12 +51,16 @@
     try {
       var localObj = typeof local === "string" ? JSON.parse(local) : local;
       var remoteObj = typeof remote === "string" ? JSON.parse(remote) : remote;
+      var changed = false;
 
       var editions = ["2nd", "3rd"];
       for (var e = 0; e < editions.length; e++) {
         var ed = editions[e];
         if (!remoteObj[ed]) continue;
-        if (!localObj[ed]) localObj[ed] = {};
+        if (!localObj[ed]) {
+          localObj[ed] = {};
+          changed = true;
+        }
 
         for (var lesson in remoteObj[ed]) {
           if (remoteObj[ed].hasOwnProperty(lesson)) {
@@ -72,15 +70,16 @@
               : -1;
             if (remoteScore > localScore) {
               localObj[ed][lesson] = remoteScore;
+              changed = true;
             }
           }
         }
       }
 
-      return JSON.stringify(localObj);
+      return { data: JSON.stringify(localObj), changed: changed };
     } catch (err) {
       console.warn("[Sync] Merge error:", err);
-      return local || remote;
+      return { data: local || remote, changed: false };
     }
   }
 
@@ -96,23 +95,23 @@
       if (xhr.readyState !== 4) return;
       isSyncing = false;
 
+      var hasNewData = false;
+
       if (xhr.status === 200) {
         try {
           var response = JSON.parse(xhr.responseText);
           var remoteData = response.record || {};
 
-          // Merge each synced key
           for (var i = 0; i < SYNC_KEYS.length; i++) {
             var key = SYNC_KEYS[i];
             var remoteVal = remoteData[key];
             var localVal = localStorage[key];
 
             if (key === "Results") {
-              // Special merge for Results: keep highest scores
-              var merged = mergeResults(localVal, remoteVal);
-              if (merged) localStorage.Results = merged;
+              var result = mergeResults(localVal, remoteVal);
+              if (result.data) localStorage.Results = result.data;
+              if (result.changed) hasNewData = true;
             } else if (remoteVal !== undefined && !localVal) {
-              // For other keys, only pull if local is not set
               localStorage[key] = remoteVal;
             }
           }
@@ -125,7 +124,7 @@
         console.warn("[Sync] Pull failed:", xhr.status);
       }
 
-      if (callback) callback();
+      if (callback) callback(hasNewData);
     };
     xhr.send();
   }
@@ -160,14 +159,22 @@
     xhr.send(JSON.stringify(data));
   }
 
-  // Expose sync functions globally so genki.js can call pushToCloud after saving results
   window.GenkiSync = {
     push: pushToCloud,
     pull: pullFromCloud,
   };
 
-  // Pull on page load, then push merged data back
-  pullFromCloud(function () {
-    pushToCloud();
+  // Pull on page load. If new data was merged, reload so the page renders with updated scores.
+  // Use a flag to prevent infinite reload loops.
+  var reloadFlag = "genkiSyncReloaded";
+  pullFromCloud(function (hasNewData) {
+    if (hasNewData && !sessionStorage[reloadFlag]) {
+      sessionStorage[reloadFlag] = "1";
+      window.location.reload();
+    } else {
+      // Clear the flag so the next navigation can trigger a reload if needed
+      sessionStorage.removeItem(reloadFlag);
+      pushToCloud();
+    }
   });
 })(window);
