@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,75 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～と|l18-p4}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences, using {!GRI|～と|l18-p4}.</p>'+
+        '<div class="problem">'+
+          'Whenever a response doesn\'t come from a friend, I get uneasy.<br>'+
+          '{友だちから返事が来ないと、不安になります|ともだちからへんじがこないと、ふあんになります|' + Genki.getAlts('{友}{だち}から{返事}が{来}ないと、{不安}になります', 'とも|達|へんじ|こ|ふあん') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Whenever I use a computer, (my) eyes hurt (lit., become painful).<br>'+
+          '{パソコンを使うと、目が痛くなります|パソコンをつかうと、めがいたくなります|' + Genki.getAlts('パソコンを{使}うと、{目}が{痛}くなります', 'つか|め|いた') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Whenever I get nervous, I get thirsty.<br>'+
+          '{緊張すると、のどがかわきます|きんちょうすると、のどがかわきます|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Whenever I take this medicine, I become sleepy.<br>'+
+          '{この薬を飲むと、眠くなります|このくすりをのむと、ねむくなります|' + Genki.getAlts('この{薬}を{飲}むと、{眠}くなります', 'くすり|の|ねむ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'When spring comes, cherry blossoms bloom.<br>'+
+          '{春が来ると、桜が咲きます|はるがくると、さくらがさきます|' + Genki.getAlts('{春}が{来}ると、{桜}が{咲}きます', 'はる|く|さくら|さ') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Complete the sentences by translating the cues.</p>'+
+        '<div class="problem">'+
+          '{運動すると|うんどうすると|answer;hint:(Whenever I exercise);width:300}、おなかがすきます。'+
+        '</div>'+
+        
+        '<div class="problem valign-top">'+
+          '{飛行機に乗ると|ひこうきにのると|' + Genki.getAlts('{飛行機}に{乗}ると', 'ひこうき|の') + 'answer;hint:(Whenever I ride on an airplane);width:300}、<ruby>気分<rt>きぶん</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>くなります。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '{プレゼントをもらうと||width:300;hint:(Whenever I receive a present)}、うれしくなります。'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Answer the questions by translating the sentences.</p>'+
+        '<div class="problem">'+
+          'どんな<ruby>時<rt>とき</rt></ruby>、<ruby>寝<rt>ね</rt></ruby>られませんか。<br>'+
+          '(Whenever I drink coffee before bed, I cannot sleep.)<br>'+
+          '{寝る前にコーヒーを飲むと、寝られません|ねるまえにコーヒーをのむと、ねられません|' + Genki.getAlts('{寝}る{前}にコーヒーを{飲}むと、{寝}られません', 'ね|まえ|の|ね') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'どんな<ruby>時<rt>とき</rt></ruby>、<ruby>恥<rt>は</rt></ruby>ずかしくなりますか。<br>'+
+          '(Whenever I fall down in a place with a lot of people, I feel embarrassed.)<br>'+
+          '{人がたくさんいる所で転ぶと、恥ずかしくなります|ひとがたくさんいるところでころぶと、はずかしくなります|' + Genki.getAlts('{人}がたくさんいる{所}で{転}ぶと、{恥}ずかしくなります', 'ひと|ところ|ころ|は') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

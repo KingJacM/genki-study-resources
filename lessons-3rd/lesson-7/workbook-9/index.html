@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,56 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>One student was robbed by someone at the dorm. A police officer is asking Robert what he and the other students were doing at the time of the incident. Write in Japanese what the following people were doing.</p>'+
+      '<div class="right">*ほかの (other)</div>'+
+      '{!AUDIO|W07-A}'+
+
+      '<div class="count-problems">'+
+        '<div class="problem">{!PLAY|W07-A|8.5} ロバートさんとソラさんは、{部屋で宿題をしていました|へやでしゅくだいをしていました|' + Genki.getAlts('{部屋}で{宿題}をしていました', 'へや|しゅくだい') + 'answer}。</div>'+
+        
+        '<div class="problem">{!PLAY|W07-A|22} たけしさんとけんさんは、{たけしさんの部屋で音楽を聞いていました|たけしさんのへやでおんがくをきいていました|' + Genki.getAlts('たけしさんの{部屋}で{音楽}を{聞}いていました', 'へや|おんがく|き') + 'answer}。</div>'+
+        
+        '<div class="problem">{!PLAY|W07-A|31} ゆいさんは、{シャワーを浴びていました|シャワーをあびていました|answer}。</div>'+
+      '</div><br>'+
+        
+      '<div class="small-margin">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Listen to a TV reporter at a celebrity\'s party. Choose appropriate descriptions for each celebrity.</p>'+
+        '<div class="right">*ドレス (dress)　　セクシー (sexy)　　ボーイフレンド (boyfriend)</div>'+
+        '{!AUDIO|W07-B}'+
+        
+        '<div class="count-problems">'+
+          '<div class="problem">{!PLAY|W07-B|12} ({a}) ({h}) Uno Daiki</div>'+
+          '<div class="problem">{!PLAY|W07-B|23} ({d}) ({f}) Noguchi Erika</div>'+
+          '<div class="problem">{!PLAY|W07-B|34.5} ({c}) ({e}) Matsumoto Kana</div>'+
+          '<div class="problem">{!PLAY|W07-B|47.5} ({b}) ({g}) Matsumoto Kana\'s new boyfriend</div>'+
+        '</div>'+
+        
+        '<div class="sub-section">'+
+          'a. wears jeans　　b. has short hair　　c. wears glasses　　d. wears a hat<br>'+
+          'e. has long hair　　f. is cute　　g. is fat　　h. is tall'+
+        '</div><br><br>'+
+        
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Mary is interviewing people who are walking downtown on Sunday. What is each interviewee doing today? Choose the appropriate answers.</p>'+
+        '{!AUDIO|W07-C}'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">{!PLAY|W07-C|2.5} ({c}) Tanaka: [a. buying flowers　　b. buying cards　　c. buying a game]</div>'+
+          '<div class="problem">{!PLAY|W07-C|32.5} ({b}) Sato: [a. playing games　　b. singing songs　　c. playing sports]</div>'+
+          '<div class="problem">{!PLAY|W07-C|50} ({b}) Suzuki: [a. working at a department store　　b. seeing his younger sister　　c. talking with his younger brother]</div>'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

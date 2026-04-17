@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,98 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : 'What do the following proverbs and sayings mean?<br>You may want to read the Culture Note about Japanese Proverbs (Genki II: p.272) if you haven\'t yet.',
+
+      quizlet : [
+        {
+          question : '<ruby>猫<rt>ねこ</rt></ruby>に<ruby>小判<rt>こばん</rt></ruby>',
+          answers : [
+            'AGiving gold coins to a cat.<br>(Casting pearls before swine.)',
+            '!All thieves started their careers with a lie.',
+            '!A rice dumpling is better than a flower.<br>(Substance over show.)'
+          ]
+        },
+        
+        {
+          question : '<ruby>仏<rt>ほとけ</rt></ruby>の<ruby>顔<rt>かお</rt></ruby>も<ruby>三度<rt>さんど</rt></ruby>',
+          answers : [
+            'AEven Buddha would be upset if his face were stroked three times.<br>(To try the patience of a saint.)',
+            'Even the coldest rock becomes warm if you sit on it for three years.<br>(Perseverance prevails.)',
+            'Hasten to do good.'
+          ]
+        },
+        
+        {
+          question : '<ruby>郷<rt>ごう</rt></ruby>に<ruby>入<rt>はい</rt></ruby>れば<ruby>郷<rt>ごう</rt></ruby>に<ruby>従<rt>したが</rt></ruby>え',
+          answers : [
+            'AWhen in a village, follow their customs.<br>(When in Rome, do as the Romans do.)',
+            'The stake that sticks out get hammered down.<br>(Don\'t be too conspicuous.',
+            'Even monkeys fall from trees.<br>(Nobody is perfect.)'
+          ]
+        },
+        
+        {
+          question : 'うそつきはどろぼうのはじまり',
+          answers : [
+            'AAll thieves started their careers with a lie.',
+            'Giving gold coins to a cat.<br>(Casting pearls before swine.)',
+            'The stake that sticks out get hammered down.<br>(Don\'t be too conspicuous.)'
+          ]
+        },
+        
+        {
+          question : 'さるも<ruby>木<rt>き</rt></ruby>から<ruby>落<rt>お</rt></ruby>ちる',
+          answers : [
+            'AEven monkeys fall from trees.<br>(Nobody is perfect.)',
+            'When in a village, follow their customs.<br>(When in Rome, do as the Romans do.)',
+            'Even the coldest rock becomes warm if you sit on it for three years.<br>(Perseverance prevails.)'
+          ]
+        },
+        
+        {
+          question : '<ruby>石<rt>いし</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>にも<ruby>三年<rt>さんねん</rt></ruby>',
+          answers : [
+            'AEven the coldest rock becomes warm if you sit on it for three years.<br>(Perseverance prevails.)',
+            'Even Buddha would be upset if his face were stroked three times.<br>(To try the patience of a saint.)',
+            'Even monkeys fall from trees.<br>(Nobody is perfect.)'
+          ]
+        },
+        
+        {
+          question : '<ruby>出<rt>で</rt></ruby>る<ruby>杭<rt>くい</rt></ruby>は<ruby>打<rt>う</rt></ruby>たれる',
+          answers : [
+            'AThe stake that sticks out get hammered down.<br>(Don\'t be too conspicuous.)',
+            '!All thieves started their careers with a lie.',
+            'When in a village, follow their customs.<br>(When in Rome, do as the Romans do.)'
+          ]
+        },
+        
+        {
+          question : '<ruby>善<rt>ぜん</rt></ruby>は<ruby>急<rt>いそ</rt></ruby>げ',
+          answers : [
+            'AHasten to do good.',
+            'Even Buddha would be upset if his face were stroked three times.<br>(To try the patience of a saint.)',
+            '!A rice dumpling is better than a flower.<br>(Substance over show.)'
+          ]
+        },
+        
+        {
+          question : '<ruby>花<rt>はな</rt></ruby>より<ruby>団子<rt>だんご</rt></ruby>',
+          answers : [
+            'AA rice dumpling is better than a flower.<br>(Substance over show.)',
+            'Giving gold coins to a cat.<br>(Casting pearls before swine.)',
+            'Hasten to do good.'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,101 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Listen to the job interviews between a company personnel interviewer and job applicants. Write answers in Japanese and mark O for the appropriate ones.</p>'+
+    '{!AUDIO|W13-A}'+
+        
+    '<table class="table center">'+
+      '<tr style="font-weight:bold;">'+
+        '<td style="width:100px"></td>'+
+        '<td>どんな<ruby>外国語<rt>がいこくご</rt></ruby>ができますか</td>'+
+        '<td><ruby>車<rt>くるま</rt></ruby>の<ruby>運転<rt>うんてん</rt></ruby>ができますか</td>'+
+        '<td><ruby>何曜日<rt>なんようび</rt></ruby>に<ruby>行<rt>い</rt></ruby>けますか</td>'+
+      '</tr>'+
+
+      '<tr>'+
+        '<td>{!PLAY|W13-A|8.5} <ruby>中山<rt>なかやま</rt></ruby></td>'+
+        '<td class="max-width">{英語|えいご|answer}</td>'+
+        '<td class="pad-zones">({||width:21}) はい・({O}) いいえ</td>'+
+        '<td class="pad-zones slim-ruby">({O}) <ruby>月<rt>げつ</rt></ruby>　({||width:21}) <ruby>火<rt>か</rt></ruby>　({O}) <ruby>水<rt>すい</rt></ruby>　({||width:21}) <ruby>木<rt>もく</rt></ruby>　({||width:21}) <ruby>金<rt>きん</rt></ruby>　({O}) <ruby>土<rt>ど</rt></ruby>　({||width:21}) <ruby>日<rt>にち</rt></ruby></td>'+
+      '</tr>'+
+
+      '<tr>'+
+        '<td>{!PLAY|W13-A|55.5} <ruby>村野<rt>むらの</rt></ruby></td>'+
+        '<td class="max-width">{中国語|ちゅうごくご|answer}</td>'+
+        '<td class="pad-zones">({O}) はい・({||width:21}) いいえ</td>'+
+        '<td class="pad-zones slim-ruby">({||width:21}) <ruby>月<rt>げつ</rt></ruby>　({||width:21}) <ruby>火<rt>か</rt></ruby>　({||width:21}) <ruby>水<rt>すい</rt></ruby>　({||width:21}) <ruby>木<rt>もく</rt></ruby>　({||width:21}) <ruby>金<rt>きん</rt></ruby>　({O}) <ruby>土<rt>ど</rt></ruby>　({O}) <ruby>日<rt>にち</rt></ruby></td>'+
+      '</tr>'+
+    '</table><br><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Ken is talking to Yui and Robert. Mark each of the following statements with O if true, or with X if false.</p>'+
+    '{!AUDIO|W13-B}'+
+        
+    '<div class="count-problems small-margin">'+
+      '<div class="problem">{!PLAY|W13-B|0} ({O}) Ken asked Yui and Robert to take his place at his part-time job.</div>'+
+      '<div class="problem">{!PLAY|W13-B|2.5} ({X}) Yui can\'t help Ken because she is busy.</div>'+
+      '<div class="problem">{!PLAY|W13-B|23.5} ({X}) Yui is not good at English.</div>'+
+      '<div class="problem">{!PLAY|W13-B|10.5} ({O}) Ken\'s younger sister is coming tomorrow.</div>'+
+      '<div class="problem">{!PLAY|W13-B|46} ({O}) Robert is busy tomorrow.</div>'+
+      '<div class="problem">{!PLAY|W13-B|60} ({X}) Robert will call Ken if he can cancel the appointment.</div>'+
+      '<div class="problem">{!PLAY|W13-B|73.5} ({O}) Robert knows somebody who may be interested in teaching.</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Two people are shopping online.</p>'+
+    '<div class="right">*スイス (Switzerland)　スポーツクラブ (sports club)　フィットネスマシン (fitness machine)</div>'+
+    '{!AUDIO|W13-C}'+
+
+    '<div class="count-problems valign-top">'+
+      '<div class="problem">'+
+        'What are their first impressions on each item?<br><br>'+
+        '<div class="indent-block">'+
+          '<div class="big-margin">(a) {!PLAY|W13-C|5} <ruby>時計<rt>とけい</rt></ruby>は{高|たか|answer}そうです。</div>'+
+          '<div class="big-margin">(b) {!PLAY|W13-C|35.5} セーターは{暖かそうです|あたたかそうです|answer}。</div>'+
+          '<div class="big-margin">(c) {!PLAY|W13-C|61} フィットネスマシンは{便利そうです|べんりそうです|answer}。</div>'+
+        '</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '<div class="inner-problem">'+
+          '{!PLAY|W13-C|5} <ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は<ruby>時計<rt>とけい</rt></ruby>を<ruby>買<rt>か</rt></ruby>いますか。<br>'+
+          '{買いません|かいません|answer}。<br><br><br>'+
+          
+          'どうしてですか。<br>'+
+          '{高すぎますから|たかすぎますから|answer}。'+
+        '</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '<div class="inner-problem">'+
+          '{!PLAY|W13-C|35.5} <ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>はセーターを<ruby>買<rt>か</rt></ruby>いますか。<br>'+
+          '{買います|かいます|answer}。<br><br><br>'+
+          
+          'どうしてですか。<br>'+
+          '{もうすぐお父さんの誕生日ですから|もうすぐおとうさんのたんじょうびですから|' + Genki.getAlts('もうすぐお{父}さんの{誕生日}ですから。', 'とう|たんじょうび') + 'answer}。'+
+        '</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '<div class="inner-problem">'+
+          '{!PLAY|W13-C|61} <ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>はフィットネスマシンを<ruby>買<rt>か</rt></ruby>いますか。<br>'+
+          '{買います|かいます|answer}。<br><br><br>'+
+          
+          'どうしてですか。<br>'+
+          '{太りましたから|ふとりましたから|answer}。'+
+        '</div>'+
+      '</div>'+
+    '</div>'
+      
+    });</script>
   </body>
 </html>

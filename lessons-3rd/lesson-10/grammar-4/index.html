@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,159 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Mary and Yui did the following things before and during their trip. Describe what Yui did, using {!GRI|の|l10-p3}.'+
+      '<table class="center">'+
+        '<tr class="t-bold left">'+
+          '<td style="width:100px"></td>'+
+          '<td style="width:100px">1.</td>'+
+          '<td style="width:100px">2.</td>'+
+          '<td style="width:100px">3.</td>'+
+          '<td style="width:100px">4.</td>'+
+          '<td style="width:100px">5.</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="t-bold">メアリー</td>'+
+          '<td>Guide Book Japan<br>English</td>'+
+          '<td><ruby>電車<rt>でんしゃ</rt></ruby><br>early</td>'+
+          '<td>コーヒー<br>hot</td>'+
+          '<td><ruby>傘<rt>かさ</rt></ruby><br>cheap</td>'+
+          '<td><ruby>手袋<rt>てぶくろ</rt></ruby><br>red</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="t-bold">ゆい</td>'+
+          '<td>ガイドブック<ruby>日本<rt>にほん</rt></ruby><br>Japanese</td>'+
+          '<td><ruby>電車<rt>でんしゃ</rt></ruby><br>late</td>'+
+          '<td>コーヒー<br>cold</td>'+
+          '<td><ruby>傘<rt>かさ</rt></ruby><br>beautiful</td>'+
+          '<td><ruby>手袋<rt>てぶくろ</rt></ruby><br>black</td>'+
+        '</tr>'+
+      '</table>', 'Mary and Yui did the following things before and during their trip. Describe what Yui did, using {!GRI|の|l10-p3}.'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'メアリーさんは<ruby>英語<rt>えいご</rt></ruby>のガイドブックを<ruby>持<rt>も</rt></ruby>っていきました。',
+            answers : [
+              'Aゆいさんは<ruby>日本語<rt>にほんご</rt></ruby>のを<ruby>持<rt>も</rt></ruby>っていきました。',
+              'ゆいさんは<ruby>日本語<rt>にほんご</rt></ruby>のガイドブックを<ruby>持<rt>も</rt></ruby>っていきました。',
+              'ゆいさんは<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>持<rt>も</rt></ruby>っていきました。',
+              'ゆいさんは<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>持<rt>も</rt></ruby>っていきました。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんは<ruby>早<rt>はや</rt></ruby>い<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>りました。',
+            answers : [
+              'Aゆいさんは<ruby>遅<rt>おそ</rt></ruby>いのに<ruby>乗<rt>の</rt></ruby>りました。',
+              'ゆいさんは<ruby>遅<rt>おそ</rt></ruby>いの<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>りました。',
+              'ゆいさんは<ruby>早<rt>はや</rt></ruby>いのに<ruby>乗<rt>の</rt></ruby>りました。',
+              'ゆいさんは<ruby>早<rt>はや</rt></ruby>いの<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>りました。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはカフェで<ruby>熱<rt>あつ</rt></ruby>いコーヒーを<ruby>飲<rt>の</rt></ruby>みました。',
+            answers : [
+              'Aゆいさんは<ruby>冷<rt>つめ</rt></ruby>たいのを<ruby>飲<rt>の</rt></ruby>みました。',
+              'ゆいさんは<ruby>冷<rt>つめ</rt></ruby>たいのコーヒーを<ruby>飲<rt>の</rt></ruby>みました。',
+              'ゆいさんは<ruby>寒<rt>さむ</rt></ruby>いのを<ruby>飲<rt>の</rt></ruby>みました。',
+              'ゆいさんは<ruby>寒<rt>さむ</rt></ruby>いのコーヒーを<ruby>飲<rt>の</rt></ruby>みました。',
+            ]
+          },
+          
+          {
+            question : 'メアリーさんは<ruby>安<rt>やす</rt></ruby>い<ruby>傘<rt>かさ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。',
+            answers : [
+              'Aゆいさんはきれいなのを<ruby>買<rt>か</rt></ruby>いました。',
+              'ゆいさんはきれいなの<ruby>傘<rt>かさ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。',
+              'ゆいさんはきれいなの<ruby>買<rt>か</rt></ruby>いました。',
+              'ゆいさんはきれいなを<ruby>買<rt>か</rt></ruby>いました。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんは<ruby>赤<rt>あか</rt></ruby>い<ruby>手袋<rt>てぶくろ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。',
+            answers : [
+              'Aゆいさんは<ruby>黒<rt>くろ</rt></ruby>いのを<ruby>買<rt>か</rt></ruby>いました。',
+              'ゆいさんは<ruby>黒<rt>くろ</rt></ruby>いの<ruby>手袋<rt>てぶくろ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。',
+              'ゆいさんは<ruby>黒<rt>くろ</rt></ruby>いを<ruby>買<rt>か</rt></ruby>いました。',
+              'ゆいさんは<ruby>黒<rt>くろ</rt></ruby>いの<ruby>買<rt>か</rt></ruby>いました。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<table class="table center">'+
+          '<tr class="t-bold left">'+
+            '<td style="width:100px"></td>'+
+            '<td style="width:100px">Example</td>'+
+            '<td style="width:100px">1.</td>'+
+            '<td style="width:100px">2.</td>'+
+            '<td style="width:100px">3.</td>'+
+            '<td style="width:100px">4.</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td class="t-bold">メアリー</td>'+
+            '<td>Guide Book Japan<br>English</td>'+
+            '<td><ruby>電車<rt>でんしゃ</rt></ruby><br>early</td>'+
+            '<td>コーヒー<br>hot</td>'+
+            '<td><ruby>傘<rt>かさ</rt></ruby><br>cheap</td>'+
+            '<td><ruby>手袋<rt>てぶくろ</rt></ruby><br>red</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td class="t-bold">ゆい</td>'+
+            '<td>ガイドブック<ruby>日本<rt>にほん</rt></ruby><br>Japanese</td>'+
+            '<td><ruby>電車<rt>でんしゃ</rt></ruby><br>late</td>'+
+            '<td>コーヒー<br>cold</td>'+
+            '<td><ruby>傘<rt>かさ</rt></ruby><br>beautiful</td>'+
+            '<td><ruby>手袋<rt>てぶくろ</rt></ruby><br>black</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="count-problems">'+
+          '<div class="example-problem">'+
+            '<div class="inner-problem valign-top">'+
+              'メアリーさんは<ruby>英語<rt>えいご</rt></ruby>のガイドブックを<ruby>持<rt>も</rt></ruby>っていきました。<br>'+
+              'ゆいさんは{日本語|にほんご|answer}のを<ruby>持<rt>も</rt></ruby>っていきました。'+
+            '</div>'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'メアリーさんは<ruby>早<rt>はや</rt></ruby>い<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>りました。<br>'+
+            '{ゆいさんは遅いのに乗りました|ゆいさんはおそいのにのりました|' + Genki.getAlts('ゆいさんは{遅}いのに{乗}りました', 'おそ|の') + 'answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'メアリーさんはカフェで<ruby>熱<rt>あつ</rt></ruby>いコーヒーを<ruby>飲<rt>の</rt></ruby>みました。<br>'+
+            '{ゆいさんは冷たいのを飲みました|ゆいさんはつめたいのをのみました|' + Genki.getAlts('ゆいさんは{冷}たいのを{飲}みました', 'つめ|の') + 'answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'メアリーさんは<ruby>安<rt>やす</rt></ruby>い<ruby>傘<rt>かさ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<br>'+
+            '{ゆいさんはきれいなのを買いました|ゆいさんはきれいなのをかいました|' + Genki.getAlts('ゆいさんは{きれい}なのを{買}いました', '綺麗|か') + 'answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'メアリーさんは<ruby>赤<rt>あか</rt></ruby>い<ruby>手袋<rt>てぶくろ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<br>'+
+            '{ゆいさんは黒いのを買いました|ゆいさんはくろいのをかいました|' + Genki.getAlts('ゆいさんは{黒}いのを{買}いました', 'くろ|か') + 'answer}。'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

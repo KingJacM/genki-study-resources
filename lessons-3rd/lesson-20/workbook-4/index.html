@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,55 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the three types of respect language that you learned ({!GRI|Honorific|l19-p1}, {!GRI|Extra-Modest|l20-p1}, {!GRI|Humble|l20-p2}).',
+      
+      quizlet : 
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Mr. Noda is interviewing Mr. Tanaka. Fill in the blanks with the appropriate expressions.</p>'+
+        '<div class="problem">Noda: <ruby>田中<rt>たなか</rt></ruby>さんは、どちらに{住んでいらっしゃいますか|すんでいらっしゃいますか|answer;hint:(Where do you live?)}。</div>'+
+        '<div class="problem">Tanaka: <ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>名古屋<rt>なごや</rt></ruby>に{住んでおります|すんでおります|answer}。</div>'+
+        
+        '<div class="problem">Noda: <ruby>今日<rt>きょう</rt></ruby>はどうやって{いらっしゃいましたか|(How did you come here today?)}。</div>'+
+        '<div class="problem">Tanaka: <ruby>新幹線<rt>しんかんせん</rt></ruby>で{参りました|まいりました|answer}。</div>'+
+        
+        '<div class="problem">Noda: ご<ruby>兄弟<rt>きょうだい</rt></ruby>が{いらっしゃいますか|(Do you have any siblings?)}。</div>'+
+        '<div class="problem">Tanaka: はい。<ruby>兄<rt>あに</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby>{おります}。</div>'+
+        
+        '<div class="problem">Noda: そうですか。<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>大学院<rt>だいがくいん</rt></ruby>で{何を勉強なさいましたか|なにをべんきょうなさいましたか|' + Genki.getAlts('{何}を{勉強}なさいましたか', 'なに|べんきょう') + 'answer;hint:(What did you study?)}。</div>'+
+        '<div class="problem">Tanaka: <ruby>経済<rt>けいざい</rt></ruby>を{勉強いたしました|べんきょういたしました|answer}。</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>One of your business associates, Ms. Mori, came to town. Write the following story in Japanese, using {!GRI|honorific expressions|l19-p1} and {!GRI|humble expressions|l20-p2}.</p>'+
+        '<div class="problem">'+
+          '(Ms. Mori arrived at the airport at 9:00.)<br>'+
+          '{森さんは九時に空港にお着きになりました|もりさんはくじにくうこうにおつきになりました|' + Genki.getAlts('{森}さんは{九時}に{空港}にお{着}きになりました', 'もり|くじ|くうこう|つ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem valign-top">'+
+          '(I met Ms. Mori for the first time.)<br>'+
+          '{初めて森さんにお会いしました|はじめてもりさんにおあいしました|' + Genki.getAlts('{初}めて{森}さんにお{会}いしました', 'はじ|もり|あ') + 'answer}。<ruby>一緒<rt>いっしょ</rt></ruby>にゴルフをしに<ruby>行<rt>い</rt></ruby>きました。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '(Ms. Mori didn\'t bring her clubs [クラブ], so I lent her mine.)<br>'+
+          '{森さんはクラブを持ってきていらっしゃらなかったので、私のをお貸ししました|もりさんはクラブをもってきていらっしゃらなかったので、わたしのをおかししました|' + Genki.getAlts('{森}さんはクラブを{持}ってきていらっしゃらなかったので、{私}のをお{貸}ししました', 'もり|も|わたし|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '(I gave her a ride to the hotel around 7:00.)<br>'+
+          '{七時ごろホテルまでお送りしました|しちじごろホテルまでおおくりしました|' + Genki.getAlts('{七時}ごろホテルまでお{送}りしました', 'しちじ|おく') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

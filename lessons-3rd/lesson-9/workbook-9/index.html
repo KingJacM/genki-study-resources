@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,79 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Ken and Yui are talking. Listen to the dialogue and answer the questions in Japanese.</p>'+
+    '<div class="right">*イタリア (Italy)</div>'+
+    '{!AUDIO|W09-A}'+
+
+    '<div class="count-problems">'+
+      '<div class="problem">'+
+        '{!PLAY|W09-A|8} だれが<ruby>遅<rt>おそ</rt></ruby>くなりましたか。<br>'+
+        '{けんさんが遅くなりました|けんさんがおそくなりました|answer}。'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W09-A|12} けんさん／ゆいさんは<ruby>何分<rt>なんぷん</rt></ruby>ぐらい<ruby>待<rt>ま</rt></ruby>ちましたか。<br>'+
+        '{%(ゆいさんは/)十分ぐらい待ちました|%(ゆいさんは/)じゅっぷんぐらいまちました|' + Genki.getAlts('{ゆいさんは}{十分}ぐらい{待}ちました', '|じゅっぷん|ま') + 'answer}。'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W09-A|17} けんさんとゆいさんは<ruby>何<rt>なに</rt></ruby>をしますか。<br>'+
+        '{%(けんさんとゆいさんは/)晩ご飯を食べます|%(けんさんとゆいさんは/)ばんごはんをたべます|' + Genki.getAlts('{けんさんとゆいさんは}{晩}ご{飯}を{食}べます', '|ばん|はん|た') + 'answer}。'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W09-A|46} レストランはどこにありますか。<br>'+
+        '{%(レストランは/)ホテルの中にあります|%(レストランは/)ホテルのなかにあります|answer}。'+
+      '</div>'+
+    '</div><br>'+
+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Jun is showing the picture taken at his birthday party. Where are the following people in the picture.</p>'+
+    '<div class="right">*ケーキ (cake)　　ワイン (wine)</div>'+
+    '{!AUDIO|W09-B}'+
+
+    '<div class="columns-2 count-problems small-margin clear" style="width:80%;margin:0 auto;">'+
+      '<div>'+
+        '<div class="problem">{!PLAY|W09-B|5} ({f}) Jun</div>'+
+        '<div class="problem">{!PLAY|W09-B|10} ({e}) Jun\'s friend</div>'+
+        '<div class="problem">{!PLAY|W09-B|18} ({h}) Jun\'s younger sister</div>'+
+        '<div class="problem">{!PLAY|W09-B|29} ({c}) Jun\'s older sister</div>'+
+        '<div class="problem">{!PLAY|W09-B|26} ({g}) Jun\'s younger brother</div>'+
+        '<div class="problem">{!PLAY|W09-B|37} ({a}) Jun\'s father</div>'+
+        '<div class="problem">{!PLAY|W09-B|42} ({b}) Pochi</div>'+
+      '</div>'+
+
+      '<div class="center">{!IMG|l9-w9-1.png|picture}</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Listen to the dialogue at a shop. How many of each item did the shopkeeper sell?</p>'+
+    '{!AUDIO|W09-C}'+
+
+    '<div class="count-problems small-margin columns-2 clear">'+
+      '<div>'+
+        '<div><span class="label">　</span>　How many? 　Total amount</div>'+
+        '<div class="problem">{!PLAY|W09-C|3} <span class="label">coffee</span> ({5}) ￥{600||width:90}</div>'+
+        '<div class="problem valign-off">{!PLAY|W09-C|10} <span class="label inline-furi">orange<i>オレンジ</i></span> ({3}) ￥{180||width:90}</div>'+
+        '<div class="problem valign-off">{!PLAY|W09-C|16.5} <span class="label inline-furi">rice ball<i>おにぎり</i></span> ({9}) ￥{1%(,/)080||width:90}</div>'+
+      '</div>'+
+        
+      '<div>'+
+        '<div class="problem">{!PLAY|W09-C|26.5} <span class="label">tea</span> ({8}) ￥{960||width:90}</div>'+
+        '<div class="problem">{!PLAY|W09-C|38} <span class="label">boxed lunch</span> ({7}) ￥{8%(,/)400||width:90}</div>'+
+      '</div>'+
+    '</div>'
+      
+    });</script>
   </body>
 </html>

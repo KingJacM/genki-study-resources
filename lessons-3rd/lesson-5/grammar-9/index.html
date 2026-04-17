@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,181 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Look at the pictures and make comments on them, using an {!GRI|adjective to modify the noun|l5-p3}.<br>Example: おいしい + たべもの = おいしいたべもの; delicious food',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : '<ruby>時計<rt>とけい</rt></ruby> (￥100,000)<br>{!IMG|3rd-l5-g9-0.png}<br>hint: <span class="spoiler">expensive</span>',
+            answers : [
+              'A<ruby>高<rt>たか</rt></ruby>い<ruby>時計<rt>とけい</rt></ruby>ですね。',
+              '<ruby>高<rt>たか</rt></ruby>いな<ruby>時計<rt>とけい</rt></ruby>ですね。',
+              '<ruby>時計<rt>とけい</rt></ruby><ruby>高<rt>たか</rt></ruby>いですね。',
+              '<ruby>時計<rt>とけい</rt></ruby>は<ruby>高<rt>たか</rt></ruby>いですね。'
+            ]
+          },
+
+          {
+            question : 'ホテル<br>{!IMG|3rd-l5-g9-1.png}<br>hint: <span class="spoiler">old</span>',
+            answers : [
+              'A<ruby>古<rt>ふる</rt></ruby>いホテルですね。',
+              '<ruby>古<rt>ふる</rt></ruby>いなホテルですね。',
+              '<ruby>古<rt>ふる</rt></ruby>ホテルですね。',
+              '<ruby>古<rt>ふる</rt></ruby>くホテルですね。'
+            ]
+          },
+
+          {
+            question : 'テレビ<br>{!IMG|3rd-l5-g9-2.png}<br>hint: <span class="spoiler">boring</span>',
+            answers : [
+              'Aつまらないテレビですね。',
+              'つまらなテレビですね。',
+              'テレビつまらないですね。',
+              'テレビはつまらないですね。'
+            ]
+          },
+
+          {
+            question : '<ruby>宿題<rt>しゅくだい</rt></ruby><br>{!IMG|3rd-l5-g9-3.png}<br>hint: <span class="spoiler">difficult</span>',
+            answers : [
+              'A<ruby>難<rt>むずか</rt></ruby>しい<ruby>宿題<rt>しゅくだい</rt></ruby>ですね。',
+              '<ruby>難<rt>むずか</rt></ruby>しいな<ruby>宿題<rt>しゅくだい</rt></ruby>ですね。',
+              '<ruby>難<rt>むずか</rt></ruby>し<ruby>宿題<rt>しゅくだい</rt></ruby>ですね。',
+              '<ruby>難<rt>むずか</rt></ruby>しく<ruby>宿題<rt>しゅくだい</rt></ruby>ですね。'
+            ]
+          },
+
+          {
+            question : '<ruby>人<rt>ひと</rt></ruby><br>{!IMG|3rd-l5-g9-4.png}<br>hint: <span class="spoiler">busy</span>',
+            answers : [
+              'A<ruby>忙<rt>いそが</rt></ruby>しい<ruby>人<rt>ひと</rt></ruby>ですね。',
+              '<ruby>忙<rt>いそが</rt></ruby>しいな<ruby>人<rt>ひと</rt></ruby>ですね。',
+              '<ruby>人<rt>ひと</rt></ruby><ruby>忙<rt>いそが</rt></ruby>しいですね。',
+              '<ruby>人<rt>ひと</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいですね。'
+            ]
+          },
+
+          {
+            question : '<ruby>人<rt>ひと</rt></ruby><br>{!IMG|3rd-l5-g9-5.png}<br>hint: <span class="spoiler">free time</span>',
+            answers : [
+              'Aひまな<ruby>人<rt>ひと</rt></ruby>ですね。',
+              'ひま<ruby>人<rt>ひと</rt></ruby>ですね。',
+              'ひまい<ruby>人<rt>ひと</rt></ruby>ですね。',
+              '<ruby>人<rt>ひと</rt></ruby>ひまなですね。'
+            ]
+          },
+
+          {
+            question : '<ruby>町<rt>まち</rt></ruby><br>{!IMG|3rd-l5-g9-6.png}<br>hint: <span class="spoiler">lively</span>',
+            answers : [
+              'Aにぎやかな<ruby>町<rt>まち</rt></ruby>ですね。',
+              'にぎやか<ruby>町<rt>まち</rt></ruby>ですね。',
+              'にぎやかない<ruby>町<rt>まち</rt></ruby>ですね。',
+              '<ruby>町<rt>まち</rt></ruby>はにぎやかですね。'
+            ]
+          },
+
+          {
+            question : '<ruby>部屋<rt>へや</rt></ruby><br>{!IMG|3rd-l5-g9-7.png}<br>hint: <span class="spoiler">clean</span>',
+            answers : [
+              'Aきれいな<ruby>部屋<rt>へや</rt></ruby>ですね。',
+              'きれい<ruby>部屋<rt>へや</rt></ruby>ですね。',
+              '<ruby>部屋<rt>へや</rt></ruby>きれいなですね。',
+              '<ruby>部屋<rt>へや</rt></ruby>きれいですね。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem center">'+
+            '<ruby>時計<rt>とけい</rt></ruby> (￥100,000)<br>'+
+            '{!IMG|3rd-l5-g9-0.png}<br>'+
+            'hint: <span class="spoiler">expensive</span><br>'+
+            '{高い|たかい|answer;hint:adj.}{時計|とけい|answer;hint:noun}ですね。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                'ホテル<br>'+
+                '{!IMG|3rd-l5-g9-1.png}<br>'+
+                'hint: <span class="spoiler">old</span><br>'+
+                '{古いホテルですね|ふるいホテルですね|answer}。'+
+              '</div>'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                'テレビ<br>'+
+                '{!IMG|3rd-l5-g9-2.png}<br>'+
+                'hint: <span class="spoiler">boring</span><br>'+
+                '{つまらないテレビですね}。'+
+              '</div>'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                '<ruby>宿題<rt>しゅくだい</rt></ruby><br>'+
+                '{!IMG|3rd-l5-g9-3.png}<br>'+
+                'hint: <span class="spoiler">difficult</span><br>'+
+                '{難しい宿題ですね|むずかしいしゅくだいですね|' + Genki.getAlts('{難}しい{宿題}ですね', 'むずか|しゅくだい') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                '<ruby>人<rt>ひと</rt></ruby><br>'+
+                '{!IMG|3rd-l5-g9-4.png}<br>'+
+                'hint: <span class="spoiler">busy</span><br>'+
+                '{忙しい人ですね|いそがしいひとですね|' + Genki.getAlts('{忙}しい{人}ですね', 'いそが|ひと') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                '<ruby>人<rt>ひと</rt></ruby><br>'+
+                '{!IMG|3rd-l5-g9-5.png}<br>'+
+                'hint: <span class="spoiler">free time</span><br>'+
+                '{暇な人ですね|ひまなひとですね|' + Genki.getAlts('{暇}な{人}ですね', 'ひま|ひと') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                '<ruby>町<rt>まち</rt></ruby><br>'+
+                '{!IMG|3rd-l5-g9-6.png}<br>'+
+                'hint: <span class="spoiler">lively</span><br>'+
+                '{にぎやかな町ですね|にぎやかなまちですね|answer}。'+
+              '</div>'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<div class="inner-problem center">'+
+                '<ruby>部屋<rt>へや</rt></ruby><br>'+
+                '{!IMG|3rd-l5-g9-7.png}<br>'+
+                'hint: <span class="spoiler">clean</span><br>'+
+                '{きれいな部屋ですね|きれいなへやですね|' + Genki.getAlts('{きれい}な{部屋}ですね', '綺麗|へや') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

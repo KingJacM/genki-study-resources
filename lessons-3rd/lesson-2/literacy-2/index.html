@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,211 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill', 'drag'],
+      info : ['Read the Japanese and choose the answer that matches it.', 'Read the katakana and the English food names, then write the letter for each match.', 'Match the food names to their katakana counterparts.'],
+      
+      quizlet : [
+        // MULTIPLE CHOICE
+        [
+          {
+            question : 'オレンジジュース',
+            answers : [
+              'Aorange juice',
+              'french fries',
+              'ice tea',
+              'chocolate parfait',
+              'curry'
+            ]
+          },
+          
+          {
+            question : 'フライドポテト',
+            answers : [
+              'Afrench fries',
+              'sandwich',
+              'steak',
+              'pizza',
+              'salad'
+            ]
+          },
+          
+          {
+            question : 'ケーキ',
+            answers : [
+              'Acake',
+              'chocolate parfait',
+              'coffee',
+              'curry',
+              'pizza'
+            ]
+          },
+          
+          {
+            question : 'サラダ',
+            answers : [
+              'Asalad',
+              'sandwich',
+              'steak',
+              'toast',
+              'cake'
+            ]
+          },
+          
+          {
+            question : 'チョコレートパフェ',
+            answers : [
+              'Achocolate parfait',
+              'cake',
+              'orange juice',
+              'pizza',
+              'ice tea'
+            ]
+          },
+          
+          {
+            question : 'コーヒー',
+            answers : [
+              'Acoffee',
+              'cake',
+              'curry',
+              'ice tea',
+              'chocolate parfait'
+            ]
+          },
+          
+          {
+            question : 'サンドイッチ',
+            answers : [
+              'Asandwich',
+              'salad',
+              'steak',
+              'toast',
+              'french fries'
+            ]
+          },
+          
+          {
+            question : 'ステーキ',
+            answers : [
+              'Asteak',
+              'salad',
+              'sandwich',
+              'orange juice',
+              'cake'
+            ]
+          },
+          
+          {
+            question : 'カレー',
+            answers : [
+              'Acurry',
+              'cake',
+              'coffee',
+              'pizza',
+              'ice tea'
+            ]
+          },
+          
+          {
+            question : 'ピザ',
+            answers : [
+              'Apizza',
+              'curry',
+              'cake',
+              'salad',
+              'french fries'
+            ]
+          },
+          
+          {
+            question : 'トースト',
+            answers : [
+              'Atoast',
+              'sandwich',
+              'ice tea',
+              'chocolate parfait',
+              'salad'
+            ]
+          },
+          
+          {
+            question : 'アイスティー',
+            answers : [
+              'Aice tea',
+              'coffee',
+              'orange juice',
+              'curry',
+              'cake'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<p class="sectionDesc3rd"><span class="sectionNumber3rd fa">&#xf054;</span>Read the katakana and the English food names, then write the letter for each match.</p>'+
+        
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<div class="problem">({c})　オレンジジュース</div>'+
+              '<div class="problem">({d})　フライドポテト</div>'+
+              '<div class="problem">({i})　ケーキ</div>'+
+              '<div class="problem">({f})　サラダ</div>'+
+              '<div class="problem">({h})　チョコレートパフェ</div>'+
+              '<div class="problem">({a})　コーヒー</div>'+
+            '</div>'+
+            
+            '<div>'+
+              '<div class="problem">({k})　サンドイッチ</div>'+
+              '<div class="problem">({j})　ステーキ</div>'+
+              '<div class="problem">({g})　カレー</div>'+
+              '<div class="problem">({l})　ピザ</div>'+
+              '<div class="problem">({e})　トースト</div>'+
+              '<div class="problem">({b})　アイスティー</div>'+
+            '</div>'+
+          '</div>'+
+        
+          '<div class="sub-section inline-problem set-problem-width-med">'+
+            '<div class="block">(a) coffee</div>'+
+            '<div class="block">(b) ice tea</div>'+
+            '<div class="block">(c) orange juice</div>'+
+            '<div class="block">(d) french fries</div>'+
+            '<div class="block">(e) toast</div>'+
+            '<div class="block">(f) salad</div>'+
+            '<div class="block">(g) curry</div>'+
+            '<div class="block">(h) chocolate parfait</div>'+
+            '<div class="block">(i) cake</div>'+
+            '<div class="block">(j) steak</div>'+
+            '<div class="block">(k) sandwich</div>'+
+            '<div class="block">(l) pizza</div>'+
+          '</div>'+
+        '</div>',
+        
+        
+        // DRAG AND DROP
+        {
+          'オレンジジュース' : 'orange juice',
+          'フライドポテト' : 'french fries',
+          'ケーキ' : 'cake',
+          'サラダ' : 'salad',
+          'チョコレートパフェ' : 'chocolate parfait',
+          'コーヒー' : 'coffee',
+          'サンドイッチ' : 'sandwich',
+          'ステーキ' : 'steak',
+          'カレー' : 'curry',
+          'ピザ' : 'pizza',
+          'トースト' : 'toast',
+          'アイスティー' : 'ice tea'
+        }
+      ]
+    });</script>
   </body>
 </html>

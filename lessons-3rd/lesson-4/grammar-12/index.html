@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,119 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Mary did a lot yesterday. Describe how many hours Mary did each activity using {!GRI|～時間|l4-p6}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'slept/8 hours',
+            answers : [
+              'Aメアリーさんは<ruby>八時間<rt>はちじかん</rt></ruby><ruby>寝<rt>ね</rt></ruby>ました。',
+              'メアリーさんは<ruby>八時間<rt>はちじかん</rt></ruby>を<ruby>寝<rt>ね</rt></ruby>ました。',
+              'メアリーさんは<ruby>八時間<rt>はちじかん</rt></ruby>に<ruby>寝<rt>ね</rt></ruby>ました。',
+              'メアリーさんは<ruby>八時間<rt>はちじかん</rt></ruby>で<ruby>寝<rt>ね</rt></ruby>ました。'
+            ]
+          },
+
+          {
+            question : 'played tennis/2 hours',
+            answers : [
+              'Aメアリーさんは<ruby>二時間<rt>にじかん</rt></ruby>テニスをしました。',
+              'メアリーさんは<ruby>三時間<rt>さんじかん</rt></ruby>テニスをしました。',
+              'メアリーさんは<ruby>二時間<rt>にじかん</rt></ruby>にテニスをしました。',
+              'メアリーさんは<ruby>三時間<rt>さんじかん</rt></ruby>にテニスをしました。'
+            ]
+          },
+
+          {
+            question : 'studied/3 hours',
+            answers : [
+              'Aメアリーさんは<ruby>三時間<rt>さんじかん</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しました。',
+              'メアリーさんは<ruby>二時間<rt>にじかん</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しました。',
+              'メアリーさんは<ruby>三時間<rt>さんじかん</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>しました。',
+              'メアリーさんは<ruby>二時間<rt>にじかん</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>しました。'
+            ]
+          },
+
+          {
+            question : 'listened to music/1 and a half hours',
+            answers : [
+              'Aメアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby><ruby>半<rt>はん</rt></ruby><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きました。',
+              'メアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby><ruby>半<rt>はん</rt></ruby>に<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きました。',
+              'メアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きました。',
+              'メアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby>に<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きました。'
+            ]
+          },
+
+          {
+            question : 'waited for Takeshi/1 hour',
+            answers : [
+              'Aメアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby>たけしさんを<ruby>待<rt>ま</rt></ruby>ちました。',
+              'メアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby>にたけしさんを<ruby>待<rt>ま</rt></ruby>ちました。',
+              'メアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby>たけしさんを<ruby>待<rt>ま</rt></ruby>ちます。',
+              'メアリーさんは<ruby>一時間<rt>いちじかん</rt></ruby>にたけしさんを<ruby>待<rt>ま</rt></ruby>ちます。'
+            ]
+          },
+
+          {
+            question : 'watched TV/2 and a half hours',
+            answers : [
+              'Aメアリーさんは<ruby>二時間<rt>にじかん</rt></ruby><ruby>半<rt>はん</rt></ruby>テレビを<ruby>見<rt>み</rt></ruby>ました。',
+              'メアリーさんは<ruby>二時間<rt>にじかん</rt></ruby>テレビを<ruby>見<rt>み</rt></ruby>ました。',
+              'メアリーさんは<ruby>二時間<rt>にじかん</rt></ruby>にテレビを<ruby>見<rt>み</rt></ruby>ました。',
+              'メアリーさんは<ruby>二時間<rt>にじかん</rt></ruby><ruby>半<rt>はん</rt></ruby>テレビを<ruby>見<rt>み</rt></ruby>ます。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem valign-top">'+
+          'slept/8 hours<br>'+
+          '{メアリーさん}は{八|はち|answer}<ruby>時間<rt>じかん</rt></ruby>{寝|ね|answer}ました。'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'played tennis/2 hours<br>'+
+              '{メアリーさんは二時間テニスをしました|メアリーさんはにじかんテニスをしました|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'studied/3 hours<br>'+
+              '{メアリーさんは三時間勉強しました|メアリーさんはさんじかんべんきょうしました|' + Genki.getAlts('メアリーさんは{三時間}{勉強}しました', 'さんじかん|べんきょう') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'listened to music/1 and a half hours<br>'+
+              '{メアリーさんは一時間半音楽を聞きました|メアリーさんはいちじかんはんおんがくをききました|' + Genki.getAlts('メアリーさんは{一時間}{半}{音楽}を{聞}きました', 'いちじかん|はん|おんがく|き') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'waited for Takeshi/1 hour<br>'+
+              '{メアリーさんは一時間たけしさんを待ちました|メアリーさんはいちじかんたけしさんをまちました|' + Genki.getAlts('メアリーさんは{一時間}たけしさんを{待}ちました', 'いちじかん|ま') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'watched TV/2 and a half hours<br>'+
+              '{メアリーさんは二時間半テレビを見ました|メアリーさんはにじかんはんテレビをみました|' + Genki.getAlts('メアリーさんは{二時間}{半}テレビを{見}ました', 'にじかん|はん|み') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

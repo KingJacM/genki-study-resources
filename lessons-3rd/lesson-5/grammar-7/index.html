@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,149 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'This is what Robert wrote down about the trip to Okinawa. Look at his notes and make sentences using {!GRI|past tense adjectives|l5-p2}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'Okinawa ― hot',
+            answers : [
+              'A<ruby>沖縄<rt>おきなわ</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>かったです。',
+              '<ruby>沖縄<rt>おきなわ</rt></ruby>は<ruby>熱<rt>あつ</rt></ruby>かったです。',
+              '<ruby>沖縄<rt>おきなわ</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いでした。',
+              '<ruby>沖縄<rt>おきなわ</rt></ruby>は<ruby>熱<rt>あつ</rt></ruby>いでした。'
+            ]
+          },
+
+          {
+            question : 'food ― not expensive',
+            answers : [
+              'A<ruby>食べ物<rt>たべもの</rt></ruby>は<ruby>高<rt>たか</rt></ruby>くなかったです。',
+              '<ruby>食べ物<rt>たべもの</rt></ruby>は<ruby>高<rt>たか</rt></ruby>いじゃなかったです。',
+              '<ruby>食べ物<rt>たべもの</rt></ruby>は<ruby>高<rt>たか</rt></ruby>くないです。',
+              '<ruby>食べ物<rt>たべもの</rt></ruby>は<ruby>高<rt>たか</rt></ruby>いじゃないです。'
+            ]
+          },
+
+          {
+            question : 'food ― delicious',
+            answers : [
+              'A<ruby>食べ物<rt>たべもの</rt></ruby>はおいしかったです。',
+              '<ruby>食べ物<rt>たべもの</rt></ruby>はおいしくったです。',
+              '<ruby>食べ物<rt>たべもの</rt></ruby>はおいしいでした。',
+              '<ruby>食べ物<rt>たべもの</rt></ruby>はおいしいです。'
+            ]
+          },
+
+          {
+            question : 'hotel ― not big',
+            answers : [
+              'Aホテルは<ruby>大<rt>おお</rt></ruby>きくなかったです。',
+              'ホテルは<ruby>大<rt>おお</rt></ruby>きいじゃなかったです。',
+              'ホテルは<ruby>大<rt>おお</rt></ruby>きくないです。',
+              'ホテルは<ruby>大<rt>おお</rt></ruby>きいじゃないです。'
+            ]
+          },
+
+          {
+            question : 'hotel ― new',
+            answers : [
+              'Aホテルは<ruby>新<rt>あたら</rt></ruby>しかったです。',
+              'ホテルは<ruby>新<rt>あたら</rt></ruby>しくったです。',
+              'ホテルは<ruby>新<rt>あたら</rt></ruby>しいでした。',
+              'ホテルは<ruby>新<rt>あたら</rt></ruby>しいです。'
+            ]
+          },
+
+          {
+            question : 'restaurant ― not quiet',
+            answers : [
+              'Aレストランは<ruby>静<rt>しず</rt></ruby>かじゃなかったです。',
+              'レストランは<ruby>静<rt>しず</rt></ruby>かなかったです。',
+              'レストランは<ruby>静<rt>しず</rt></ruby>かじゃないです。',
+              'レストランは<ruby>静<rt>しず</rt></ruby>かないです。'
+            ]
+          },
+
+          {
+            question : 'sea ― beautiful',
+            answers : [
+              'A<ruby>海<rt>うみ</rt></ruby>はきれいでした。',
+              '<ruby>海<rt>うみ</rt></ruby>はきれかったです',
+              '<ruby>海<rt>うみ</rt></ruby>はきれいなったです。',
+              '<ruby>海<rt>うみ</rt></ruby>はきれいです。'
+            ]
+          },
+
+          {
+            question : 'surfing ― fun',
+            answers : [
+              'Aサーフィンは<ruby>面白<rt>おもしろ</rt></ruby>かったです。',
+              'サーフィンは<ruby>面白<rt>おもしろ</rt></ruby>くったです。',
+              'サーフィンは<ruby>面白<rt>おもしろ</rt></ruby>いでした。',
+              'サーフィンは<ruby>面白<rt>おもしろ</rt></ruby>いです。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem valign-top">'+
+          'Okinawa ― hot<br>'+
+          '{沖縄|おきなわ|answer}は{暑|あつ|answer}かったです。'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'food ― not expensive<br>'+
+              '{食べ物は高くなかったです|たべものはたかくなかったです|' + Genki.getAlts('{食べ物}は{高}くなかったです', 'たべもの|たか') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'food ― delicious<br>'+
+              '{食べ物はおいしかったです|たべものはおいしかったです|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'hotel ― not big<br>'+
+              '{ホテルは大きくなかったです|ホテルはおおきくなかったです|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'hotel ― new<br>'+
+              '{ホテルは新しかったです|ホテルはあたらしかったです|answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'restaurant ― not quiet<br>'+
+              '{レストランは静かじゃなかったです|レストランはしずかじゃなかったです|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'sea ― beautiful<br>'+
+              '{海はきれいでした|うみはきれいでした|' + Genki.getAlts('{海}は{きれい}でした', 'うみ|綺麗') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'surfing ― fun<br>'+
+              '{サーフィンは%(面白/楽し)かったです|サーフィンは%(おもしろ/たのし)かったです|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

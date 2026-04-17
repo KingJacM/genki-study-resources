@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,67 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>(function() {
+      var kana = ['ア|a', 'イ|i', 'ウ|u', 'エ|e', 'オ|o', 'カ|ka', 'キ|ki', 'ク|ku', 'ケ|ke', 'コ|ko', 'サ|sa', 'シ|shi', 'ス|su', 'セ|se', 'ソ|so', 'タ|ta', 'チ|chi', 'ツ|tsu', 'テ|te', 'ト|to', 'ナ|na', 'ニ|ni', 'ヌ|nu', 'ネ|ne', 'ノ|no', 'ハ|ha', 'ヒ|hi', 'フ|fu', 'ヘ|he', 'ホ|ho', 'マ|ma', 'ミ|mi', 'ム|mu', 'メ|me', 'モ|mo', 'ヤ|ya', 'ユ|yu', 'ヨ|yo', 'ラ|ra', 'リ|ri', 'ル|ru', 'レ|re', 'ロ|ro', 'ワ|wa', 'ヲ|wo', 'ン|n', 'ガ|ga', 'ギ|gi', 'グ|gu', 'ゲ|ge', 'ゴ|go', 'ザ|za', 'ジ|ji', 'ズ|zu', 'ゼ|ze', 'ゾ|zo', 'ダ|da', 'ヂ|di', 'ヅ|du', 'デ|de', 'ド|do', 'バ|ba', 'ビ|bi', 'ブ|bu', 'ベ|be', 'ボ|bo', 'パ|pa', 'ピ|pi', 'プ|pu', 'ペ|pe', 'ポ|po', 'キャ|kya', 'キュ|kyu', 'キョ|kyo', 'ギャ|gya', 'ギュ|gyu', 'ギョ|gyo', 'シャ|sha', 'シュ|shu', 'ショ|sho', 'ジャ|ja', 'ジュ|ju', 'ジョ|jo', 'チャ|cha', 'チュ|chu', 'チョ|cho', 'ニャ|nya', 'ニュ|nyu', 'ニョ|nyo', 'ヒャ|hya', 'ヒュ|hyu', 'ヒョ|hyo', 'ビャ|bya', 'ビュ|byu', 'ビョ|byo', 'ピャ|pya', 'ピュ|pyu', 'ピョ|pyo', 'ミャ|mya', 'ミュ|myu', 'ミョ|myo', 'リャ|rya', 'リュ|ryu', 'リョ|ryo', 'ウィ|wi', 'ウェ|we', 'ウォ|wo', 'シェ|she', 'ジェ|je', 'チェ|che', 'ファ|fa', 'フィ|fi', 'フェ|fe', 'フォ|fo', 'ティ|ti', 'ディ|di', 'デュ|dyu'],
+      kanaClone = kana.slice(), // used for assigning random answers
+      quizlet = [],
+      i = 0,
+      j,
+      k,
+      answers,
+      currentAnswer,
+      randAnswer,
+      data,
+      n;
+        
+      // randomly setup questions
+      while (kana.length) {
+        n = Math.floor(Math.random() * kana.length);
+        data = kana[n].split('|');
+        currentAnswer = data[1];
+        
+        quizlet[i] = {
+          question : data[0],
+          answers : ['A' + currentAnswer]
+        }
+        
+        // randomly assign answers
+        answers = kanaClone.slice();
+        answers.splice(answers.indexOf(kana[n]), 1);
+        j = 3;
+        
+        while (j --> 0) {
+          k = Math.floor(Math.random() * answers.length);
+          randAnswer = answers[k].split('|')[1];
+          
+          if (randAnswer == currentAnswer) { // prevent identical answers
+            j++; // increment and trying another (identical will be spliced)
+            
+          } else {
+            quizlet[i].answers.push(randAnswer);
+          }
+          
+          answers.splice(k, 1);
+        }
+        
+        // remove the assigned kana
+        kana.splice(n, 1);
+        i++;
+      }
+      
+      // launch exercise
+      Genki.generateQuiz({
+        type : 'multi',
+        info : 'Identify all the Katakana + combos by choosing the correct romaji.<br>NOTE 1: Answer order is randomized, so the quiz will always be different each time you take it.<br>NOTE 2: ヂ is pronounced like ジ and ヅ is pronounced like ズ. The romanizations used are how you type these characters with a keyboard.',
+
+        quizlet : quizlet
+      });
+    }());</script>
   </body>
 </html>

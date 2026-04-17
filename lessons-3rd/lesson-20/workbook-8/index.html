@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,55 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～やすい／～にくい|l20-p6}.',
+      
+      quizlet : 
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Describe the situations using {!GRI|～やすい／～にくい|l20-p6}.</p>'+
+        '<div class="problem">'+
+          '<ruby>魚<rt>さかな</rt></ruby>は{食べにくいです|たべにくいです|answer;hint:(difficult to eat);width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>広<rt>ひろ</rt></ruby>い<ruby>道<rt>みち</rt></ruby>は{走りやすいです|はしりやすいです|answer;hint:(easy to drive [on]);width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'ハイヒール(high heels)は{歩きにくいです|あるきにくいです|answer;hint:(difficult to walk [in]);width:200}。'+
+        '</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Read the first half of the sentence and fill in the blanks with the {!GRI|verb stem + やすいです／にくいです|l20-p6}, according to the given cues.</p>'+
+        '<div class="problem">'+
+          'ここは<ruby>物価<rt>ぶっか</rt></ruby>が<ruby>安<rt>やす</rt></ruby>いので、{住みやすいです|すみやすいです|answer;hint:(live)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'あの<ruby>角<rt>かど</rt></ruby>はせまいので、{曲がりにくいです|まがりにくいです|answer;hint:(turn)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この<ruby>歌<rt>うた</rt></ruby>は<ruby>音<rt>おた</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いので、{歌いにくいです|うたいにくいです|answer;hint:(sing)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この<ruby>携帯<rt>けいたい</rt></ruby>は<ruby>小<rt>ちい</rt></ruby>さくて<ruby>軽<rt>かる</rt></ruby>いので、{持ちやすいです|もちやすいです|answer;hint:(hold)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はやさしいし、<ruby>話<rt>はなし</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いてくださるから、{相談しやすいです|そうだんしやすいです|answer;hint:(consult)}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,105 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about Gift-giving in Japan (Genki II: p.103) if you haven\'t yet.',
+
+      quizlet : [
+        {
+          question : 'Gift-giving is an important part of Japanese culture.',
+          answers : [
+            'Atrue',
+            'false'
+          ]
+        },
+        
+        {
+          question : 'In _____ and _____, people give presents to their relatives, friends, business clients and so on.',
+          answers : [
+            'AJuly/August and December',
+            '!August and December',
+            'July and December'
+          ]
+        },
+        
+        {
+          question : 'What is the gift given during July/August called?',
+          answers : [
+            'Aお<ruby>中元<rt>ちゅうげん</rt></ruby>',
+            'お<ruby>歳暮<rt>せいぼ</rt></ruby>',
+            'お<ruby>土産<rt>みやげ</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'What is the gift given during December called?',
+          answers : [
+            'Aお<ruby>歳暮<rt>せいぼ</rt></ruby>',
+            'お<ruby>中元<rt>ちゅうげん</rt></ruby>',
+            'お<ruby>土産<rt>みやげ</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'What are the most common お<ruby>中元<rt>ちゅうげん</rt></ruby>／お<ruby>歳暮<rt>せいぼ</rt></ruby> gifts?',
+          answers : [
+            'Afood such as sweets, fruits, and drinks.',
+            'anime, snacks, soda, and various odds and ends',
+            'clothes, flowers, cards, and hugs'
+          ]
+        },
+        
+        {
+          question : 'On average, the gifts cost somewhere between _____-_____ yen.',
+          answers : [
+            'A3,000-5,000 yen',
+            '300-500 yen',
+            '5,000-10,000 yen'
+          ]
+        },
+        
+        {
+          question : 'When Japanese people travel, they purchase local food products or small items to give to their friends, family, and co-workers. What are these gifts called?',
+          answers : [
+            'Aお<ruby>土産<rt>みやげ</rt></ruby>',
+            '<ruby>手土産<rt>てみやげ</rt></ruby>',
+            'お<ruby>中元<rt>ちゅうげん</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'When visiting someone\'s house, Japanese people often take _____.',
+          answers : [
+            'A<ruby>手土産<rt>てみやげ</rt></ruby>',
+            'お<ruby>土産<rt>みやげ</rt></ruby>',
+            'お<ruby>歳暮<rt>せいぼ</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'What is a good <ruby>手土産<rt>てみやげ</rt></ruby> to bring when visiting someone\'s house?',
+          answers : [
+            'Asweets or fruits',
+            'liquor or cigarettes',
+            'snacks or sushi'
+          ]
+        },
+        
+        {
+          question : 'If you are invited to a Japanese home, it is not a good idea to take some <ruby>手土産<rt>てみやげ</rt></ruby> with you.',
+          answers : [
+            'Afalse',
+            'true'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

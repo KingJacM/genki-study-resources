@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources</title>
-    <meta name="title" content="Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources">
-    <meta name="twitter:title" content="Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources">
-    <meta property="og:title" content="Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources">
+    <title>Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Workbook: Listening Comprehension - Lesson 7 | Genki Study Resources - 2nd Edition">
     <meta name="description" content="Listen to the audio and answer the questions.">
     <meta property="og:description" content="Listen to the audio and answer the questions.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I Workbook, page 77, problem A, problem B, problem C, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki I Workbook, page 71, problem A, problem B, problem C, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,60 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+      '<p class="section-desc"><span class="section-number">A</span> One student was assaulted by someone at the dorm. A police officer is asking Robert what he and the other students were doing at the time of the incident. Write in Japanese what the following people were doing.</p>'+
+      '<div class="right">*ほかの (other)</div>'+
+      '{!AUDIO|W07-A}'+
+
+      '<div class="count-problems">'+
+        '<div class="problem">{!PLAY|W07-A|8.5} ロバートさんは、{%(スーさんと/)部屋で宿題をしていました|%(スーさんと/)へやでしゅくだいをしていました|' + Genki.getAlts('{スーさんと}{部屋}で{宿題}をしていました', '|へや|しゅくだい') + 'answer}。</div>'+
+        
+        '<div class="problem">{!PLAY|W07-A|14.5} スーさんは、{%(ロバートさんと/)部屋で宿題をしていました|%(ロバートさんと/)へやでしゅくだいをしていました|' + Genki.getAlts('{ロバートさんと}{部屋}で{宿題}をしていました', '|へや|しゅくだい') + 'answer}。</div>'+
+        
+        '<div class="problem">{!PLAY|W07-A|23.5} たけしさんは、{%(けんさんと/)部屋で音楽を聞いていました|%(けんさんと/)へやでおんがくをきいていました|' + Genki.getAlts('{けんさんと}{部屋}で{音楽}を{聞}いていました', '|へや|おんがく|き') + 'answer}。</div>'+
+        
+        '<div class="problem">{!PLAY|W07-A|27} けんさんは、{%(たけしさんと/)部屋で音楽を聞いていました|%(たけしさんと/)へやでおんがくをきいていました|' + Genki.getAlts('{たけしさんと}{部屋}で{音楽}を{聞}いていました', '|へや|おんがく|き') + 'answer}。</div>'+
+        
+        '<div class="problem">{!PLAY|W07-A|33} みちこさんは、{お風呂に入っていました|おふろにはいっていました|' + Genki.getAlts('お{風呂}に{入}っていました', 'ふろ|はい') + 'answer}。</div>'+
+      '</div>'+
+        
+      '<div class="small-margin">'+
+        '<p class="section-desc"><span class="section-number">B</span> Listen to a TV reporter at a celebrity\'s party. Choose appropriate descriptions for each celebrity.</p>'+
+        '<div class="right">*ドレス (dress)　　ボーイフレンド (boyfriend)</div>'+
+        '{!AUDIO|W07-B}'+
+        
+        '<div class="count-problems">'+
+          '<div class="problem">{!PLAY|W07-B|9.5} ({a}) ({h}) Arnold Stallone</div>'+
+          '<div class="problem">{!PLAY|W07-B|22.5} ({b}) ({f}) Noguchi Erika</div>'+
+          '<div class="problem">{!PLAY|W07-B|35} ({c}) ({e}) Matsumoto Yui</div>'+
+          '<div class="problem">{!PLAY|W07-B|47.5} ({d}) ({g}) Matsumoto Yui\'s new boyfriend</div>'+
+        '</div>'+
+        
+        '<div class="sub-section">'+
+          'a. wears jeans　　b. wears a hat　　c. wears glasses　　d. has short hair<br>'+
+          'e. has long hair　　f. is cute　　g. is fat　　h. is tall'+
+        '</div><br>'+
+        
+        '<p class="section-desc"><span class="section-number">C</span> Mary is interviewing people who are walking downtown on Sunday. What is each interviewee doing today? Choose the appropriate answers.</p>'+
+        '{!AUDIO|W07-C}'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">{!PLAY|W07-C|2} ({c}) Tanaka: [a. buying flowers　　b. buying cards　　c. buying a DVD]</div>'+
+          '<div class="problem">{!PLAY|W07-C|34} ({b}) Sato: [a. playing games　　b. singing songs　　c. playing sports]</div>'+
+          '<div class="problem">{!PLAY|W07-C|51.5} ({b}) Suzuki: [a. working at a department store　　b. seeing his younger sister　　c. talking with his younger brother]</div>'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

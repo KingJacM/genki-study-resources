@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,92 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|ほしい|l14-p1}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Write whether or not you want the following.</p>'+
+        '<div class="problem">'+
+          'ぬいぐるみ<br>'+
+          '{ぬいぐるみが%(ほしい/ほしくない)です|ぬいぐるみが%(欲しい/欲しくない)です|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>休<rt>やす</rt></ruby>み<br>'+
+          '{休みが%(ほしい/ほしくない)です|やすみが%(ほしい/ほしくない)です|' + Genki.getAlts('{休}みが{ほ}し{くな}いです', 'やす|欲|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'お<ruby>金持<rt>かねも</rt></ruby>ちの<ruby>友<rt>とも</rt></ruby>だち<br>'+
+          '{お金持ちの友だちが%(ほしい/ほしくない)です|おかねもちのともだちが%(ほしい/ほしくない)です|' + Genki.getAlts('お{金持}ちの{友}{達}が{ほ}し{い}です', 'かねもち|とも|だち|欲|くない') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Write whether or not you wanted the following when you were a child.</p>'+
+        '<div class="problem">'+
+          '<ruby>大<rt>おお</rt></ruby>きい<ruby>犬<rt>いぬ</rt></ruby><br>'+
+          '{子供の時、大きい犬がほし%(かった/くなかった)です|こどものとき、おおきいいぬがほし%(かった/くなかった)です|' + Genki.getAlts('{子}{供}の{時}、{大}きい{犬}が{ほ}し{くな}かったです', 'こ|ども|とき|おお|いぬ|欲|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>楽器<rt>がっき</rt></ruby><br>'+
+          '{子供の時、楽器がほし%(かった/くなかった)です|こどものとき、がっきがほし%(かった/くなかった)です|' + Genki.getAlts('{子}{供}の{時}、{楽器}が{ほ}し{くな}かったです', 'こ|ども|とき|がっき|欲|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>化粧品<rt>けしょうひん</rt></ruby><br>'+
+          '{子供の時、化粧品がほし%(かった/くなかった)です|こどものとき、けしょうひんがほし%(かった/くなかった)です|' + Genki.getAlts('{子}{供}の{時}、{化粧品}が{ほ}し{くな}かったです', 'こ|ども|とき|けしょうひん|欲|') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Answer the following questions by translating the sentences.</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>今<rt>いま</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby>ほしいですか。<br>'+
+            '(I want money.)<br>'+
+            '{お金がほしいです|おかねがほしいです|' + Genki.getAlts('お{金}が{ほ}しいです', 'かね|欲') + 'answer}。<br><br><br>'+
+
+            'どうしてですか。<br>'+
+            '(Because I want to buy a new personal computer.)<br>'+
+            '{新しいパソコンが買いたいですから|あたらしいパソコンがかいたいですから|' + Genki.getAlts('{新}しいパソコンが{買}いたいですから', 'かね|あたら|か') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby>ほしかったですか。<br>'+
+            '(I wanted a toy.)<br>'+
+            '{おもちゃがほしかったです|おもちゃが欲しかったです|answer}。<br><br><br>'+
+
+            '<ruby>今<rt>いま</rt></ruby>もそれがほしいですか。<br>'+
+            '(I don\'t want it now.)<br>'+
+            '{今はほしくないです|いまはほしくないです|' + Genki.getAlts('今は{ほ}しくないです', 'いま|欲') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>時間<rt>じかん</rt></ruby>とお<ruby>金<rt>かね</rt></ruby>とどちらがほしいですか。<br>'+
+            '(I want more time.)<br>'+
+            '{時間のほうがほしいです|じかんのほうがほしいです|' + Genki.getAlts('{時間}のほうが{ほ}しいです', 'じかん|欲') + 'answer}。<br><br><br>'+
+
+            'どうしてですか。<br>'+
+            '(Because I\'m too busy every day.)<br>'+
+            '{毎日忙しすぎますから|まいにちいそがしすぎますから|' + Genki.getAlts('{毎日}{忙}しすぎますから', 'まいにち|いそが') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

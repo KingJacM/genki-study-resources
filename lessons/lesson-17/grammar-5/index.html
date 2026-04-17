@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources</title>
-    <meta name="title" content="Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources">
-    <meta name="twitter:title" content="Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources">
-    <meta property="og:title" content="Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources">
-    <meta name="description" content="Carlos doesn't have to do the following things. Make sentences using ～なくてもいい.">
-    <meta property="og:description" content="Carlos doesn't have to do the following things. Make sentences using ～なくてもいい.">
+    <title>Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Practice: ～なくてもいいです - Lesson 17 | Genki Study Resources - 2nd Edition">
+    <meta name="description" content="John doesn't have to do the following things. Make sentences using ～なくてもいい.">
+    <meta property="og:description" content="John doesn't have to do the following things. Make sentences using ～なくてもいい.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 128, page 129, problem IV-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 132, problem IV-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,116 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : 'John doesn\'t have to do the following things. Make sentences using {!GRI|～なくてもいい|l17-p4}.',
+
+      quizlet : [
+        {
+          question : 'need not study',
+          answers : [
+            'Aジョンさんは勉強しなくてもいいです。',
+            'ジョンさんは勉強しないてもいいです。',
+            'ジョンさんは勉強してもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not memorize vocabulary',
+          answers : [
+            'Aジョンさんは単語を覚えなくてもいいです。',
+            'ジョンさんは単語を教えなくてもいいです。',
+            'ジョンさんは単語を覚えらなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not practice kanji',
+          answers : [
+            'Aジョンさんは漢字を練習しなくてもいいです。',
+            'ジョンさんは漢字を覚えなくてもいいです。',
+            'ジョンさんは漢字を教えなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not speak Japanese',
+          answers : [
+            'Aジョンさんは日本語を話さなくてもいいです。',
+            'ジョンさんは日本語を話しなくてもいいです。',
+            'ジョンさんは日本語を話しません。'
+          ]
+        },
+        
+        {
+          question : 'need not get up early in the morning',
+          answers : [
+            'Aジョンさんは朝早く起きなくてもいいです。',
+            'ジョンさんは早く起きなくてもいいです。',
+            'ジョンさんは朝早く起きらなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not go to school',
+          answers : [
+            'Aジョンさんは学校に行かなくてもいいです。',
+            'ジョンさんは学校に行くなくてもいいです。',
+            'ジョンさんは学校に行きなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not wash dishes',
+          answers : [
+            'Aジョンさんは皿を洗わなくてもいいです。',
+            'ジョンさんは皿を掃除しなくてもいいです。',
+            'ジョンさんは皿を洗あなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not do laundry',
+          answers : [
+            'Aジョンさんは洗濯しなくてもいいです。',
+            'ジョンさんは洗濯すなくてもいいです。',
+            'ジョンさんは洗濯すらなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not cook',
+          answers : [
+            'Aジョンさんは料理しなくてもいいです。',
+            'ジョンさんは料理しないです。',
+            'ジョンさんは料理すなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not clean his own room',
+          answers : [
+            'Aジョンさんは自分の部屋を掃除しなくてもいいです。',
+            'ジョンさんは部屋を掃除しなくてもいいです。',
+            'ジョンさんの部屋を掃除しなくてもいいです。'
+          ]
+        },
+        
+        {
+          question : 'need not come home early',
+          answers : [
+            'Aジョンさんは早く帰らなくてもいいです。',
+            'ジョンさんは早く来なくてもいいです。',
+            'ジョンさんは早く行かなくてもいいです。'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

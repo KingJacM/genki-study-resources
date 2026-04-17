@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,10 +68,215 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>(function() {
+      var q = 'メアリーさんは<ruby>何<rt>なに</rt></ruby>をしていますか。<br>';
+        
+      Genki.generateQuiz({
+        format : 'practice',
+        type : ['multi', 'fill'],
+        info : ['What is Mary doing? Read the cues and choose the correct description. {!GRI|Click here|l7-p1} to review ～ている (Actions in Progress).', 'What is Mary doing? Read the cues and answer the questions. {!GRI|Click here|l7-p1} to review ～ている (Actions in Progress).'],
+
+        quizlet : [
+          [
+            // MULTIPLE CHOICE
+            {
+              question : q + 'watching TV',
+              answers : [
+                'Aテレビを<ruby>見<rt>み</rt></ruby>ています。',
+                'テレビを<ruby>見<rt>み</rt></ruby>っています。',
+                'Aテレビを<ruby>見<rt>み</rt></ruby>てあります。',
+                'テレビを<ruby>見<rt>み</rt></ruby>ってあります。',
+              ]
+            },
+
+            {
+              question : q + 'reading a book',
+              answers : [
+                'A<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。',
+                '<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>いでいます。',
+                '<ruby>本<rt>ほん</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでいます。',
+                '<ruby>本<rt>ほん</rt></ruby>を<ruby>飲<rt>の</rt></ruby>いでいます。'
+              ]
+            },
+
+            {
+              question : q + 'swimming',
+              answers : [
+                'A<ruby>泳<rt>およ</rt></ruby>いでいます。',
+                '<ruby>泳<rt>およ</rt></ruby>んでいます。',
+                '<ruby>泳<rt>およ</rt></ruby>いています。',
+                '<ruby>泳<rt>およ</rt></ruby>っています。'
+              ]
+            },
+
+            {
+              question : q + 'taking a picture',
+              answers : [
+                'A<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>っています。',
+                '<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ています。',
+                '<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ってあります。',
+                '<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>てあります。',
+              ]
+            },
+
+            {
+              question : q + 'listening to music',
+              answers : [
+                'A<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いています。',
+                '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いでいます。',
+                '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>っています。',
+                '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>ています。'
+              ]
+            },
+
+            {
+              question : q + 'singing a song',
+              answers : [
+                'A<ruby>歌<rt>うた</rt></ruby>を<ruby>歌<rt>うた</rt></ruby>っています。',
+                '<ruby>歌<rt>うた</rt></ruby>を<ruby>歌<rt>うた</rt></ruby>っていります。',
+                '<ruby>歌<rt>うた</rt></ruby>を<ruby>歌<rt>うた</rt></ruby>ています。',
+                '<ruby>歌<rt>うた</rt></ruby>を<ruby>歌<rt>うた</rt></ruby>ていります。'
+              ]
+            },
+
+            {
+              question : q + 'speaking Japanese',
+              answers : [
+                'A<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>しています。',
+                '<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すています。',
+                '<ruby>中国語<rt>ちゅうごくご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>しています。',
+                '<ruby>中国語<rt>ちゅうごくご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すています。',
+              ]
+            },
+
+            {
+              question : q + 'waiting for Takeshi',
+              answers : [
+                'Aたけしさんを<ruby>待<rt>ま</rt></ruby>っています。',
+                'たけしさんを<ruby>待<rt>ま</rt></ruby>ちます。',
+                'たけしさんを<ruby>持<rt>も</rt></ruby>っています。',
+                'たけしさんを<ruby>持<rt>も</rt></ruby>ちます。'
+              ]
+            },
+
+            {
+              question : q + 'playing a game',
+              answers : [
+                'Aゲームをしています。',
+                'ゲームをすています。',
+                'ゲームをしっています。',
+                'ゲームをします。'
+              ]
+            },
+
+            {
+              question : q + 'playing tennis',
+              answers : [
+                'Aテニスをしています。',
+                'テニスをしいます。',
+                'テニスをします。',
+                'テニスをしていります。'
+              ]
+            },
+
+            {
+              question : q + 'drinking coffee',
+              answers : [
+                'Aコーヒーを<ruby>飲<rt>の</rt></ruby>んでいます。',
+                'コーヒーを<ruby>飲<rt>の</rt></ruby>いでいます。',
+                'コーヒーを<ruby>読<rt>よ</rt></ruby>んでいます。',
+                'コーヒーを<ruby>読<rt>よ</rt></ruby>いでいます。',
+              ]
+            },
+
+            {
+              question : q + 'writing a report',
+              answers : [
+                'Aレポートを<ruby>書<rt>か</rt></ruby>いています。',
+                'レポートを<ruby>書<rt>か</rt></ruby>いでいます。',
+                'レポートを<ruby>聞<rt>き</rt></ruby>いています。',
+                'レポートを<ruby>聞<rt>き</rt></ruby>いでいます。',
+              ]
+            }
+          ],
+          
+          
+          // WRITTEN
+          '<div class="example-problem">'+
+            '<div class="inner-problem">'+
+              q + 'watching TV<br>'+
+              '{テレビ}を{見|み|answer}ています。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="count-problems columns-2 clear">'+
+            '<div>'+
+              '<div class="problem">'+
+                'reading a book<br>'+
+                '{本を読んでいます|ほんをよんでいます|' + Genki.getAlts('{本}を{読}んでいます', 'ほん|よ') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'swimming<br>'+
+                '{泳いでいます|およいでいます|answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'taking a picture<br>'+
+                '{写真を撮っています|しゃしんをとっています|' + Genki.getAlts('{写真}を{撮}っています', 'しゃしん|と') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'listening to music<br>'+
+                '{音楽を聞いています|おんがくをきいています|' + Genki.getAlts('{音楽}を{聞}いています', 'おんがく|き') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'singing a song<br>'+
+                '{歌を歌っています|うたをうたっています|' + Genki.getAlts('{歌}を{歌}っています', 'うた|うた') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'speaking Japanese<br>'+
+                '{日本語を話しています|にほんごをはなしています|' + Genki.getAlts('{日本語}を{話}しています', 'にほんご|はな') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+
+            '<div>'+
+              '<div class="problem">'+
+                'waiting for Takeshi<br>'+
+                '{たけしさんを待っています|たけしさんをまっています|answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'playing a game<br>'+
+                '{ゲームをしています}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'playing tennis<br>'+
+                '{テニスをしています}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'drinking coffee<br>'+
+                '{コーヒーを飲んでいます|コーヒーをのんでいます|answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'writing a report<br>'+
+                '{レポートを書いています|レポートをかいています|answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'
+        ]
+      });
+    }());</script>
   </body>
 </html>

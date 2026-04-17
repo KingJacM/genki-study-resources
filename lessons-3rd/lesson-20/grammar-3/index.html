@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,12 +68,296 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Change the underlined part of questions (Q) into {!GRI|honorific expressions|l19-p1}, and the underlined part of answers (A) into {!GRI|extra-modest expressions|l20-p1}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'Q：お<ruby>名前<rt>なまえ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>と<u class="ul-double"><ruby>言<rt>い</rt></ruby>います</u>か。',
+            answers : [
+              'Aおっしゃいます',
+              'いらっしゃいます',
+              '<ruby>申<rt>もう</rt></ruby>します',
+              'おります'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>田中<rt>たなか</rt></ruby>と<u class="ul-double"><ruby>言<rt>い</rt></ruby>います</u>。',
+            answers : [
+              'A<ruby>申<rt>もう</rt></ruby>します',
+              'おります',
+              'おっしゃいます',
+              'いらっしゃいます'
+            ]
+          },
+          
+          {
+            question : 'Q：いつ<ruby>日本<rt>にほん</rt></ruby>に<u class="ul-double"><ruby>来<rt>き</rt></ruby>ました</u>か。',
+            answers : [
+              'Aいらっしゃいました',
+              'おっしゃいました',
+              '<ruby>参<rt>まい</rt></ruby>りました',
+              '<ruby>申<rt>もう</rt></ruby>しました'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>先月<rt>せんげつ</rt></ruby><u class="ul-double"><ruby>来<rt>き</rt></ruby>ました</u>。',
+            answers : [
+              'A<ruby>参<rt>まい</rt></ruby>りました',
+              '<ruby>申<rt>もう</rt></ruby>しました',
+              'いらっしゃいました',
+              'おっしゃいました'
+            ]
+          },
+          
+          {
+            question : 'Q：どちらに<u class="ul-double"><ruby>住<rt>す</rt></ruby>んでいます</u>か。',
+            answers : [
+              'A<ruby>住<rt>す</rt></ruby>んでいらっしゃいます',
+              '<ruby>住<rt>す</rt></ruby>んでおっしゃいます',
+              '<ruby>住<rt>す</rt></ruby>んでおります',
+              '<ruby>住<rt>す</rt></ruby>んでいたします'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>名古屋<rt>なごや</rt></ruby>に<u class="ul-double"><ruby>住<rt>す</rt></ruby>んでいます</u>。',
+            answers : [
+              'A<ruby>住<rt>す</rt></ruby>んでおります',
+              '<ruby>住<rt>す</rt></ruby>んでいたします',
+              '<ruby>住<rt>す</rt></ruby>んでいらっしゃいます',
+              '<ruby>住<rt>す</rt></ruby>んでおっしゃいます'
+            ]
+          },
+          
+          {
+            question : 'Q：お<ruby>酒<rt>さけ</rt></ruby>をよく<u class="ul-double"><ruby>飲<rt>の</rt></ruby>みます</u>か。',
+            answers : [
+              'A<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります',
+              'お<ruby>飲<rt>の</rt></ruby>みになります',
+              'いただきます',
+              'いたします'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>少<rt>すこ</rt></ruby>し<u class="ul-double"><ruby>飲<rt>の</rt></ruby>みます</u>。',
+            answers : [
+              'Aいただきます',
+              'いたします',
+              '<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります',
+              'お<ruby>飲<rt>の</rt></ruby>みになります'
+            ]
+          },
+          
+          {
+            question : 'Q：ご<ruby>兄弟<rt>きょうだい</rt></ruby>が<u class="ul-double">います</u>か。',
+            answers : [
+              'Aいらっしゃいます',
+              'おっしゃいます',
+              'おります',
+              'ございます'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>兄<rt>あに</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby><u class="ul-double">います</u>。',
+            answers : [
+              'Aおります',
+              'ございます',
+              'いらっしゃいます',
+              'おっしゃいます'
+            ]
+          },
+          
+          {
+            question : 'Q：<ruby>何<rt>なに</rt></ruby>かスポーツを<u class="ul-double">します</u>か。',
+            answers : [
+              'Aなさいます',
+              'くださいます',
+              'いたします',
+              'いただきます'
+            ]
+          },
+          
+          {
+            question : 'A：はい、サッカーを<u class="ul-double">します</u>。',
+            answers : [
+              'Aいたします',
+              'いただきます',
+              'なさいます',
+              'くださいます'
+            ]
+          },
+          
+          {
+            question : 'Q：<ruby>毎日<rt>まいにち</rt></ruby><ruby>何時間<rt>なんじかん</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<u class="ul-double"><ruby>勉強<rt>べんきょう</rt></ruby>します</u>か。',
+            answers : [
+              'A<ruby>勉強<rt>べんきょう</rt></ruby>なさいます',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>くださいます',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>いたします',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>いただきます'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>二時間<rt>にじかん</rt></ruby>ぐらい<u class="ul-double"><ruby>勉強<rt>べんきょう</rt></ruby>します</u>。',
+            answers : [
+              'A<ruby>勉強<rt>べんきょう</rt></ruby>いたします',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>いただきます',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>なさいます',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>くださいます'
+            ]
+          },
+          
+          {
+            question : 'Q：<ruby>毎日<rt>まいにち</rt></ruby><ruby>何時<rt>なんじ</rt></ruby>ごろ<ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<u class="ul-double"><ruby>食<rt>た</rt></ruby>べます</u>か。',
+            answers : [
+              'A<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります',
+              'お<ruby>食<rt>た</rt></ruby>べになります',
+              'いただきます',
+              'いたします'
+            ]
+          },
+          
+          {
+            question : 'A：<ruby>七時<rt>しちじ</rt></ruby>ごろ<u class="ul-double"><ruby>食<rt>た</rt></ruby>べます</u>。',
+            answers : [
+              'Aいただきます',
+              'いたします',
+              '<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります',
+              'お<ruby>食<rt>た</rt></ruby>べになります'
+            ]
+          },
+          
+          {
+            question : 'Q：<ruby>週末<rt>しゅうまつ</rt></ruby>はどこかへ<u class="ul-double"><ruby>行<rt>い</rt></ruby>きました</u>か。',
+            answers : [
+              'Aいらっしゃいました',
+              'おっしゃいました',
+              '<ruby>参<rt>まい</rt></ruby>りました',
+              '<ruby>申<rt>もう</rt></ruby>しました'
+            ]
+          },
+          
+          {
+            question : 'A：はい、<ruby>美術館<rt>びじゅつかん</rt></ruby>へ<u class="ul-double"><ruby>行<rt>い</rt></ruby>きました</u>。',
+            answers : [
+              'A<ruby>参<rt>まい</rt></ruby>りました',
+              '<ruby>申<rt>もう</rt></ruby>しました',
+              'いらっしゃいました',
+              'おっしゃいました'
+            ]
+          },
+          
+          {
+            question : 'Q：<ruby>日本<rt>にほん</rt></ruby><ruby>文学<rt>ぶんがく</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>が<u class="ul-double">あります</u>か。',
+            answers : [
+              'Aおありになります',
+              'いらっしゃいます',
+              'ございます',
+              'でございます'
+            ]
+          },
+          
+          {
+            question : 'A：はい、<u class="ul-double">あります</u>。',
+            answers : [
+              'Aございます',
+              'でございます',
+              'おありになります',
+              'いらっしゃいます'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'Q：お<ruby>名前<rt>なまえ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>と<u class="ul-double"><ruby>言<rt>い</rt></ruby>います</u>か。　<i class="fa">&#xf061;</i>　おっしゃいます<br>'+
+            'A：<ruby>田中<rt>たなか</rt></ruby>と<u class="ul-double"><ruby>言<rt>い</rt></ruby>います</u>。　<i class="fa">&#xf061;</i>　<ruby>申<rt>もう</rt></ruby>します'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems valign-top">'+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：いつ<ruby>日本<rt>にほん</rt></ruby>に<u class="ul-double"><ruby>来<rt>き</rt></ruby>ました</u>か。　<i class="fa">&#xf061;</i>　{いらっしゃいました}<br><br>'+
+              'A：<ruby>先月<rt>せんげつ</rt></ruby><u class="ul-double"><ruby>来<rt>き</rt></ruby>ました</u>。　<i class="fa">&#xf061;</i>　{参りました|まいりました|answer}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：どちらに<u class="ul-double"><ruby>住<rt>す</rt></ruby>んでいます</u>か。　<i class="fa">&#xf061;</i>　{住んでいらっしゃいます|すんでいらっしゃいます|answer}<br><br>'+
+              'A：<ruby>名古屋<rt>なごや</rt></ruby>に<u class="ul-double"><ruby>住<rt>す</rt></ruby>んでいます</u>。　<i class="fa">&#xf061;</i>　{住んでおります|すんでおります|answer}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：お<ruby>酒<rt>さけ</rt></ruby>をよく<u class="ul-double"><ruby>飲<rt>の</rt></ruby>みます</u>か。　<i class="fa">&#xf061;</i>　{召し上がります|めしあがります|answer}<br><br>'+
+              'A：<ruby>少<rt>すこ</rt></ruby>し<u class="ul-double"><ruby>飲<rt>の</rt></ruby>みます</u>。　<i class="fa">&#xf061;</i>　{いただきます}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：ご<ruby>兄弟<rt>きょうだい</rt></ruby>が<u class="ul-double">います</u>か。　<i class="fa">&#xf061;</i>　{いらっしゃいます}<br><br>'+
+              'A：<ruby>兄<rt>あに</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby><u class="ul-double">います</u>。　<i class="fa">&#xf061;</i>　{おります}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：<ruby>何<rt>なに</rt></ruby>かスポーツを<u class="ul-double">します</u>か。　<i class="fa">&#xf061;</i>　{なさいます}<br><br>'+
+              'A：はい、サッカーを<u class="ul-double">します</u>。　<i class="fa">&#xf061;</i>　{いたします}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：<ruby>毎日<rt>まいにち</rt></ruby><ruby>何時間<rt>なんじかん</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<u class="ul-double"><ruby>勉強<rt>べんきょう</rt></ruby>します</u>か。　<i class="fa">&#xf061;</i>　{勉強なさいます|べんきょうなさいます|answer}<br><br>'+
+              'A：<ruby>二時間<rt>にじかん</rt></ruby>ぐらい<u class="ul-double"><ruby>勉強<rt>べんきょう</rt></ruby>します</u>。　<i class="fa">&#xf061;</i>　{勉強いたします|べんきょういたします|answer}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：<ruby>毎日<rt>まいにち</rt></ruby><ruby>何時<rt>なんじ</rt></ruby>ごろ<ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<u class="ul-double"><ruby>食<rt>た</rt></ruby>べます</u>か。　<i class="fa">&#xf061;</i>　{召し上がります|めしあがります|answer}<br><br>'+
+              'A：<ruby>七時<rt>しちじ</rt></ruby>ごろ<u class="ul-double"><ruby>食<rt>た</rt></ruby>べます</u>。　<i class="fa">&#xf061;</i>　{いただきます}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：<ruby>週末<rt>しゅうまつ</rt></ruby>はどこかへ<u class="ul-double"><ruby>行<rt>い</rt></ruby>きました</u>か。　<i class="fa">&#xf061;</i>　{いらっしゃいました}<br><br>'+
+              'A：はい、<ruby>美術館<rt>びじゅつかん</rt></ruby>へ<u class="ul-double"><ruby>行<rt>い</rt></ruby>きました</u>。　<i class="fa">&#xf061;</i>　{参りました|まいりました|answer}'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：<ruby>日本<rt>にほん</rt></ruby><ruby>文学<rt>ぶんがく</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>が<u class="ul-double">あります</u>か。　<i class="fa">&#xf061;</i>　{おありになります}<br><br>'+
+              'A：はい、<u class="ul-double">あります</u>。　<i class="fa">&#xf061;</i>　{ございます}'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
     <style>u.ul-double { text-decoration:none!important; }</style>
   </body>
 </html>

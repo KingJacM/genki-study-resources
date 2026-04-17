@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,193 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Describe who gave what to whom using {!GRI|あげる／くれる／もらる|l14-p3}. You can look at the picture on page 62 to help visualize the transaction.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'ヤスミンさん　<i class="fa">&#xf061;</i>　トレーナー　<i class="fa">&#xf061;</i>　カルロスさん',
+            answers : [
+              'Aヤスミンさんはカルロスさんにトレーナーをあげました。',
+              'カルロスさんはヤスミンさんにトレーナーをあげました。',
+              'Aカルロスさんはヤスミンさんにトレーナーをもらいました。',
+              'ヤスミンさんはカルロスさんにトレーナーをもらいました。'
+            ]
+          },
+
+          {
+            question : '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf061;</i>　チョコレート　<i class="fa">&#xf061;</i>　カルロスさん',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>はカルロスさんにチョコレートをあげました。',
+              'カルロスさんは<ruby>私<rt>わたし</rt></ruby>にチョコレートをあげました。',
+              'カルロスさんは<ruby>私<rt>わたし</rt></ruby>にチョコレートをもらいました。',
+              '<ruby>私<rt>わたし</rt></ruby>はカルロスさんにチョコレートをもらいました。'
+            ]
+          },
+
+          {
+            question : '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf060;</i>　ぬいぐるみ　<i class="fa">&#xf060;</i>　ヤスミンさん',
+            answers : [
+              'Aヤスミンさんは<ruby>私<rt>わたし</rt></ruby>にぬいぐるみをくれました。',
+              '<ruby>私<rt>わたし</rt></ruby>はヤスミンさんにぬいぐるみをくれました。',
+              'A<ruby>私<rt>わたし</rt></ruby>はヤスミンさんにぬいぐるみをもらいました。',
+              'ヤスミンさんは<ruby>私<rt>わたし</rt></ruby>にぬいぐるみをもらいました。'
+            ]
+          },
+
+          {
+            question : '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf060;</i>　<ruby>手袋<rt>てぶくろ</rt></ruby>　<i class="fa">&#xf060;</i>　メアリーさん',
+            answers : [
+              'Aメアリーさんは<ruby>私<rt>わたし</rt></ruby>に<ruby>手袋<rt>てぶくろ</rt></ruby>をくれました。',
+              '<ruby>私<rt>わたし</rt></ruby>はメアリーさんに<ruby>手袋<rt>てぶくろ</rt></ruby>をくれました。',
+              'A<ruby>私<rt>わたし</rt></ruby>はメアリーさんに<ruby>手袋<rt>てぶくろ</rt></ruby>をもらいました。',
+              'メアリーさんは<ruby>私<rt>わたし</rt></ruby>に<ruby>手袋<rt>てぶくろ</rt></ruby>をもらいました。'
+            ]
+          },
+
+          {
+            question : 'たけしさん　<i class="fa">&#xf061;</i>　<ruby>花<rt>はな</rt></ruby>　<i class="fa">&#xf061;</i>　メアリーさん',
+            answers : [
+              'Aたけしさんはメアリーさんに<ruby>花<rt>はな</rt></ruby>をあげました。',
+              'メアリーさんはたけしさんに<ruby>花<rt>はな</rt></ruby>をあげました。',
+              'Aメアリーさんはたけしさんに<ruby>花<rt>はな</rt></ruby>をもらいました。',
+              'たけしさんはメアリーさんに<ruby>花<rt>はな</rt></ruby>をもらいました。'
+            ]
+          },
+
+          {
+            question : 'メアリーさん　<i class="fa">&#xf061;</i>　<ruby>靴<rt>くつ</rt></ruby>　<i class="fa">&#xf061;</i>　たけしさん',
+            answers : [
+              'Aメアリーさんはたけしさんに<ruby>靴<rt>くつ</rt></ruby>をあげました。',
+              'たけしさんはメアリーさんに<ruby>靴<rt>くつ</rt></ruby>をあげました。',
+              'Aたけしさんはメアリーさんに<ruby>靴<rt>くつ</rt></ruby>をもらいました。',
+              'メアリーさんはたけしさんに<ruby>靴<rt>くつ</rt></ruby>をもらいました。'
+            ]
+          },
+
+          {
+            question : '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf061;</i>　<ruby>漫画<rt>まんが</rt></ruby>　<i class="fa">&#xf061;</i>　たけしさん',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>はたけしさんに<ruby>漫画<rt>まんが</rt></ruby>をあげました。',
+              'たけしさんは<ruby>私<rt>わたし</rt></ruby>に<ruby>漫画<rt>まんが</rt></ruby>をあげました。',
+              'たけしさんは<ruby>私<rt>わたし</rt></ruby>に<ruby>漫画<rt>まんが</rt></ruby>をもらいました。',
+              '<ruby>私<rt>わたし</rt></ruby>はたけしさんに<ruby>漫画<rt>まんが</rt></ruby>をもらいました。'
+            ]
+          },
+
+          {
+            question : 'ロバートさん　<i class="fa">&#xf061;</i>　<ruby>本<rt>ほん</rt></ruby>　<i class="fa">&#xf061;</i>　ソラさん',
+            answers : [
+              'Aロバートさんはソラさんに<ruby>本<rt>ほん</rt></ruby>をあげました。',
+              'ソラさんはロバートさんに<ruby>本<rt>ほん</rt></ruby>をあげました。',
+              'Aソラさんはロバートさんに<ruby>本<rt>ほん</rt></ruby>をもらいました。',
+              'ロバートさんはソラさんに<ruby>本<rt>ほん</rt></ruby>をもらいました。'
+            ]
+          },
+
+          {
+            question : '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf060;</i>　セーター　<i class="fa">&#xf060;</i>　ロバートさん',
+            answers : [
+              'Aロバートさんは<ruby>私<rt>わたし</rt></ruby>にセーターをくれました。',
+              '<ruby>私<rt>わたし</rt></ruby>はロバートさんにセーターをくれました。',
+              'A<ruby>私<rt>わたし</rt></ruby>はロバートさんにセーターをもらいました。',
+              'ロバートさんは<ruby>私<rt>わたし</rt></ruby>にセーターをもらいました。'
+            ]
+          },
+
+          {
+            question : 'ナオミさん　<i class="fa">&#xf061;</i>　ネクタイ　<i class="fa">&#xf061;</i>　けんさん',
+            answers : [
+              'Aナオミさんはけんさんにネクタイをあげました。',
+              'けんさんはナオミさんにネクタイをあげました。',
+              'Aけんさんはナオミさんにネクタイをもらいました。',
+              'ナオミさんはけんさんにネクタイをもらいました。'
+            ]
+          },
+
+          {
+            question : 'けんさん　<i class="fa">&#xf061;</i>　みかん　<i class="fa">&#xf061;</i>　<ruby>私<rt>わたし</rt></ruby>',
+            answers : [
+              'Aけんさんは<ruby>私<rt>わたし</rt></ruby>にみかんをくれました。',
+              '<ruby>私<rt>わたし</rt></ruby>はけんさんにみかんをくれました。',
+              'A<ruby>私<rt>わたし</rt></ruby>はけんさんにみかんをもらいました。',
+              'けんさんは<ruby>私<rt>わたし</rt></ruby>にみかんをもらいました。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'ヤスミンさん　<i class="fa">&#xf061;</i>　トレーナー　<i class="fa">&#xf061;</i>　カルロスさん<br>'+
+            'あげる：ヤスミンさんはカルロスさんにトレーナーをあげました。<br>'+
+            'もらう：カルロスさんはヤスミンさんにトレーナーをもらいました。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf061;</i>　チョコレート　<i class="fa">&#xf061;</i>　カルロスさん<br>'+
+            '{私はカルロスさんにチョコレートをあげました|わたしはカルロスさんにチョコレートをあげました|' + Genki.getAlts('{私}{は}カルロスさんにチョコレートをあげました', 'わたし|が') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf060;</i>　ぬいぐるみ　<i class="fa">&#xf060;</i>　ヤスミンさん<br>'+
+            '{ヤスミンさんは私にぬいぐるみをくれました|私はヤスミンさんにぬいぐるみをもらいました|' + Genki.getAlts('ヤスミンさん{は}{私}にぬいぐるみをくれました', 'が|わたし') + Genki.getAlts('{私}{は}ヤスミンさん{に}ぬいぐるみをもらいました', 'わたし|が|から') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf060;</i>　<ruby>手袋<rt>てぶくろ</rt></ruby>　<i class="fa">&#xf060;</i>　メアリーさん<br>'+
+            '{メアリーさんは私に手袋をくれました|私はメアリーさんに手袋をもらいました|' + Genki.getAlts('メアリーさん{は}{私}に{手袋}をくれました', 'が|わたし|てぶくろ') + Genki.getAlts('{私}{は}メアリーさん{に}{手袋}をもらいました', 'わたし|が|から|てぶくろ') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'たけしさん　<i class="fa">&#xf061;</i>　<ruby>花<rt>はな</rt></ruby>　<i class="fa">&#xf061;</i>　メアリーさん<br>'+
+            '{たけしさんはメアリーさんに花をあげました|メアリーさんはたけしさんに花をもらいました|' + Genki.getAlts('たけしさん{は}メアリーさんに{花}をあげました', 'が|はな') + Genki.getAlts('メアリーさん{は}たけしさん{に}{花}をもらいました', 'が|から|はな') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'メアリーさん　<i class="fa">&#xf061;</i>　<ruby>靴<rt>くつ</rt></ruby>　<i class="fa">&#xf061;</i>　たけしさん<br>'+
+            '{メアリーさんはたけしさんに靴をあげました|たけしさんはメアリーさんに靴をもらいました|' + Genki.getAlts('メアリーさん{は}たけしさんに{靴}をあげました', 'が|くつ') + Genki.getAlts('たけしさん{は}メアリーさん{に}{靴}をもらいました', 'が|から|くつ') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf061;</i>　<ruby>漫画<rt>まんが</rt></ruby>　<i class="fa">&#xf061;</i>　たけしさん<br>'+
+            '{私はたけしさんに漫画をあげました|わたしはたけしさんにまんがをあげました|' + Genki.getAlts('{私}{は}たけしさんに{漫画}をあげました', 'わたし|が|まんが') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'ロバートさん　<i class="fa">&#xf061;</i>　<ruby>本<rt>ほん</rt></ruby>　<i class="fa">&#xf061;</i>　ソラさん<br>'+
+            '{ロバートさんはソラさんに本をあげました|ソラさんはロバートさんに本をもらいました|' + Genki.getAlts('ロバートさん{は}ソラさんに{本}をあげました', 'が|ほん') + Genki.getAlts('ソラさん{は}ロバートさん{に}{本}をもらいました', 'が|から|ほん') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>私<rt>わたし</rt></ruby>　<i class="fa">&#xf060;</i>　セーター　<i class="fa">&#xf060;</i>　ロバートさん<br>'+
+            '{ロバートさんは私にセーターをくれました|私はロバートさんにセーターをもらいました|' + Genki.getAlts('ロバートさん{は}{私}にセーターをくれました', 'が|わたし') + Genki.getAlts('{私}{は}ロバートさん{に}セーターをもらいました', 'わたし|が|から') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'ナオミさん　<i class="fa">&#xf061;</i>　ネクタイ　<i class="fa">&#xf061;</i>　けんさん<br>'+
+            '{ナオミさんはけんさんにネクタイをあげました|けんさんはナオミさんにネクタイをもらいました|' + Genki.getAlts('ナオミさん{は}けんさんにネクタイをあげました', 'が') + Genki.getAlts('けんさん{は}ナオミさん{に}ネクタイをもらいました', 'が|から') + 'answer;width:400}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'けんさん　<i class="fa">&#xf061;</i>　みかん　<i class="fa">&#xf061;</i>　<ruby>私<rt>わたし</rt></ruby><br>'+
+            '{けんさんは私にみかんをくれました|私はけんさんにみかんをもらいました|' + Genki.getAlts('けんさん{は}{私}にみかんをくれました', 'が|わたし') + Genki.getAlts('{私}{は}けんさん{に}みかんをもらいました', 'わたし|が|から') + 'answer;width:400}。'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,81 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Two workers are talking about their senior colleague, Mr. Yamamoto. Listen to their dialogue and mark each of the following statements with O if true, or with X if false.</p>'+
+    '{!AUDIO|W17-A}'+
+        
+    '<div class="count-problems small-margin">'+
+      '<div class="problem">{!PLAY|W17-A|9} ({O}) Yamamoto is going to quit the company.</div>'+
+      '<div class="problem">{!PLAY|W17-A|16.5} ({X}) He has been sick these days.</div>'+
+      '<div class="problem">{!PLAY|W17-A|27} ({X}) His salary is pretty low.</div>'+
+      '<div class="problem">{!PLAY|W17-A|20.5} ({O}) He has been working very hard.</div>'+
+      '<div class="problem">{!PLAY|W17-A|32} ({X}) He has just gotten divorced.</div>'+
+      '<div class="problem">{!PLAY|W17-A|45} ({X}) They think the cause of his divorce is his wife\'s new boyfriend.</div>'+
+      '<div class="problem">{!PLAY|W17-A|52} ({O}) They think they may need to find a new job before they get married.</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Two people are going to Tanaka\'s party. Listen and answer the following questions by writing Yes or No.</p>'+
+    '{!AUDIO|W17-B}'+
+        
+    'Before the party, are they going to:<br><br>'+
+    '<div class="columns-2 count-problems small-margin clear">'+
+      '<div>'+
+        '<div class="problem">'+
+          '{!PLAY|W17-B|3} <span class="label">hurry?</span> [{No|Yes/No}]'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '{!PLAY|W17-B|10} <span class="label">call Miss Tanaka?</span> [{Yes|Yes/No}]'+
+        '</div>'+
+      '</div>'+
+        
+      '<div>'+
+        '<div class="problem">'+
+          '{!PLAY|W17-B|17.5} <span class="label">take an umbrella?</span> [{No|Yes/No}]'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '{!PLAY|W17-B|26} <span class="label">buy something?</span> [{Yes|Yes/No}]'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Mary and Takeshi are talking about plans for this weekend. Listen to the dialogue and answer the questions in Japanese.</p>'+
+    '<div class="right">*<ruby>六甲山<rt>ろっこうさん</rt></ruby> (Mt. Rokko)</div>'+
+    '{!AUDIO|W17-C}'+
+        
+    '<div class="count-problems">'+
+      '<div class="problem">'+
+        '{!PLAY|W17-C|2.5} メアリーさんたちはいつ<ruby>神戸<rt>こうべ</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりですか。<br>'+
+        '{日曜日に行くつもりです|にちようびにいくつもりです|' + Genki.getAlts('{日曜日}に{行}くつもりです', 'にちようび|い') + 'answer}。'+
+      '</div>'+
+        
+      '<div class="problem valign-top">'+
+        '<ruby>神戸<rt>こうべ</rt></ruby>で<ruby>何<rt>なに</rt></ruby>がしたいと<ruby>思<rt>おも</rt></ruby>っていますか。<br>'+
+        '<div class="indent-block">'+
+          '<div class="big-margin">a. {!PLAY|W17-C|20.5} メアリーさんは{おいしいものが食べたい|おいしいものがたべたい|' + Genki.getAlts('{美味}しい{物}が{食}べたい', 'おい|もの|た') + 'answer}と<ruby>思<rt>おも</rt></ruby>っています。</div>'+
+          '<div class="big-margin">b. {!PLAY|W17-C|33} ソラさんは{買い物がしたい|かいものがしたい|answer}と<ruby>思<rt>おも</rt></ruby>っています。</div>'+
+          '<div class="big-margin">c. {!PLAY|W17-C|37} たけしさんは{六甲山に行きたい|ろっこうさんにいきたい|' + Genki.getAlts('{六甲山}に{行}きたい', 'ろっこうさん|い') + 'answer}と<ruby>思<rt>おも</rt></ruby>っています。</div>'+
+        '</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W17-C|54} <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ったら、<ruby>何<rt>なに</rt></ruby>をするつもりですか。<br>'+
+        '{町で買い物をしたり、おいしいものを食べたりするつもりです|まちでかいものをしたり、おいしいものをたべたりするつもりです|' + Genki.getAlts('{町}で{買い物}をしたり、おいしいものを{食}べたりするつもりです', 'まち|かいもの|た') + 'answer}。'+
+      '</div>'+
+    '</div><br>'
+      
+    });</script>
   </body>
 </html>

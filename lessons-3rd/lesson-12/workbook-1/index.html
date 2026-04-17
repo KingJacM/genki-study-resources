@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,76 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～んです|l12-p1}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Answer the questions using {!GRI|～んです|l12-p1} according to the cues.</p>'+
+        'Q：どうしたんですか。<br><br>'+
+        '<div class="problem">'+
+          'A：{おなかが痛いんです|おなかがいたいんです|answer;hint:(have a stomachache);width:250}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：{彼女と別れたんです|かのじょとわかれたんです|' + Genki.getAlts('{彼女}と{別}れたんです', 'かのじょ|わか') + 'answer;hint:(broke up with my girlfriend);width:250}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：{風邪をひいたんです|かぜをひいたんです|answer;hint:(caught a cold);width:250}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：{二日酔いなんです|ふつかよいなんです|answer;hint:(have a hangover);width:250}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：{電車の切符をなくしたんです|でんしゃのきっぷをなくしたんです|' + Genki.getAlts('{電車}の{切符}をなくしたんです', 'でんしゃ|きっぷ') + 'answer;hint:(lost my train ticket);width:250}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：{成績が悪かったんです|せいせきがわるかったんです|' + Genki.getAlts('{成績}が{悪}かったんです', 'せいせき|わる') + 'answer;hint:(got a bad grade);width:250}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Answer the following questions using {!GRI|～んです|l12-p1} by translating the cues.</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：どうしてアルバイトをしているんですか。<br>'+
+            'A：{お金がないんです|おかねがないんです|answer;hint:(have no money);width:250}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：どうしてきのう<ruby>授業<rt>じゅぎょう</rt></ruby>をサボったんですか<br>'+
+            'A：{眠かったんです|ねむかったんです|answer;hint:(was sleepy);width:250}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：どうして<ruby>疲<rt>つか</rt></ruby>れているんですか。<br>'+
+            'A：{たくさん勉強したんです|たくさんべんきょうしたんです|answer;hint:(studied a lot);width:250}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：どうして<ruby>緊張<rt>きんちょう</rt></ruby>しているんですか。<br>'+
+            'A：{テストがあるんです|(there\'s a test)|width:250}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,212 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'What would these people say when they want someone to refrain from doing the following things.<br>{!GRI|Click here|l8-p5} to review ～ないでください.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'not to look at the photo',
+            answers : [
+              'A<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>ないでください。',
+              '<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>らないでください。',
+              '<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>るないでください。',
+              '<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>でください。'
+            ]
+          },
+          {
+            question : 'not to call (on the phone)',
+            answers : [
+              'A<ruby>電話<rt>でんわ</rt></ruby>しないでください。',
+              '<ruby>電話<rt>でんわ</rt></ruby>すないでください。',
+              '<ruby>電話<rt>でんわ</rt></ruby>すらないでください。',
+              '<ruby>電話<rt>でんわ</rt></ruby>しでください。'
+            ]
+          },
+
+          {
+            question : 'not to come to my house',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>のうちに<ruby>来<rt>こ</rt></ruby>ないでください。',
+              '<ruby>私<rt>わたし</rt></ruby>のうちに<ruby>来<rt>こ</rt></ruby>らないでください。',
+              '<ruby>私<rt>わたし</rt></ruby>のうちに<ruby>来<rt>こ</rt></ruby>りないでください。',
+              '<ruby>私<rt>わたし</rt></ruby>のうちに<ruby>来<rt>き</rt></ruby>でください。'
+            ]
+          },
+
+          {
+            question : 'not to go',
+            answers : [
+              'A<ruby>行<rt>い</rt></ruby>かないでください。',
+              '<ruby>行<rt>い</rt></ruby>きないでください。',
+              '<ruby>行<rt>い</rt></ruby>ないでください。',
+              '<ruby>行<rt>い</rt></ruby>っでください。'
+            ]
+          },
+
+          {
+            question : 'not to smoke',
+            answers : [
+              'Aたばこを<ruby>吸<rt>す</rt></ruby>わないでください。',
+              'たばこを<ruby>吸<rt>す</rt></ruby>あないでください。',
+              'たばこを<ruby>吸<rt>す</rt></ruby>いないでください。',
+              'たばこを<ruby>吸<rt>す</rt></ruby>うでください。'
+            ]
+          },
+          
+          {
+            question : 'not to throw away the magazine',
+            answers : [
+              'A<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てないでください。',
+              '<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てらないでください。',
+              '<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てりないでください。',
+              '<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>でください'
+            ]
+          },
+
+          {
+            question : 'not to speak English',
+            answers : [
+              'A<ruby>英語<rt>えいご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>さないでください。',
+              '<ruby>英語<rt>えいご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>しないでください。',
+              '<ruby>英語<rt>えいご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>ないでください。',
+              '<ruby>英語<rt>えいご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すないでください。'
+            ]
+          },
+
+          {
+            question : 'not to sleep in class',
+            answers : [
+              'Aクラスで<ruby>寝<rt>ね</rt></ruby>ないでください。',
+              'クラスで<ruby>寝<rt>ね</rt></ruby>らないでください。',
+              'クラスで<ruby>寝<rt>ね</rt></ruby>りないでください。',
+              'クラスで<ruby>寝<rt>ね</rt></ruby>るないでください。'
+            ]
+          },
+
+          {
+            question : 'not to forget your homework',
+            answers : [
+              'A<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れないでください。',
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れらないでください。',
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れりないでください。',
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れるないでください。'
+            ]
+          },
+          
+          {
+            question : 'not to be late',
+            answers : [
+              'A<ruby>遅<rt>おそ</rt></ruby>くならないでください。',
+              '<ruby>遅<rt>おそ</rt></ruby>かないでください。',
+              '<ruby>遅<rt>おそ</rt></ruby>くなりないでください。',
+              '<ruby>遅<rt>おそ</rt></ruby>きないでください。'
+            ]
+          },
+
+          {
+            question : 'not to start the test yet',
+            answers : [
+              'Aまだテストを<ruby>始<rt>はじ</rt></ruby>めないでください。',
+              'テストを<ruby>始<rt>はじ</rt></ruby>めないでください。',
+              'まだテストを<ruby>始<rt>はじ</rt></ruby>めらないでください。',
+              'テストを<ruby>始<rt>はじ</rt></ruby>めらないでください。'
+            ]
+          },
+
+          {
+            question : 'not to use smartphones',
+            answers : [
+              'Aスマホを<ruby>使<rt>つか</rt></ruby>わないでください。',
+              'スマホを<ruby>使<rt>つか</rt></ruby>あないでください。',
+              'スマホを<ruby>使<rt>つか</rt></ruby>うないでください。',
+              'スマホを<ruby>使<rt>つか</rt></ruby>ないでください。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<h4>ソラさん</h4>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                'not to look at the photo<br>'+
+                '{写真|しゃしん|answer}を{見ない|みない|answer}でください。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to call (on the phone)<br>'+
+              '{電話しないでください|でんわしないでください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to come to my house<br>'+
+              '{私のうちに来ないでください|わたしのうちにこないでください|' + Genki.getAlts('{私}の{家}に{来}ないでください', 'わたし|うち|こ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to go<br>'+
+              '{行かないでください|いかないでください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to smoke<br>'+
+              '{たばこを吸わないでください|たばこをすわないでください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to throw away the magazine<br>'+
+              '{雑誌を捨てないでください|ざっしをすてないでください|' + Genki.getAlts('{雑誌}を{捨}てないでください', 'ざっし|す') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<h4><ruby>山下先生<rt>やましたせんせい</rt></ruby></h4>'+
+            '<div class="problem">'+
+              'not to speak English<br>'+
+              '{英語を話さないでください|えいごをはなさないでください|' + Genki.getAlts('{英語}を{話}さないでください', 'えいご|はな') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to sleep in class<br>'+
+              '{クラスで寝ないでください|クラスでねないでください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to forget your homework<br>'+
+              '{宿題を忘れないでください|しゅくだいをわすれないでください|' + Genki.getAlts('{宿題}を{忘}れないでください', 'しゅくだい|わす') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to be late<br>'+
+              '{遅くならないでください|おそくならないでください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to start the test yet<br>'+
+              '{まだテストを始めないでください|まだテストをはじめないでください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'not to use smartphones<br>'+
+              '{スマホを使わないでください|スマホをつかわないでください|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

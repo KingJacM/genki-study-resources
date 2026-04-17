@@ -47,27 +47,13 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
+        <div class="text-block multi-quiz-image center">
+          <a href="../../../resources/images/lesson-images/3rd-l4-g3.png" target="_blank"><img src="../../../resources/images/lesson-images/3rd-l4-g3.png" alt=""></a>
+          <div><small>(Click Image to See Full Size)</small></div>
+        </div>
         <div id="quiz-timer" class="center"></div>
       </div>
     </div>
@@ -86,11 +72,135 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Look at the picture and {!GRI|tell where the following things are|l4-p2}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : '<ruby>図書館<rt>としょかん</rt></ruby>',
+            answers : [
+              'A<ruby>図書館<rt>としょかん</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>後<rt>うし</rt></ruby>ろです。',
+              '<ruby>図書館<rt>としょかん</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。',
+              'A<ruby>図書館<rt>としょかん</rt></ruby>はスーパーのとなりです。',
+              '<ruby>図書館<rt>としょかん</rt></ruby>はスーパーの<ruby>右<rt>みぎ</rt></ruby>です。'
+            ]
+          },
+
+          {
+            question : '<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>',
+            answers : [
+              'A<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>は<ruby>病院<rt>びょういん</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。',
+              '<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>は<ruby>病院<rt>びょういん</rt></ruby>の<ruby>後<rt>うし</rt></ruby>ろです。',
+              '<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。',
+              '<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>後<rt>うし</rt></ruby>ろです。'
+            ]
+          },
+
+          {
+            question : 'カフェ',
+            answers : [
+              'Aカフェはホテルの<ruby>中<rt>なか</rt></ruby>です。',
+              'カフェはホテルの<ruby>下<rt>した</rt></ruby>です。',
+              'カフェは公園の<ruby>前<rt>まえ</rt></ruby>です。',
+              'カフェは公園の<ruby>後<rt>うし</rt></ruby>ろです。'
+            ]
+          },
+
+          {
+            question : 'バス<ruby>停<rt>てい</rt></ruby>',
+            answers : [
+              'Aバス<ruby>停<rt>てい</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。',
+              'バス<ruby>停<rt>てい</rt></ruby>は<ruby>前<rt>まえ</rt></ruby>の<ruby>大学<rt>だいがく</rt></ruby>です。',
+              'バス<ruby>停<rt>てい</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>下<rt>した</rt></ruby>です。',
+              'バス<ruby>停<rt>てい</rt></ruby>は<ruby>下<rt>した</rt></ruby>の<ruby>大学<rt>だいがく</rt></ruby>です。'
+            ]
+          },
+
+          {
+            question : '<ruby>公園<rt>こうえん</rt></ruby>',
+            answers : [
+              'A<ruby>公園<rt>こうえん</rt></ruby>はホテルの<ruby>後<rt>うし</rt></ruby>ろです。',
+              '<ruby>公園<rt>こうえん</rt></ruby>は<ruby>後<rt>うし</rt></ruby>ろのホテルです。',
+              '<ruby>公園<rt>こうえん</rt></ruby>はホテルの<ruby>上<rt>うえ</rt></ruby>です。',
+              '<ruby>公園<rt>こうえん</rt></ruby>は<ruby>上<rt>うえ</rt></ruby>のホテルです。'
+            ]
+          },
+
+          {
+            question : 'スーパー',
+            answers : [
+              'Aスーパーは<ruby>図書館<rt>としょかん</rt></ruby>のとなりです。',
+              'スーパーは<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>のとなりです。',
+              'スーパーは<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>左<rt>ひだり</rt></ruby>です。',
+              'スーパーは<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>の<ruby>左<rt>ひだり</rt></ruby>です。'
+            ]
+          },
+
+          {
+            question : '<ruby>病院<rt>びょういん</rt></ruby>',
+            answers : [
+              'A<ruby>病院<rt>びょういん</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>とホテルの<ruby>間<rt>あいだ</rt></ruby>です。',
+              '<ruby>病院<rt>びょういん</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>とホテルの<ruby>中<rt>なか</rt></ruby>です。',
+              '<ruby>病院<rt>びょういん</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>です。',
+              '<ruby>病院<rt>びょういん</rt></ruby>はホテルの<ruby>中<rt>なか</rt></ruby>です。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="center">{!IMG|3rd-l4-g3.png}</div><br>'+
+        '<div class="example-problem">'+
+          '<ruby>図書館<rt>としょかん</rt></ruby><br>'+
+          '{図書館|としょかん|answer}は{大学|だいがく|answer;hint:university;width:80}の{後ろ|うしろ|answer;hint:behind}です。<br><br><br>'+
+          '{図書館|としょかん|answer}は{スーパー|super market}の{となり|隣|answer;hint:next to}です。'+
+        '</div>'+
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>郵便局<rt>ゆうびんきょく</rt></ruby><br>'+
+              '{郵便局は病院の前です|ゆうびんきょくはびょういんのまえです|' + Genki.getAlts('{郵便局}は{病院}の{前}です', 'ゆうびんきょく|びょういん|まえ') + 'answer}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              'カフェ<br>'+
+              '{カフェはホテルの中です|カフェはホテルのなかです|answer}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              'バス<ruby>停<rt>てい</rt></ruby><br>'+
+              '{バス停は大学の前です|バスていはだいがくのまえです|' + Genki.getAlts('バス{停}は{大学}の{前}です', 'てい|だいがく|まえ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>公園<rt>こうえん</rt></ruby><br>'+
+              '{公園はホテルの後ろです|こうえんはホテルのうしろです|' + Genki.getAlts('{公園}はホテルの{後}ろです', 'こうえん|うし') + 'answer}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              'スーパー<br>'+
+              '{スーパーは図書館のとなりです|スーパーはとしょかんのとなりです|' + Genki.getAlts('スーパーは{図書館}の{となり}です', 'としょかん|隣') + 'answer}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<ruby>病院<rt>びょういん</rt></ruby><br>'+
+              '{病院は大学とホテルの間です|びょういんはだいがくとホテルのあいだです|' + Genki.getAlts('{病院}は{大学}とホテルの{間}です', 'びょういん|だいがく|あいだ') + 'answer;hint:between}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,138 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>(function() {
+      var q = 'はいくらですか。';
+        
+      Genki.generateQuiz({
+        type : 'multi',
+        info : 'Read the questions and answer how much the items are.',
+
+        quizlet : [
+          {
+            question : 'ペン' + q + '<br>Price: ￥80',
+            answers : [
+              'Aはちじゅうえんです。',
+              'はちじゅうです。',
+              'はちじゅうえん。'
+            ]
+          },
+          
+          {
+            question : 'えんぴつ' + q + '<br>Price: ￥50',
+            answers : [
+              'Aごじゅうえんです。',
+              'ごじゅうです。',
+              'ごじゅうえん。'
+            ]
+          },
+
+          {
+            question : 'かさ' + q + '<br>Price: ￥1,000',
+            answers : [
+              'Aせんえんです。',
+              'せんです。',
+              'せんえん。'
+            ]
+          },
+
+          {
+            question : 'しんぶん' + q + '<br>Price: ￥110',
+            answers : [
+              'Aひゃくじゅうえんです。',
+              'ひゃくえんです。',
+              'ひゃくじゅうです。'
+            ]
+          },
+
+          {
+            question : 'ほん' + q + '<br>Price: ￥1,500',
+            answers : [
+              'Aせんごひゃくえんです。',
+              'せんごひゃくです。',
+              'せんにひゃくえんです。'
+            ]
+          },
+
+          {
+            question : 'くつ' + q + '<br>Price: ￥3,500',
+            answers : [
+              'Aさんぜんごひゃくえんです。',
+              'さんぜんごひゃくです。',
+              'さんせんごひゃくえんです。'
+            ]
+          },
+
+          {
+            question : 'とけい' + q + '<br>Price: ￥10,000',
+            answers : [
+              'Aいちまんえんです。',
+              'いちまんです。',
+              'じゅうせんえんです。'
+            ]
+          },
+
+          {
+            question : 'かばん' + q + '<br>Price: ￥20,000',
+            answers : [
+              'Aにまんえんです。',
+              'にまんです。',
+              'にじゅうまんえんです。'
+            ]
+          },
+
+          {
+            question : 'じしょ' + q + '<br>Price: ￥8,000',
+            answers : [
+              'Aはっせんえんです。',
+              'はちせんえんです。',
+              'はっせんです。'
+            ]
+          },
+
+          {
+            question : 'ジーンズ' + q + '<br>Price: ￥9,000',
+            answers : [
+              'Aきゅうせんえんです。',
+              'きゅうせんです。',
+              'きゅうせんえん。'
+            ]
+          },
+
+          {
+            question : 'じてんしゃ' + q + '<br>Price: ￥25,000',
+            answers : [
+              'Aにまんごせんえんです。',
+              'にまんごせんです。',
+              'にじゅうごせんえんです。'
+            ]
+          },
+
+          {
+            question : 'ノート' + q + '<br>Price: ￥450',
+            answers : [
+              'Aよんひゃくごじゅうえんです。',
+              'よんひゃくごじゅうです。',
+              'よんひゃくごじゅうえん。'
+            ]
+          },
+
+          {
+            question : 'ぼうし' + q + '<br>Price: ￥2,800',
+            answers : [
+              'Aにせんはっぴゃくえんです。',
+              'にせんはちぴゃくえんです。',
+              'にせんはっぴゃくです。'
+            ]
+          }
+        ]
+      });
+    }());</script>
   </body>
 </html>

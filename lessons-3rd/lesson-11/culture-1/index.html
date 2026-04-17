@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,150 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about New Year\'s (Genki I: p.270) if you haven\'t yet.',
+
+      quizlet : [
+        {
+          question : 'お<ruby>正月<rt>しょうがつ</rt></ruby> is the _____ homecoming holiday in Japan.',
+          answers : [
+            'Abiggest',
+            'smallest',
+            'best'
+          ]
+        },
+        
+        {
+          question : 'The Japanese celebrate New Year\'s day on _____, unlike most other Asians, who go by the lunar calendar.',
+          answers : [
+            'AJanuary 1',
+            'February 5',
+            'December 31'
+          ]
+        },
+        
+        {
+          question : 'Most businesses _____ on and around New Year\'s day.',
+          answers : [
+            'Aare closed',
+            'close early',
+            'are open'
+          ]
+        },
+        
+        {
+          question : 'What is New Year\'s Eve called in Japan?',
+          answers : [
+            'A<ruby>大晦日<rt>おおみそか</rt></ruby>',
+            'お<ruby>正月<rt>しょうがつ</rt></ruby>',
+            '<ruby>元日<rt>がんじつ</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'People try to do <em>what</em> by New Year\'s Eve?',
+          answers : [
+            'Afinish seasonal chores, clean the house, write greeting cards, etc..',
+            'buy food, beer, fireworks, etc..',
+            'finish homework, call friends and family, buy presents, etc..'
+          ]
+        },
+        
+        {
+          question : 'What do people call New Year\'s greeting cards in Japan?',
+          answers : [
+            'A<ruby>年賀状<rt>ねんがじょう</rt></ruby>',
+            'お<ruby>正月<rt>しょうがつ</rt></ruby>',
+            '<ruby>大晦日<rt>おおみそうか</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'When you meet somebody for the first time in the new year, you say _____.',
+          answers : [
+            'Aあけましておめでとうございます',
+            'こんにちは',
+            'よいお<ruby>年<rt>とし</rt></ruby>を'
+          ]
+        },
+        
+        {
+          question : 'Many people go to shrines and temples for _____.',
+          answers : [
+            'A<ruby>初詣<rt>はつもうで</rt></ruby>',
+            'お<ruby>正月<rt>しょうがつ</rt></ruby>',
+            '<ruby>年越<rt>としこ</rt></ruby>しそば'
+          ]
+        },
+        
+        {
+          question : '<ruby>初詣<rt>はつもうで</rt></ruby> or "the first worship of the year" is likely to be a person\'s only visit to shrines and temples for the year.',
+          answers : [
+            'Atrue',
+            'false'
+          ]
+        },
+        
+        {
+          question : 'Special dishes called _____ are eaten for New Year\'s. Each dish is said to signify a particular wish.',
+          answers : [
+            'Aお<ruby>節料理<rt>せちりょうり</rt></ruby>',
+            'お<ruby>弁当<rt>べんとう</rt></ruby>',
+            '<ruby>年越<rt>としこ</rt></ruby>しそば'
+          ]
+        },
+        
+        {
+          question : 'What do black beans (<ruby>黒豆<rt>くろまめ</rt></ruby>) signify?',
+          answers : [
+            'Adiligence and health',
+            'suffering and death',
+            'strength to break through the darkness'
+          ]
+        },
+        
+        {
+          question : 'What does herring roe (<ruby>数<rt>かず</rt></ruby>の<ruby>子<rt>こ</rt></ruby>) signify?',
+          answers : [
+            'Ahaving many offspring',
+            'having no children',
+            'enormous debt'
+          ]
+        },
+        
+        {
+          question : 'The staple food for New Year\'s is _____.',
+          answers : [
+            'Aおもち',
+            '<ruby>年越<rt>としこ</rt></ruby>しそば',
+            '<ruby>黒豆<rt>くろまめ</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'おもち is typically served toasted or in <ruby>雑煮<rt>ぞうに</rt></ruby>.',
+          answers : [
+            'Atrue',
+            'false'
+          ]
+        },
+        
+        {
+          question : 'Children expect to receive お<ruby>年玉<rt>としだま</rt></ruby>, which are _____.',
+          answers : [
+            'Agifts of money from their family',
+            'greeting cards from their family',
+            'gifts of food from their family'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

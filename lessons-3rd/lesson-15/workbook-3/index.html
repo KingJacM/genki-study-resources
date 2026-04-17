@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,71 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the {!GRI|Volitional Form + と<ruby>思<rt>おも</rt></ruby>っています|l15-p2}.',
+      
+      quizlet : 
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Read the first half of the sentences carefully. Then, choose what you are going to do from the list and complete the sentences, using the {!GRI|volitional + と<ruby>思<rt>おも</rt></ruby>っています|l15-p2}.</p>'+
+        
+        '<div class="sub-section center" style="font-size:18px;width:80%;margin:0 auto;">'+
+          'ボランティア<ruby>活動<rt>かつどう</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>する　　<ruby>両親<rt>りょうしん</rt></ruby>にお<ruby>金<rt>かね</rt></ruby>を<ruby>借<rt>か</rt></ruby>りる　　<ruby>練習<rt>れんしゅう</rt></ruby>する<br>'+
+          'お<ruby>風呂<rt>ふろ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>って<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>る　　<ruby>保険<rt>ほけん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>る　　<ruby>花<rt>はな</rt></ruby>を<ruby>送<rt>おく</rt></ruby>る'+
+        '</div><br>'+
+        
+        '<div class="problem">'+
+          '<ruby>将来<rt>しょうらい</rt></ruby><ruby>病気<rt>びょうき</rt></ruby>になるかもしれないので、{保険に入ろうと思っています|ほけんにはいろうとおもっています|' + Genki.getAlts('{保険}に{入}ろうと{思}っています', 'ほけん|はい|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'お<ruby>金<rt>かね</rt></ruby>がないので、{両親にお金を借りようと思っています|りょうしんにおかねをかりようとおもっています|' + Genki.getAlts('{両親}にお{金}を{借}りようと{思}っています', 'りょうしん|かね|か|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>一日中<rt>いちにちじゅう</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>して<ruby>疲<rt>つか</rt></ruby>れたので、{お風呂に入って早く寝ようと思っています|おふろにはいってはやくねようとおもっています|' + Genki.getAlts('お{風呂}に{入}って{早}く{寝}ようと{思}っています', 'ふろ|はい|はや|ね|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '夏休みに<ruby>時間<rt>じかん</rt></ruby>があるので、{ボランティア活動に参加しようと思っています|ボランティアかつどうにさんかしようとおもっています|' + Genki.getAlts('ボランティア{活動}に{参加}しようと{思}っています', 'かつどう|さんか|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>母<rt>はは</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に{花を送ろうと思っています|はなをおくろうとおもっています|' + Genki.getAlts('{花}を{送}ろうと{思}っています', 'はな|おく|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>自転車<rt>じてんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>れないので、{練習しようと思っています|れんしゅうしようとおもっています|' + Genki.getAlts('{練習}しようと{思}っています', 'れんしゅう|おも') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Complete the dialogue, using the {!GRI|volitional + と<ruby>思<rt>おも</rt></ruby>っています|l15-p2}.</p>'+
+        '<div class="problem">'+
+          'かな：{今度の休みに何をしようと思っていますか|こんどのやすみになにをしようとおもっていますか|' + Genki.getAlts('{今度}の{休}みに{何}をしようと{思}っていますか', 'こんど|やす|なに|おも') + 'answer;hint:(What do you intend to do next holiday?)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'ジョン：{友だちが来る|ともだちがくる|' + Genki.getAlts('{友}{達}が{来}る', 'とも|だち|く') + 'answer;hint:(my friend will come);width:200}ので、{友だちといろいろな所に行こうと思っています|ともだちといろいろなところにいこうとおもっています|' + Genki.getAlts('{友}{達}と{色々}な{所}に{行}こうと{思}っています', 'とも|だち|いろいろ|ところ|い|おも') + 'answer;hint:I intend to go to various places with them.}。'+
+        '</div>'+
+        
+        '<div style="margin:0 0 40px 0;">かな：いいですね。</div>'+
+        
+        '<div style="margin:0 0 40px 0;">ジョン：かなさんは？</div>'+
+        
+        '<div class="problem">'+
+          'かな：{試験があるので、勉強しようと思っています|しけんがあるので、べんきょうしようとおもっています|' + Genki.getAlts('{試験}があるので、{勉強}しようと{思}っています', 'しけん|べんきょう|おも') + 'answer;hint:(Since there\'s an exam, I intend to study.)}。'+
+        '</div>'+
+        
+        '<div style="margin:0 0 40px 0;">ジョン：そうですか。</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

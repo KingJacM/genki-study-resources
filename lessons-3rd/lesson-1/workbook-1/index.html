@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,61 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Solve the problems using the framework "{!GRI|XはYです|l1-p1}."',
+
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Look at Takeshi\'s profile and describe him in Japanese.</p>'+
+      '<div class="columns-2 clear">'+
+        '<div class="count-problems">'+
+          '<div class="problem">たけしさんは{にじゅうにさいです|二十二歳です|answer;width:200;hint:(age)}。</div>'+
+          '<div class="problem">たけしさんは{にほんじんです|日本人です|answer;width:200;hint:(nationality)}。</div>'+
+          '<div class="problem">たけしさんは{よねんせいです|四年生です|answer;width:200;hint:(year in school)}。</div>'+
+        '</div>'+
+
+        '<div class="center">'+
+          '{!IMG|3rd-takeshi.png|たけし}<br>'+
+          'Takeshi, 22 years old<br>'+
+          'Japanese<br>'+
+          '4th-year student'+
+        '</div>'+
+      '</div>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Using the framework "XはYです," translate the following sentences into Japanese.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'Ms. Ogawa is Japanese.<br>'+
+          '{おがわさん}は{にほんじん|日本人|answer}です。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'Mr. Takeda is a teacher.<br>'+
+          '{たけださんはせんせいです|たけださんは先生です|answer}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'I am an international student.<br>'+
+          '{わたしはりゅうがくせいです|私は留学生です|' + Genki.getAlts('{私}は{留学生}です', 'わたし|りゅうがくせい') + 'answer}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'Haruna is a first-year student.<br>'+
+          '{はるなさんはいちねんせいです|はるなさんは一年生です|answer}。'+
+        '</div>'+
+
+        '<div class="problem">'+
+          'Ms. Yamamoto is 25 years old.<br>'+
+          '{やまもとさんはにじゅうごさいです|やまもとさんは二十五歳です|answer}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

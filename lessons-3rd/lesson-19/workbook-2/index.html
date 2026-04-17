@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,54 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|honorific expressions|l19-p1}.',
+      
+      quizlet : 
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>You are the master of a ceremony (<ruby>司会<rt>しかい</rt></ruby>) at a school party. This is your speech, introducing your professor, who will sing a song. Rewrite the blanks with {!GRI|honorific expressions|l19-p1}.</p>'+
+        '<div class="problem"><ruby>大川先生<rt>おおかわせんせい</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>します。<ruby>大川先生<rt>おおかわせんせい</rt></ruby>は、イリノイ<ruby>大学<rt>だいがく</rt></ruby>の<ruby>大学院<rt>だいがくいん</rt></ruby>で{勉強なさった|べんきょうなさった|answer;hint:<ruby>勉強<rt>べんきょう</rt></ruby>した}<ruby>後<rt>あと</rt></ruby>、</div>'+
+        
+        '<div class="problem">アメリカで<ruby>日本語<rt>にほんご</rt></ruby>を{教えていらっしゃいました|おしえていらっしゃいました|answer;hint:<ruby>教<rt>おし</rt></ruby>えていました}が、<ruby>四年前<rt>よねんまえ</rt></ruby>にさくら<ruby>大学<rt>だいがく</rt></ruby>に{いらっしゃいました|<ruby>来<rt>き</rt></ruby>ました|width:140}。</div>'+
+        
+        '<div class="problem">「<ruby>最近<rt>さいきん</rt></ruby>はとても<ruby>忙<rt>いそが</rt></ruby>しくて、テレビを<ruby>見<rt>み</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>もない」と{おっしゃっています|<ruby>言<rt>い</rt></ruby>っています|width:140}。</div>'+
+        
+        '<div class="problem">この<ruby>間<rt>あいだ</rt></ruby>、ギターを{お買いになった|おかいになった|answer;hint:<ruby>買<rt>か</rt></ruby>った}そうです。<ruby>今日<rt>きょう</rt></ruby>は「ドナ・ドナ」を{歌ってくださいます|うたってくださいます|answer;hint:<ruby>歌<rt>うた</rt></ruby>ってくれます}。</div>'+
+        
+        '<div class="problem">きのうもお<ruby>宅<rt>たく</rt></ruby>で{練習なさった|れんしゅうなさった|answer;hint:<ruby>練習<rt>れんしゅう</rt></ruby>した}そうです。じゃあ、<ruby>大川先生<rt>おおかわせんせい</rt></ruby>、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Here is the interview with the professor after the performance. Fill in the blanks with appropriate {!GRI|honorific verbs|l19-p1}.</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>司会<rt>しかい</rt></ruby>：<ruby>大川先生<rt>おおかわせんせい</rt></ruby>、ありがとうございました。<br>'+
+            '　　　きのうの<ruby>夜<rt>よる</rt></ruby>はよく{お休みになりました|おやすみになりました|answer}か。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>先生<rt>せんせい</rt></ruby>：いいえ、<ruby>緊張<rt>きんちょう</rt></ruby>していたので、あまり<ruby>寝<rt>ね</rt></ruby>られませんでした。<br>'+
+            '<ruby>司会<rt>しかい</rt></ruby>：そうですか。<ruby>今晩<rt>こんばん</rt></ruby>は<ruby>何<rt>なに</rt></ruby>を{なさる}んですか。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>先生<rt>せんせい</rt></ruby>：<ruby>家族<rt>かぞく</rt></ruby>とゆっくり<ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べるつもりです。<br>'+
+            '<ruby>司会<rt>しかい</rt></ruby>：そうですか。おいしい<ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を{召し上がって|めしあがって|answer}ください。<ruby>今日<rt>きょう</rt></ruby>はどうもありがとうございました。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

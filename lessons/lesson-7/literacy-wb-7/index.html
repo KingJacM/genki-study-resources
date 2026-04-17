@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,44 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Using the kanji you know, translate the sentences into Japanese.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'Kyoko\'s younger sister is a high school student.<br>'+
+          '{京子さんの妹さんは高校生です|きょうこさんのいもうとさんはこうこうせいです|' + Genki.getAlts('{京子}さんの{妹}さんは{高校生}です', 'きょうこ|いもうと|こうこうせい') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Kyoko\'s mother works for a small company.<br>'+
+          '{京子さんのお母さんは小さい会社に勤めています|きょうこさんのおかあさんはちいさいかいしゃにつとめています|' + Genki.getAlts('{京子}さんのお{母}さんは{小}さい{会社}に{勤}めています', 'きょうこ|かあ|ちい|かいしゃ|つと') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Kyoko\'s father comes home late every day.<br>'+
+          '{京子さんのお父さんは毎日遅くうちに帰ります|きょうこさんのおとうさんはまいにちおそくうちにかえります|' + Genki.getAlts('{京子}さんのお{父}さんは{毎日}{遅}くうちに{帰}ります', 'きょうこ|とう|まいにち|おそ|かえ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I am studying Japanese and literature.<br>'+
+          '{%(私は/)日本語と文学を勉強しています|%(わたしは/)にほんごとぶんがくをべんきょうしています|' + Genki.getAlts('{私}は{日本語}と{文学}を{勉強}しています', 'わたし|にほんご|ぶんがく|べんきょう') + Genki.getAlts('{日本語}と{文学}を{勉強}しています', 'にほんご|ぶんがく|べんきょう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Ms. Minami speaks English a little.<br>'+
+          '{南さんは少し英語を話します|みなみさんはすこしえいごをはなします|' + Genki.getAlts('{南}さんは{少}し{英語}を{話}します', 'みなみ|すこ|えいご|はな') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

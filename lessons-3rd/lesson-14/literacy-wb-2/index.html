@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,30 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the kanji you learned.',
+      
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd fa">&#xf054;</span>Rewrite the hiragana with an appropriate mix of kanji and hiragana. Rewrite the kanji with hiragana.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem valign-top">私の{彼|かれ}はとても{親切|しんせつ}です。二<ruby>歳<rt>さい</rt></ruby>{としうえ|年上|width:70}です。</div>'+
+        '<div class="problem valign-top">{にかげつご|二か月後|width:84}、{留学|りゅうがく}するので、{家族|かぞく}は<ruby>心配<rt>しんぱい</rt></ruby>しています。</div>'+
+        '<div class="problem">その{店|みせ}の人は{英語|えいご}が{じょうず|上手|width:70}でした。</div>'+
+        '<div class="problem">{急に|きゅうに}{病気|びょうき}になって{医者|いしゃ}に行きました。</div>'+
+        '<div class="problem">{去年|きょねん}は{本当に|ほんとうに}{楽しかった|たのしかった}です。</div>'+
+        '<div class="problem valign-top">東京から{ほっかいどう|北海道|width:98}まで<ruby>飛行機<rt>ひこうき</rt></ruby>に{乗りました|のりました}。</div>'+
+        '<div class="problem valign-top">{彼女|かのじょ}は{留学生|りゅうがくせい}で、<ruby>専攻<rt>せんこう</rt></ruby>は{音楽|おんがく}です。</div>'+
+        '<div class="problem">大学{時代|じだい}の友だちに{さんねんかん|三年間|width:98}会っていません。</div>'+
+        '<div class="problem">仕事の後、{買い物|かいもの}をして、{急いで|いそいで}帰ります。</div>'+
+        '<div class="problem">子どもの時、{父親|ちちおや}が<ruby>髪<rt>かみ</rt></ruby>を{切って|きって}くれました。</div>'+
+      '</div>'
+    });</script>
   </body>
 </html>

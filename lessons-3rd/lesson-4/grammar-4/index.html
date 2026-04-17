@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,164 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Read the cues and {!GRI|describe where the following things are located|l4-p2}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : '<ruby>本<rt>ほん</rt></ruby>はどこですか。<br>(on the desk)',
+            answers : [
+              'A<ruby>本<rt>ほん</rt></ruby>はつくえの<ruby>上<rt>うえ</rt></ruby>です。',
+              '<ruby>本<rt>ほん</rt></ruby>は<ruby>上<rt>うえ</rt></ruby>のつくえです。',
+              '<ruby>本<rt>ほん</rt></ruby>はつくえの<ruby>下<rt>した</rt></ruby>です。',
+              '<ruby>本<rt>ほん</rt></ruby>は<ruby>下<rt>した</rt></ruby>のつくえです。'
+            ]
+          },
+
+          {
+            question : 'ジーンズはどこですか。<br>(on the TV)',
+            answers : [
+              'Aジーンズはテレビの<ruby>上<rt>うえ</rt></ruby>です。',
+              'ジーンズは<ruby>上<rt>うえ</rt></ruby>のテレビです。',
+              'ジーンズはテレビの<ruby>下<rt>した</rt></ruby>です。',
+              'ジーンズは<ruby>下<rt>した</rt></ruby>のテレビです。'
+            ]
+          },
+
+          {
+            question : '<ruby>猫<rt>ねこ</rt></ruby>はどこですか。<br>(behind the TV)',
+            answers : [
+              'A<ruby>猫<rt>ねこ</rt></ruby>はテレビの<ruby>後<rt>うし</rt></ruby>ろです。',
+              '<ruby>猫<rt>ねこ</rt></ruby>は<ruby>後<rt>うし</rt></ruby>ろのテレビです。',
+              '<ruby>猫<rt>ねこ</rt></ruby>はテレビの<ruby>前<rt>まえ</rt></ruby>です。',
+              '<ruby>猫<rt>ねこ</rt></ruby>は<ruby>前<rt>まえ</rt></ruby>のテレビです。'
+            ]
+          },
+
+          {
+            question : '<ruby>帽子<rt>ぼうし</rt></ruby>はどこですか。<br>(in the bag)',
+            answers : [
+              'A<ruby>帽子<rt>ぼうし</rt></ruby>はかばんの<ruby>中<rt>なか</rt></ruby>です。',
+              '<ruby>帽子<rt>ぼうし</rt></ruby>は<ruby>中<rt>なか</rt></ruby>のかばんです。',
+              '<ruby>帽子<rt>ぼうし</rt></ruby>はかばんの<ruby>下<rt>した</rt></ruby>です。',
+              '<ruby>帽子<rt>ぼうし</rt></ruby>は<ruby>下<rt>した</rt></ruby>のかばんです。'
+            ]
+          },
+
+          {
+            question : '<ruby>時計<rt>とけい</rt></ruby>はどこですか。<br>(in front of the TV)',
+            answers : [
+              'A<ruby>時計<rt>とけい</rt></ruby>はテレビの<ruby>前<rt>まえ</rt></ruby>です。',
+              '<ruby>時計<rt>とけい</rt></ruby>は<ruby>前<rt>まえ</rt></ruby>のテレビです。',
+              '<ruby>時計<rt>とけい</rt></ruby>はテレビの<ruby>後<rt>うし</rt></ruby>ろです。',
+              '<ruby>時計<rt>とけい</rt></ruby>は<ruby>後<rt>うし</rt></ruby>ろのテレビです。'
+            ]
+          },
+
+          {
+            question : '<ruby>靴<rt>くつ</rt></ruby>はどこですか。<br>(under the desk)',
+            answers : [
+              'A<ruby>靴<rt>くつ</rt></ruby>はつくえの<ruby>下<rt>した</rt></ruby>です。',
+              '<ruby>靴<rt>くつ</rt></ruby>は<ruby>下<rt>した</rt></ruby>のつくえです。',
+              '<ruby>靴<rt>くつ</rt></ruby>はつくえの<ruby>中<rt>なか</rt></ruby>です。',
+              '<ruby>靴<rt>くつ</rt></ruby>は<ruby>中<rt>なか</rt></ruby>のつくえです。'
+            ]
+          },
+
+          {
+            question : '<ruby>花<rt>はな</rt></ruby>はどこですか。<br>(on the chair)',
+            answers : [
+              'A<ruby>花<rt>はな</rt></ruby>はいすの<ruby>上<rt>うえ</rt></ruby>です。',
+              '<ruby>花<rt>はな</rt></ruby>は<ruby>上<rt>うえ</rt></ruby>のいすです。',
+              '<ruby>花<rt>はな</rt></ruby>はいすの<ruby>前<rt>まえ</rt></ruby>です。',
+              '<ruby>花<rt>はな</rt></ruby>は<ruby>前<rt>まえ</rt></ruby>のいすです。'
+            ]
+          },
+
+          {
+            question : '<ruby>犬<rt>いぬ</rt></ruby>はどこですか。<br>(under the desk)',
+            answers : [
+              'A<ruby>犬<rt>いぬ</rt></ruby>はつくえの<ruby>下<rt>した</rt></ruby>です。',
+              '<ruby>犬<rt>いぬ</rt></ruby>は<ruby>下<rt>した</rt></ruby>のつくえです。',
+              '<ruby>犬<rt>いぬ</rt></ruby>はつくえの<ruby>後<rt>うし</rt></ruby>ろです。',
+              '<ruby>犬<rt>いぬ</rt></ruby>は<ruby>後<rt>うし</rt></ruby>ろのつくえです。'
+            ]
+          },
+
+          {
+            question : '<ruby>傘<rt>かさ</rt></ruby>はどこですか。<br>(on the desk)',
+            answers : [
+              'A<ruby>傘<rt>かさ</rt></ruby>はつくえの<ruby>上<rt>うえ</rt></ruby>です。',
+              '<ruby>傘<rt>かさ</rt></ruby>は<ruby>上<rt>うえ</rt></ruby>のつくえです。',
+              '<ruby>傘<rt>かさ</rt></ruby>はつくえの<ruby>下<rt>した</rt></ruby>です。',
+              '<ruby>傘<rt>かさ</rt></ruby>は<ruby>下<rt>した</rt></ruby>のつくえです。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<ruby>本<rt>ほん</rt></ruby>はどこですか。(on the desk)<br>'+
+          '{本|ほん|answer}は{机|つくえ|answer}の{上|うえ|answer}です。'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'ジーンズはどこですか。(on the TV)<br>'+
+              '{ジーンズはテレビの上です|ジーンズはテレビのうえです|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>猫<rt>ねこ</rt></ruby>はどこですか。(behind the TV)<br>'+
+              '{猫はテレビの後ろです|ねこはテレビのうしろです|' + Genki.getAlts('{猫}はテレビの{後}ろです', 'ねこ|うし') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>帽子<rt>ぼうし</rt></ruby>はどこですか。(in the bag)<br>'+
+              '{帽子はかばんの中です|ぼうしはかばんのなかです|' + Genki.getAlts('{帽子}は{かばん}の{中}です', 'ぼうし|鞄|なか') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>時計<rt>とけい</rt></ruby>はどこですか。(in front of the TV)<br>'+
+              '{時計はテレビの前です|とけいはテレビのまえです|' + Genki.getAlts('{時計}はテレビの{前}です', 'とけい|まえ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>靴<rt>くつ</rt></ruby>はどこですか。(under the desk)<br>'+
+              '{靴は机の下です|くつはつくえのしたです|' + Genki.getAlts('{靴}は{机}の{下}です', 'くつ|つくえ|した') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>花<rt>はな</rt></ruby>はどこですか。(on the chair)<br>'+
+              '{花はいすの上です|はなはいすのうえです|' + Genki.getAlts('{花}は{いす}の{上}です', 'はな|椅子|うえ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>犬<rt>いぬ</rt></ruby>はどこですか。(under the desk)<br>'+
+              '{犬は机の下です|いぬはつくえのしたです|' + Genki.getAlts('{犬}は{机}の{下}です', 'いぬ|つくえ|した') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>傘<rt>かさ</rt></ruby>はどこですか。(on the desk)<br>'+
+              '{傘は机の上です|かさはつくえのうえです|' + Genki.getAlts('{傘}は{机}の{上}です', 'かさ|つくえ|うえ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

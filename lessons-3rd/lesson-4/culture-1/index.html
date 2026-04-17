@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,10 +68,181 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>(function () {
+      var s = 'What holiday is celebrated on ',
+          h = [ // holidays
+            '<ruby>元日<rt>がんじつ</rt></ruby>（New Year\'s Day）', // 0
+            '<ruby>成人の日<rt>せいじんのひ</rt></ruby>（Coming-of-Age Day）', // 1
+            '<ruby>建国記念の日<rt>けんこくきねんのひ</rt></ruby>（National Foundation Day）', // 2
+            '<ruby>春分の日<rt>しゅんぶんのひ</rt></ruby>（Vernal Equinox Day）', // 3
+            '<ruby>昭和の日<rt>しょうわのひ</rt></ruby>（Showa Day）', // 4
+            '<ruby>憲法記念日<rt>けんぽうきねんび</rt></ruby>（Constitution Day）', // 5
+            'みどりの<ruby>日<rt>ひ</rt></ruby>（Greenery Day）', // 6
+            'こどもの<ruby>日<rt>ひ</rt></ruby>（Children\'s Day）', // 7
+            '<ruby>海の日<rt>うみのひ</rt></ruby>（Marine Day）', // 8
+            '<ruby>敬老の日<rt>けいろうのひ</rt></ruby>（Respect-for-the-Aged Day）', // 9
+            '<ruby>秋分の日<rt>しゅうぶんのひ</rt></ruby>（Autumnal Equinox）', // 10
+            '<ruby>体育の日<rt>たいいくのひ</rt></ruby>（Health and Sports Day）', // 11
+            '<ruby>文化の日<rt>ぶんかのひ</rt></ruby>（Culture Day）', // 12
+            '<ruby>勤労感謝の日<rt>きんろうかんしゃ</rt></ruby>（Labor Thanksgiving Day）', // 13
+            '<ruby>天皇誕生日<rt>てんのうたんじょうび</rt></ruby>（Emperor\'s Birthday）', // 14
+            '<ruby>山の日<rt>やまのひ</rt></ruby>（Mountain Day）' // 15
+          ],
+          
+          q = [
+            {
+              question : s + '1月1日？',
+              answers : [
+                'A' + h[0]
+              ]
+            },
+
+            {
+              question : s + '1月第2月曜日？',
+              answers : [
+                'A' + h[1]
+              ]
+            },
+
+            {
+              question : s + '2月11日？',
+              answers : [
+                'A' + h[2]
+              ]
+            },
+
+            {
+              question : s + '2月23日？',
+              answers : [
+                'A' + h[14]
+              ]
+            },
+
+            {
+              question : s + '3月20日ごろ？',
+              answers : [
+                'A' + h[3]
+              ]
+            },
+
+            {
+              question : s + '4月29日？',
+              answers : [
+                'A' + h[4]
+              ]
+            },
+
+            {
+              question : s + '5月3日？',
+              answers : [
+                'A' + h[5]
+              ]
+            },
+
+            {
+              question : s + '5月4日？',
+              answers : [
+                'A' + h[6]
+              ]
+            },
+
+            {
+              question : s + '5月5日？',
+              answers : [
+                'A' + h[7]
+              ]
+            },
+
+            {
+              question : s + '7月第3月曜日？',
+              answers : [
+                'A' + h[8]
+              ]
+            },
+
+            {
+              question : s + '8月11日？',
+              answers : [
+                'A' + h[15]
+              ]
+            },
+
+            {
+              question : s + '9月第3月曜日？',
+              answers : [
+                'A' + h[9]
+              ]
+            },
+
+            {
+              question : s + '9月23日ごろ？',
+              answers : [
+                'A' + h[10]
+              ]
+            },
+
+            {
+              question : s + '10月第2月曜日？',
+              answers : [
+                'A' + h[11]
+              ]
+            },
+
+            {
+              question : s + '11月3日？',
+              answers : [
+                'A' + h[12]
+              ]
+            },
+
+            {
+              question : s + '11月23日？',
+              answers : [
+                'A' + h[13]
+              ]
+            },
+
+            {
+              question : 'The period around April 29 to May 5 encompasses several holidays and is called _____.',
+              answers : [
+                'Aゴールデンウィーク（Golden Week）',
+                'シルバーウィーク（Silver Week）',
+                'ブロンズウィーク（Bronze Week）',
+                'プラチナムウィーク（Platinum Week）'
+              ]
+            }
+          ],
+          i = 0, j = q.length - 1, answers, k, n;
+        
+      // randomly assign answers for problems 1-16
+      for (; i < j; i++) {
+        answers = h.slice();
+        answers.splice(answers.indexOf(q[i].answers[0].slice(1)), 1);
+        k = 3;
+        
+        while (k --> 0) {
+          if (answers.length) {
+            n = Math.floor(Math.random() * answers.length);
+            q[i].answers.push(answers[n].charAt(0) == 'A' ? '!' + answers[n] : answers[n]);
+            answers.splice(n, 1);
+          } else {
+            break; // break out if there's no more answers, to prevent errors
+          }
+        }
+      }
+        
+      Genki.generateQuiz({
+        type : 'multi',
+        info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about Japanese National Holidays (Genki I: p.114) if you haven\'t yet.',
+
+        quizlet : q
+      });
+    }());</script>
   </body>
 </html>

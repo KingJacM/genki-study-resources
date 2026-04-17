@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,76 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|Number+も／Number+しか+Negative|l14-p5}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences. If you think the number is large, use {!GRI|も|l14-p5}. If you think the number is small, use {!GRI|しか|l14-p5}.</p>'+
+        '<div class="problem">'+
+          'Naomi\'s father has seven cars.<br>'+
+          '{ナオミさんのお父さんは車を七台も持っています|ナオミさんのおとうさんはくるまをななだいももっています|' + Genki.getAlts('ナオミさんのお{父}さんは{車}を{七台}も{持}っています', 'とう|くるま|ななだい|も') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Ken read three books last year.<br>'+
+          '{けんさんは去年本を三冊しか読みませんでした|けんさんはきょねんほんをさんさつしかよみませんでした|' + Genki.getAlts('けんさんは{去年}{本}を{三冊}しか{読}みませんでした', 'きょねん|ほん|さんさつ|よ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Mary has three part-time jobs.<br>'+
+          '{メアリーさんはアルバイトが三つもあります|メアリーさんはアルバイトがみっつもあります|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'John slept four hours yesterday.<br>'+
+          '{ジョンさんはきのう四時間しか寝ませんでした|ジョンさんはきのうよじかんしかねませんでした|' + Genki.getAlts('ジョンさんは{昨日}{四時間}しか{寝}ませんでした', 'きのう|よじかん|ね') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Takeshi has six cats.<br>'+
+          '{たけしさんは猫を六匹も飼っています|たけしさんはねこをろっぴきもかっています|' + Genki.getAlts('たけしさんは{猫}を{六匹}も{飼}っています', 'ねこ|ろっぴき|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Professor Yamashita has two T-shirts.<br>'+
+          '{山下先生はＴシャツを二枚しか持っていません|やましたせんせいはＴシャツをにまいしかもっていません|' + Genki.getAlts('{山下}{先生}はＴシャツを{二枚}しか{持}っていません', 'やました|せんせい|にまい|も') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Hiro has one friend.<br>'+
+          '{ひろさんは友だちが一人しかいません|ひろさんはともだちがひとりしかいません|' + Genki.getAlts('ひろさんは{友}{達}が{一人}しかいません', 'とも|だち|ひとり') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Answer the following questions by translating the sentences. Use "{!GRI|Number + も|l14-p5}" or "{!GRI|Number + しか|l14-p5}" if necessary.</p>'+
+        '<div class="problem">'+
+          'きのう<ruby>何時間<rt>なんじかん</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しましたか。<br>'+
+          '(I studied for as many as 5 hours.)。<br>'+
+          '{五時間も%(勉強/)しました|ごじかんも%(べんきょう/)しました|' + Genki.getAlts('{五時間}も{勉強}しました', 'ごじかん|べんきょう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>今<rt>いま</rt></ruby>、<ruby>財布<rt>さいふ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にいくらありますか。<br>'+
+          '(There\'s only 1,000 yen.)<br>'+
+          '{千円しかありません|せんえんしかありません|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'ジーンズを<ruby>何本<rt>なんぼん</rt></ruby><ruby>持<rt>も</rt></ruby>っていますか。<br>'+
+          '(I own three.)<br>'+
+          '{三本持っています|さんぼんもっています|' + Genki.getAlts('{三本}{持}っています', 'さんぼん|も') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

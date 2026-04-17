@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,37 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Read the passage about Mary\'s weekend and then answer the activities in the order Mary did them.',
+      
+      quizlet : 
+        '<p class="section-desc">Read the following passage about Mary\'s weekend.</p>'+
+        '<p class="text-passage sub-section">'+
+          '　<ruby>金曜日<rt>きんようび</rt></ruby>に<ruby>日本人<rt>にほんじん</rt></ruby>のともだちとこうえんにいきました。こうえんでともだちとはなしました。それから、レストランへいきました。たくさんたべました。<br>'+
+          '　<ruby>土曜日<rt>どようび</rt></ruby>は<ruby>一人<rt>ひとり</rt></ruby>でおてらへいきました。たくさんみせがありました。みせでおまんじゅうをかいました。<br>'+
+          '　<ruby>日曜日<rt>にちようび</rt></ruby>はおそくおきました。おかあさんもおそくおきました。わたしはあさ、ざっしをよみました。それから、おかあさんとひるごはんをたべました。ごごは<ruby>日本語<rt>にほんご</rt></ruby>をべんきょうしました。レポートもかきました。'+
+        '</p>'+
+        '<p style="text-align:right;">みせ shop; store<br>おまんじゅう sweet bun<br>おそく (do something) late</p>'+
+        
+        '<p class="section-desc">Answer the following activities in the order Mary did them.</p>'+
+        '<div class="indent-block">'+
+          '<div>({c}) <i class="fa">&#xf061;</i> ({b}) <i class="fa">&#xf061;</i> ({d}) <i class="fa">&#xf061;</i> ({e}) <i class="fa">&#xf061;</i> ({a})</div><br>'+
+
+          '<div class="sub-section inline-problem set-problem-width-med" style="width:80%;">'+
+            '<div class="block">(a) studied Japanese</div>'+
+            '<div class="block">(b) went to a restaurant</div>'+
+            '<div class="block">(c) went to a park</div>'+
+            '<div class="block">(d) bought sweet buns</div>'+
+            '<div class="block">(e) read a magazine</div>'+
+          '</div>'+
+        '</div>'
+    });</script>
   </body>
 </html>

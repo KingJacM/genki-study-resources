@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,72 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～のに|l22-p5}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate phrases 1 through 5, using {!GRI|のに|l22-p5}, and match them up with the appropriate continuations by writing 1-5 in the ( ).</p>'+
+        '<div class="columns-2 valign-top clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '{今日、期末試験があるのに|きょう、きまつしけんがあるのに|' + Genki.getAlts('{今日}、{期末試験}があるのに', 'きょう|きまつしけん') + 'answer;hint:(though I have a final exam today);width:300}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '{毎日練習したのに|まいにちれんしゅうしたのに|' + Genki.getAlts('{毎日}{練習}したのに', 'まいにち|れんしゅう') + 'answer;hint:(though I practiced every day);width:300}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '{あの人にプレゼントをあげたのに|あのひとにプレゼントをあげたのに|answer;hint:(though I gave that person a present);width:300}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '{兄弟なのに|きょうだいなのに|answer;hint:(though they are brothers);width:300}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '{同僚は忙しくないのに|どうりょうはいそがしくないのに|' + Genki.getAlts('{同僚}は{忙}しくないのに', 'どうりょう|いそが') + 'answer;hint:(though the colleague is not busy);width:300}。'+
+            '</div>'+
+          '</div>'+
+        
+          '<div>'+
+            '<div class="big-margin">a. ({5}) <ruby>手伝<rt>てつだ</rt></ruby>ってくれません。</div>'+
+            '<div class="big-margin">b. ({1}) <ruby>勉強<rt>べんきょう</rt></ruby>しませんでした。</div>'+
+            '<div class="big-margin">c. ({4}) <ruby>仲<rt>なか</rt></ruby>がよくないです。</div>'+
+            '<div class="big-margin">d. ({2}) <ruby>負<rt>ま</rt></ruby>けてしまいました。</div>'+
+            '<div class="big-margin">e. ({3}) 「ありがとう」と<ruby>言<rt>い</rt></ruby>いませんでした。</div>'+
+          '</div>'+
+        '</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Complete the following sentences by translating the cues.</p>'+
+        '<div class="problem">'+
+          '<ruby>彼<rt>かれ</rt></ruby>は<ruby>免許<rt>めんきょ</rt></ruby>を<ruby>持<rt>も</rt></ruby>っていないのに{車を運転した|くるまをうんてんした|' + Genki.getAlts('{車}を{運転}した', 'くるま|うんてん') + 'answer;hint:(drove a car)}ので、<ruby>警察<rt>けいさつ</rt></ruby>に<ruby>捕<rt>つか</rt></ruby>まりました。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>彼女<rt>かのじょ</rt></ruby>はよく<ruby>授業<rt>じゅぎょう</rt></ruby>をサボるのに、{成績がいいです|せいせきがいいです|' + Genki.getAlts('{成績}が{よ}いです', 'せいせき|良') + 'answer;hint:(grades are good)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '{仕事が大変な|しごとがたいへんな|' + Genki.getAlts('{仕事}が{大変}な', 'しごと|たいへん') + 'answer;hint:(job is tough)}のに、<ruby>彼<rt>かれ</rt></ruby>は<ruby>文句<rt>もんく</rt></ruby>を<ruby>言<rt>い</rt></ruby>いません。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '{何でもしてあげた|なんでもしてあげた|answer;hint:(gave everything)}のに、ふられてしまいました。'+
+        '</div>'+
+        
+      '</div>'
+        
+    });</script>
   </body>
 </html>

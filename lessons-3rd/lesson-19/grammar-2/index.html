@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,195 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Describe what Professor Yamashita does in a day using {!GRI|honorific expressions|l19-p1}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'drink coffee',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はコーヒーを<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はコーヒーを<ruby>飲<rt>の</rt></ruby>みます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はコーヒーを<ruby>飲<rt>の</rt></ruby>んでいらっしゃいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はコーヒーをお<ruby>飲<rt>の</rt></ruby>みます。'
+            ]
+          },
+
+          {
+            question : 'ride bus',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はバスにお<ruby>乗<rt>の</rt></ruby>りになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はバスにお<ruby>乗<rt>の</rt></ruby>るになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はバスにお<ruby>乗<rt>の</rt></ruby>になります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はバスにお<ruby>乗<rt>の</rt></ruby>っていらっしゃいます。'
+            ]
+          },
+
+          {
+            question : 'go to college',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>にいらっしゃいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>にお<ruby>行<rt>い</rt></ruby>きになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>におっしゃいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>に<ruby>行<rt>い</rt></ruby>っていらっしゃいます。'
+            ]
+          },
+
+          {
+            question : 'use phone',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>電話<rt>でんわ</rt></ruby>なさいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はお<ruby>電話<rt>でんわ</rt></ruby>になります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>電話<rt>でんわ</rt></ruby>していらっしゃいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>電話<rt>でんわ</rt></ruby>しておっしゃいます。'
+            ]
+          },
+
+          {
+            question : 'eat lunch',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>をお<ruby>食<rt>た</rt></ruby>べになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べていらっしゃいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります。'
+            ]
+          },
+
+          {
+            question : 'use personal computer',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はパソコンをお<ruby>使<rt>つか</rt></ruby>いになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はパソコンをお<ruby>使<rt>つか</rt></ruby>うになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はパソコンをお<ruby>使<rt>つか</rt></ruby>ったになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はパソコンをお<ruby>使<rt>つか</rt></ruby>っていらっしゃいます。'
+            ]
+          },
+
+          {
+            question : 'return home',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>にお<ruby>帰<rt>かえ</rt></ruby>りになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>にお<ruby>帰<rt>かえ</rt></ruby>るになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>にお<ruby>帰<rt>かえ</rt></ruby>になります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>にいらっしゃいます。'
+            ]
+          },
+
+          {
+            question : 'cook',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>をなさいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>をおしになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>をくださいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はお<ruby>料理<rt>りょうり</rt></ruby>になります。'
+            ]
+          },
+
+          {
+            question : 'watch TV',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はテレビをご<ruby>覧<rt>らん</rt></ruby>になります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はテレビをお<ruby>見<rt>み</rt></ruby>になります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はテレビをお<ruby>見<rt>み</rt></ruby>りになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はテレビをご<ruby>覧<rt>らん</rt></ruby>ます。'
+            ]
+          },
+
+          {
+            question : 'read book',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>本<rt>ほん</rt></ruby>をお<ruby>読<rt>よ</rt></ruby>みになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>本<rt>ほん</rt></ruby>をお<ruby>読<rt>よ</rt></ruby>むになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>本<rt>ほん</rt></ruby>をお<ruby>読<rt>よ</rt></ruby>んでいらっしゃいます。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。'
+            ]
+          },
+
+          {
+            question : 'sleep',
+            answers : [
+              'A<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はお<ruby>休<rt>やす</rt></ruby>みになります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はお<ruby>寝<rt>ね</rt></ruby>になります。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はお<ruby>休<rt>やす</rt></ruby>みなさい。',
+              '<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>は<ruby>寝<rt>ね</rt></ruby>ます。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'drink coffee　<i class="fa">&#xf061;</i>　<ruby>山下<rt>やました</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はコーヒーを<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'ride bus<br>'+
+              '{山下先生はバスにお乗りになります|やましたせんせいはバスにおのりになります|' + Genki.getAlts('{山下}{先生}はバスにお{乗}りになります', 'やました|せんせい|の') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'go to college<br>'+
+              '{山下先生は大学にいらっしゃいます|やましたせんせいはだいがくにいらっしゃいます|' + Genki.getAlts('{山下}{先生}は{大学}にいらっしゃいます', 'やました|せんせい|だいがく') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'use phone<br>'+
+              '{山下先生は電話なさいます|やましたせんせいはでんわなさいます|' + Genki.getAlts('{山下}{先生}は{電話}なさいます', 'やました|せんせい|でんわ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'eat lunch<br>'+
+              '{山下先生は昼ご飯を召し上がります|やましたせんせいはひるごはんをめしあがります|' + Genki.getAlts('{山下}{先生}は{昼}ご{飯}を{召}し{上}がります', 'やました|せんせい|ひる|はん|め|あ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'use personal computer<br>'+
+              '{山下先生はパソコンをお使いになります|やましたせんせいはパソコンをおつかいになります|' + Genki.getAlts('{山下}{先生}はパソコンをお{使}いになります', 'やました|せんせい|つか') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'return home<br>'+
+              '{山下先生は家にお帰りになります|やましたせんせいはいえにおかえりになります|' + Genki.getAlts('{山下}{先生}は{家}にお{帰}りになります', 'やました|せんせい|いえ|かえ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'cook<br>'+
+              '{山下先生は料理をなさいます|やましたせんせいはりょうりをなさいます|' + Genki.getAlts('{山下}{先生}は{料理}をなさいます', 'やました|せんせい|りょうり') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'watch TV<br>'+
+              '{山下先生はテレビをご覧になります|やましたせんせいはテレビをごらんになります|' + Genki.getAlts('{山下}{先生}はテレビをご{覧}になります', 'やました|せんせい|らん') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'read book<br>'+
+              '{山下先生は本をお読みになります|やましたせんせいはほんをおよみになります|' + Genki.getAlts('{山下}{先生}は{本}をお{読}みになります', 'やました|せんせい|ほん|よ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'sleep<br>'+
+              '{山下先生はお休みになります|やましたせんせいはおやすみになります|' + Genki.getAlts('{山下}{先生}はお{休}みになります', 'やました|せんせい|やす') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

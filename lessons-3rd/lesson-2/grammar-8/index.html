@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,183 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : '1-5: Look at the item and ask whose it is using {!GRI|だれの|l2-p4}.<br>6-10: Answer who the item belongs to.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'Shoes',
+            answers : [
+              'Aこれはだれのくつですか。',
+              'これはくつのだれですか。',
+              'これはだれのかさですか。',
+              'これはかさのだれですか。'
+            ]
+          },
+          
+          {
+            question : 'Umbrella',
+            answers : [
+              'Aこれはだれのかさですか。',
+              'だれはこれのかさですか。',
+              'これはだれのくつですか。',
+              'だれはこれのくつですか。'
+            ]
+          },
+          
+          {
+            question : 'Book',
+            answers : [
+              'Aこれはだれのほんですか。',
+              'だれはこれのほんですか。',
+              'これはだれのぼうしですか。',
+              'だれはこれのぼうしですか。'
+            ]
+          },
+          
+          {
+            question : 'Bag',
+            answers : [
+              'Aこれはだれのかばんですか。',
+              'これはかばんのだれですか。',
+              'これはだれのさいふですか。',
+              'これはさいふのだれですか。'
+            ]
+          },
+          
+          {
+            question : 'Bicycle',
+            answers : [
+              'Aこれはだれのじてんしゃですか。',
+              'だれはこれのじてんしゃですか。',
+              'これはだれのしんぶんですか。',
+              'だれはこれのしんぶんですか。'
+            ]
+          },
+          
+          {
+            question : 'これはだれのぼうしですか。<br>Owner: Takeshi',
+            answers : [
+              'Aたけしさんのぼうしです。',
+              'ぼうしのたけしさんです。',
+              'だれのぼうしです。',
+              'ぼうしのだれです。'
+            ]
+          },
+          
+          {
+            question : 'これはだれのかばんですか。<br>Owner: Naomi',
+            answers : [
+              'Aナオミさんのかばんです。',
+              'かばんのナオミさんです。',
+              'ナオミさんのさいふです。',
+              'さいふのナオミさんです。'
+            ]
+          },
+          
+          {
+            question : 'これはだれのスマホですか。<br>Owner: Mary',
+            answers : [
+              'Aメアリーさんのスマホです。',
+              'スマホのメアリーさんです。',
+              'メアリーさんのノートです。',
+              'ノートのメアリーさんです。'
+            ]
+          },
+          
+          {
+            question : 'これはだれのぼうしですか。<br>Owner: Naomi',
+            answers : [
+              'Aナオミさんのぼうしです。',
+              'ぼうしのナオミさんです。',
+              'だれのぼうしです。',
+              'ぼうしのだれです。'
+            ]
+          },
+          
+          {
+            question : 'これはだれのTシャツですか。<br>Owner: Karurosu',
+            answers : [
+              'AカルロスさんのTシャツです。',
+              'Tシャツのカルロスさんです。',
+              'カルロスさんのジーンズです。',
+              'ジーンズのカルロスさんです。'
+            ]
+          },
+        ],
+        
+        
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<h4>Ask whose item it is</h4>'+
+              '<div class="problem">'+
+                'Shoes<br>'+
+                'これは{だれ|誰|answer}の{くつ|靴|answer}ですか。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'Umbrella<br>'+
+                '{これはだれのかさですか|これはだれの傘ですか|' + Genki.getAlts('これは{だれ}の{傘}ですか', '誰|かさ') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'Book<br>'+
+                '{これはだれのほんですか|これはだれの本ですか|' + Genki.getAlts('これは{だれ}の{本}ですか', '誰|ほん') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'Bag<br>'+
+                '{これはだれのかばんですか|これはだれの鞄ですか|' + Genki.getAlts('これは{だれ}の{鞄}ですか', '誰|かばん') + 'answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'Bicycle<br>'+
+                '{これはだれのじてんしゃですか|これはだれの自転車ですか|' + Genki.getAlts('これは{だれ}の{自転車}ですか', '誰|じてんしゃ') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div>'+
+              '<h4>Answer who the item belongs to</h4>'+
+              '<div class="problem">'+
+                'これはだれのぼうしですか。(たけし)<br>'+
+                '{たけしさん}の{ぼうし|帽子|answer}です。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'これはだれのかばんですか。(ナオミ)<br>'+
+                '{ナオミさんのかばんです|ナオミさんの鞄です|answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'これはだれのスマホですか。(メアリー)<br>'+
+                '{メアリーさんのスマホです}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'これはだれのぼうしですか。(ナオミ)<br>'+
+                '{ナオミさんのぼうしです|ナオミさんの帽子です|answer}。'+
+              '</div>'+
+              
+              '<div class="problem">'+
+                'これはだれのTシャツですか。(カルロス)<br>'+
+                '{カルロスさんの%(T/Ｔ)シャツです}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

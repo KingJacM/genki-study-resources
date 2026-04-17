@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,76 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Listen to the dialogue carefully and write the name of the people the ticket was passed around to.</p>'+
+    '{!AUDIO|W14-A}'+
     
+    '<div class="columns-2 center clear" style="width:80%;margin:0 auto;">'+
+      '<div>'+
+        '<div class="problem">もり　<i class="fa">&#xf061;</i>　すずき</div>'+
+        '<div class="problem">{!PLAY|W14-A|28.5} よしだ　<i class="fa">&#xf061;</i>　{たなか}</div>'+
+      '</div>'+
+        
+      '<div>'+
+        '<div class="problem">{!PLAY|W14-A|9} すずき　<i class="fa">&#xf061;</i>　{よしだ}</div>'+
+        '<div class="problem">{!PLAY|W14-A|40.5} たなか　<i class="fa">&#xf061;</i>　{もり||width:56}</div>'+
+      '</div>'+
+    '</div>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Yuki helps international students with their problems at a Japanese school. Listen to the dialogues and answer the questions.</p>'+
+    '{!AUDIO|W14-B}'+
+        
+    'Questions:<br>'+
+    '<div class="problem">'+
+      '(a) <ruby>留学生<rt>りゅうがくせい</rt></ruby>は<ruby>何<rt>なに</rt></ruby>がしたいと<ruby>言<rt>い</rt></ruby>っていましたか。<br>'+
+      '(b) ゆきさんはどんなアドバイスをしましたか。'+
+    '</div>'+
+        
+    '<div class="count-problems valign-top">'+
+      '<div class="problem">'+
+        '{!PLAY|W14-B|2.5}<br>'+
+        '<div class="indent-block big-margin">(a) <ruby>留学生<rt>りゅうがくせい</rt></ruby>は{髪を切りたい|かみをきりたい|' + Genki.getAlts('{髪}を{切}りたい', 'かみ|き') + 'answer}と<ruby>言<rt>い</rt></ruby>っていました。</div>'+
+        '<div class="indent-block big-margin">(b) ゆきさんのアドバイス：{バス停の前の美容院に行ったら|バスていのまえのびよういんにいったら|' + Genki.getAlts('バス{停}の{前}の{美容院}に{行}ったら', 'てい|まえ|びよういん|い') + 'answer}どうですか。</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W14-B|42}<br>'+
+        '<div class="indent-block big-margin">(a) <ruby>留学生<rt>りゅうがくせい</rt></ruby>は{日本語をもっと話したい|にほんごをもっとはなしたい|' + Genki.getAlts('{日本語}をもっと{話}したい', 'にほんご|はな') + 'answer}と<ruby>言<rt>い</rt></ruby>っていました。</div>'+
+        '<div class="indent-block big-margin">(b) ゆきさんのアドバイス：{何かサークルに入ったら|なにかサークルにはいったら|' + Genki.getAlts('{何}かサークルに{入}ったら', 'なに|はい') + 'answer}どうですか。</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W14-B|83}<br>'+
+        '<div class="indent-block big-margin">(a) <ruby>留学生<rt>りゅうがくせい</rt></ruby>は{ホストファミリーの子供たちに何かあげたい|ホストファミリーのこどもたちになにかあげたい|' + Genki.getAlts('ホストファミリーの{子}{供}たちに{何}かあげたい', 'こ|ども|なに') + 'answer}と<ruby>言<rt>い</rt></ruby>っていました。</div>'+
+        '<div class="indent-block big-margin">(b) ゆきさんのアドバイス：{一緒にケーキを作ったら|いっしょにケーキをつくったら|' + Genki.getAlts('{一緒}にケーキを{作}ったら', 'いっしょ|つく') + 'answer}どうですか。</div>'+
+      '</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Yui\'s younger brother\'s birthday is coming soon. Listen to the conversation between Yui and her younger brother, Ichiro.</p>'+
+    '{!AUDIO|W14-C}'+
+        
+    '<div class="problem inline-problem">1. {!PLAY|W14-C|2.5} Write O for the ones Ichiro wants, and X for the ones he doesn\'t want.<br><br>'+
+      '<div class="indent-block valign-top">'+
+        '<span class="problem">a. ({O}) <ruby>自転車<rt>じてんしゃ</rt></ruby></span>　　<span class="problem">c. ({X}) <ruby>本<rt>ほん</rt></ruby></span>　　<span class="problem">e. ({X}) <ruby>服<rt>ふく</rt></ruby></span><br><br>'+
+        '<span class="problem">b. ({O}) <ruby>時計<rt>とけい</rt></ruby></span>　　<span class="problem">d. ({O}) まんが</span>'+
+      '</div>'+
+    '</div>'+
+    
+    '<div class="problem">'+
+      '2. {!PLAY|W14-C|38.5} ゆいさんは<ruby>一郎<rt>いちろう</rt></ruby>さんに<ruby>何<rt>なに</rt></ruby>をあげるつもりですか。<br>'+
+      '{まんがを一冊あげるつもりです|まんがをいっさつあげるつもりです|' + Genki.getAlts('{漫画}を{一冊}あげるつもりです', 'まんが|いっさつ') + 'answer}。'+
+    '</div>'
+      
+    });</script>
   </body>
 </html>

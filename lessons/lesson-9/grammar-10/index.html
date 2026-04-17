@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,25 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Match up the phrases to make sense by writing the letter for the explanation next to the situation. {!GRI|Click here|l9-p7} to review ～から.',
+      
+      quizlet : 
+        '<div class="count-problems valign-top">'+
+          '<div class="problem">(a) <span class="big-label"><ruby>魚<rt>さかな</rt></ruby>がきらいだから</span>({b}) <ruby>今<rt>いま</rt></ruby>はひまです。</div>'+
+          '<div class="problem">(b) <span class="big-label"><ruby>試験<rt>しけん</rt></ruby>が<ruby>終<rt>お</rt></ruby>わったから</span>({d}) <ruby>行<rt>い</rt></ruby>きませんか。</div>'+
+          '<div class="problem">(c) <span class="big-label"><ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったから</span>({a}) すしを<ruby>食<rt>た</rt></ruby>べません。</div>'+
+          '<div class="problem">(d) <span class="big-label">コンサートの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>二枚<rt>にまい</rt></ruby>もらったから</span>({f}) <ruby>急<rt>いそ</rt></ruby>ぎましょう。</div>'+
+          '<div class="problem">(e) <span class="big-label"><ruby>天気<rt>てんき</rt></ruby>がよくなかったから</span>({e}) <ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>きませんでした。</div>'+
+          '<div class="problem">(f) <span class="big-label">クラスが<ruby>始<rt>はじ</rt></ruby>まるから</span>({c}) お<ruby>金<rt>かね</rt></ruby>がありません。</div>'+
+        '</div>'
+    });</script>
   </body>
 </html>

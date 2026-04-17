@@ -22,41 +22,6 @@
       // edition: [OPTIONAL] restricts the announcement to a specific edition, possible values are: 3rd || 2nd, announcements are global by default
       msg : [
         {
-          date : '2/14/26',
-          content : "Happy New Year! To kick off the new year we\'ve posted a new <a href=\"https://ko-fi.com/post/Kantan-Japanese-Progress-Update-3-Z8Z01U7DVR\" target=\"_blank\">progress update</a> for Kantan Japanese! We hope you look forward to it!"
-        },
-        
-        {
-          date : '12/23/25',
-          content : "Check out our last <a href=\"https://ko-fi.com/post/Kantan-Japanese-Progress-Update-2-P5P71QTZFD\" target=\"_blank\">progress update</a> for the year! Wishing you a Merry Christmas and a Happy New Year! See you next year!"
-        },
-        
-        {
-          date : '11/19/25',
-          content : "Work on our new project is going well so far thanks to everyone's feedback! <a href=\"https://ko-fi.com/post/Project-Kantan-Progress-Update-I2I41ORTG4\" target=\"_blank\">Click here</a> to read our progress update and to see a preview of the new website."
-        },
-        
-        {
-          date : '10/17/25',
-          content : "We'd like to hear from you! Please <a href=\"https://ko-fi.com/Post/New-Project-Survey-L3L51MZM9T\" target=\"_blank\">click here</a> to take the survey for our new project."
-        },
-        
-        {
-          date : '9/29/25',
-          content : "<strong class='t-red'>IMPORTANT:</strong> If any exercises are missing, it is because The Japan Times requested their removal. Please <a href=\"https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E\" target=\"_blank\">click here</a> for more details."
-        },
-        
-        {
-          date : '9/20/25',
-          content : "The 2nd Edition resources have been upgraded. Please <a href=\"https://ko-fi.com/post/Genki-Study-Resources-2nd-Edition-Upgrade-N4N21LK1L0\" target=\"_blank\">click here</a> for more details."
-        },
-        
-        {
-          date : '9/11/25',
-          content : "<strong class='t-red'>IMPORTANT:</strong> The 3rd Edition resources have been removed at the request of <a href=\"https://bookclub.japantimes.co.jp/en/contact/\" target=\"_blank\">The Japan Times</a>. Please <a href=\"https://ko-fi.com/post/Important-Information-Regarding-Genki-and-Quartet-D1D21L4B1S\" target=\"_blank\">click here</a> for more details."
-        },
-        
-        {
           date : '6/6/25',
           content : "Quartet Study Resources is now available! <a href=\"https://ko-fi.com/post/Quartet-Study-Resources-is-Now-Available-Y8Y61G3093\" target=\"_blank\">Click here</a> to learn more about this new Japanese practice website."
         },
@@ -212,7 +177,7 @@
         
         // Live Stream announcement (only shows when stream is active)
         // only execute on the online version, since checking twitch state offline doesn't work due to CORS policy
-        /*if (window.location.protocol != 'file:') {
+        if (window.location.protocol != 'file:') {
           // caches streaming state for 30 minutes to reduce amount of requests
           var cacheState = function (state) {
             if (storageOK) {
@@ -284,7 +249,7 @@
               document.body.appendChild(stream);
             });
           }
-        }*/
+        }
       }
     };
     
@@ -321,7 +286,7 @@
           offset : '0px',
 
           tooltip : 'Squash..?',
-          image : getPaths() + 'resources/images/holiday/halloween.png',
+          image : getPaths() + '/resources/images/holiday/halloween.png',
           web : 'background-color:#000;width:2px;height:999em;position:absolute;right:42%;bottom:95%;'
         },
 
@@ -409,9 +374,9 @@
   
   // # OFFLINE LINK MODIFICATIONS #
   // appends index.html to links if this project is hosted on the local file system
-  if (window.location.protocol == 'file:' || /localhost/.test(window.location.href)) {
+  if (window.location.protocol == 'file:') {
     for (var a = document.getElementsByTagName('A'), i = 0, j = a.length; i < j; i++) {
-      if (!/http/.test(a[i].href) || /localhost/.test(a[i].href)) {
+      if (!/http/.test(a[i].href)) {
         if (/\/$/.test(a[i].href)) {
           a[i].href += 'index.html';
         } else if (/\/#.*?$/.test(a[i].href)) {
@@ -521,7 +486,7 @@
         container = document.createElement('DIV');
     
     container.id = 'light-switch-container';
-    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + ((window.location.protocol == 'file:' || /localhost/.test(window.location.href)) ? 'index.html' : '') + '"><strong><span class="en">Where is Dark Mode?</span><span class="ja">ダークモードはどこ？</span></strong></a>';
+    container.innerHTML = '<a href="' + getPaths() + 'help/stuck-loading/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '"><strong><span class="en">Where is Dark Mode?</span><span class="ja">ダークモードはどこ？</span></strong></a>';
     
     footer.appendChild(container);
   }

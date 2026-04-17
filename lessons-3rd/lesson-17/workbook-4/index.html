@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,63 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～みたいです|l17-p5}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the sentences, using {!GRI|～みたいです|l17-p5}.</p>'+
+        '<div class="problem">'+
+          'It looks like I have caught a cold.<br>'+
+          '{かぜをひいたみたいです|かぜをひいたみたいです|' + Genki.getAlts('{風邪}をひいたみたいです', 'かぜ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'It seems that I forgot my smartphone in the car.<br>'+
+          '{車にスマホを忘れたみたいです|くるまにスマホをわすれたみたいです|' + Genki.getAlts('{車}にスマホを{忘}れたみたいです', 'くるま|わす') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'My younger sister cries often. She is like a child.<br>'+
+          '{妹はよく泣きます。子供みたいです。|いもうとはよくなきます。こどもみたいです。|' + Genki.getAlts('{妹}は{よ}く{泣}きます。{子}{供}みたいです。', '良|いもうと|な|こ|ども') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'It seems that my friend is not used to life in Japan yet.<br>'+
+          '{友だちはまだ日本の生活に慣れていないみたいです|ともだちはまだにほんのせいかつになれていないみたいです|' + Genki.getAlts('{友}{だち}はまだ{日本}の{生活}に{慣}れていないみたいです', 'とも|達|にほん|せいかつ|な') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'It seems that my uncle will get a divorce.<br>'+
+          '{私のおじさんは離婚するみたいです|わたしのおじさんはりこんするみたいです|' + Genki.getAlts('{私}のおじさんは{離婚}するみたいです', 'わたし|りこん') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Describe your impressions of the situations below, using {!GRI|～みたいです|l17-p5}.</p>'+
+        '<div class="problem">'+
+          'The man is in a hurry.<br>'+
+          '{男の人は急いでいるみたいです|おとこのひとはいそいでいるみたいです|' + Genki.getAlts('{男}の{人}は{急}いでいるみたいです', 'おとこ|ひと|いそ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'He\'s reading a book.<br>'+
+          '{本を読んでいるみたいです|ほんをよんでいるみたいです|' + Genki.getAlts('{本}を{読}んでいるみたいです', 'ほん|よ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'He lost his ticket.<br>'+
+          '{切符をなくしたみたいです|きっぷをなくしたみたいです|answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

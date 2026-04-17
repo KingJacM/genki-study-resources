@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,67 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Answer the following questions in Japanese by translating the sentences.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span><ruby>日本語<rt>にほんご</rt></ruby>で<ruby>答<rt>こた</rt></ruby>えてください。</p>'+
+        '<div class="problem">'+
+          'もうすぐ<ruby>海外旅行<rt>かいがいりょこう</rt></ruby>(trip to a foreign country)に<ruby>行<rt>い</rt></ruby>きます。<ruby>何<rt>なに</rt></ruby>をしておかなければいけませんか。<br>'+
+          '(I have to reserve a hotel.)<br>'+
+          '{ホテルを予約しておかなければいけません|ホテルをよやくしておかなければいけません|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。<ruby>観光<rt>かんこう</rt></ruby>したい<ruby>所<rt>ところ</rt></ruby>はどこですか。<br>'+
+          '(The place I want to do sightseeing is Shibuya [<ruby>渋谷<rt>しぶや</rt></ruby>].)<br>'+
+          '{観光したい所は渋谷です|かんこうしたいところはしぶやです|' + Genki.getAlts('{観光}したい{所}は{渋谷}です', 'かんこう|ところ|しぶや') + 'answer}。<br><br><br>'+
+          
+          'どうしてですか。<br>'+
+          '(Because I want to take a picture together with Hachiko [ハチ<ruby>公<rt>こう</rt></ruby>].)<br>'+
+          '{ハチ公と一緒に写真を撮りたいからです|ハチこうといっしょうにしゃしんをとりたいからです|' + Genki.getAlts('ハチ{公}と{一緒}に{写真}を{撮}りたいからです', 'こう|いっしょ|しゃしん|と') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>今度<rt>こんど</rt></ruby>の<ruby>休<rt>やす</rt></ruby>みに<ruby>何<rt>なに</rt></ruby>をしようと<ruby>思<rt>おも</rt></ruby>っていますか。<br>'+
+          '(I intend to go to Tokyo to meet a friend.)<br>'+
+          '{東京に友だちに会いに行こうと思っています|とうきょうにともだちにあいにいこうとおもっています|' + Genki.getAlts('{東京}に{友}{達}に{会}いに{行}こうと{思}っています', 'とうきょう|とも|だち|あ|い|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'どんな<ruby>友<rt>とも</rt></ruby>だちがいますか。<small>(Use a sentence qualifying noun.)</small><br>'+
+          '(I have a friend who lives in Hawaii.)<br>'+
+          '{ハワイに住んでいる友だちがいます|ハワイにすんでいるともだちがいます|' + Genki.getAlts('ハワイに{住}んでいる{友}{達}がいます', 'す|とも|だち') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'どんな<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>みたいですか。<small>(Use a sentence qualifying noun.)</small><br>'+
+          '(I want to live in a house where I can see the sea.)<br>'+
+          '{海が見える家に住みたいです|うみがみえるいえにすみたいです|' + Genki.getAlts('{海}が{見}える{家}に{住}みたいです', 'うみ|み|いえ|す') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span><ruby>日本語<rt>にほんご</rt></ruby>で書いてください。<br>けんの<ruby>今年<rt>ことし</rt></ruby>の「<ruby>新年<rt>しんねん</rt></ruby>の<ruby>抱負<rt>ほうふ</rt></ruby>(New Year\'s Resolution)」を<ruby>訳<rt>やく</rt></ruby>しましょう(translate)。</p>'+
+        '<div class="problem">'+
+          'This year I intend to eat more vegetables, because I\'m always eating too many snacks.<br>'+
+          '{いつもお菓子を食べすぎるので、今年はもっと野菜を食べようと思っています|いつもおかしをたべすぎるので、ことしはもっとやさいをたべようとおもっています|' + Genki.getAlts('いつもお{菓子}を{食}べすぎるので、{今年}はもっと{野菜}を{食}べようと{思}っています', 'かし|た|ことし|やさい|た|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'After that, I intend to exercise about three times a week.<br>'+
+          '{それから、一週間に三回ぐらい運動しようと思っています|それから、いっしゅうかんにさんかいぐらいうんどうしようとおもっています|' + Genki.getAlts('それから、{一週間}に{三回}ぐらい{運動}しようと{思}っています', 'いっしゅうかん|さんかい|うんどう|おも') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

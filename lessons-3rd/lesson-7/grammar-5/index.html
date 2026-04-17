@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,151 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Mary has been enjoying her life in Japan. She talks about her friends and life in Japan. Make sentences using the {!GRI|two adjectives|l7-p4}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'ゆい：かわいい／やさしい',
+            answers : [
+              'Aゆいさんはかわいくて、やさしいです。',
+              'ゆいさんはかわいくで、やさしいです。',
+              'ゆいさんはかわいいで、やさしいです。',
+              'ゆいさんはかわいいて、やさしいです。'
+            ]
+          },
+          
+          {
+            question : 'ロバート：<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い／かっこいい',
+            answers : [
+              'Aロバートさんは<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>くて、かっこいいです。',
+              'ロバートさんは<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>くで、かっこいいです。',
+              'ロバートさんは<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いで、かっこいいです。',
+              'ロバートさんは<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いて、かっこいいです。'
+            ]
+          },
+          
+          {
+            question : 'ナオミ：<ruby>目<rt>め</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きい／きれいな',
+            answers : [
+              'Aナオミさんは<ruby>目<rt>め</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きくて、きれいです。',
+              'ナオミさんは<ruby>目<rt>め</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きくで、きれいです。',
+              'ナオミさんは<ruby>目<rt>め</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きいて、きれいです。',
+              'ナオミさんは<ruby>目<rt>め</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きいで、きれいです。'
+            ]
+          },
+          
+          {
+            question : 'ソラ：<ruby>頭<rt>あたま</rt></ruby>がいい／<ruby>親切<rt>しんせつ</rt></ruby>な',
+            answers : [
+              'Aソラさんは<ruby>頭<rt>あたま</rt></ruby>がよくて、<ruby>親切<rt>しんせつ</rt></ruby>です。',
+              'ソラさんは<ruby>頭<rt>あたま</rt></ruby>がいくて、<ruby>親切<rt>しんせつ</rt></ruby>です。',
+              'ソラさんは<ruby>頭<rt>あたま</rt></ruby>がいいて、<ruby>親切<rt>しんせつ</rt></ruby>です。',
+              'ソラさんは<ruby>頭<rt>あたま</rt></ruby>がいいで、<ruby>親切<rt>しんせつ</rt></ruby>です。'
+            ]
+          },
+          
+          {
+            question : '<ruby>山下先生<rt>やましたせんせい</rt></ruby>：<ruby>元気<rt>げんき</rt></ruby>な／おもしろい',
+            answers : [
+              'A<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>元気<rt>げんき</rt></ruby>で、おもしろいです。',
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>元気<rt>げんき</rt></ruby>て、おもしろいです。',
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>元気<rt>げんき</rt></ruby>くて、おもしろいです。',
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>元気<rt>げんき</rt></ruby>くで、おもしろいです。'
+            ]
+          },
+          
+          {
+            question : '<ruby>日本語<rt>にほんご</rt></ruby>のクラス：にぎやかな／<ruby>楽<rt>たの</rt></ruby>しい',
+            answers : [
+              'A<ruby>日本語<rt>にほんご</rt></ruby>のクラスはにぎやかで、<ruby>楽<rt>たの</rt></ruby>しいです。',
+              '<ruby>日本語<rt>にほんご</rt></ruby>のクラスはにぎやかて、<ruby>楽<rt>たの</rt></ruby>しいです。',
+              '<ruby>日本語<rt>にほんご</rt></ruby>のクラスはにぎやかくて、<ruby>楽<rt>たの</rt></ruby>しいです。',
+              '<ruby>日本語<rt>にほんご</rt></ruby>のクラスはにぎやかくで、<ruby>楽<rt>たの</rt></ruby>しいです。'
+            ]
+          },
+          
+          {
+            question : '<ruby>宿題<rt>しゅくだい</rt></ruby>：<ruby>難<rt>むずか</rt></ruby>しい／<ruby>大変<rt>たいへん</rt></ruby>な',
+            answers : [
+              'A<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しくて、<ruby>大変<rt>たいへん</rt></ruby>です。',
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しくで、<ruby>大変<rt>たいへん</rt></ruby>です。',
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しいて、<ruby>大変<rt>たいへん</rt></ruby>です。',
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しいで、<ruby>大変<rt>たいへん</rt></ruby>です。'
+            ]
+          },
+          
+          {
+            question : '<ruby>食堂<rt>しょくどう</rt></ruby>：<ruby>安<rt>やす</rt></ruby>い／おいしい',
+            answers : [
+              'A<ruby>食堂<rt>しょくどう</rt></ruby>は<ruby>安<rt>やす</rt></ruby>くて、おいしいです。',
+              '<ruby>食堂<rt>しょくどう</rt></ruby>は<ruby>安<rt>やす</rt></ruby>くで、おいしいです。',
+              '<ruby>食堂<rt>しょくどう</rt></ruby>は<ruby>安<rt>やす</rt></ruby>いて、おいしいです。',
+              '<ruby>食堂<rt>しょくどう</rt></ruby>は<ruby>安<rt>やす</rt></ruby>いで、おいしいです。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'ゆい：かわいい／やさしい<br>'+
+            'ゆいさんは{かわい}くて、{やさしい}です。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'ロバート：<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い／かっこいい<br>'+
+              '{ロバートさんは背が高くて、かっこいいです|ロバートさんはせがたかくて、かっこいいです|' + Genki.getAlts('ロバートさんは{背}が{高}くて、かっこ{い}いです', 'せ|たか|良') + Genki.getAlts('ロバートさんは{背}が{高}くて、かっこ{よ}いです', 'せ|たか|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'ナオミ：<ruby>目<rt>め</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きい／きれいな<br>'+
+              '{ナオミさんは目が大きくて、きれいです|ナオミさんはめがおおきくて、きれいです|' + Genki.getAlts('ナオミさんは{目}が{大}きくて、{きれい}です', 'め|おお|綺麗') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'ソラ：<ruby>頭<rt>あたま</rt></ruby>がいい／<ruby>親切<rt>しんせつ</rt></ruby>な<br>'+
+              '{ソラさんは頭がよくて、親切です|ソラさんはあたまがよくて、しんせつです|' + Genki.getAlts('ソラさんは{頭}が{よ}くて、{親切}です', 'あたま|しんせつ|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>：<ruby>元気<rt>げんき</rt></ruby>な／おもしろい<br>'+
+              '{山下先生は元気で、おもしろいです|やましたせんせいはげんきで、おもしろいです|' + Genki.getAlts('{山下}{先生}は{元気}で、{おもしろ}いです', 'やました|せんせい|げんき|面白') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>日本語<rt>にほんご</rt></ruby>のクラス：にぎやかな／<ruby>楽<rt>たの</rt></ruby>しい<br>'+
+              '{日本語のクラスはにぎやかで、楽しいです|にほんごのクラスはにぎやかで、たのしいです|' + Genki.getAlts('{日本語}のクラスはにぎやかで、{楽}しいです', 'にほんご|たの') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>宿題<rt>しゅくだい</rt></ruby>：<ruby>難<rt>むずか</rt></ruby>しい／<ruby>大変<rt>たいへん</rt></ruby>な<br>'+
+              '{宿題は難しくて、大変です|しゅくだいはむずかしくて、たいへんです|' + Genki.getAlts('{宿題}は{難}しくて、{大変}です', 'しゅくだい|むずか|たいへん') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>食堂<rt>しょくどう</rt></ruby>：<ruby>安<rt>やす</rt></ruby>い／おいしい<br>'+
+              '{食堂は安くて、おいしいです|しょくどうはやすくて、おいしいです|' + Genki.getAlts('{食堂}は{安}くて、おいしいです', 'しょくどう|やす') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,156 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'What do the people say in the following situations? {!GRI|Click here|l6-p2} to review ～てください.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'The man is sweating and wants the window open.',
+            answers : [
+              'A<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けてください。',
+              '<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けってください。',
+              '<ruby>窓<rt>まど</rt></ruby>を<ruby>閉<rt>し</rt></ruby>めてください。',
+              '<ruby>窓<rt>まど</rt></ruby>を<ruby>閉<rt>し</rt></ruby>めってください。'
+            ]
+          },
+
+          {
+            question : 'The woman wants the man to turn the light off.',
+            answers : [
+              'A<ruby>電気<rt>でんき</rt></ruby>を<ruby>消<rt>け</rt></ruby>してください。',
+              '<ruby>電気<rt>でんき</rt></ruby>を<ruby>消<rt>け</rt></ruby>すてください。',
+              '<ruby>電気<rt>でんき</rt></ruby>をつけてください。',
+              '<ruby>電気<rt>でんき</rt></ruby>をつけってください。'
+            ]
+          },
+
+          {
+            question : 'The nurse wants the patient to come in.',
+            answers : [
+              'A<ruby>入<rt>はい</rt></ruby>ってください。',
+              '<ruby>入<rt>はい</rt></ruby>てください。',
+              '<ruby>行<rt>い</rt></ruby>ってください。',
+              '<ruby>行<rt>い</rt></ruby>いてください。'
+            ]
+          },
+
+          {
+            question : 'The teacher wants the student to sit down.',
+            answers : [
+              'A<ruby>座<rt>すわ</rt></ruby>ってください。',
+              '<ruby>座<rt>すわ</rt></ruby>てください。',
+              '<ruby>立<rt>た</rt></ruby>ってください。',
+              '<ruby>立<rt>た</rt></ruby>んでください。'
+            ]
+          },
+
+          {
+            question : 'The boyfriend wants his girlfriend to hurry up.<br>The girlfriend wants her boyfriend to wait.',
+            answers : [
+              'A<ruby>急<rt>いそ</rt></ruby>いでください。<br><ruby>待<rt>ま</rt></ruby>ってください。',
+              '<ruby>急<rt>いそ</rt></ruby>んでください。<br><ruby>待<rt>ま</rt></ruby>ってください。',
+              '<ruby>急<rt>いそ</rt></ruby>いでください。<br><ruby>待<rt>ま</rt></ruby>てください。',
+              '<ruby>急<rt>いそ</rt></ruby>いてください。<br><ruby>待<rt>ま</rt></ruby>ってください。'
+            ]
+          },
+
+          {
+            question : 'The man is shivering and wants the window closed.',
+            answers : [
+              'A<ruby>窓<rt>まど</rt></ruby>を<ruby>閉<rt>し</rt></ruby>めてください。',
+              '<ruby>窓<rt>まど</rt></ruby>を<ruby>閉<rt>し</rt></ruby>めってください。',
+              '<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けてください。',
+              '<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けってください。',
+            ]
+          },
+
+          {
+            question : 'The old lady wants to go to the hospital.',
+            answers : [
+              'A<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ってください。',
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>いてください。',
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>来<rt>き</rt></ruby>てください。',
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>来<rt>き</rt></ruby>ってください。'
+            ]
+          },
+
+          {
+            question : 'The woman wants you to write your name here.',
+            answers : [
+              'Aここに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。',
+              'ここに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>ってください。',
+              '<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。',
+              '<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いでください。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'The man is sweating and wants the window open.<br>'+
+            '{窓|まど|answer}を{開け|あけ|answer}てください。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'The woman wants the man to turn the light off.<br>'+
+              '{電気を消してください|でんきをけしてください|' + Genki.getAlts('{電気}を{消}してください', 'でんき|け') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'The nurse wants the patient to come in.<br>'+
+              '{入ってください|はいってください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'The teacher wants the student to sit down.<br>'+
+              '{座ってください|すわってください|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'The boyfriend wants his girlfriend to hurry up.<br>'+
+              '{急いでください|いそいでください|answer}。'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              'The girlfriend wants her boyfriend to wait.<br>'+
+              '{待ってください|まってください|answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'The man is shivering and wants the window closed.<br>'+
+              '{窓を閉めてください|まどをしめてください|' + Genki.getAlts('{窓}を{閉}めてください', 'まど|し') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'The old lady wants to go to the hospital.<br>'+
+              '{病院に行ってください|びょういんにいってください|' + Genki.getAlts('{病院}に{行}ってください', 'びょういん|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'The woman wants you to write your name here.<br>'+
+              '{ここに名前を書いてください|ここになまえをかいてください|' + Genki.getAlts('ここに{名前}を{書}いてください', 'なまえ|か') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

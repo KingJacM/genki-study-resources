@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,12 +68,68 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Mary wrote a letter to Professor Nishikawa, her Japanese teacher back home. Read the letter and answer the questions.',
+      
+      quizlet : 
+      '<div class="clear">'+
+        '<p class="sub-section text-passage vertical-text" style="width:auto;float:right;">'+
+          '　西川京子先生へ<br><br>'+
+          '　西川先生、お元気ですか。アリゾナはあついですか。日本はすこしさむいです。今、私は日本のかぞくと大学のちかくにすんでいます。ここは小さくて、しずかなまちです。<br>'+
+          '　私のかぞくは四人です。みんなとてもしんせつで、たのしいです。お父さんはコンピューターの会社ではたらいています。いそがしくて、毎日おそく帰ります。お母さんはとてもおもしろい人です。いっしょによくはなします。いもうとは高校生です。らいねん大学ですから、よくべんきょうします。毎日学校から帰って、すぐじゅくへ行きます。日本の高校生はたいへんですね。'+
+        '</p>'+
+      '</div>'+
+      '<div class="clear">'+
+        '<p id="paragraph-2" class="sub-section text-passage vertical-text" style="width:auto;float:right;margin-right:300px;margin-top:-30px;">'+
+          'おにいさんは東京の大学に行っていますから、あまり会いません。<br>'+
+          '　私は今、日本語と日本文学のクラスをとっています。テニスサークルにも入っています。とてもおもしろいです。<br>'+
+          '　西川先生はいつ日本に帰りますか。日本で会いましょう。たのしみにしています。<br>'+
+          '　からだに気をつけてください。<br><br>'+
+          '　十一月三日<br><br>'+
+          '　　　　　　　　メアリー・ハート'+
+        '</p>'+
+      '</div>'+
+        
+      '<div class="vocab-key columns-2 clear">'+
+        '<div>'+
+          'すこし　a little<br>'+
+          'みんな　all<br>'+
+          '～から　from...<br>'+
+          'じゅく　cram school'+
+        '</div>'+
+
+        '<div>'+
+          '<ruby>文学<rt>ぶんがく</rt></ruby>　literature<br>'+
+          'とる　to take (a class)<br>'+
+          '(～を)たのしみにする　to look forward (to)<br>'+
+          'からだに<ruby>気<rt>き</rt></ruby>をつける　to take care of oneself'+
+        '</div>'+
+      '</div>'+
+        
+      '<div class="count-problems">'+
+        '<p class="section-desc">Summarize what Mary wrote about the following topics in Japanese.</p>'+
+        '<div class="problem">Japan: {すこし寒いです|すこしさむいです|' + Genki.getAlts('{少}し{寒}いです', 'すこ|さむ') + 'answer}。</div>'+
+        
+        '<div class="problem">Her town: {小さくて、静かです|ちいさくて、しずかです|' + Genki.getAlts('{小}さくて、{静}かです', 'ちい|しずか') + 'answer}。</div>'+
+        
+        '<div class="problem">Father: {コンピューターの会社で働いています。忙しくて、毎日遅く帰ります。|コンピューターのかいしゃではたらいています。いそがしくて、まいにちおそくかえります。|' + Genki.getAlts('コンピューターの{会社}で{働}いています。{忙}しくて、{毎日}{遅}く{帰}ります。', 'かいしゃ|はたら|いそが|まいにち|おそ|かえ') + 'answer}</div>'+
+        
+        '<div class="problem">Mother: {とても面白い人です|とてもおもしろいひとです|' + Genki.getAlts('とても{面白}い{人}です', 'おもしろ|ひと') + 'answer}。</div>'+
+        
+        '<div class="problem">Sister: {高校生です。よく勉強します。|こうこうせいです。よくべんきょうします。|' + Genki.getAlts('{高校生}です。{よ}く{勉強}します。', 'こうこうせい|良|べんきょう') + 'answer}</div>'+
+        
+        '<div class="problem">Brother: {東京の大学に行っています|とうきょうのだいがくにいっています|' + Genki.getAlts('{東京}の{大学}に{行}っています', 'とうきょう|だいがく|い') + 'answer}。</div>'+
+        
+        '<div class="problem">School: {とても面白いです|とてもおもしろいです|answer}。</div>'+
+      '</div>'
+    });</script>
     <style>
       @media (max-width:820px) {
         #paragraph-2 { margin:15px auto !important; }

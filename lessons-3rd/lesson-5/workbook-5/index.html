@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,96 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems by using {!GRI|adjectives to describe the nouns|l5-p3}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Look at the pictures and answer the questions.</p>'+
+        '<table class="table">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>e.g.'+
+              '<div class="center">{!IMG|3rd-l5-wb5-0.png|room}</div>'+
+            '</td>'+
+            
+            '<td>1.'+
+              '<div class="center">{!IMG|3rd-l5-wb5-1.png|bicycle}</div>'+
+            '</td>'+
+            
+            '<td>2.'+
+              '<div class="center">{!IMG|3rd-l5-wb5-2.png|town}</div>'+
+            '</td>'+
+            
+            '<td>3.'+
+              '<div class="center">{!IMG|3rd-l5-wb5-3.png|person}</div>'+
+            '</td>'+
+            
+            '<td>4.'+
+              '<div class="center">{!IMG|3rd-l5-wb5-4.png|house}</div>'+
+            '</td>'+
+            
+          '</tr>'+
+        
+          '<tr class="center">'+
+            '<td>small</td>'+
+            '<td>old</td>'+
+            '<td>quiet</td>'+
+            '<td>scary</td>'+
+            '<td>beautiful</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="example-problem">'+
+          '<span class="med-label">Q：どんな<ruby>部屋<rt>へや</rt></ruby>ですか。</span>'+
+          '<div class="inline">A：{小さい|ちいさい|answer;hint:small}{部屋|へや|answer;hint:room}です。</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<span class="med-label">Q：どんな<ruby>自転車<rt>じてんしゃ</rt></ruby>ですか。</span>'+
+          '<div class="inline">A：{古い自転車です|ふるいじてんしゃです|' + Genki.getAlts('{古}い{自転車}です', 'ふる|じてんしゃ') + 'answer;width:200}。</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<span class="med-label">Q：どんな<ruby>町<rt>まち</rt></ruby>ですか。</span>'+
+          '<div class="inline">A：{静かな町です|しずかなまちです|' + Genki.getAlts('{静}かな{町}です', 'しず|まち') + 'answer;width:200}。</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<span class="med-label">Q：どんな<ruby>人<rt>ひと</rt></ruby>ですか。</span>'+
+          '<div class="inline">A：{怖い人です|こわいひとです|' + Genki.getAlts('{怖}い{人}です', 'こわ|ひと') + 'answer;width:200}。</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<span class="med-label">Q：どんな<ruby>家<rt>いえ</rt></ruby>ですか。</span>'+
+          '<div class="inline">A：{きれいな家です|きれいないえです|' + Genki.getAlts('{きれい}な{家}です', '綺麗|いえ') + 'answer;width:200}。</div>'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate the following sentences into Japanese.</p>'+
+        '<div class="problem">'+
+          'I met a kind person.<br>'+
+          '{%(私は/)やさしい人に会いました|%(わたしは/)やさしいひとにあいました|' + Genki.getAlts('{私}はやさしい{人}に{会}いました', 'わたし|ひと|あ') + Genki.getAlts('やさしい{人}に{会}いました', 'ひと|あ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I bought delicious fruit.<br>'+
+          '{%(私は/)おいしい果物を買いました|%(わたしは/)おいしいくだものをかいました|' + Genki.getAlts('{私}はおいしい{果物}を{買}いました', 'わたし|くだもの|か') + Genki.getAlts('おいしい{果物}を{買}いました', 'くだもの|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I read an interesting book last week.<br>'+
+          '{%(私は/)先週面白い本を読みました|%(わたしは/)せんしゅうおもしろいほんをよみました|' + Genki.getAlts('{先週}{面白}い{本}を{読}みました', 'わたし|せんしゅう|おもしろ|ほん|よ') + Genki.getAlts('{私}は{先週}{面白}い{本}を{読}みました', 'せんしゅう|おもしろ|ほん|よ') + 'answer}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,40 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the {!GRI|Volitional Form|l15-p1}.',
+      
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>A and B are close friends. Complete the dialogue using the {!GRI|volitional forms|l15-p1}.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'A：{今晩レストランで食べよう|こんばんレストランでたべよう|' + Genki.getAlts('{今晩}レストランで{食}べよう', 'こんばん|た') + 'answer;width:300;hint:(Let\'s eat at a restaurant tonight.)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'B：いいね。{予約しようか|よやくしようか|answer;width:300;hint:(Let\'s make a reservation, shall we?)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：そうだね。{ゆいさんも誘おう|ゆいさんもさそおう|answer;width:300;hint:(Let\'s invite Yui, too.)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'B：いいよ。{どうやって行こうか|どうやっていこうか|answer;width:300;hint:(How shall we go [there]?)}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'A：{電車で行こう|でんしゃでいこう|' + Genki.getAlts('{電車}で{行}こう', 'でんしゃ|い') + 'answer;width:300;hint:(Let\'s go [there] by train.)}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

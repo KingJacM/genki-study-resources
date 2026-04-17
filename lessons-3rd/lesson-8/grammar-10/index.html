@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,196 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Use the table below and answer the questions. {!GRI|Click here|l8-p7} to review the subject particle が.<br><br>'+
+      '<table class="center">'+
+        '<tr>'+
+          '<td style="font-weight:bold">Robert</td>'+
+          '<td>British</td>'+
+          '<td>is good at cooking</td>'+
+          '<td>cooks often</td>'+
+          '<td>went to Okinawa last weekend</td>'+
+          '<td>doesn\'t like cats</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Mary</td>'+
+          '<td>American</td>'+
+          '<td>is good at tennis</td>'+
+          '<td>does not cook</td>'+
+          '<td>had a date last weekend</td>'+
+          '<td>likes dogs</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Sora</td>'+
+          '<td>Korean</td>'+
+          '<td>is good at singing</td>'+
+          '<td>cooks sometimes</td>'+
+          '<td>went to Tokyo last weekend</td>'+
+          '<td>likes cats</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Takeshi</td>'+
+          '<td>Japanese</td>'+
+          '<td>is good at swimming</td>'+
+          '<td>always eats at the cafeteria</td>'+
+          '<td>had a date last weekend</td>'+
+          '<td>doesn\'t like cats</td>'+
+        '</tr>'+
+      '</table>', 'Use the table below and answer the questions. {!GRI|Click here|l8-p7} to review the subject particle が.'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'だれがイギリス<ruby>人<rt>じん</rt></ruby>ですか。',
+            answers : [
+              'Aロバートさんがイギリス<ruby>人<rt>じん</rt></ruby>です。',
+              'ロバートさんはイギリス<ruby>人<rt>じん</rt></ruby>です。',
+              'たけしさんがイギリス<ruby>人<rt>じん</rt></ruby>です。',
+              'たけしさんはイギリス<ruby>人<rt>じん</rt></ruby>です。'
+            ]
+          },
+
+          {
+            question : 'だれが<ruby>韓国人<rt>かんこくじん</rt></ruby>ですか。',
+            answers : [
+              'Aソラさんが<ruby>韓国人<rt>かんこくじん</rt></ruby>です。',
+              'ソラさんは<ruby>韓国人<rt>かんこくじん</rt></ruby>です。',
+              'メアリーさんが<ruby>韓国人<rt>かんこくじん</rt></ruby>です。',
+              'メアリーさんは<ruby>韓国人<rt>かんこくじん</rt></ruby>です。'
+            ]
+          },
+
+          {
+            question : 'だれが<ruby>料理<rt>りょうり</rt></ruby>をするのが<ruby>上手<rt>じょうず</rt></ruby>ですか。',
+            answers : [
+              'Aロバートさんが<ruby>料理<rt>りょうり</rt></ruby>をするのが<ruby>上手<rt>じょうず</rt></ruby>です。',
+              'ロバートさんは<ruby>料理<rt>りょうり</rt></ruby>をするのが<ruby>上手<rt>じょうず</rt></ruby>です。',
+              'メアリーさんが<ruby>料理<rt>りょうり</rt></ruby>をするのが<ruby>上手<rt>じょうず</rt></ruby>です。',
+              'メアリーさんは<ruby>料理<rt>りょうり</rt></ruby>をするのが<ruby>上手<rt>じょうず</rt></ruby>です。'
+            ]
+          },
+
+          {
+            question : 'だれがいつも<ruby>食堂<rt>しょくどう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べますか。',
+            answers : [
+              'Aたけしさんがいつも<ruby>食堂<rt>しょくどう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べます。',
+              'たけしさんはいつも<ruby>食堂<rt>しょくどう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べます。',
+              'ソラさんがいつも<ruby>食堂<rt>しょくどう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べます。',
+              'ソラさんはいつも<ruby>食堂<rt>しょくどう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べます。'
+            ]
+          },
+
+          {
+            question : 'だれがデートをしましたか。',
+            answers : [
+              'Aメアリーさんとたけしさんがデートをしました。',
+              'メアリーさんとたけしさんはデートをしました。',
+              'ロバートさんとソラさんがデートをしました。',
+              'ロバートさんとソラさんはデートをしました。'
+            ]
+          },
+
+          {
+            question : 'だれが<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか。',
+            answers : [
+              'Aメアリーさんが<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。',
+              'メアリーさんは<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。',
+              'たけしさんが<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。',
+              'たけしさんは<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<table class="table center">'+
+          '<tr>'+
+            '<td style="font-weight:bold">Robert</td>'+
+            '<td>British</td>'+
+            '<td>is good at cooking</td>'+
+            '<td>cooks often</td>'+
+            '<td>went to Okinawa last weekend</td>'+
+            '<td>doesn\'t like cats</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Mary</td>'+
+            '<td>American</td>'+
+            '<td>is good at tennis</td>'+
+            '<td>does not cook</td>'+
+            '<td>had a date last weekend</td>'+
+            '<td>likes dogs</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Sora</td>'+
+            '<td>Korean</td>'+
+            '<td>is good at singing</td>'+
+            '<td>cooks sometimes</td>'+
+            '<td>went to Tokyo last weekend</td>'+
+            '<td>likes cats</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td style="font-weight:bold">Takeshi</td>'+
+            '<td>Japanese</td>'+
+            '<td>is good at swimming</td>'+
+            '<td>always eats at the cafeteria</td>'+
+            '<td>had a date last weekend</td>'+
+            '<td>doesn\'t like cats</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="example-problem">'+
+          '<div class="inner-problem valign-top">'+
+            'だれ<strong>が</strong>イギリス<ruby>人<rt>じん</rt></ruby>ですか。<br>'+
+            '{ロバート}さん<strong>が</strong>{イギリス}<ruby>人<rt>じん</rt></ruby>です。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'だれが<ruby>韓国人<rt>かんこくじん</rt></ruby>ですか。<br>'+
+              '{ソラさんが韓国人です|ソラさんがかんこくじんです|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'だれが<ruby>料理<rt>りょうり</rt></ruby>をするのが<ruby>上手<rt>じょうず</rt></ruby>ですか。<br>'+
+              '{ロバートさんが料理をするのが上手です|ロバートさんがりょうりをするのがじょうずです|' + Genki.getAlts('ロバートさんが{料理}をするのが{上手}です', 'りょうり|じょうず') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'だれがいつも<ruby>食堂<rt>しょくどう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べますか。<br>'+
+              '{たけしさんがいつも食堂で食べます|たけしさんがいつもしょくどうでたべます|' + Genki.getAlts('たけしさんがいつも{食堂}で{食}べます', 'しょくどう|た') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'だれがデートをしましたか。<br>'+
+              '{メアリーさんとたけしさんがデートをしました|たけしさんとメアリーさんがデートをしました|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'だれが<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか。<br>'+
+              '{メアリーさんが犬が好きです|メアリーさんがいぬがすきです|' + Genki.getAlts('メアリーさんが{犬}が{好}きです', 'いぬ|す') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,92 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Answer the following questions in Japanese by translating the sentences.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span><ruby>日本語<rt>にほんご</rt></ruby>で<ruby>答<rt>こた</rt></ruby>えてください。</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>財布<rt>さいふ</rt></ruby>を<ruby>持<rt>も</rt></ruby>たないで<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったことがありますか。<br>'+
+            '(Yes, I have.)<br>'+
+            '{はい、あります}。<br><br><br>'+
+
+            '（「はい」の<ruby>時<rt>とき</rt></ruby>）どうしましたか。<br>'+
+            '(I went back home to pick up my wallet.)<br>'+
+            '{財布を取りに家に戻りました|さいふをとりにいえにもどりました|' + Genki.getAlts('{財布}を{取}りに{家}に{戻}りました', 'さいふ|と|いえ|もど') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby>が<ruby>週末<rt>しゅうまつ</rt></ruby><ruby>何<rt>なに</rt></ruby>をしたか<ruby>知<rt>し</rt></ruby>っていますか。<br>'+
+            '(No, I don\'t know.)<br>'+
+            '{いいえ、知りません|いいえ、しりません|answer}。<br><br><br>'+
+
+            '（「いいえ」の時）何をしたと思いますか。<br>'+
+            '(I think the teacher went to go see a movie on the weekend.)<br>'+
+            '{先生は週末映画を見に行ったと思います|せんせいはしゅうまつえいがをみにいったとおもいます|' + Genki.getAlts('{先生}は{週末}{映画}を{見}に{行}ったと{思}います', 'せんせい|しゅうまつ|えいが|み|い|おも') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'どんな<ruby>町<rt>まち</rt></ruby>が<ruby>生活<rt>せいかつ</rt></ruby>しやすいと<ruby>思<rt>おも</rt></ruby>いますか。<br>'+
+            '(I think it\'s easy to live in a town with not very many people.)<br>'+
+            '{人があまり多くない町が生活しやすいと思います|ひとがあまりおおくないまちがせいかつしやすいとおもいます|' + Genki.getAlts('{人}があまり{多}くない{町}が{生活}しやすいと{思}います', 'ひと|おお|まち|せいがつ|おも') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>好<rt>す</rt></ruby>きな<ruby>本<rt>ほん</rt></ruby>／まんが／アニメ／ゲームは<ruby>何<rt>なん</rt></ruby>ですか。<small>(Use ～という)</small><br>'+
+            '(I love the game called Ao no Kiseki [<ruby>碧<rt>あお</rt></ruby>の<ruby>軌跡<rt>きせき</rt></ruby>].)<br>'+
+            '{碧の軌跡というゲームが大好きです|あおのきせきというゲームがだいすきです|' + Genki.getAlts('{碧}の{軌跡}というゲームが{大好}きです', 'あお|きせき|だいす') + 'answer}。<br><br><br>'+
+
+            'どうしてそれが好きですか。<br>'+
+            '(Because it\'s fun, interesting, and has my favorite character in it.)<br>'+
+            '{楽しくて面白くて私の好きなキャラがいますから|たのしくておもしろくてわたしのすきなキャラがいますから|' + Genki.getAlts('{楽}しくて{面白}くて{私}の{好}きなキャラがいますから', 'たの|おもしろ|わたし|す') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate Robert\'s formal self-introduction using the words below.</p>'+
+        
+        '<div class="sub-section center" style="display:inline-block;">'+
+          '<ruby>申<rt>もう</rt></ruby>します　　<ruby>参<rt>まい</rt></ruby>りました　　（て）おります'+
+        '</div><br><br>'+
+        
+        '<div class="problem">'+
+          'My name is Robert Smith.<br>'+
+          '{ロバート・スミスと申します|ロバート・スミスともうします|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I came here from Britain.<br>'+
+          '{イギリスから参りました|イギリスからまいりました|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Currently, I am studying Japanese and business at a Japanese university.<br>'+
+          '{今、日本の大学で日本語とビジネスを勉強しております|いま、にほんのだいがくでにほんごとビジネスをべんきょうしております|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'It is a pleasure to make your acquaintance.<br>'+
+          '{どうぞよろしくお願いいたします|どうぞよろしくおねがいいたします|answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

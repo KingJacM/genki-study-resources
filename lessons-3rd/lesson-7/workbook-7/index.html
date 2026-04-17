@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,69 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems by using the {!GRI|counter for people|l7-p6}, 人.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Answer the following questions in Japanese by translating the sentences.</p>'+
+        
+        '<div class="problem">'+
+          '<ruby>兄弟<rt>きょうだい</rt></ruby>がいますか。<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+          '(Yes, I have siblings. I have 2.)<br>'+
+          '{はい、%(兄弟が/)います。二人います。|はい、%(きょうだいが/)います。ふたりいます。|' + Genki.getAlts('はい、{兄弟}がいます。{二人}います。', 'きょうだい|ふたり') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>ルームメイト<rt>roommate</rt></ruby>がいますか。<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+          '(Yes, I have a roommate. I have 1.)<br>'+
+          '{はい、%(ルームメイトが/)います。一人います。|はい、%(ルームメイトが/)います。ひとりいます。|' + Genki.getAlts('はい、ルームメ{イ}トがいます。{一人}います。', 'ー|ひとり') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>日本語<rt>にほんご</rt></ruby>のクラスに<ruby>学生<rt>がくせい</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+          '(There are 6 students in my Japanese class.)<br>'+
+          '{%(日本語のクラスに学生が/)六人います|%(にほんごのクラスにがくせいが/)ろくにんいます|' + Genki.getAlts('{日本語}のクラスに{学生}が{六人}います', 'にほんご|がくせい|ろくにん') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'あなたの<ruby>町<rt>まち</rt></ruby>に<ruby>人<rt>ひと</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>ぐらい<ruby>住<rt>す</rt></ruby>んでいますか。<br>'+
+          '(There are about 8,000 people living in my town.)<br>'+
+          '{%(私の町に人が/)八千人ぐらい住んでいます|%(わたしのまちにひとが/)はっせんにんぐらいすんでいます|' + Genki.getAlts('{私}の{町}に{人}が{八千人}ぐらい{住}んでいます', 'わたし|まち|ひと|はっせんにん|す') + Genki.getAlts('{八千人}ぐらい{住}んでいます', 'はっせんにん|す') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>日本人<rt>にほんじん</rt></ruby>の<ruby>友<rt>とも</rt></ruby>だちが<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+          '(I have 2 Japanese friends.)<br>'+
+          '{%(日本人の友だちが/)二人います|%(にほんじんのともだちが/)ふたりいます|' + Genki.getAlts('{日本人}の{友}{達}が{二人}います', 'にほんじん|とも|だち|ふたり') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate the following sentences.</p>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：How many students are there in your school?<br>'+
+            '{あなたの学校に学生が何人いますか|あなたのがっこうにがくせいがなんにんいますか|' + Genki.getAlts('あなたの{学校}に{学生}が{何人}いますか', 'がっこう|がくせい|なんにん') + 'answer}。<br><br><br>'+
+            'A：There are about 10,000 students in my school.<br>'+
+            '{私の学校に学生が一万人ぐらいいます|わたしのがっこうにがくせいがいちまんにんぐらいいます|' + Genki.getAlts('{私}の{学校}に{学生}が{一万人}ぐらいいます', 'わたし|がっこう|がくせい|いちまんにん') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'My older sister has two children.<br>'+
+          '{姉は子どもが二人います|あねはこどもがふたりいます|' + Genki.getAlts('{姉}は{子}{供}が{二人}います', 'あね|こ|ども|ふたり') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

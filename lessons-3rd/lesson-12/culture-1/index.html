@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,143 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about The Japanese Climate (Genki I: p.292) if you haven\'t yet.',
+
+      quizlet : [
+        {
+          question : 'The seasons in Japan are _____.',
+          answers : [
+            'Avery different depending on where you go',
+            'the same everywhere',
+            'very mild'
+          ]
+        },
+        
+        {
+          question : 'Where in Japan is winter sunny and dry?',
+          answers : [
+            'APacific coast',
+            'Sea of Japan coast',
+            'Tokyo'
+          ]
+        },
+        
+        {
+          question : 'Where in Japan is winter cloudy and snowy?',
+          answers : [
+            'ASea of Japan coast',
+            'Pacific coast',
+            'Okinawa'
+          ]
+        },
+        
+        {
+          question : 'Spring is rather short because _____.',
+          answers : [
+            'Atemperatures rise quickly and the rainy season arrives',
+            'temperatures fall quickly and the rainy season arrives',
+            'air pollution is high'
+          ]
+        },
+        
+        {
+          question : 'How long does the rainy season typically last?',
+          answers : [
+            'Amonth and a half',
+            'one month',
+            'three months'
+          ]
+        },
+        
+        {
+          question : 'Summer in most parts of Japan is _____.',
+          answers : [
+            'Ahot and very humid, almost tropical in some places',
+            'hot and tropical',
+            'very cold'
+          ]
+        },
+        
+        {
+          question : 'Typhoons make occasional landfalls in _____.',
+          answers : [
+            'Asummer and early fall',
+            'summer',
+            'early fall'
+          ]
+        },
+        
+        {
+          question : 'What temperature unit does Japan use?',
+          answers : [
+            'ACelsius',
+            'Fahrenheit',
+            'Kelvin'
+          ]
+        },
+        
+        {
+          question : 'What is the Sea of Japan called in Japan?',
+          answers : [
+            'A<ruby>日本海<rt>にほんかい</rt></ruby>',
+            '<ruby>太平洋<rt>たいへいよう</rt></ruby>',
+            '<ruby>大西洋<rt>たいせいよう</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'What is the Pacific ocean called in Japan?',
+          answers : [
+            'A<ruby>太平洋<rt>たいへいよう</rt></ruby>',
+            '<ruby>大西洋<rt>たいせいよう</rt></ruby>',
+            '<ruby>日本海<rt>にほんかい</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'What is the rainy season called in Japan?',
+          answers : [
+            'A<ruby>梅雨<rt>つゆ</rt></ruby>',
+            '<ruby>雨月<rt>うげつ</rt></ruby>',
+            '<ruby>雨<rt>あめ</rt></ruby>'
+          ]
+        },
+        
+{
+          question : 'When do the cherry trees blossom in Tokyo?',
+          answers : [
+            'ALate March',
+            'Early May',
+            'Mid January'
+          ]
+        },
+        
+        {
+          question : 'When does the rainy season start in Tokyo?',
+          answers : [
+            'AMid-June',
+            'Early May',
+            'No rainy season'
+          ]
+        },
+        
+        {
+          question : 'When is the first snowfall in Tokyo?',
+          answers : [
+            'AJanuary',
+            'October',
+            'No snow'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

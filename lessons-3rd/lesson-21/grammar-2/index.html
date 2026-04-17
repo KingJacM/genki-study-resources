@@ -47,25 +47,7 @@
     </div>
 
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,200 @@
       </ul>
     </footer>
 
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Takeshi has been having a tough life. Describe what happened to him with the cues, using the {!GRI|passive forms|l21-p1}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'どろぼう／かばんをとる',
+            answers : [
+              'Aたけしさんはどろぼうにかばんをとられました。',
+              'たけしさんはどろぼうにかばんをとりれました。',
+              'たけしさんはどろぼうにかばんをとりました。',
+              'たけしさんはどろぼうにかばんをとらました。'
+            ]
+          },
+
+          {
+            question : 'メアリー／<ruby>笑<rt>わら</rt></ruby>う',
+            answers : [
+              'Aたけしさんはメアリーさんに<ruby>笑<rt>わら</rt></ruby>われました。',
+              'たけしさんはメアリーさんに<ruby>笑<rt>わら</rt></ruby>あれました。',
+              'たけしさんはメアリーさんが<ruby>笑<rt>わら</rt></ruby>われました。',
+              'たけしさんはメアリーさんが<ruby>笑<rt>わら</rt></ruby>あれました。'
+            ]
+          },
+
+          {
+            question : '友だち／<ruby>足<rt>あし</rt></ruby>を<ruby>踏<rt>ふ</rt></ruby>む',
+            answers : [
+              'Aたけしさんは友だちに<ruby>足<rt>あし</rt></ruby>を<ruby>踏<rt>ふ</rt></ruby>まれました。',
+              'たけしさんは友だちに<ruby>足<rt>あし</rt></ruby>を<ruby>踏<rt>ふ</rt></ruby>めました。',
+              'たけしさんは友だちが<ruby>足<rt>あし</rt></ruby>を<ruby>踏<rt>ふ</rt></ruby>まれました。',
+              'たけしさんは友だちが<ruby>足<rt>あし</rt></ruby>を<ruby>踏<rt>ふ</rt></ruby>めました。'
+            ]
+          },
+
+          {
+            question : 'どろぼう／<ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>む',
+            answers : [
+              'Aたけしさんはどろぼうに<ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>まれました。',
+              'たけしさんはどろぼうに<ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>めました。',
+              'たけしさんはどろぼうに<ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>みました。',
+              'たけしさんはどろぼうに<ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>れました。'
+            ]
+          },
+
+          {
+            question : '<ruby>友<rt>とも</rt></ruby>だち／なぐる',
+            answers : [
+              'Aたけしさんは<ruby>友<rt>とも</rt></ruby>だちになぐられました。',
+              'たけしさんは<ruby>友<rt>とも</rt></ruby>だちになぐりれました。',
+              'たけしさんは<ruby>友<rt>とも</rt></ruby>だちになぐりました。',
+              'たけしさんは<ruby>友<rt>とも</rt></ruby>だちになぐらました。'
+            ]
+          },
+
+          {
+            question : '<ruby>赤<rt>あか</rt></ruby>ちゃん／<ruby>泣<rt>な</rt></ruby>く',
+            answers : [
+              'Aたけしさんは<ruby>赤<rt>あか</rt></ruby>ちゃんに<ruby>泣<rt>な</rt></ruby>かれました。',
+              'たけしさんは<ruby>赤<rt>あか</rt></ruby>ちゃんに<ruby>泣<rt>な</rt></ruby>きれました。',
+              'たけしさんは<ruby>赤<rt>あか</rt></ruby>ちゃんが<ruby>泣<rt>な</rt></ruby>かれました。',
+              'たけしさんは<ruby>赤<rt>あか</rt></ruby>ちゃんが<ruby>泣<rt>な</rt></ruby>きれました。'
+            ]
+          },
+
+          {
+            question : '<ruby>雨<rt>あめ</rt></ruby>／<ruby>降<rt>ふ</rt></ruby>る',
+            answers : [
+              'Aたけしさんは<ruby>雨<rt>あめ</rt></ruby>に<ruby>降<rt>ふ</rt></ruby>られました。',
+              'たけしさんは<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>られました。',
+              'たけしさんは<ruby>雨<rt>あめ</rt></ruby>に<ruby>降<rt>ふ</rt></ruby>りました。',
+              'たけしさんは<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りました。'
+            ]
+          },
+
+          {
+            question : '<ruby>蚊<rt>か</rt></ruby>／<ruby>刺<rt>さ</rt></ruby>す',
+            answers : [
+              'Aたけしさんは<ruby>蚊<rt>か</rt></ruby>に<ruby>刺<rt>さ</rt></ruby>されました。',
+              'たけしさんは<ruby>蚊<rt>か</rt></ruby>に<ruby>刺<rt>さ</rt></ruby>しれました。',
+              'たけしさんは<ruby>蚊<rt>か</rt></ruby>に<ruby>刺<rt>さ</rt></ruby>しました。',
+              'たけしさんは<ruby>蚊<rt>か</rt></ruby>に<ruby>刺<rt>さ</rt></ruby>さりました。'
+            ]
+          },
+
+          {
+            question : 'あやか／ふる',
+            answers : [
+              'Aたけしさんはあやかさんにふられました。',
+              'たけしさんはあやかさんにふらりました。',
+              'たけしさんはあやかさんがふられました。',
+              'たけしさんはあやかさんがふらりました。'
+            ]
+          },
+
+          {
+            question : 'ちかん／さわる',
+            answers : [
+              'Aたけしさんはちかんにさわられました。',
+              'たけしさんはちかんにさわらりました。',
+              'たけしさんはちかんにさわりました。',
+              'たけしさんはちかんにさわらました。'
+            ]
+          },
+
+          {
+            question : '<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>友<rt>とも</rt></ruby>だち／いじめる',
+            answers : [
+              'Aたけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>友<rt>とも</rt></ruby>だちにいじめられました。',
+              'たけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>友<rt>とも</rt></ruby>だちにいじめらりました。',
+              'たけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>友<rt>とも</rt></ruby>だちにいじめました。',
+              'たけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>友<rt>とも</rt></ruby>だちにいじめらました。'
+            ]
+          },
+
+          {
+            question : '<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、おじさん／<ruby>怒<rt>おこ</rt></ruby>る',
+            answers : [
+              'Aたけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、おじさんに<ruby>怒<rt>おこ</rt></ruby>られました。',
+              'たけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、おじさんに<ruby>怒<rt>おこ</rt></ruby>らりました。',
+              'たけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、おじさんが<ruby>怒<rt>おこ</rt></ruby>られました。',
+              'たけしさんは<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、おじさんが<ruby>怒<rt>おこ</rt></ruby>らりました。'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'どろぼう／かばんをとる　<i class="fa">&#xf061;</i>　たけしさんはどろぼうにかばんをとられました。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'メアリー／<ruby>笑<rt>わら</rt></ruby>う<br>'+
+              '{たけしさんはメアリーさんに笑われました|たけしさんはメアリーさんにわらわれました|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '友だち／<ruby>足<rt>あし</rt></ruby>を<ruby>踏<rt>ふ</rt></ruby>む<br>'+
+              '{たけしさんは友だちに足を踏まれました|たけしさんは友だちにあしをふまれました|' + Genki.getAlts('たけしさんは{友}{だち}に{足}を{踏}まれました', 'とも|達|あし|ふ') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'どろぼう／<ruby>財布<rt>さいふ</rt></ruby>を<ruby>盗<rt>ぬす</rt></ruby>む<br>'+
+              '{たけしさんはどろぼうに財布を盗まれました|たけしさんはどろぼうにさいふをぬすまれました|' + Genki.getAlts('たけしさんは{どろぼう}に{財布}を{盗}まれました', '泥棒|さいふ|ぬす') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>友<rt>とも</rt></ruby>だち／なぐる<br>'+
+              '{たけしさんは友だちになぐられました|たけしさんはともだちになぐられました|' + Genki.getAlts('たけしさんは{友}{だち}に{なぐ}られました', 'とも|達|殴') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>赤<rt>あか</rt></ruby>ちゃん／<ruby>泣<rt>な</rt></ruby>く<br>'+
+              '{たけしさんは赤ちゃんに泣かれました|たけしさんはあかちゃんになかれました|' + Genki.getAlts('たけしさんは{赤}ちゃんに{泣}かれました', 'あか|な') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>雨<rt>あめ</rt></ruby>／<ruby>降<rt>ふ</rt></ruby>る<br>'+
+              '{たけしさんは雨に降られました|たけしさんはあめにふられました|' + Genki.getAlts('たけしさんは{雨}に{降}られました', 'あめ|ふ') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>蚊<rt>か</rt></ruby>／<ruby>刺<rt>さ</rt></ruby>す<br>'+
+              '{たけしさんは蚊に刺されました|たけしさんはかにさされました|' + Genki.getAlts('たけしさんは{蚊}に{刺}されました', 'か|さ') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'あやか／ふる<br>'+
+              '{たけしさんはあやかさんにふられました|たけしさんはあやかさんに振られました|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ちかん／さわる<br>'+
+              '{たけしさんはちかんに触られました|たけしさんはちかんにさわられました|たけしさんは痴漢にさわられました|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

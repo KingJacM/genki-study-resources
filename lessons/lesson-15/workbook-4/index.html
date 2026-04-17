@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Workbook: ～ておく - Lesson 15 | Genki Study Resources</title>
-    <meta name="title" content="Workbook: ～ておく - Lesson 15 | Genki Study Resources">
-    <meta name="twitter:title" content="Workbook: ～ておく - Lesson 15 | Genki Study Resources">
-    <meta property="og:title" content="Workbook: ～ておく - Lesson 15 | Genki Study Resources">
+    <title>Workbook: ～ておく - Lesson 15 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Workbook: ～ておく - Lesson 15 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Workbook: ～ておく - Lesson 15 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Workbook: ～ておく - Lesson 15 | Genki Study Resources - 2nd Edition">
     <meta name="description" content="Complete the following problems using ～ておく.">
     <meta property="og:description" content="Complete the following problems using ～ておく.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II Workbook, page 30, problem I, problem II, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki II Workbook, page 30, problem I, problem II, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,55 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～ておく|l15-p3}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Read the first half of the sentences carefully. Then choose from the list what you will do in preparation and complete the sentences, using {!GRI|～ておきます|l15-p3}.</p>'+
+        
+        '<div class="sub-section center" style="font-size:18px;width:80%;margin:0 auto;">'+
+          'withdraw money　　reserve an inn　　look for a nice restaurant<br>'+
+          'practice new songs　　check the time of the train'+
+        '</div><br>'+
+        
+        '<div class="problem">来週、北海道を旅行するので、{旅館を予約しておきます|りょかんをよやくしておきます|' + Genki.getAlts('{旅館}を{予約}しておきます', 'りょかん|よやく') + 'answer}。</div>'+
+        
+        '<div class="problem">電車で東京に行くので、{電車の時間を調べておきます|でんしゃのじかんをしらべておきます|' + Genki.getAlts('{電車}の{時間}を{調}べておきます', 'でんしゃ|じかん|しら') + 'answer}。</div>'+
+        
+        '<div class="problem">今度の週末、友だちとカラオケに行くので、{新しい歌を練習しておきます|あたらしいうたをれんしゅうしておきます|' + Genki.getAlts('{新}しい{歌}を{練習}しておきます', 'あたら|うた|れんしゅう') + 'answer}。</div>'+
+        
+        '<div class="problem">週末デートをするので、{いいレストランを探しておきます|いいレストランをさがしておきます|' + Genki.getAlts('{い}いレストランを{探}しておきます', '良|さが') + Genki.getAlts('{よ}いレストランを{探}しておきます', '良|さが') + 'answer}。</div>'+
+        
+        '<div class="problem">買い物に行くので、{お金をおろしておきます|おかねをおろしておきます|' + Genki.getAlts('お{金}を{下}ろすしておきます', 'かね|お') + 'answer}。</div>'+
+        
+        '<p class="section-desc">Answer the following questions.</p>'+
+        '<div class="problem">'+
+          '来週、地震があるかもしれません。何をしておきますか。<br>'+
+          '(I will buy water and food.)<br>'+
+          '{水と食べ物を買っておきます|みずとたべものをかっておきます|' + Genki.getAlts('{水}と{食べ物}を{買}っておきます', 'みず|たべもの|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '来週、テストがあります。何をしておきますか。<br>'+
+          '(I will study a lot.)<br>'+
+          '{たくさん勉強しておきます|たくさんべんきょうしておきます|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '今度の休みに富士山に登ります。何をしておかなければいけませんか。<br>'+
+          '(I have to buy warm clothes.)<br>'+
+          '{暖かい服を買っておかなければいけません|あたたかいふくをかっておかなければいけません|' + Genki.getAlts('{暖}かい{服}を{買}っておかなければいけません', 'あたた|ふく|か') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

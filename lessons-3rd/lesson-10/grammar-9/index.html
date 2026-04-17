@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,309 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Use the table below to figure out the {!GRI|means of transportation|l10-p7} to answer the questions.<br><br>'+
+      '<table class="center">'+
+        '<tr style="font-weight:bold;">'+
+          '<td>Origin</td>'+
+          '<td>Destination</td>'+
+          '<td>Transportation</td>'+
+          '<td>Time to Destination</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>うち</td>'+
+          '<td><ruby>駅<rt>えき</rt></ruby></td>'+
+          '<td><ruby>自転車<rt>じてんしゃ</rt></ruby></td>'+
+          '<td><ruby>十分<rt>じゅっぷん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>うち</td>'+
+          '<td><ruby>学校<rt>がっこう</rt></ruby></td>'+
+          '<td>バス</td>'+
+          '<td><ruby>四十分<rt>よんじゅっぷん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>うち</td>'+
+          '<td>バス<ruby>停<rt>てい</rt></ruby></td>'+
+          '<td><ruby>歩<rt>ある</rt></ruby>いて</td>'+
+          '<td><ruby>二十分<rt>にじゅっぷん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>うち</td>'+
+          '<td><ruby>会社<rt>かいしゃ</rt></ruby></td>'+
+          '<td><ruby>車<rt>くるま</rt></ruby></td>'+
+          '<td><ruby>一時間<rt>いちじかん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>横浜<rt>よこはま</rt></ruby></td>'+
+          '<td><ruby>東京<rt>とうきょう</rt></ruby></td>'+
+          '<td><ruby>電車<rt>でんしゃ</rt></ruby></td>'+
+          '<td><ruby>三十分<rt>さんじゅっぷん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>会社<rt>かいしゃ</rt></ruby></td>'+
+          '<td>デパート</td>'+
+          '<td><ruby>地下鉄<rt>ちかてつ</rt></ruby></td>'+
+          '<td><ruby>十五分<rt>じゅうごふん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>名古屋<rt>なごや</rt></ruby></td>'+
+          '<td><ruby>東京<rt>とうきょう</rt></ruby></td>'+
+          '<td><ruby>新幹線<rt>しんかんせん</rt></ruby></td>'+
+          '<td><ruby>二時間<rt>にじかん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>日本<rt>にほん</rt></ruby></td>'+
+          '<td>ハワイ</td>'+
+          '<td><ruby>飛行機<rt>ひこうき</rt></ruby></td>'+
+          '<td><ruby>八時間<rt>はちじかん</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>日本<rt>にほん</rt></ruby></td>'+
+          '<td>インドネシア</td>'+
+          '<td><ruby>船<rt>ふね</rt></ruby></td>'+
+          '<td><ruby>一週間<rt>いっしゅうかん</rt></ruby></td>'+
+        '</tr>'+
+      '</table>', 'Use the table below to figure out the {!GRI|means of transportation|l10-p7} to answer the questions.'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'うちから<ruby>駅<rt>えき</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'Aうちから<ruby>駅<rt>えき</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>駅<rt>えき</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>駅<rt>えき</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>駅<rt>えき</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : 'うちから<ruby>学校<rt>がっこう</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'Aうちから<ruby>学校<rt>がっこう</rt></ruby>までバスで<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>学校<rt>がっこう</rt></ruby>までバスに<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>学校<rt>がっこう</rt></ruby>まで<ruby>車<rt>くるま</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>学校<rt>がっこう</rt></ruby>まで<ruby>車<rt>くるま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : 'うちからバス<ruby>停<rt>てい</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'Aうちからバス<ruby>停<rt>てい</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いて<ruby>行<rt>い</rt></ruby>きます。',
+              'うちからバス<ruby>停<rt>てい</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いてで<ruby>行<rt>い</rt></ruby>きます。',
+              'うちからバス<ruby>停<rt>てい</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              'うちからバス<ruby>停<rt>てい</rt></ruby>まで<ruby>自転車<rt>じてんしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : 'うちから<ruby>会社<rt>かいしゃ</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'Aうちから<ruby>会社<rt>かいしゃ</rt></ruby>まで<ruby>車<rt>くるま</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>会社<rt>かいしゃ</rt></ruby>まで<ruby>車<rt>くるま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>会社<rt>かいしゃ</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              'うちから<ruby>会社<rt>かいしゃ</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : '<ruby>横浜<rt>よこはま</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'A<ruby>横浜<rt>よこはま</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>横浜<rt>よこはま</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>横浜<rt>よこはま</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>車<rt>くるま</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>横浜<rt>よこはま</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>車<rt>くるま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : '<ruby>会社<rt>かいしゃ</rt></ruby>からデパートまでどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'A<ruby>会社<rt>かいしゃ</rt></ruby>からデパートまで<ruby>地下鉄<rt>ちかてつ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>会社<rt>かいしゃ</rt></ruby>からデパートまで<ruby>地下鉄<rt>ちかてつ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>会社<rt>かいしゃ</rt></ruby>からデパートまで<ruby>新幹線<rt>しんかんせん</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>会社<rt>かいしゃ</rt></ruby>からデパートまで<ruby>新幹線<rt>しんかんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : '<ruby>名古屋<rt>なごや</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'A<ruby>名古屋<rt>なごや</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>新幹線<rt>しんかんせん</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>名古屋<rt>なごや</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>新幹線<rt>しんかんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>名古屋<rt>なごや</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>地下鉄<rt>ちかてつ</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>名古屋<rt>なごや</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>地下鉄<rt>ちかてつ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : '<ruby>日本<rt>にほん</rt></ruby>からハワイまでどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'A<ruby>日本<rt>にほん</rt></ruby>からハワイまで<ruby>飛行機<rt>ひこうき</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>日本<rt>にほん</rt></ruby>からハワイまで<ruby>飛行機<rt>ひこうき</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>日本<rt>にほん</rt></ruby>からハワイまで<ruby>新幹線<rt>しんかんせん</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>日本<rt>にほん</rt></ruby>からハワイまで<ruby>新幹線<rt>しんかんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : '<ruby>日本<rt>にほん</rt></ruby>からインドネシアまでどうやって<ruby>行<rt>い</rt></ruby>きますか。',
+            answers : [
+              'A<ruby>日本<rt>にほん</rt></ruby>からインドネシアまで<ruby>船<rt>ふね</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>日本<rt>にほん</rt></ruby>からインドネシアまで<ruby>船<rt>ふね</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>日本<rt>にほん</rt></ruby>からインドネシアまで<ruby>車<rt>くるま</rt></ruby>で<ruby>行<rt>い</rt></ruby>きます。',
+              '<ruby>日本<rt>にほん</rt></ruby>からインドネシアまで<ruby>車<rt>くるま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<table class="table center">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>Origin</td>'+
+            '<td>Destination</td>'+
+            '<td>Transportation</td>'+
+            '<td>Time to Destination</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>うち</td>'+
+            '<td><ruby>駅<rt>えき</rt></ruby></td>'+
+            '<td><ruby>自転車<rt>じてんしゃ</rt></ruby></td>'+
+            '<td><ruby>十分<rt>じゅっぷん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>うち</td>'+
+            '<td><ruby>学校<rt>がっこう</rt></ruby></td>'+
+            '<td>バス</td>'+
+            '<td><ruby>四十分<rt>よんじゅっぷん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>うち</td>'+
+            '<td>バス<ruby>停<rt>てい</rt></ruby></td>'+
+            '<td><ruby>歩<rt>ある</rt></ruby>いて</td>'+
+            '<td><ruby>二十分<rt>にじゅっぷん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>うち</td>'+
+            '<td><ruby>会社<rt>かいしゃ</rt></ruby></td>'+
+            '<td><ruby>車<rt>くるま</rt></ruby></td>'+
+            '<td><ruby>一時間<rt>いちじかん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>横浜<rt>よこはま</rt></ruby></td>'+
+            '<td><ruby>東京<rt>とうきょう</rt></ruby></td>'+
+            '<td><ruby>電車<rt>でんしゃ</rt></ruby></td>'+
+            '<td><ruby>三十分<rt>さんじゅっぷん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>会社<rt>かいしゃ</rt></ruby></td>'+
+            '<td>デパート</td>'+
+            '<td><ruby>地下鉄<rt>ちかてつ</rt></ruby></td>'+
+            '<td><ruby>十五分<rt>じゅうごふん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>名古屋<rt>なごや</rt></ruby></td>'+
+            '<td><ruby>東京<rt>とうきょう</rt></ruby></td>'+
+            '<td><ruby>新幹線<rt>しんかんせん</rt></ruby></td>'+
+            '<td><ruby>二時間<rt>にじかん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>日本<rt>にほん</rt></ruby></td>'+
+            '<td>ハワイ</td>'+
+            '<td><ruby>飛行機<rt>ひこうき</rt></ruby></td>'+
+            '<td><ruby>八時間<rt>はちじかん</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>日本<rt>にほん</rt></ruby></td>'+
+            '<td>インドネシア</td>'+
+            '<td><ruby>船<rt>ふね</rt></ruby></td>'+
+            '<td><ruby>一週間<rt>いっしゅうかん</rt></ruby></td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="example-problem">'+
+          '<div class="inner-problem valign-top">'+
+            'うちから<ruby>駅<rt>えき</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+            'うちから<ruby>駅<rt>えき</rt></ruby>まで{自転車|じてんしゃ|answer}で<ruby>行<rt>い</rt></ruby>きます。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'うちから<ruby>学校<rt>がっこう</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{うちから学校までバスで行きます|うちからがっこうまでバスでいきます|' + Genki.getAlts('{うち}から{学校}までバスで{行}きます', '家|がっこう|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'うちからバス<ruby>停<rt>てい</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{うちからバス停まで歩いて行きます|うちからバスていまであるいていきます|' + Genki.getAlts('{うち}からバス{停}まで{歩}いて{行}きます', '家|てい|ある|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'うちから<ruby>会社<rt>かいしゃ</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{うちから会社まで車で行きます|うちからかいしゃまでくるまでいきます|' + Genki.getAlts('{うち}から{会社}まで{車}で{行}きます', '家|かいしゃ|くるま|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>横浜<rt>よこはま</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{横浜から東京まで電車で行きます|よこはまからとうきょうまででんしゃでいきます|' + Genki.getAlts('{横浜}から{東京}まで{電車}で{行}きます', 'よこはま|とうきょう|でんしゃ|い') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>会社<rt>かいしゃ</rt></ruby>からデパートまでどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{会社からデパートまで地下鉄で行きます|かいしゃからデパートまでちかてつでいきます|' + Genki.getAlts('{会社}からデパートまで{地下鉄}で{行}きます', 'かいしゃ|ちかてつ|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>名古屋<rt>なごや</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{名古屋から東京まで新幹線で行きます|なごやからとうきょうまでしんかんせんでいきます|' + Genki.getAlts('{名古屋}から{東京}まで{新幹線}で{行}きます', 'なごや|とうきょう|しんかんせん|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>日本<rt>にほん</rt></ruby>からハワイまでどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{日本からハワイまで飛行機で行きます|にほんからハワイまでひこうきでいきます|' + Genki.getAlts('{日本}からハワイまで{飛行機}で{行}きます', 'にほん|ひこうき|い') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>日本<rt>にほん</rt></ruby>からインドネシアまでどうやって<ruby>行<rt>い</rt></ruby>きますか。<br>'+
+              '{日本からインドネシアまで船で行きます|にほんからインドネシアまでふねでいきます|' + Genki.getAlts('{日本}からインドネシアまで{船}で{行}きます', 'にほん|ふね|い') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

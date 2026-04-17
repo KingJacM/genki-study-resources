@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,69 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Ryota, Kana, and Ken are talking about their vacation. What did they do? What are the planning to do for the next vacation? Choose the answers from the list.</p>'+
+    '<div class="right">*ビーチ (beach)</div>'+
+    '{!AUDIO|W11-A}'+
+        
+    '<div class="sub-section" style="width:80%;margin:0 auto;">'+
+      'a. skiing　　b. camping　　c. driving　　d. doing nothing<br>'+
+      'e. shopping　　f. meeting friends　　g. taking a walk on a beach<br>'+
+      'h. working part-time　　i. climbing mountains　　j. taking a spa bath'+
+    '</div><br>'+
+
+    '<div class="small-margin columns-2 clear">'+
+      '<div>'+
+        '<div><span class="label"></span><u>1. last vacation</u></div>'+
+        '<div class="problem">{!PLAY|W11-A|8.5} りょうた…　({a}) ({j})</div>'+
+        '<div class="problem">{!PLAY|W11-A|25} かな………　({e}) ({f}) ({g})</div>'+
+        '<div class="problem">{!PLAY|W11-A|67} けん………　({d})</div>'+
+      '</div>'+
+        
+      '<div>'+
+        '<div><u>2. next vacation</u></div>'+
+        '<div class="problem">({i})</div>'+
+        '<div class="problem">({h})</div>'+
+        '<div class="problem">({b}) ({c})</div>'+
+      '</div>'+
+    '</div>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Listen to the two short dialogues and choose the most appropriate answer(s) by marking them with O.</p>'+
+    '<div class="right">*パンダ (panda)</div>'+
+    '{!AUDIO|W11-B}'+
+
+    '<div class="count-problems pad-zones no-margin">'+
+      '<div class="problem">'+
+        '{!PLAY|W11-B|2.5} They are going to have...<br>'+
+        '<div class="indent-block">({||width:21}) a. pizza　　({||width:21}) b. sushi　　({O}) c. pasta (パスタ)</div>'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W11-B|35} Where are they going to go in Tokyo?<br>'+
+        '<div class="indent-block"><span class="label">Today:</span> ({O}) a. shopping　　({||width:21}) b. art museum　　({O}) c. Kabuki　　({||width:21}) d. zoo</div>'+
+        '<div class="indent-block"><span class="label">Tomorrow:</span> ({||width:21}) a. shopping　　({O}) b. art museum　　({||width:21}) c. Kabuki　　({O}) d. zoo</div>'+
+      '</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Listen to the dialogue and fill in the blanks.</p>'+
+    '{!AUDIO|W11-C}'+
+        
+    '<div class="count-problems valign-top">'+
+      '<div class="problem">{!PLAY|W11-C|2} メアリーさんは、<ruby>今<rt>いま</rt></ruby>、{社長になりたい|しゃちょうになりたい|answer}と<ruby>言<rt>い</rt></ruby>っていました。</div>'+
+      '<div class="problem">{!PLAY|W11-C|15} トムさんは、<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、{歌手になりたかった|かしゅになりたかった|answer}と<ruby>言<rt>い</rt></ruby>っていました。</div>'+
+      '<div class="problem">{!PLAY|W11-C|28.5} <ruby>先生<rt>せんせい</rt></ruby>は、<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、{%(先生になりたくなかった/別に何もなりたくなかった)|%(せんせいになりたくなかった/べつになにもなりたくなかった)|' + Genki.getAlts('{別}に{何}もなりたくなかった', 'べつ|なに') + 'answer}と<ruby>言<rt>い</rt></ruby>っていました。</div>'+
+    '</div>'
+      
+    });</script>
   </body>
 </html>

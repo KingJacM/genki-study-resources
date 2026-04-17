@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,107 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about Names of Years (Genki II: p.44) if you haven\'t yet.',
+
+      quizlet : [
+        {
+          question : 'The Japanese use two systems of reference for years. What are they?',
+          answers : [
+            'AGregorian calendar and <ruby>元号<rt>げんごう</rt></ruby>',
+            'Julian calendar and <ruby>元号<rt>げんごう</rt></ruby>',
+            'Gregorian and Julian calendar'
+          ]
+        },
+        
+        {
+          question : 'What is <ruby>元号<rt>げんごう</rt></ruby>?',
+          answers : [
+            'AJapanese imperial eras that coincide with the emperors\' tenures.',
+            'Japanese imperial eras that coincide with the emperors\' age.',
+            'Japanese imperial eras that coincide with the moon\'s phases.'
+          ]
+        },
+        
+        {
+          question : 'Under the <ruby>元号<rt>げんごう</rt></ruby> system the year 2020 was _____.',
+          answers : [
+            'A<ruby>令和<rt>れいわ</rt></ruby>2<ruby>年<rt>ねん</rt></ruby>',
+            '<ruby>昭和<rt>しょうわ</rt></ruby>2<ruby>年<rt>ねん</rt></ruby>',
+            '<ruby>明治<rt>めいじ</rt></ruby>2<ruby>年<rt>ねん</rt></ruby>'
+          ]
+        },
+        
+        {
+          question : 'The five most recent eras were _____.',
+          answers : [
+            'AMeiji, Taisho, Showa, Heisei, and Reiwa',
+            'Edo, Taisho, Showa, Heisei, and Reiwa',
+            'Meiji, Taisho, Showa, Heian, and Edo'
+          ]
+        },
+        
+        {
+          question : 'Meiji was the era _____.',
+          answers : [
+            'Aof modernization',
+            'of war and economic growth',
+            'of recession and big earthquakes'
+          ]
+        },
+        
+        {
+          question : 'Taisho was the era _____.',
+          answers : [
+            'Athe movement toward democracy was born',
+            'of modernization',
+            'of war and economic growth'
+          ]
+        },
+        
+        {
+          question : 'Showa was the era _____.',
+          answers : [
+            'Aof war and economic growth',
+            'the movement toward democracy was born',
+            'of recession and big earthquakes'
+          ]
+        },
+        
+        {
+          question : 'Heisei was the era _____.',
+          answers : [
+            'Aof recession and big earthquakes',
+            'of war and economic growth',
+            'of modernization'
+          ]
+        },
+        
+        {
+          question : 'Japanese people associate their birth years with _____.',
+          answers : [
+            'Athe 12 animals in the East Asian zodiac',
+            'the 12 astrological signs in the Western zodiac',
+            'the imperial eras'
+          ]
+        },
+        
+        {
+          question : 'The east asian zodiac is referred to as _____.',
+          answers : [
+            'A<ruby>干支<rt>えと</rt></ruby> and <ruby>十二支<rt>じゅうにし</rt></ruby>',
+            '<ruby>江戸<rt>えど</rt></ruby> and <ruby>十二支<rt>じゅうにし</rt></ruby>',
+            '<ruby>干支<rt>えと</rt></ruby> and <ruby>十二時<rt>じゅうにじ</rt></ruby>'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

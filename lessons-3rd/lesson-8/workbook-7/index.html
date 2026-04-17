@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,86 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|が|l8-p7}・{!GRI|何か and 何も|l8-p8}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Look at the picture of a party and complete the following conversations using the {!GRI|subject particle が|l8-p7}.</p>'+
+        
+        '<div class="columns-2 clear">'+
+          '<div class="center">{!IMG|l8-w7-1.png|party}</div>'+
+        
+          '<div>'+
+            '<div class="problem">'+
+              'Q：だれが<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいますか。<br><br><br>'+
+              '<div class="indent-block">A：{佐藤さんが新聞を読んでいます|さとうさんがしんぶんをよんでいます|' + Genki.getAlts('{佐藤}さんが{新聞}を{読}んでいます', 'さとう|しんぶん|よ') + 'answer}。</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'Q：{だれが写真を撮っていますか|だれがしゃしんをとっていますか|' + Genki.getAlts('{だれ}が{写真}を{撮}っていますか', '誰|しゃしん|と') + 'answer}。<br><br><br>'+
+              '<div class="indent-block">A：<ruby>森<rt>もり</rt></ruby>さんが<ruby>撮<rt>と</rt></ruby>っています。</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'Q：だれがめがねをかけていますか。<br><br><br>'+
+              '<div class="indent-block">A：{山田さんがめがねをかけています|やまださんがめがねをかけています|' + Genki.getAlts('{山田}さんが{眼鏡}をかけています', 'やまだ|めがね') + 'answer}。</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'Q：{だれが帽子をかぶっていますか|だれがぼうしをかぶっていますか|' + Genki.getAlts('{だれ}が{帽子}をかぶっていますか', '誰|ぼうし') + 'answer}。<br><br><br>'+
+              '<div class="indent-block">A：<ruby>田中<rt>たなか</rt></ruby>さんがかぶっています。</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate the following sentences.<br>(Note especially that {!GRI|<ruby>何<rt>なに</rt></ruby>か and <ruby>何<rt>なに</rt></ruby>も|l8-p8} are normally not accompanied by particles.)</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<div>'+
+              'Q：Did you eat anything this morning?<br>'+
+              '{今朝、何か食べましたか|けさ、なにかたべましたか|' + Genki.getAlts('{今朝}、{何}か{食}べましたか', 'けさ|なに|た') + 'answer}。'+
+            '</div><br><br>'+
+            '<div>'+
+              'A：No, I did not eat anything this morning.<br>'+
+              '{いいえ、今朝何も食べませんでした|いいえ、けさなにもたべませんでした|' + Genki.getAlts('いいえ、{今朝}{何}も{食}べませんでした', 'けさ|なに|た') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<div>'+
+              'Q：What will you do over the weekend?<br>'+
+              '{週末、何をしますか|しゅうまつ、なにをしますか|' + Genki.getAlts('{週末}、{何}をしますか', 'しゅうまつ|なに') + 'answer}。'+
+            '</div><br><br>'+
+            '<div>'+
+              'A：I won\'t do anything.<br>'+
+              '{何もしません|なにもしません|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Would you like to drink something?<br>'+
+          '{何か飲みませんか|なにかのみませんか|' + Genki.getAlts('{何}か{飲}みませんか', 'なに|の') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Kento asked something, but I did not understand.<br>'+
+          '{けんとさんは何か聞きましたが、%(私は/)わかりませんでした|けんとさんはなにかききましたが、%(わたしは/)わかりませんでした|' + Genki.getAlts('けんとさんは{何}か{聞}きましたが、{私}は{分}かりませんでした', 'なに|き|わたし|わ') + Genki.getAlts('けんとさんは{何}か{聞}きましたが、{分}かりませんでした', 'なに|き|わ') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

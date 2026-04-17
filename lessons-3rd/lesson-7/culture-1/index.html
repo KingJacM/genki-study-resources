@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,112 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Review the chart on page 184 of Genki I and then fill in as many kinship terms as you can.',
+      
+      quizlet : 
+      '<table class="table large-width center">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td>Referring to other families</td>'+
+          '<td>Formal (referring to yours)</td>'+
+          '<td>Informal (referring to yours)</td>'+
+          '<td>Addressing yours</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Father</td>'+
+          '<td>{お父さん|おとうさん|answer}</td>'+
+          '<td>{父|ちち|answer}</td>'+
+          '<td>{お父さん|おとうさん|answer}</td>'+
+          '<td>{お%(父/とう)さん|パパ|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Mother</td>'+
+          '<td>{お母さん|おかあさん|answer}</td>'+
+          '<td>{母|はは|answer}</td>'+
+          '<td>{お母さん|おかあさん|answer}</td>'+
+          '<td>{お%(母/かあ)さん|ママ|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Older Brother</td>'+
+          '<td>{お兄さん|おにいさん|answer}</td>'+
+          '<td>{兄|あに|answer}</td>'+
+          '<td>{お兄さん|おにいさん|answer}</td>'+
+          '<td>{お兄ちゃん|おにいちゃん|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Older Sister</td>'+
+          '<td>{お姉さん|おねえさん|answer}</td>'+
+          '<td>{姉|あね|answer}</td>'+
+          '<td>{お姉さん|おねえさん|answer}</td>'+
+          '<td>{お姉ちゃん|おねえちゃん|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Younger Brother</td>'+
+          '<td>{弟さん|おとうとさん|answer}</td>'+
+          '<td colspan="2">{弟|おとうと|answer}</td>'+
+          '<td>ー</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Younger Sister</td>'+
+          '<td>{妹さん|いもうとさん|answer}</td>'+
+          '<td colspan="2">{妹|いもうと|answer}</td>'+
+          '<td>ー</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Husband</td>'+
+          '<td>{ご主人|ごしゅじん|answer}</td>'+
+          '<td>{%(ご主人/夫)|%(しゅじん/おっと)|answer}</td>'+
+          '<td>{だんな|うちの%(人/ひと)|answer}</td>'+
+          '<td>{お父さん|おとうさん|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Wife</td>'+
+          '<td>{奥さん|おくさん|answer}</td>'+
+          '<td>{%(家内/妻)|%(かない/つま)|answer}</td>'+
+          '<td>{%(奥さん/嫁さん)|%(おくさん/よめさん)|answer}</td>'+
+          '<td>{お母さん|おかあさん|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Grandfather</td>'+
+          '<td>{おじいさん}</td>'+
+          '<td>{祖父|そふ|answer}</td>'+
+          '<td>{おじいさん}</td>'+
+          '<td>{おじいちゃん}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Grandmother</td>'+
+          '<td>{おばあさん}</td>'+
+          '<td>{祖母|そぼ|answer}</td>'+
+          '<td>{おばあさん}</td>'+
+          '<td>{おばあちゃん}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>Child</td>'+
+          '<td>{お子さん|おこさん|answer}</td>'+
+          '<td colspan="2">{うちの子|うちのこ|answer}</td>'+
+          '<td>ー</td>'+
+        '</tr>'+
+      '</table>'
+        
+    });</script>
   </body>
 </html>

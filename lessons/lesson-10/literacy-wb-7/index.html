@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,49 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Using the kanji you know, translate the sentences into Japanese.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'I live in a small town.<br>'+
+          '{%(私は/)小さい町に住んでいます|%(わたし/)はちいさいまちにすんでいます|' + Genki.getAlts('{私}は{小}さい{町}に{住}んでいます', 'わたし|ちい|まち|す') + Genki.getAlts('{小}さい{町}に{住}んでいます', 'ちい|まち|す') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'It snowed yesterday morning.<br>'+
+          '{昨日の朝、雪が降りました|きのうのあさ、ゆきがふりました|' + Genki.getAlts('{昨日}の{朝}、{雪}が{降}りました', 'きのう|あさ|ゆき|ふ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I sold my old car and brought a new one.<br>'+
+          '{%(私は/)古い車を売って、新しいのを買いました|%(わたし/)はふるいくるまをうって、あたらしいのをかいました|' + Genki.getAlts('{私}は{古}い{車}を{売}って、{新}しいのを{買}いました', 'わたし|ふる|くるま|う|あたら|か') + Genki.getAlts('{古}い{車}を{売}って、{新}しいのを{買}いました', 'ふる|くるま|う|あたら|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Ms. Yamada is tall and has long hair.<br>'+
+          '{山田さんは背が高くて、髪が長いです|やまださんはせがたかくて、かみがながいです|' + Genki.getAlts('{山田}さんは{背}が{高}くて、{髪}が{長}いです', 'やまだ|せ|たか|かみ|なが') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Do you have an umbrella?<br>'+
+          '{傘を持っていますか|かさをもっていますか|' + Genki.getAlts('{傘}を{持}っていますか', 'かさ|も') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'This road becomes quiet at night.<br>'+
+          '{この道は夜静かになります|このみちはよるしずかになります|' + Genki.getAlts('この{道}は{夜}{静}かになります', 'みち|よる|しず') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

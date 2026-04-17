@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,178 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Change the verbs into the {!GRI|volitional forms|l15-p1}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : '<ruby>行<rt>い</rt></ruby>く',
+            answers : [
+              'A<ruby>行<rt>い</rt></ruby>こう',
+              '<ruby>行<rt>い</rt></ruby>きう',
+              '<ruby>行<rt>い</rt></ruby>かう',
+              '<ruby>行<rt>い</rt></ruby>くう'
+            ]
+          },
+
+          {
+            question : '<ruby>食<rt>た</rt></ruby>べる',
+            answers : [
+              'A<ruby>食<rt>た</rt></ruby>べよう',
+              '<ruby>食<rt>た</rt></ruby>べろう',
+              '<ruby>食<rt>た</rt></ruby>べりう',
+              '<ruby>食<rt>た</rt></ruby>べゆう'
+            ]
+          },
+
+          {
+            question : '<ruby>誘<rt>さそ</rt></ruby>う',
+            answers : [
+              'A<ruby>誘<rt>さそ</rt></ruby>おう',
+              '<ruby>誘<rt>さそ</rt></ruby>いう',
+              '<ruby>誘<rt>さそ</rt></ruby>あう',
+              '<ruby>誘<rt>さそ</rt></ruby>わう'
+            ]
+          },
+
+          {
+            question : '<ruby>借<rt>か</rt></ruby>りる',
+            answers : [
+              'A<ruby>借<rt>か</rt></ruby>りよう',
+              '<ruby>借<rt>か</rt></ruby>りろう',
+              '<ruby>借<rt>か</rt></ruby>りらう',
+              '<ruby>借<rt>か</rt></ruby>りゆう'
+            ]
+          },
+
+          {
+            question : '<ruby>読<rt>よ</rt></ruby>む',
+            answers : [
+              'A<ruby>読<rt>よ</rt></ruby>もう',
+              '<ruby>読<rt>よ</rt></ruby>みう',
+              '<ruby>読<rt>よ</rt></ruby>まう',
+              '<ruby>読<rt>よ</rt></ruby>むう'
+            ]
+          },
+
+          {
+            question : '<ruby>来<rt>く</rt></ruby>る',
+            answers : [
+              'A<ruby>来<rt>こ</rt></ruby>よう',
+              '<ruby>来<rt>こ</rt></ruby>ろう',
+              '<ruby>来<rt>こ</rt></ruby>ゆう',
+              '<ruby>来<rt>こ</rt></ruby>りう'
+            ]
+          },
+
+          {
+            question : '<ruby>待<rt>ま</rt></ruby>つ',
+            answers : [
+              'A<ruby>待<rt>ま</rt></ruby>とう',
+              '<ruby>待<rt>ま</rt></ruby>ちう',
+              '<ruby>待<rt>ま</rt></ruby>たう',
+              '<ruby>待<rt>ま</rt></ruby>つう'
+            ]
+          },
+
+          {
+            question : '<ruby>入<rt>はい</rt></ruby>る',
+            answers : [
+              'A<ruby>入<rt>はい</rt></ruby>ろう',
+              '<ruby>入<rt>はい</rt></ruby>よう',
+              '<ruby>入<rt>はい</rt></ruby>りう',
+              '<ruby>入<rt>はい</rt></ruby>ゆう'
+            ]
+          },
+
+          {
+            question : '<ruby>急<rt>いそ</rt></ruby>ぐ',
+            answers : [
+              'A<ruby>急<rt>いそ</rt></ruby>ごう',
+              '<ruby>急<rt>いそ</rt></ruby>ぎう',
+              '<ruby>急<rt>いそ</rt></ruby>がう',
+              '<ruby>急<rt>いそ</rt></ruby>ぎゅう'
+            ]
+          },
+
+          {
+            question : '<ruby>話<rt>はな</rt></ruby>す',
+            answers : [
+              'A<ruby>話<rt>はな</rt></ruby>そう',
+              '<ruby>話<rt>はな</rt></ruby>しう',
+              '<ruby>話<rt>はな</rt></ruby>さう',
+              '<ruby>話<rt>はな</rt></ruby>しよう'
+            ]
+          },
+
+          {
+            question : '<ruby>見<rt>み</rt></ruby>る',
+            answers : [
+              'A<ruby>見<rt>み</rt></ruby>よう',
+              '<ruby>見<rt>み</rt></ruby>ろう',
+              '<ruby>見<rt>み</rt></ruby>りう',
+              '<ruby>見<rt>み</rt></ruby>ゆう'
+            ]
+          },
+
+          {
+            question : '<ruby>書<rt>か</rt></ruby>く',
+            answers : [
+              'A<ruby>書<rt>か</rt></ruby>こう',
+              '<ruby>書<rt>か</rt></ruby>きう',
+              '<ruby>書<rt>か</rt></ruby>かう',
+              '<ruby>書<rt>か</rt></ruby>くう'
+            ]
+          },
+
+          {
+            question : '<ruby>予約<rt>よやく</rt></ruby>する',
+            answers : [
+              'A<ruby>予約<rt>よやく</rt></ruby>しよう',
+              '<ruby>予約<rt>よやく</rt></ruby>しろう',
+              '<ruby>予約<rt>よやく</rt></ruby>すろう',
+              '<ruby>予約<rt>よやく</rt></ruby>すよう'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>行<rt>い</rt></ruby>く　<i class="fa">&#xf061;</i>　<ruby>行<rt>い</rt></ruby>こう'+
+          '</div>'+
+        '</div>'+
+        '<div class="count-problems valign-top columns-2 clear">'+
+          '<div>'+
+            '<div class="problem"><ruby>食<rt>た</rt></ruby>べる　<i class="fa">&#xf061;</i>　{食べよう|たべよう|answer}</div>'+
+            '<div class="problem"><ruby>誘<rt>さそ</rt></ruby>う　　<i class="fa">&#xf061;</i>　{誘おう|さそおう|answer}</div>'+
+            '<div class="problem"><ruby>借<rt>か</rt></ruby>りる　<i class="fa">&#xf061;</i>　{借りよう|かりよう|answer}</div>'+
+            '<div class="problem"><ruby>読<rt>よ</rt></ruby>む　　<i class="fa">&#xf061;</i>　{読もう|よもう|answer}</div>'+
+            '<div class="problem"><ruby>来<rt>く</rt></ruby>る　　<i class="fa">&#xf061;</i>　{来よう|こよう|answer}</div>'+
+            '<div class="problem"><ruby>待<rt>ま</rt></ruby>つ　　<i class="fa">&#xf061;</i>　{待とう|まとう|answer}</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem"><ruby>入<rt>はい</rt></ruby>る　　<i class="fa">&#xf061;</i>　{入ろう|はいろう|answer}</div>'+
+            '<div class="problem"><ruby>急<rt>いそ</rt></ruby>ぐ　　<i class="fa">&#xf061;</i>　{急ごう|いそごう|answer}</div>'+
+            '<div class="problem"><ruby>話<rt>はな</rt></ruby>す　　<i class="fa">&#xf061;</i>　{話そう|はなそう|answer}</div>'+
+            '<div class="problem"><ruby>見<rt>み</rt></ruby>る　　<i class="fa">&#xf061;</i>　{見よう|みよう|answer}</div>'+
+            '<div class="problem"><ruby>書<rt>か</rt></ruby>く　　<i class="fa">&#xf061;</i>　{書こう|かこう|answer}</div>'+
+            '<div class="problem"><ruby>予約<rt>よやく</rt></ruby>する　<i class="fa">&#xf061;</i>　{予約しよう|よやくしよう|answer}</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

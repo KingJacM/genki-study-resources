@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,145 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Look at the table below and {!GRI|count the people|l7-p6}.<br><br>'+
+      '<table class="center">'+
+        '<tr>'+
+          '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+          '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+          '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+          '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+          '<td><ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+          '<td><ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>日本人<rt>にほんじん</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby></td>'+
+          '<td><ruby>日本人<rt>にほんじん</rt></ruby>の<ruby>学生<rt>がくせい</rt></ruby></td>'+
+          '<td>イギリス<ruby>人<rt>じん</rt></ruby>の<ruby>学生<rt>がくせい</rt></ruby></td>'+
+          '<td><ruby>日本人<rt>にほんじん</rt></ruby>のお<ruby>父<rt>とう</rt></ruby>さん</td>'+
+          '<td><ruby>日本人<rt>にほんじん</rt></ruby>のお<ruby>母<rt>かあ</rt></ruby>さん</td>'+
+          '<td>アメリカ<ruby>人<rt>じん</rt></ruby>の<ruby>学生<rt>がくせい</rt></ruby></td>'+
+        '</tr>'+
+      '</table>', 'Look at the table below and {!GRI|count the people|l7-p6}.'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : '<ruby>日本人<rt>日本人</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。',
+            answers : [
+              'A<ruby>四人<rt>よにん</rt></ruby>います。',
+              '<ruby>さん人<rt>さんにん</rt></ruby>います。',
+              '<ruby>四人<rt>よにん</rt></ruby>あります。',
+              '<ruby>さん人<rt>さんにん</rt></ruby>あります。'
+            ]
+          },
+          
+          {
+            question : '<ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。',
+            answers : [
+              'A<ruby>四人<rt>よにん</rt></ruby>います。',
+              '<ruby>三人<rt>さんにん</rt></ruby>います。',
+              '<ruby>五人<rt>ごにん</rt></ruby>います。',
+              '<ruby>二人<rt>ふたり</rt></ruby>います。'
+            ]
+          },
+          
+          {
+            question : '<ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。',
+            answers : [
+              'A<ruby>二人<rt>ふたり</rt></ruby>います。',
+              '<ruby>一人<rt>ひとり</rt></ruby>います。',
+              '<ruby>二人<rt>ふたり</rt></ruby>あります。',
+              '<ruby>一人<rt>ひとり</rt></ruby>あります。'
+            ]
+          },
+          
+          {
+            question : 'アメリカ<ruby>人<rt>じん</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。',
+            answers : [
+              'A<ruby>一人<rt>ひとり</rt></ruby>います。',
+              '<ruby>二人<rt>ふたり</rt></ruby>います。',
+              '<ruby>三人<rt>さんにん</rt></ruby>います。',
+              '<ruby>六人<rt>ろくにん</rt></ruby>います。'
+            ]
+          },
+          
+          {
+            question : '<ruby>学生<rt>がくせい</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。',
+            answers : [
+              'A<ruby>三人<rt>さんにん</rt></ruby>います。',
+              '<ruby>四人<rt>よにん</rt></ruby>います。',
+              '<ruby>三人<rt>さんにん</rt></ruby>あります。',
+              '<ruby>四人<rt>よにん</rt></ruby>あります。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<table class="table center">'+
+          '<tr>'+
+            '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+            '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+            '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+            '<td><ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+            '<td><ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+            '<td><ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>日本人<rt>にほんじん</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby></td>'+
+            '<td><ruby>日本人<rt>にほんじん</rt></ruby>の<ruby>学生<rt>がくせい</rt></ruby></td>'+
+            '<td>イギリス<ruby>人<rt>じん</rt></ruby>の<ruby>学生<rt>がくせい</rt></ruby></td>'+
+            '<td><ruby>日本人<rt>にほんじん</rt></ruby>のお<ruby>父<rt>とう</rt></ruby>さん</td>'+
+            '<td><ruby>日本人<rt>にほんじん</rt></ruby>のお<ruby>母<rt>かあ</rt></ruby>さん</td>'+
+            '<td>アメリカ<ruby>人<rt>じん</rt></ruby>の<ruby>学生<rt>がくせい</rt></ruby></td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="example-problem">'+
+          '<div class="inner-problem valign-top">'+
+            '<ruby>日本人<rt>日本人</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+            '{四|よ|answer}<ruby>人<rt>にん</rt></ruby>います。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+              '{四人います|よにんいます|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+              '{二人います|ふたりいます|answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'アメリカ<ruby>人<rt>じん</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+              '{一人います|ひとりいます|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<ruby>学生<rt>がくせい</rt></ruby>が<ruby>何人<rt>なんにん</rt></ruby>いますか。<br>'+
+              '{三人います|さんにんいます|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

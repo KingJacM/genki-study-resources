@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,50 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice {!GRI|describing people|l7-p3} in Japanese.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'Yasuo is not tall.<br>'+
+          '{やすおさんは背が高くないです|やすおさんはせがたかくないです|' + Genki.getAlts('やすおさんは{背}が{高}くないです', 'せ|たか') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Yasuo is very bright.<br>'+
+          '{やすおさんは%(とても/すごく)頭がいいです|やすおさんは%(とても/すごく)あたまがいいです|' + Genki.getAlts('やすおさんは{とても}{頭}が{い}いです', 'すごく|あたま|良') + Genki.getAlts('やすおさんは{とても}{頭}が{よ}いです', 'すごく|あたま|良') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Norio is wearing a new T-shirt today.<br>'+
+          '{のりおさんは今日新しいTシャツを着ています|のりおさんはきょうあたらしいTシャツをきています|' + Genki.getAlts('のりおさんは{今日}{新}しいＴシャツを{着}ています', 'きょう|あたら|き') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Norio is thin, but Yasuo is overweight.<br>'+
+          '{のりおさんはやせていますが、やすおさんは太っています|のりおさんはやせていますが、やすおさんはふとっています|answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>You are at a big shopping mall with your younger sister, but she is missing now. Report this to customer service and describe your sister.</p>'+
+        '<div class="problem">Cap: {帽子をかぶっています|ぼうしをかぶっています|answer;hint:wearing}。</div>'+
+        '<div class="problem">Hair: {髪が長いです|かみがながいです|' + Genki.getAlts('{髪}が{長}いです', 'かみ|なが') + 'answer;hint:long}。</div>'+
+        '<div class="problem">Glasses: {眼鏡をかけています|めがねをかけています|answer;hint:wearing}。</div>'+
+        '<div class="problem">Eyes: {目が大きいです|めがおおきいです|' + Genki.getAlts('{目}が{大}きいです', 'め|おお') + 'answer;hint:big}。</div>'+
+        '<div class="problem">Clothes (above the waist): {Tシャツを着ています|Tシャツをきています|answer;hint:T-shirt}。</div>'+
+        '<div class="problem">Clothes (below the waist): {ジーンズをはいています|jeans|width:168}。</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

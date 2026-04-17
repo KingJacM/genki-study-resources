@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,252 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'You are in the following situations. Explain them using {!GRI|～んです|l12-p1}.',
+        
+      questionsAlignLeft : true,
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'Q：どうしたんですか。<br>A：<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです',
+            answers : [
+              'A<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いんです。',
+              '<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。',
+              '<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いたんです。',
+              '<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：<ruby>彼<rt>かれ</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>がありました',
+            answers : [
+              'A<ruby>彼<rt>かれ</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>があったんです。',
+              '<ruby>彼<rt>かれ</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>があるんです。',
+              '<ruby>彼<rt>かれ</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>があたんです。',
+              '<ruby>彼<rt>かれ</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>があったなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：プレゼントをもらいました',
+            answers : [
+              'Aプレゼントをもらったんです。',
+              'プレゼントをもらいんです。',
+              'プレゼントをもらたんです。',
+              'プレゼントをもらうなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：あしたは<ruby>休<rt>やす</rt></ruby>みです',
+            answers : [
+              'Aあしたは<ruby>休<rt>やす</rt></ruby>みなんです。',
+              'あしたは<ruby>休<rt>やす</rt></ruby>んだです。',
+              'あしたは<ruby>休<rt>やす</rt></ruby>みんです。',
+              'あしたは<ruby>休<rt>やす</rt></ruby>むんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：きのうは<ruby>誕生日<rt>たんじょうび</rt></ruby>でした',
+            answers : [
+              'Aきのうは<ruby>誕生日<rt>たんじょうび</rt></ruby>だったんです。',
+              'きのうは<ruby>誕生日<rt>たんじょうび</rt></ruby>なんでした。',
+              'きのうは<ruby>誕生日<rt>たんじょうび</rt></ruby>なんです。',
+              'きのうは<ruby>誕生日<rt>たんじょうび</rt></ruby>だったです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなかったです',
+            answers : [
+              'A<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなかったんです。',
+              '<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくないんです。',
+              '<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなかったです。',
+              '<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくないなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：のどが<ruby>痛<rt>いた</rt></ruby>いです',
+            answers : [
+              'Aのどが<ruby>痛<rt>いた</rt></ruby>いんです。',
+              'のどが<ruby>痛<rt>いた</rt></ruby>いたんです。',
+              'のどが<ruby>痛<rt>いた</rt></ruby>いです。',
+              'のどが<ruby>痛<rt>いた</rt></ruby>いなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：かぜをひきました',
+            answers : [
+              'Aかぜをひいたんです。',
+              'かぜをひくんです。',
+              'かぜをひきました。',
+              'かぜをひいなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：<ruby>切符<rt>きっぷ</rt></ruby>をなくしました',
+            answers : [
+              'A<ruby>切符<rt>きっぷ</rt></ruby>をなくしたんです。',
+              '<ruby>切符<rt>きっぷ</rt></ruby>をなくしるんです。',
+              '<ruby>切符<rt>きっぷ</rt></ruby>をなくしました。',
+              '<ruby>切符<rt>きっぷ</rt></ruby>をなくしなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：あした<ruby>試験<rt>しけん</rt></ruby>があります',
+            answers : [
+              'Aあした<ruby>試験<rt>しけん</rt></ruby>があるんです。',
+              'あした<ruby>試験<rt>しけん</rt></ruby>があったんです。',
+              'あした<ruby>試験<rt>しけん</rt></ruby>があたんです。',
+              'あした<ruby>試験<rt>しけん</rt></ruby>があるなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：せきが<ruby>出<rt>で</rt></ruby>ます',
+            answers : [
+              'Aせきが<ruby>出<rt>で</rt></ruby>るんです。',
+              'せきが<ruby>出<rt>で</rt></ruby>たんです。',
+              'せきが<ruby>出<rt>で</rt></ruby>ったんです。',
+              'せきが<ruby>出<rt>で</rt></ruby>るなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>別<rt>わか</rt></ruby>れました',
+            answers : [
+              'A<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>別<rt>わか</rt></ruby>れたんです。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>別<rt>わか</rt></ruby>れったんです。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>別<rt>わか</rt></ruby>れるんです。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>別<rt>わか</rt></ruby>れなんです。'
+            ]
+          },
+
+          {
+            question : 'Q：どうしたんですか。<br>A：お<ruby>手洗<rt>てあら</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きたいです',
+            answers : [
+              'Aお<ruby>手洗<rt>てあら</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きたいんです。',
+              'お<ruby>手洗<rt>てあら</rt></ruby>いに<ruby>行<rt>い</rt></ruby>ったんです。',
+              'お<ruby>手洗<rt>てあら</rt></ruby>いに<ruby>行<rt>い</rt></ruby>くんです。',
+              'お<ruby>手洗<rt>てあら</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きたいなんです。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'Q：どうしたんですか。<br>(<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです)<br>'+
+            'A：<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いんです。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(<ruby>彼<rt>かれ</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>がありました)<br>'+
+                'A：{彼から電話があったんです|かれからでんわがあったんです|' + Genki.getAlts('{彼}から{電話}があったんです', 'かれ|でんわ') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(プレゼントをもらいました)<br>'+
+                'A：{プレゼントをもらったんです}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(あしたは<ruby>休<rt>やす</rt></ruby>みです)<br>'+
+                'A：{あしたは休みなんです|あしたはやすみなんです|' + Genki.getAlts('{あした}は{休}みなんです', '明日|やす') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(きのうは<ruby>誕生日<rt>たんじょうび</rt></ruby>でした)<br>'+
+                'A：{きのうは誕生日だったんです|きのうはたんじょうびだったんです|' + Genki.getAlts('{きのう}は{誕生日}だったんです', '昨日|たんじょうび') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなかったです)<br>'+
+                'A：{試験が難しくなかったんです|しけんがむずかしくなかったんです|' + Genki.getAlts('{試験}が{難}しくなかったんです', 'しけん|むずか') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(のどが<ruby>痛<rt>いた</rt></ruby>いです)<br>'+
+                'A：{のどが痛いんです|のどがいたいんです|answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(かぜをひきました)<br>'+
+                'A：{かぜをひいたんです}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(<ruby>切符<rt>きっぷ</rt></ruby>をなくしました)<br>'+
+                'A：{切符をなくしたんです|きっぷをなくしたんです|answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(あした<ruby>試験<rt>しけん</rt></ruby>があります)<br>'+
+                'A：{あした試験があるんです|あしたしけんがあるんです|' + Genki.getAlts('{あした}{試験}があるんです', '明日|しけん') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(せきが<ruby>出<rt>で</rt></ruby>ます)<br>'+
+                'A：{せきが出るんです|せきがでるんです|answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>別<rt>わか</rt></ruby>れました)<br>'+
+                'A：{彼女と別れたんです|かのじょとわかれたんです|' + Genki.getAlts('{彼女}と{別}れたんです', 'かのじょ|わか') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              '<div class="inner-problem">'+
+                'Q：どうしたんですか。<br>(お<ruby>手洗<rt>てあら</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きたいです)<br>'+
+                'A：{お手洗いに行きたいんです|おてあらいにいきたいんです|' + Genki.getAlts('お{手洗}いに{行}きたいんです', 'てあら|い') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

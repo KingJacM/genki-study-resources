@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,260 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Takeshi was sick yesterday. Mary did a lot of things without him. Answer the questions based on the chart below.<br>{!GRI|Click here|l10-p6} to review どこかに/どこにも.<br><br>'+
+      '<table class="center" style="width:350px">'+
+        '<tr>'+
+          '<td></td>'+
+          '<td><strong>Mary</strong></td>'+
+          '<td><strong>Takeshi</strong></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>eat</td>'+
+          '<td>sushi and tempura</td>'+
+          '<td>nothing</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>drink</td>'+
+          '<td>green tea and coffee</td>'+
+          '<td>nothing</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>go</td>'+
+          '<td>Osaka</td>'+
+          '<td>nowhere</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>meet</td>'+
+          '<td>Robert</td>'+
+          '<td>nobody</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>do</td>'+
+          '<td>watch a movie</td>'+
+          '<td>nothing</td>'+
+        '</tr>'+
+      '</table>', 'Takeshi was sick yesterday. Mary did a lot of things without him. Answer the questions based on the chart below.<br>{!GRI|Click here|l10-p6} to review どこかに/どこにも.'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'きのう、メアリーさんは<ruby>何<rt>なに</rt></ruby>か<ruby>食<rt>た</rt></ruby>べましたか。',
+            answers : [
+              'Aはい、すしと<ruby>天<rt>てん</rt></ruby>ぷらを<ruby>食<rt>た</rt></ruby>べました。',
+              'はい、お<ruby>茶<rt>ちゃ</rt></ruby>とコーヒーを<ruby>飲<rt>の</rt></ruby>みました。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>をも<ruby>食<rt>た</rt></ruby>べませんでした。'
+            ]
+          },
+
+          {
+            question : 'きのう、たけしさんは<ruby>何<rt>なに</rt></ruby>か<ruby>食<rt>た</rt></ruby>べましたか。',
+            answers : [
+              'Aいいえ、<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>をも<ruby>食<rt>た</rt></ruby>べませんでした。',
+              'はい、すしと<ruby>天<rt>てん</rt></ruby>ぷらを<ruby>食<rt>た</rt></ruby>べました。',
+              'はい、お<ruby>茶<rt>ちゃ</rt></ruby>とコーヒーを<ruby>飲<rt>の</rt></ruby>みました。'
+            ]
+          },
+
+          {
+            question : 'きのう、メアリーさんは<ruby>何<rt>なに</rt></ruby>か<ruby>飲<rt>の</rt></ruby>みましたか。',
+            answers : [
+              'Aはい、お<ruby>茶<rt>ちゃ</rt></ruby>とコーヒーを<ruby>飲<rt>の</rt></ruby>みました。',
+              'はい、すしと<ruby>天<rt>てん</rt></ruby>ぷらを<ruby>食<rt>た</rt></ruby>べました。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>も<ruby>飲<rt>の</rt></ruby>みませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>をも<ruby>飲<rt>の</rt></ruby>みませんでした。'
+            ]
+          },
+
+          {
+            question : 'きのう、たけしさんは<ruby>何<rt>なに</rt></ruby>か<ruby>飲<rt>の</rt></ruby>みましたか。',
+            answers : [
+              'Aいいえ、<ruby>何<rt>なに</rt></ruby>も<ruby>飲<rt>の</rt></ruby>みませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>をも<ruby>飲<rt>の</rt></ruby>みませんでした。',
+              'はい、お<ruby>茶<rt>ちゃ</rt></ruby>とコーヒーを<ruby>飲<rt>の</rt></ruby>みました。',
+              'はい、オレンジジュースを<ruby>飲<rt>の</rt></ruby>みました。'
+            ]
+          },
+
+          {
+            question : 'きのう、メアリーさんはどこかに<ruby>行<rt>い</rt></ruby>きましたか。',
+            answers : [
+              'Aはい、<ruby>大阪<rt>おおさか</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。',
+              'はい、<ruby>大阪<rt>おおさか</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。',
+              'はい、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。',
+              'はい、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : 'きのう、たけしさんはどこかに<ruby>行<rt>い</rt></ruby>きましたか。',
+            answers : [
+              'Aいいえ、どこにも<ruby>行<rt>い</rt></ruby>きませんでした。',
+              'いいえ、どこもに<ruby>行<rt>い</rt></ruby>きませんでした。',
+              'いいえ、どこに<ruby>行<rt>い</rt></ruby>きませんでした。',
+              'いいえ、どこも<ruby>行<rt>い</rt></ruby>きませんでした。'
+            ]
+          },
+
+          {
+            question : 'きのう、メアリーさんはだれかに<ruby>会<rt>あ</rt></ruby>いましたか。',
+            answers : [
+              'Aはい、ロバートさんに<ruby>会<rt>あ</rt></ruby>いました。',
+              'はい、ソラさんに<ruby>会<rt>あ</rt></ruby>いました。',
+              'はい、たけしさんに<ruby>会<rt>あ</rt></ruby>いました。',
+              'はい、けんさんに<ruby>会<rt>あ</rt></ruby>いました。'
+            ]
+          },
+
+          {
+            question : 'きのう、たけしさんはだれかに<ruby>会<rt>あ</rt></ruby>いましたか。',
+            answers : [
+              'Aいいえ、だれにも<ruby>会<rt>あ</rt></ruby>いませんでした。',
+              'いいえ、だれもに<ruby>会<rt>あ</rt></ruby>いませんでした。',
+              'いいえ、だれに<ruby>会<rt>あ</rt></ruby>いませんでした。',
+              'いいえ、だれも<ruby>会<rt>あ</rt></ruby>いませんでした。'
+            ]
+          },
+
+          {
+            question : 'きのう、メアリーさんは<ruby>何<rt>なに</rt></ruby>かしましたか。',
+            answers : [
+              'Aはい、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました。',
+              'はい、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みました。',
+              'はい、<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しました。',
+              'はい、<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>きました。'
+            ]
+          },
+
+          {
+            question : 'きのう、たけしさんは<ruby>何<rt>なに</rt></ruby>かしましたか。',
+            answers : [
+              'Aいいえ、<ruby>何<rt>なに</rt></ruby>もしませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>をもしませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>をしませんでした。',
+              'いいえ、<ruby>何<rt>なに</rt></ruby>もをしませんでした。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<table class="table center" style="width:350px;margin:0 auto;">'+
+          '<tr>'+
+            '<td></td>'+
+            '<td><strong>Mary</strong></td>'+
+            '<td><strong>Takeshi</strong></td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>eat</td>'+
+            '<td>sushi and tempura</td>'+
+            '<td>nothing</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>drink</td>'+
+            '<td>green tea and coffee</td>'+
+            '<td>nothing</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>go</td>'+
+            '<td>Osaka</td>'+
+            '<td>nowhere</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>meet</td>'+
+            '<td>Robert</td>'+
+            '<td>nobody</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>do</td>'+
+            '<td>watch a movie</td>'+
+            '<td>nothing</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="columns-2 clear">'+
+          '<div class="example-problem">'+
+            '<div class="inner-problem">'+
+              'きのう、メアリーさんは<ruby>何<rt>なに</rt></ruby>か<ruby>食<rt>た</rt></ruby>べましたか。<br>'+
+              'はい、すしと<ruby>天<rt>てん</rt></ruby>ぷらを<ruby>食<rt>た</rt></ruby>べました。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="example-problem">'+
+            '<div class="inner-problem">'+
+              'きのう、たけしさんは<ruby>何<rt>なに</rt></ruby>か<ruby>食<rt>た</rt></ruby>べましたか。<br>'+
+              'いいえ、<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べませんでした。'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'きのう、メアリーさんは<ruby>何<rt>なに</rt></ruby>か<ruby>飲<rt>の</rt></ruby>みましたか。<br>'+
+              '{はい、お茶とコーヒーを飲みました|はい、おちゃとコーヒーをのみました|' + Genki.getAlts('はい、お{茶}とコーヒーを{飲}みました', 'ちゃ|の') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'きのう、たけしさんは<ruby>何<rt>なに</rt></ruby>か<ruby>飲<rt>の</rt></ruby>みましたか。<br>'+
+              '{いいえ、何も飲みませんでした|いいえ、なにものみませんでした|' + Genki.getAlts('いいえ、{何}も{飲}みませんでした', 'なに|の') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'きのう、メアリーさんはどこかに<ruby>行<rt>い</rt></ruby>きましたか。<br>'+
+              '{はい、大阪に行きました|はい、おおさかにいきました|' + Genki.getAlts('はい、{大阪}に{行}きました', 'おおさか|い') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'きのう、たけしさんはどこかに<ruby>行<rt>い</rt></ruby>きましたか。<br>'+
+              '{いいえ、どこにも行きませんでした|いいえ、どこにもいきませんでした|answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div>'+
+            '<div class="problem">'+
+              'きのう、メアリーさんはだれかに<ruby>会<rt>あ</rt></ruby>いましたか。<br>'+
+              '{はい、ロバートさんに会いました|はい、ロバートさんにあいました|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'きのう、たけしさんはだれかに<ruby>会<rt>あ</rt></ruby>いましたか。<br>'+
+              '{いいえ、だれにも会いませんでした|いいえ、だれにもあいませんでした|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'きのう、メアリーさんは<ruby>何<rt>なに</rt></ruby>かしましたか。<br>'+
+              '{はい、映画を見ました|はい、えいがをみました|' + Genki.getAlts('はい、{映画}を{見}ました', 'えいが|み') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'きのう、たけしさんは<ruby>何<rt>なに</rt></ruby>かしましたか。<br>'+
+              '{いいえ、何もしませんでした|いいえ、なにもしませんでした|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

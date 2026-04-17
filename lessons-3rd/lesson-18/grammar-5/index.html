@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,139 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'You stayed at your friend\'s apartment while they were away. Now your friend is back; make an apology using {!GRI|～ちゃう／～じゃう|l18-p3} for what you have done in the apartment.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'ate all your friend\'s food in the refrigerator',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>は<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べてしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べた。'
+            ]
+          },
+
+          {
+            question : 'used your friend\'s shampoo',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>はシャンプーを<ruby>使<rt>つか</rt></ruby>っちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はシャンプーを<ruby>使<rt>つか</rt></ruby>っじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はシャンプーを<ruby>使<rt>つか</rt></ruby>ってしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>はシャンプーを<ruby>使<rt>つか</rt></ruby>った。'
+            ]
+          },
+
+          {
+            question : 'read your friend\'s diary',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>は<ruby>日記<rt>にっき</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>日記<rt>にっき</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>日記<rt>にっき</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>日記<rt>にっき</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだ。'
+            ]
+          },
+
+          {
+            question : 'threw away your friend\'s magazine',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>は<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>ててしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>は<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てた。'
+            ]
+          },
+
+          {
+            question : 'broke your friend\'s camera',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>はカメラを<ruby>壊<rt>こわ</rt></ruby>しちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はカメラを<ruby>壊<rt>こわ</rt></ruby>しじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はカメラを<ruby>壊<rt>こわ</rt></ruby>してしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>はカメラを<ruby>壊<rt>こわ</rt></ruby>した。'
+            ]
+          },
+
+          {
+            question : 'lost your friend\'s key',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>はかぎをなくしちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はかぎをなくじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はかぎをなくしてしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>はかぎをなくした。'
+            ]
+          },
+
+          {
+            question : 'dirtied your friend\'s sweater',
+            answers : [
+              'A<ruby>実<rt>じつ</rt></ruby>はセーターを<ruby>汚<rt>よご</rt></ruby>しちゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はセーターを<ruby>汚<rt>よご</rt></ruby>しじゃった。',
+              '<ruby>実<rt>じつ</rt></ruby>はセーターを<ruby>汚<rt>よご</rt></ruby>してしまった。',
+              '<ruby>実<rt>じつ</rt></ruby>はセーターを<ruby>汚<rt>よご</rt></ruby>した。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'ate all your friend\'s food in the refrigerator<br>'+
+            'A：ごめん。<br>'+
+            'B：どうしたの？<br>'+
+            'A：<ruby>実<rt>じつ</rt></ruby>は<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べちゃった。<br>'+
+            'B：えっ！'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'used your friend\'s shampoo<br>'+
+              '{実はシャンプーを使っちゃった|じつはシャンプーをつかっちゃった|' + Genki.getAlts('{実}はシャンプーを{使}っちゃった', 'じつ|つか') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'read your friend\'s diary<br>'+
+              '{実は日記を読んじゃった|じつはにっきをよんじゃった|' + Genki.getAlts('{実}は{日記}を{読}んじゃった', 'じつ|にっき|よ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'threw away your friend\'s magazine<br>'+
+              '{実は雑誌を捨てちゃった|じつはざっしをすてちゃった|' + Genki.getAlts('{実}は{雑誌}を{捨}てちゃった', 'じつ|ざっし|す') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'broke your friend\'s camera<br>'+
+              '{実はカメラを壊しちゃった|じつはカメラをこわしちゃった|' + Genki.getAlts('{実}はカメラを{壊}しちゃった', 'じつ|こわ') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'lost your friend\'s key<br>'+
+              '{実はかぎをなくしちゃった|じつはかぎをなくしちゃった|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'dirtied your friend\'s sweater<br>'+
+              '{実はセーターを汚しちゃった|じつはセーターをよごしちゃった|' + Genki.getAlts('{実}はセーターを{汚}しちゃった', 'じつ|よご') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

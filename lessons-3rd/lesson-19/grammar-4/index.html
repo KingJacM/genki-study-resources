@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,12 +68,88 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Match the following expressions with the pictures. Put answers in the ( ).<br>{!GRI|Click here|l19-p2} to review Giving Respectful Advice.',
+      
+      quizlet : 
+      '<div class="sub-section" style="width:80%;margin:0 auto;padding:12px;">'+
+        '<div class="columns-2 clear">'+
+          '<div class="answer-guide">'+
+            '<div><b>A.</b> お<ruby>待<rt>ま</rt></ruby>ちください。</div>'+
+            '<div><b>B.</b> ご<ruby>覧<rt>らん</rt></ruby>ください。</div>'+
+            '<div><b>C.</b> お<ruby>入<rt>はい</rt></ruby>りください。</div>'+
+            '<div><b>D.</b> ご<ruby>注意<rt>ちゅうい</rt></ruby>ください。</div>'+
+            '<div><b>E.</b> お<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がりください。</div>'+
+          '</div>'+
+        
+          '<div class="answer-guide">'+
+            '<div><b>F.</b> おかけください。</div>'+
+            '<div><b>G.</b> お<ruby>使<rt>つか</rt></ruby>いください。</div>'+
+            '<div><b>H.</b> お<ruby>書<rt>か</rt></ruby>きください。</div>'+
+            '<div><b>I.</b> おたばこはご<ruby>遠慮<rt>えんりょ</rt></ruby>ください。</div>'+
+          '</div>'+
+        '</div>'+
+      '</div><br><br>'+
+        
+      '<div class="count-problems columns-2 clear center">'+
+        '<div>'+
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-1.png|1}<br>'+
+            '({F})'+
+          '</div></div>'+
+          
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-2.png|2}<br>'+
+            '({H})'+
+          '</div></div>'+
+        
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-3.png|3}<br>'+
+            '({C})'+
+          '</div></div>'+
+        
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-4.png|4}<br>'+
+            '({G})'+
+          '</div></div>'+
+        
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-5.png|5}<br>'+
+            '({A})'+
+          '</div></div>'+
+        '</div>'+
+        
+        '<div>'+
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-6.png|6}<br>'+
+            '({I})'+
+          '</div></div>'+
+        
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-7.png|7}<br>'+
+            '({B})'+
+          '</div></div>'+
+        
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-8.png|8}<br>'+
+            '({E})'+
+          '</div></div>'+
+        
+          '<div class="problem"><div>'+
+            '{!IMG|l19-g4-9.png|9}<br>'+
+            '({D})'+
+          '</div></div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
     <style type="text/css">
       .problem > div {display:inline-block;}
       .answer-guide > div { margin:10px auto; }

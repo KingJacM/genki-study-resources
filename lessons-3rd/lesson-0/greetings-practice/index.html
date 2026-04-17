@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,166 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Choose the appropriate expression for the each situation.', 'Write in Japanese (hiragana) the appropriate expression for each situation.'],
+      
+      quizlet : [
+        // MULTIPLE CHOICE VERSION
+        [
+          {
+            question : 'It is one o\'clock in the afternoon. You see your neighbor Mr. Yamada.',
+            answers : [
+              'Aこんにちは。',
+              'こんばんは。',
+              'おはよう。'
+            ]
+          },
+
+          {
+            question : 'You come to class in the morning. Greet your teacher. Greet your friends.',
+            answers : [
+              'Aおはようございます。／おはよう。',
+              'おはよう。／おはようございます。',
+              'はじめまして。／こんにちは。'
+            ]
+          },
+
+          {
+            question : 'On a crowded train, you stepped on someone\'s foot.',
+            answers : [
+              'Aすみません。',
+              'はじめまして。',
+              'ごちそうさま。'
+            ]
+          },
+
+          {
+            question : 'You dropped your book. Someone picked it up for you.',
+            answers : [
+              'Aありがとうございます。',
+              'ありがとう。',
+              'Aすみません。'
+            ]
+          },
+
+          {
+            question : 'It is eight o\'clock at night. You happen to meet your teacher at the convenience store.',
+            answers : [
+              'Aこんばんは。',
+              'こんにちは。',
+              'おはようございます。'
+            ]
+          },
+
+          {
+            question : 'You are watching TV with your host family. It is time to go to sleep.',
+            answers : [
+              'Aおやすみ（なさい）。',
+              'さようなら。',
+              'いってきます。'
+            ]
+          },
+
+          {
+            question : 'You are leaving home.',
+            answers : [
+              'Aいってきます。',
+              'いったらっしゃい。',
+              'さようなら。'
+            ]
+          },
+
+          {
+            question : 'You have come back home.',
+            answers : [
+              'Aただいま。',
+              'おかえりなさい。',
+              'こんにちは。'
+            ]
+          },
+
+          {
+            question : 'You are going to start eating.',
+            answers : [
+              'Aいただきます。',
+              'ごちそうさま。',
+              'ありがとう。'
+            ]
+          },
+
+          {
+            question : 'You have finished eating.',
+            answers : [
+              'Aごちそうさま（でした）。',
+              'ありがとうございます。',
+              'おやすみなさい。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN VERSION
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            'It is one o\'clock in the afternoon. You see your neighbor Mr. Yamada.<br>'+
+            '{こんにちは}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You come to class in the morning. Greet your teacher. Greet your friends.<br>'+
+            'To your teacher: {おはようございます}。<br><br>'+
+            'To your friend: {おはよう}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'On a crowded train, you stepped on someone\'s foot.<br>'+
+            '{すみません}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You dropped your book. Someone picked it up for you.<br>'+
+            '{ありがとうございます}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'It is eight o\'clock at night. You happen to meet your teacher at the convenience store.<br>'+
+            '{こんばんは}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You are watching TV with your host family. It is time to go to sleep.<br>'+
+            '{おやすみ%(なさい/)}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You are leaving home.<br>'+
+            '{いってきます}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You have come back home.<br>'+
+            '{ただいま}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You are going to start eating.<br>'+
+            '{いただきます}。'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            'You have finished eating.<br>'+
+            '{ごちそうさま%(でした/)}。'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

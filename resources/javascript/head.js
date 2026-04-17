@@ -2,15 +2,6 @@
 (function (window, document) {
   'use strict';
   
-  // redirect for defunct 3rd edition resources
-  if (/lessons-3rd/.test(window.location.href)) {
-    if (/lessons-3rd\/index.html$|lessons-3rd\/$/.test(window.location.pathname)) {
-      window.location.href = window.location.href.replace(/lessons-3rd\/index.html$|lessons-3rd\/$/, /index.html/.test(window.location.pathname) ? 'index.html' : '');
-    } else {
-      window.location.href = window.location.href.replace(/lessons-3rd/, 'lessons');
-    }
-  }
-  
   // apply class to body for OS based fixes
   if (document.documentElement) {
     document.documentElement.className += /Linux/.test(window.navigator.platform) ? ' os-linux' : '';
@@ -263,7 +254,7 @@
             '<button id="settings-dark-mode" class="button' + (darkMode == 'on' ? '' : ' opt-off') + '" onclick="GenkiSettings.updateDarkMode(this);">' + (darkMode == 'on' ? 'ON' : 'OFF') + '</button>'+
           '</li>'+
         
-          ((window.location.protocol == 'file:' || /localhost/.test(window.location.href)) ? '' : '<li>'+
+          (window.location.protocol == 'file:' ? '' : '<li>'+
             '<span class="label">'+
                 '<span class="en">Ads:</span><span class="ja">広告：</span>'+
                 '<span class="desc"><small class="en">Enable or disable Ads.<br>Ads help support the developer, but if they\'re annoying or distracting, you can turn them off with this option.</small><small class="ja">広告がトグルできます。<br>広告はこのウェブサイトの開発者が支援しますが邪魔だったら無効にできます。</small></span>'+
@@ -388,9 +379,8 @@
               '<span class="en">Save/Load Exercise Score Data:</span><span class="ja">練習データをセーブ／ロードする：</span>'+
               '<span class="desc"><small class="en">Save or load your exercise score data.<br>This data is stored locally in the browser, so it\'s highly recommended that you save your data periodically so you don\'t lose it.</small><small class="ja">練習データがセーブ／ロードできます。<br>このデータはブラウザーで保存していますのでキャッシュをクリアすると失います。ですから、定期的にセーブするのがおすすめします。</small></span>'+
             '</span>'+
-            '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data.txt" href="data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '" onclick="if (/localhost/.test(window.location.href)) GenkiSettings.viewExerciseData(); return false;"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
+            '<a id="settings-save-exercise-data" class="button" download="Genki Exercise Score Data.txt" href="data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '') + '"><i class="fa">&#xf019;</i><span class="en">Save</span><span class="ja">セーブする</span></a>'+
             '<button id="settings-load-exercise-data" class="button" onclick="this.nextSibling.click();"><i class="fa">&#xf093;</i><span class="en">Load</span><span class="ja">ロードする</span></button><input id="settings-load-data" type="file" accept=".txt,.json,.js" onchange="GenkiSettings.loadExerciseData(this);" style="visibility:hidden;position:absolute;">'+
-            '<button id="settings-swap-exercise-data" class="button" onclick="GenkiSettings.swapExerciseData();"><i class="fa">&#xf074;</i><span class="en">Swap Data</span><span class="ja">データを見る</span></button>'+
             '<button id="settings-view-exercise-data" class="button" onclick="GenkiSettings.viewExerciseData();"><i class="fa">&#xf1c9;</i><span class="en">View Data</span><span class="ja">データを見る</span></button>'+
           '</li>'+
         '</ul>'+
@@ -517,40 +507,6 @@
 
           '<button class="button" onclick="CopyText(document.getElementById(\'copy-data\').value, this);"><i class="fa">&#xf0c5;</i><span class="en">Copy</span><span class="ja">コピーする</span></button>'+
         '</div>',
-        
-        closeCallback : function () {
-          window.setTimeout(GenkiSettings.manager, 10);
-        }
-      });
-    },
-    
-    // swaps the user's exercise score data between the 2nd and 3rd edition
-    swapExerciseData : function () {
-      GenkiModal.open({
-        title : 'Swap Exercise Score Data',
-        buttonHTML : 'Swap Data',
-        content : 
-        '<p>This feature is mainly used for swapping data from the now defunct 3rd Edition to the current version of Genki Study Resources. Click the "Swap Data" button below to swap in your 3rd Edition score data.</p>'+
-        '<p>※ Your 2nd Edition data will be preserved in the background so that you can swap back to it at any time by using this function again.</p>',
-        
-        callback : function () {
-          // create new data from the old data
-          var oldData = JSON.parse(localStorage.Results),
-          newData = {
-            '3rd' : {},
-            '2nd' : {}
-          }, k;
-          
-          // swap the data and save it
-          for (k in oldData['3rd']) newData['2nd'][k] = oldData['3rd'][k];
-          for (k in oldData['2nd']) newData['3rd'][k] = oldData['2nd'][k];
-          
-          localStorage.Results = JSON.stringify(newData);
-          localStorage.dataSwapped = true;
-          
-          // prompt to reload the page
-          setTimeout(GenkiSettings.reloadPrompt, 10);
-        },
         
         closeCallback : function () {
           window.setTimeout(GenkiSettings.manager, 10);
@@ -908,7 +864,7 @@
             item = '<div data-lesson="' + data[0].replace(/.*?lesson-(\d+).*/, 'L$1') + '" data-path="' + data[0] + '" data-name="' + data[1] + '">'+
                 '<input class="def-selector genki_input_hidden" type="checkbox" onchange="GenkiSettings.updateRandomList(this, \'' + GenkiExercises[i] + '\');"' + (GenkiRandomList.indexOf(GenkiExercises[i]) != -1 ? ' checked' : '') + '>'+
                 '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>'+
-              '<a href="' + getPaths() + 'lessons' + (GenkiEd == '3rd' ? '-3rd' : '') + '/' + data[0] + '/' + ((window.location.protocol == 'file:' || /localhost/.test(window.location.href)) ? 'index.html' : '') + '" target="_blank">' + data[1] + '</a>'+
+              '<a href="' + getPaths() + 'lessons' + (GenkiEd == '3rd' ? '-3rd' : '') + '/' + data[0] + '/' + (window.location.protocol == 'file:' ? 'index.html' : '') + '" target="_blank">' + data[1] + '</a>'+
             '</div>';
             
             list += item;
@@ -1206,7 +1162,7 @@
   }
   
   
-  // # AJAX page getter #
+  // AJAX page getter
   window.Get = function (url, callback, type) {
     var xhttp = new XMLHttpRequest();
 
@@ -1229,7 +1185,6 @@
   };
   
   
-  // # TEXT COPY #
   // copies text to the user's clipboard
   window.CopyText = function (text, caller, callback) {
     if (text) {

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,120 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Read the story about unlucky ages and answer the questions.',
+      
+      quizlet : 
+      // vocab key
+      '<div class="vocab-key columns-2 clear">'+
+        '<div>'+
+          '<ruby>迷信<rt>めいしん</rt></ruby>　superstition<br>'+
+          '<ruby>起<rt>お</rt></ruby>こる　to occur; to happen<br>'+
+          '<ruby>多<rt>おお</rt></ruby>くの～　many...<br>'+
+          '<ruby>信<rt>しん</rt></ruby>じる　to believe<br>'+
+          'ただの～　nothing more than...<br>'+
+          '<ruby>急<rt>きゅう</rt></ruby>に　suddenly<br>'+
+          '<ruby>入院<rt>にゅういん</rt></ruby>する　to be hospitalized<br>'+
+          '<ruby>占<rt>うらな</rt></ruby>い　fortunetelling<br>'+
+          '<ruby>気<rt>き</rt></ruby>にする　to worry<br>'+
+          '<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby>　long time<br>'+
+          '<ruby>一生懸命<rt>いっしょうけんめい</rt></ruby>　very hard<br>'+
+          '<ruby>親<rt>おや</rt></ruby>　parents<br>'+
+          '<ruby>送<rt>おく</rt></ruby>る　to send'+
+        '</div>'+
+
+        '<div>'+
+          'ぜいたくをする　to indulge in luxury<br>'+
+          'めったに～ない　seldom<br>'+
+          '<ruby>食事<rt>しょくじ</rt></ruby>　meal<br>'+
+          'うらやましい　envious; jealous<br>'+
+          'ところが　however; on the contrary<br>'+
+          '<ruby>楽<rt>たの</rt></ruby>しみ　pleasure<br>'+
+          '<ruby>通<rt>かよ</rt></ruby>う　to commute to<br>'+
+          '<ruby>遅<rt>おく</rt></ruby>れる　to be late<br>'+
+          '<ruby>一台<rt>いちだい</rt></ruby>　one vehicle; one machine<br>'+
+          '<ruby>不便<rt>ふべん</rt></ruby>な　inconvenient<br>'+
+          '<ruby>心配<rt>しんぱい</rt></ruby>な　worried about<br>'+
+          'お<ruby>守<rt>まも</rt></ruby>り　charm (against evils); amulet'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span><ruby>厄年<rt>やくどし</rt></ruby>の話を読みましょう。</p>'+
+        '<div class="sub-section">'+
+          '厄年（やくどし） Critical or unlucky ages. According to Japanese folk belief, at certain ages an individual is most likely to experience calamities or misfortunes. It is customary in these unlucky years to visit temples and shrines to pray for better fortune.'+
+        '</div>'+
+        '<p class="sub-section text-passage">'+
+          '　「<ruby>厄年<rt>やくどし</rt></ruby>」という<ruby>言葉<rt>ことば</rt></ruby>を聞いたことがありますか。昔から多くの日本人は、厄年に悪いことがよく起こると信じています。男の人の厄年は二十五歳と四十二歳と六十一歳、女の人の厄年は十九歳と三十三歳と三十七歳です。これはただの<ruby>迷信<rt>めいしん</rt></ruby>だと言う人もいますが、厄年に<ruby>大変<rt>たいへん</rt></ruby>なことを経験する人も多いそうです。ある友だちは台風で家が<ruby>壊<rt>こわ</rt></ruby>れてしまいました。ある友だちは<ruby>飼<rt>か</rt></ruby>っていた犬に死なれました。また、ある友だちは急に重い病気になって入院しなければいけませんでした。<br>'+
+          '　私は今年が<ruby>厄年<rt>やくどし</rt></ruby>です。友だちは気をつけてほうがいいと言いましたが、私は<ruby>占<rt>うらな</rt></ruby>いや<ruby>迷信<rt>めいしん</rt></ruby>が大きらいなので、初めはぜんぜん気にしていませんでした。でも……<br><br>'+
+          '　私は今、オーストラリアで勉強しています。外国で勉強するのは長い間の<ruby>夢<rt>ゆめ</rt></ruby>でした。日本で大学を卒業してから、一生<ruby>懸命<rt>けんめい</rt></ruby>仕事をしてお金をためました。そして、去年ここに来ました。<br><br>'+
+          '　ここには若い日本人の留学生がたくさんいます。みんな親にお金を送ってもらって、いいアパートに住んで、いい車に乗っています。休みは、いろいろな所に旅行に行ったりしています。私はそんなぜいたくができません。安いアパートに住んで、めったに外で食事をしたり、旅行に行ったりしません。でも、<ruby>夢<rt>ゆめ</rt></ruby>がかなったので、毎日がとても幸せでした。ほかの日本人をうらやましいと思ったことはありませんでした。<br>'+
+          '　ところが、きのう<ruby>大変<rt>たいへん</rt></ruby>なことがありました。アパートに帰った時、ドアのかぎが<ruby>壊<rt>こわ</rt></ruby>され、部屋がめちゃくちゃになっていたのです。びっくりして何が起こったのかわかりませんでした。でも、すぐ「どろぼうに入られた。」と気がつきました。<br>'+
+          '　いろいろな物を<ruby>取<rt>と</rt></ruby>られました。パソコン、カメラ、時計、そして自転車も。ネットで日本の家族と話したり、ビデオを見たりするのは、私の楽しみでした。カメラにはオーストラリアで初めて行った旅行の写真が入っていました。自転車は、学校に通う時使っていました。今日からバスで通わなければいけません。バスはよく遅れるし、一時間に一台しか来ないから、とても<ruby>不便<rt>ふべん</rt></ruby>です。<br>'+
+          '　「どうしてどろぼうは私のアパートに入ったんだろう。どうしてお金持ちの日本人のアパートに入らなかったんだろう。」と思ってしまいました。日本人の友だちに話したら、「<ruby>厄年<rt>やくどし</rt></ruby>だから、やっぱり悪いことが起こったんだよ。」と言われました。<br>'+
+          '　今、とても心配です。また悪いことが起こるかもしれません。今度、弟か妹にお<ruby>守<rt>まも</rt></ruby>りを送ってもらおうと思います。みなさんは<ruby>厄年<rt>やくどし</rt></ruby>を信じますか。<br>'+
+        '</p><br>'+
+        
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>質問に<ruby>答<rt>こた</rt></ruby>えてください。</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>厄年<rt>やくどし</rt></ruby>にこの人の友だちはどんなことを経験しましたか。<br>'+
+            '(1) {台風で家が壊れてしまいました|たいふうでいえがこわれてしまいました|' + Genki.getAlts('{台風}で{家}が{壊}れてしまいました', 'たいふう|いえ|こわ') + 'answer}。<br><br><br>'+
+
+            '(2) {飼っていた犬に死なれました|かっていたいぬにしなれました|' + Genki.getAlts('{飼}っていた{犬}に{死}なれました', 'か|いぬ|し') + 'answer}。<br><br><br>'+
+
+            '(3) {急に重い病気になって入院しなければいけませんでした|きゅうにおもいびょうきになってにゅういんしなければいけませんでした|' + Genki.getAlts('{急}に{重}い{病気}になって{入院}しなければいけませんでした', 'きゅう|おも|びょうき|にゅういん') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この人はオーストラリアに行く前、<ruby>厄年<rt>やくどし</rt></ruby>を信じていましたか。<br>'+
+          '{いいえ、信じていませんでした|いいえ、しんじていませんでした|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この人の<ruby>夢<rt>ゆめ</rt></ruby>は何でしたか。<br>'+
+          '{外国で勉強することでした|がいこくでべんきょうすることでした|' + Genki.getAlts('{外国}で{勉強}することでした', 'がいこく|べんきょう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この人と若い日本人の留学生は、どんなところが<ruby>違<rt>ちが</rt></ruby>いますか。<br>'+
+          '{若い日本人の留学生は、親にお金を送ってもらって、ぜいたくをしていますが、この人はぜいたくができません|わかいにほんじんのりゅうがくせいは、おやにおかねをおくってもらって、ぜいたくをしていますが、このひとはぜいたくができません|' + Genki.getAlts('{若}い{日本人}の{留学生}は、{親}にお{金}を{送}ってもらって、ぜいたくをしていますが、この{人}はぜいたくができません', 'わかい|にほんじん|りゅうがくせい|おや|かね|おく|ひと') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'きのう何がありましたか。<br>'+
+          '{どろぼうにアパートに入られました|どろぼうにアパートにはいられました|' + Genki.getAlts('{泥棒}にアパートに{入}られました', 'どろぼう|はい') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '何を<ruby>取<rt>と</rt></ruby>られましたか。<br>'+
+          '{パソコンとカメラと時計と自転車を取られました|パソコンとカメラととけいとじてんしゃをとられました|' + Genki.getAlts('パソコンとカメラと{時計}と{自転車}を{取}られました', 'とけい|じてんしゃ|と') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '今日からどうやって学校に通いますか。<br>'+
+          '{バスで通います|バスでかよいます|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '友だちはどうして悪いことが起こったと思っていますか。<br>'+
+          '{厄年だから、悪いことが起こったと思っています|やくどしだから、わるいことがおこったとおもっています|' + Genki.getAlts('{厄年}だから、{悪}いことが{起}こったと{思}っています', 'やくどし|わる|お|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この人は今、<ruby>厄年<rt>やくどし</rt></ruby>を信じていますか。<br>'+
+          '{少し信じています|すこししんじています|' + Genki.getAlts('{少}し{信}じています', 'すこ|しん') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

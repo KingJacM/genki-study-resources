@@ -6,12 +6,12 @@
 
   // ========== CONFIGURATION ==========
   // 1. Create a free account at https://jsonbin.io
-  // 2. Create a new bin with content: {}
+  // 2. Create a new bin with content: {"Results":"{}"}
   // 3. Paste your API key and Bin ID below
   var CONFIG = {
     JSONBIN_API_KEY:
       "$2a$10$rAp7SnqrO0NpRFgvFVX4ouPxP/yD5b.3p7rxOZG8JMw5HiMKTxMye", // Your JSONBin X-Master-Key
-    JSONBIN_BIN_ID: "69e0f27136566621a8bdcbee", // Your Bin ID (e.g., 65f...)
+    JSONBIN_BIN_ID: "69e0f27136566621a8bdcbee", // Your Bin ID
   };
   // ====================================
 

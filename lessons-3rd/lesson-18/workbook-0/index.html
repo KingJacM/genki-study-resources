@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,129 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Review the transitivity pairs on {!GRI|page 140 of Genki II|l18-p1} and fill in the transitive and intransitive verbs below.',
+      
+      quizlet : 
+      '<div class="columns-2 count-problems clear">'+
+        '<div>'+
+          '<div>'+
+            '<h3>Transitive verbs</h3>'+
+            '<div class="problem">'+
+              '<em>open something</em><br>'+
+              '{開ける|あける|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>close something</em><br>'+
+              '{閉める|しめる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>put something in</em><br>'+
+              '{入れる|いれる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>take something out</em><br>'+
+              '{出す|だす|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>turn something on</em><br>'+
+              '{つける}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>turn something off</em><br>'+
+              '{消す|けす|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>break something</em><br>'+
+              '{壊す|こわす|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>make something dirty</em><br>'+
+              '{汚す|よごす|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>drop something</em><br>'+
+              '{落とす|おとす|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>boil water</em><br>'+
+              '{沸かす|わかす|answer}'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+
+        '<div>'+
+          '<div>'+
+            '<h3>Intransitive verbs</h3>'+
+            '<div class="problem">'+
+              '<em>something opens</em><br>'+
+              '{開く|あく|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something closes</em><br>'+
+              '{閉まる|しまる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something goes inside</em><br>'+
+              '{入る|はいる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something goes out</em><br>'+
+              '{出る|でる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something goes on</em><br>'+
+              '{つく}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something goes off</em><br>'+
+              '{消える|きえる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something breaks</em><br>'+
+              '{壊れる|こわれる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something becomes dirty</em><br>'+
+              '{汚れる|よごれる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>something drops</em><br>'+
+              '{落ちる|おちる|answer}'+
+            '</div>'+
+        
+            '<div class="problem">'+
+              '<em>water boils</em><br>'+
+              '{沸く|わく|answer}'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

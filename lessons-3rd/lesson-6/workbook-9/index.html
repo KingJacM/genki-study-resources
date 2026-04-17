@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,87 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+      quizlet : 
+      '<div class="small-margin">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Listen to the dialogue at a youth hostel. Mark each of the following statements with O if true, or with X if false.</p>'+
+        '<div class="right">*<ruby>外<rt>そと</rt></ruby> (outside)　コインランドリー (laundromat)</div>'+
+        '{!AUDIO|W06-A}'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">{!PLAY|W06-A|7.5} ({X}) Breakfast starts at 6:30.</div>'+
+          '<div class="problem">{!PLAY|W06-A|18} ({O}) Smoking is not permitted in the rooms.</div>'+
+          '<div class="problem">{!PLAY|W06-A|26} ({O}) You can take a shower in the morning.</div>'+
+          '<div class="problem">{!PLAY|W06-A|34} ({X}) There is no laundromat in this building.</div>'+
+        '</div><br>'+
+        
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Robert is staying at a "smart hotel room" in Tokyo. Listen to his commands after "OK, My Room." Mark O for what he says, and leave blank what he doesn\'t say.</p>'+
+        '<div class="right">*カーテン (curtain)　ライブのチケット (concert ticket)　<ruby>了解<rt>りょうかい</rt></ruby>しました (Certainly)</div>'+
+        '{!AUDIO|W06-B}'+
+        
+        'Robert asked:<br><br>'+
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">{!PLAY|W06-B|5} ({||width:21}) close the window curtain</div>'+
+            '<div class="problem">{!PLAY|W06-B|8} ({||width:21}) turn on the room light</div>'+
+            '<div class="problem">{!PLAY|W06-B|15.5} ({O}) turn on the TV</div>'+
+          '</div>'+
+        
+          '<div>'+
+            '<div class="problem">{!PLAY|W06-B|21.5} ({O}) buy a concert ticket</div>'+
+            '<div class="problem">{!PLAY|W06-B|31} ({||width:21}) tell the time in Japan</div>'+
+            '<div class="problem">{!PLAY|W06-B|39} ({O}) call his mother</div>'+
+          '</div>'+
+        '</div>'+
+        
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Takeshi is trying to organize a picnic. Listen to the dialogue and answer the questions in Japanese.</p>'+
+        '<div class="right">*ピクニック (picnic)</div>'+
+        '{!AUDIO|W06-C}'+
+
+        '<div class="count-problems big-margin">'+
+          '<div class="problem">When is NOT convenient for each of them? Why?</div>'+
+          '<table class="table">'+
+            '<tr style="font-weight:bold;" class="center">'+
+              '<td style="width:100px"></td>'+
+              '<td>a. Inconvenient day</td>'+
+              '<td>b. Reasons</td>'+
+            '</tr>'+
+
+            '<tr>'+
+              '<td>{!PLAY|W06-C|2.5} ゆい</td>'+
+              '<td class="center">{土曜日|どようび|answer}</td>'+
+              '<td class="center">{アルバイトがあります}。</td>'+
+            '</tr>'+
+
+            '<tr>'+
+              '<td>{!PLAY|W06-C|23} ソラ</td>'+
+              '<td class="center">{土曜日|どようび|answer}</td>'+
+              '<td class="center">{友だちが来ます|ともだちがきます|' + Genki.getAlts('{友}{達}が{来}ます', 'とも|だち|き') + 'answer}。</td>'+
+            '</tr>'+
+
+            '<tr>'+
+              '<td>{!PLAY|W06-C|31} ロバート</td>'+
+              '<td class="center">{日曜日|にちようび|answer}</td>'+
+              '<td class="center">{うちで勉強します|うちでべんきょうします|' + Genki.getAlts('{うち}で{勉強}します', '家|べんきょう') + 'answer}。{月曜日にテストがありますから|げつようびにテストがありますから|answer}。</td>'+
+            '</tr>'+
+          '</table><br>'+
+        
+          '<div class="problem">'+
+            '{!PLAY|W06-C|42} いつピクニックに行きますか。<br>'+
+            '{来週行きます|らいしゅういきます|' + Genki.getAlts('{来週}{行}きます', 'らいしゅう|い') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,67 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～のように／～のような|l22-p6}.',
+      
+      quizlet : 
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Complete the following sentences by translating the cues, using {!GRI|～のように|l22-p6}.</p>'+
+        '<div class="right">*オペラ<ruby>歌手<rt>かしゅ</rt></ruby> opera singer　パン<ruby>屋<rt>や</rt></ruby>さん baker</div>'+
+        
+        '<div class="problem">{ジョン|John|width:100}さんは{パンダのように|(like a panda)|width:120}かわいいです。</div>'+
+        
+        '<div class="problem">{メアリー|Mary|width:100}さんは{オペラ歌手のように|オペラかしゅのように|answer;width:160;hint:(like an opera singer*)}<ruby>歌<rt>うた</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>です。</div>'+
+        
+        '<div class="problem"><ruby>私<rt>わたし</rt></ruby>は{パン屋さん|パンやさん|answer;hint:(baker*)}のように{パンが上手に焼けます|パンがじょうずにやけます|answer;hint:(can skillfully bake bread);width:200}。</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Complete the following sentences by translating the cues, using {!GRI|～のような|l22-p6}.</p>'+
+        
+        '<div class="problem"><ruby>私<rt>わたし</rt></ruby>は{「ハリー・ポッター」のような|(like "Harry Potter")|width:210}<ruby>映画<rt>えいが</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。</div>'+
+        
+        '<div class="problem"><ruby>私<rt>わたし</rt></ruby>は{ニューヨークのような|(like New York)|width:160}ところに<ruby>住<rt>す</rt></ruby>みたくないです。</div>'+
+        
+        '<div class="problem"><ruby>私<rt>わたし</rt></ruby>は{ソニーのような|(like Sony)|width:110}<ruby>大<rt>おお</rt></ruby>きい<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>就職<rt>しゅうしょく</rt></ruby>したいです。</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Translate the sentences, using {!GRI|～のように／～のような|l22-p6}.</p>'+
+        
+        '<div class="problem">'+
+          'Today it\'s hot like summer.<br>'+
+          '{今日は夏のように暑いです|きょうはなつのようにあついです|' + Genki.getAlts('{今日}は{夏}のように{暑}いです', 'きょう|なつ|あつ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I want to be a person like my grandfather.<br>'+
+          '{おじいさんのような人になりたいです|おじいさんのようなひとになりたいです|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'When she got lost, she cried like a child.<br>'+
+          '{彼女は道に迷った時、子供のように泣きました|かのじょはみちにまよったとき、こどものようになきました|' + Genki.getAlts('{彼女}は{道}に{迷}った{時}、{子}{供}のように{泣}きました', 'かのじょ|みち|まよ|とき|こ|ども|な') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Sora is fluent in Japanese like a Japanese person.<br>'+
+          '{ソラさんは日本人のように日本語がぺらぺらです|ソラさんはにほんじんのようににほんごがぺらぺらです|' + Genki.getAlts('ソラさんは{日本人}のように{日本語}がぺらぺらです', 'にほんじん|にほんご') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I have never met a lazy person like you.<br>'+
+          '{あなたのような怠け者に会ったことがありません|あなたのようななまけものにあったことがありません|' + Genki.getAlts('あなたのような{怠}け{者}に{会}ったことがありません', 'なま|もの|あ') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,162 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Say what Mary and Takeshi make a habit of doing or not doing, using {!GRI|～ことにしている|l23-p4}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'メアリー：check messages when she gets up',
+            answers : [
+              'Aメアリーさんは<ruby>起<rt>お</rt></ruby>きたら、メッセージをチェックすることにしています。',
+              'メアリーさんは<ruby>起<rt>お</rt></ruby>きたら、メッセージをチェックすることにします。',
+              'メアリーさんは<ruby>起<rt>お</rt></ruby>きたら、メッセージをチェックしたことにしています。',
+              'メアリーさんは<ruby>起<rt>お</rt></ruby>きたら、メッセージをチェックしたことにします。'
+            ]
+          },
+          
+          {
+            question : 'たけし：not talk behind someone\'s back',
+            answers : [
+              'Aたけしさんは<ruby>悪口<rt>わるぐち</rt></ruby>を<ruby>言<rt>い</rt></ruby>わないことにしています。',
+              'たけしさんは<ruby>悪口<rt>わるぐち</rt></ruby>を<ruby>言<rt>い</rt></ruby>わなかったことにしています。',
+              'たけしさんは<ruby>悪口<rt>わるぐち</rt></ruby>を<ruby>言<rt>い</rt></ruby>わなくてことにしています。',
+              'たけしさんは<ruby>悪口<rt>わるぐち</rt></ruby>を<ruby>言<rt>い</rt></ruby>うことにしていません。'
+            ]
+          },
+
+          {
+            question : 'メアリー：study in the library on weekends',
+            answers : [
+              'Aメアリーさんは<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>することにしています。',
+              'メアリーさんは<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>することにします。',
+              'メアリーさんは<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>したことにしています。',
+              'メアリーさんは<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>したことにします。'
+            ]
+          },
+          
+          {
+            question : 'メアリー：take a walk with her dog twice a day',
+            answers : [
+              'Aメアリーさんは<ruby>一日<rt>いちにち</rt></ruby>に<ruby>二回<rt>にかい</rt></ruby>、<ruby>犬<rt>いぬ</rt></ruby>と<ruby>散歩<rt>さんぽ</rt></ruby>することにしています。',
+              'メアリーさんは<ruby>一日<rt>いちにち</rt></ruby>に<ruby>二回<rt>にかい</rt></ruby>、<ruby>犬<rt>いぬ</rt></ruby>と<ruby>散歩<rt>さんぽ</rt></ruby>することにします。',
+              'メアリーさんは<ruby>一日<rt>いちにち</rt></ruby>に<ruby>二回<rt>にかい</rt></ruby>、<ruby>犬<rt>いぬ</rt></ruby>と<ruby>散歩<rt>さんぽ</rt></ruby>したことにしています。',
+              'メアリーさんは<ruby>一日<rt>いちにち</rt></ruby>に<ruby>二回<rt>にかい</rt></ruby>、<ruby>犬<rt>いぬ</rt></ruby>と<ruby>散歩<rt>さんぽ</rt></ruby>したことにします。'
+            ]
+          },
+
+          {
+            question : 'メアリー：not watch TV and study at the same time',
+            answers : [
+              'Aメアリーさんはテレビを<ruby>見<rt>み</rt></ruby>ながら<ruby>勉強<rt>べんきょう</rt></ruby>しないことにしています。',
+              'メアリーさんはテレビを<ruby>見<rt>み</rt></ruby>ながら<ruby>勉強<rt>べんきょう</rt></ruby>しなかったことにしています。',
+              'メアリーさんはテレビを<ruby>見<rt>み</rt></ruby>ながら<ruby>勉強<rt>べんきょう</rt></ruby>しなくてことにしています。',
+              'メアリーさんはテレビを<ruby>見<rt>み</rt></ruby>ながら<ruby>勉強<rt>べんきょう</rt></ruby>することにしていません。'
+            ]
+          },
+
+          {
+            question : 'メアリー：ask a person when she doesn\'t understand',
+            answers : [
+              'Aメアリーさんはわからない<ruby>時<rt>とき</rt></ruby>、<ruby>人<rt>ひと</rt></ruby>に<ruby>聞<rt>き</rt></ruby>くことにしています。',
+              'メアリーさんはわからない<ruby>時<rt>とき</rt></ruby>、<ruby>人<rt>ひと</rt></ruby>に<ruby>聞<rt>き</rt></ruby>きことにしています。',
+              'メアリーさんはわからない<ruby>時<rt>とき</rt></ruby>、<ruby>人<rt>ひと</rt></ruby>に<ruby>聞<rt>き</rt></ruby>いてことにしています。',
+              'メアリーさんはわからない<ruby>時<rt>とき</rt></ruby>、<ruby>人<rt>ひと</rt></ruby>に<ruby>聞<rt>き</rt></ruby>いたことにしています。'
+            ]
+          },
+
+          {
+            question : 'たけし：not cry even if he is sad',
+            answers : [
+              'Aたけしさんは<ruby>悲<rt>かな</rt></ruby>しくても<ruby>泣<rt>な</rt></ruby>かないことにしています。',
+              'たけしさんは<ruby>悲<rt>かな</rt></ruby>しいても<ruby>泣<rt>な</rt></ruby>かないことにしています。',
+              'たけしさんは<ruby>悲<rt>かな</rt></ruby>しても<ruby>泣<rt>な</rt></ruby>かなくてことにしています。',
+              'たけしさんは<ruby>悲<rt>かな</rt></ruby>しくても<ruby>泣<rt>な</rt></ruby>かなくてことにしています。'
+            ]
+          },
+
+          {
+            question : 'メアリー：buy flowers, cook, etc., on Mother\'s Day',
+            answers : [
+              'Aメアリーさんは<ruby>母<rt>はは</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に、<ruby>花<rt>はな</rt></ruby>を<ruby>買<rt>か</rt></ruby>ったり、<ruby>料理<rt>りょうり</rt></ruby>をしたりすることにしています。',
+              'メアリーさんは<ruby>母<rt>はは</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に、<ruby>花<rt>はな</rt></ruby>を<ruby>買<rt>か</rt></ruby>ったり、<ruby>料理<rt>りょうり</rt></ruby>をしたりしてことにしています。',
+              'メアリーさんは<ruby>母<rt>はは</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に、<ruby>花<rt>はな</rt></ruby>を<ruby>買<rt>か</rt></ruby>って、<ruby>料理<rt>りょうり</rt></ruby>をすることにしています。',
+              'メアリーさんは<ruby>母<rt>はは</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に、<ruby>花<rt>はな</rt></ruby>を<ruby>買<rt>か</rt></ruby>ったら、<ruby>料理<rt>りょうり</rt></ruby>をしたことにしています。'
+            ]
+          },
+
+          {
+            question : 'たけし：not drink coffee before going to bed',
+            answers : [
+              'Aたけしさんは<ruby>寝<rt>ね</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>にコーヒーを<ruby>飲<rt>の</rt></ruby>まないことにしています。',
+              'たけしさんは<ruby>寝<rt>ね</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>にコーヒーを<ruby>飲<rt>の</rt></ruby>まなかったことにしています。',
+              'たけしさんは<ruby>寝<rt>ね</rt></ruby>るにコーヒーを<ruby>飲<rt>の</rt></ruby>まないことにしています。',
+              'たけしさんは<ruby>寝<rt>ね</rt></ruby>るにコーヒーを<ruby>飲<rt>の</rt></ruby>まなかったことにしています。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'メアリー：check messages when she gets up<br>'+
+            '<i class="fa">&#xf061;</i>　メアリーさんは<ruby>起<rt>お</rt></ruby>きたら、メッセージをチェックすることにしています。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            'たけし：not talk behind someone\'s back<br>'+
+            '{たけしさんは悪口を言わないことにしています|たけしさんはわるぐちをいわないことにしています|' + Genki.getAlts('たけしさんは{悪口}を{言}わないことにしています', 'わるぐち|い') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'メアリー：study in the library on weekends<br>'+
+            '{メアリーさんは週末に図書館で勉強することにしています|メアリーさんはしゅうまつにとしょかんでべんきょうすることにしています|' + Genki.getAlts('メアリーさんは{週末}に{図書館}で{勉強}することにしています', 'しゅうまつ|としょかん|べんきょう') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'メアリー：take a walk with her dog twice a day<br>'+
+            '{メアリーさんは一日に二回、犬と散歩することにしています|メアリーさんはいちにちににかい、いぬとさんぽすることにしています|' + Genki.getAlts('メアリーさんは{一日}に{二回}、{犬}と{散歩}することにしています', 'いちにち|にかい|いぬ|さんぽ') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'メアリー：not watch TV and study at the same time<br>'+
+            '{メアリーさんはテレビを見ながら勉強しないことにしています|メアリーさんはテレビをみながらべんきょうしないことにしています|' + Genki.getAlts('メアリーさんはテレビを{見}ながら{勉強}しないことにしています', 'み|べんきょう') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'メアリー：ask a person when she doesn\'t understand<br>'+
+            '{メアリーさんはわからない時、人に聞くことにしています|メアリーさんはわからないとき、ひとにきくことにしています|' + Genki.getAlts('メアリーさんはわからない{時}、{人}に{聞}くことにしています', 'とき|ひと|き') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'たけし：not cry even if he is sad<br>'+
+            '{たけしさんは悲しくても泣かないことにしています|たけしさんはかなしくてもなかないことにしています|' + Genki.getAlts('たけしさんは{悲}しくても{泣}かないことにしています', 'かな|な') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'メアリー：buy flowers, cook, etc., on Mother\'s Day<br>'+
+            '{メアリーさんは母の日に、花を買ったり、料理をしたりすることにしています|メアリーさんはははのひに、はなをかったり、りょうりをしたりすることにしています|' + Genki.getAlts('メアリーさんは{母}の{日}に、{花}を{買}ったり、{料理}をしたりすることにしています', 'はは|ひ|はな|か|りょうり') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'たけし：not drink coffee before going to bed<br>'+
+            '{たけしさんは寝る前にコーヒーを飲まないことにしています|たけしさんはねるまえにコーヒーをのまないことにしています|' + Genki.getAlts('たけしさんは{寝}る{前}にコーヒーを{飲}まないことにしています', 'ね|まえ|の') + 'answer}。'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

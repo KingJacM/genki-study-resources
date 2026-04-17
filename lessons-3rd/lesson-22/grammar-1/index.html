@@ -47,25 +47,7 @@
     </div>
 
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,201 @@
       </ul>
     </footer>
 
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Change the following verbs into the {!GRI|causative forms|l22-p1}.',
+
+      quizlet : [
+        [
+          // MULTPLE CHOICE
+          {
+            question : '<ruby>食<rt>た</rt></ruby>べる',
+            answers : [
+              'A<ruby>食<rt>た</rt></ruby>べさせる',
+              '<ruby>食<rt>た</rt></ruby>べらせる',
+              '<ruby>食<rt>た</rt></ruby>べられる',
+              '<ruby>食<rt>た</rt></ruby>べされる'
+            ]
+          },
+
+          {
+            question : 'やめる',
+            answers : [
+              'Aやめさせる',
+              'やめらせる',
+              'やめられる',
+              'やめされる'
+            ]
+          },
+
+          {
+            question : '<ruby>働<rt>はたら</rt></ruby>く',
+            answers : [
+              'A<ruby>働<rt>はたら</rt></ruby>かせる',
+              '<ruby>働<rt>はたら</rt></ruby>きせる',
+              '<ruby>働<rt>はたら</rt></ruby>かれる',
+              '<ruby>働<rt>はたら</rt></ruby>きれる'
+            ]
+          },
+
+          {
+            question : '<ruby>飲<rt>の</rt></ruby>む',
+            answers : [
+              'A<ruby>飲<rt>の</rt></ruby>ませる',
+              '<ruby>飲<rt>の</rt></ruby>みせる',
+              '<ruby>飲<rt>の</rt></ruby>まれる',
+              '<ruby>飲<rt>の</rt></ruby>みれる'
+            ]
+          },
+
+          {
+            question : '<ruby>持<rt>も</rt></ruby>つ',
+            answers : [
+              'A<ruby>持<rt>も</rt></ruby>たせる',
+              '<ruby>持<rt>も</rt></ruby>ちせる',
+              '<ruby>持<rt>も</rt></ruby>たれる',
+              '<ruby>持<rt>も</rt></ruby>ちれる'
+            ]
+          },
+
+          {
+            question : 'あきらめる',
+            answers : [
+              'Aあきらめさせる',
+              'あきらめらせる',
+              'あきらめられる',
+              'あきらめされる'
+            ]
+          },
+
+          {
+            question : '<ruby>来<rt>く</rt></ruby>る',
+            answers : [
+              'A<ruby>来<rt>こ</rt></ruby>させる',
+              '<ruby>来<rt>こ</rt></ruby>らせる',
+              '<ruby>来<rt>こ</rt></ruby>られる',
+              '<ruby>来<rt>こ</rt></ruby>される'
+            ]
+          },
+
+          {
+            question : '<ruby>考<rt>かんが</rt></ruby>える',
+            answers : [
+              'A<ruby>考<rt>かんが</rt></ruby>えさせる',
+              '<ruby>考<rt>かんが</rt></ruby>えらせる',
+              '<ruby>考<rt>かんが</rt></ruby>えられる',
+              '<ruby>考<rt>かんが</rt></ruby>えされる'
+            ]
+          },
+
+          {
+            question : '<ruby>習<rt>なら</rt></ruby>う',
+            answers : [
+              'A<ruby>習<rt>なら</rt></ruby>わせる',
+              '<ruby>習<rt>なら</rt></ruby>あせる',
+              '<ruby>習<rt>なら</rt></ruby>われる',
+              '<ruby>習<rt>なら</rt></ruby>あれる'
+            ]
+          },
+
+          {
+            question : '<ruby>取<rt>と</rt></ruby>る',
+            answers : [
+              'A<ruby>取<rt>と</rt></ruby>らせる',
+              '<ruby>取<rt>と</rt></ruby>させる',
+              '<ruby>取<rt>と</rt></ruby>られる',
+              '<ruby>取<rt>と</rt></ruby>される'
+            ]
+          },
+
+          {
+            question : '<ruby>拾<rt>ひろ</rt></ruby>う',
+            answers : [
+              'A<ruby>拾<rt>ひろ</rt></ruby>わせる',
+              '<ruby>拾<rt>ひろ</rt></ruby>あせる',
+              '<ruby>拾<rt>ひろ</rt></ruby>われる',
+              '<ruby>拾<rt>ひろ</rt></ruby>あれる'
+            ]
+          },
+
+          {
+            question : '<ruby>帰<rt>かえ</rt></ruby>る',
+            answers : [
+              'A<ruby>帰<rt>かえ</rt></ruby>らせる',
+              '<ruby>帰<rt>かえ</rt></ruby>させる',
+              '<ruby>帰<rt>かえ</rt></ruby>られる',
+              '<ruby>帰<rt>かえ</rt></ruby>される'
+            ]
+          },
+
+          {
+            question : '<ruby>運<rt>はこ</rt></ruby>ぶ',
+            answers : [
+              'A<ruby>運<rt>はこ</rt></ruby>ばせる',
+              '<ruby>運<rt>はこ</rt></ruby>びせる',
+              '<ruby>運<rt>はこ</rt></ruby>ばれる',
+              '<ruby>運<rt>はこ</rt></ruby>びれる'
+            ]
+          },
+
+          {
+            question : '<ruby>持<rt>も</rt></ruby>っていく',
+            answers : [
+              'A<ruby>持<rt>も</rt></ruby>っていかせる',
+              '<ruby>持<rt>も</rt></ruby>っていきせる',
+              '<ruby>持<rt>も</rt></ruby>っていかれる',
+              '<ruby>持<rt>も</rt></ruby>っていきれる'
+            ]
+          },
+
+          {
+            question : '<ruby>練習<rt>れんしゅう</rt></ruby>する',
+            answers : [
+              'A<ruby>練習<rt>れんしゅう</rt></ruby>させる',
+              '<ruby>練習<rt>れんしゅう</rt></ruby>しさせる',
+              '<ruby>練習<rt>れんしゅう</rt></ruby>される',
+              '<ruby>練習<rt>れんしゅう</rt></ruby>らせる'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>食<rt>た</rt></ruby>べる　<i class="fa">&#xf061;</i>　<ruby>食<rt>た</rt></ruby>べさせる'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems valign-top columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">やめる　<i class="fa">&#xf061;</i>　{やめさせる}</div>'+
+            '<div class="problem"><ruby>働<rt>はたら</rt></ruby>く　<i class="fa">&#xf061;</i>　{働かせる|はたらかせる|answer}</div>'+
+            '<div class="problem"><ruby>飲<rt>の</rt></ruby>む　<i class="fa">&#xf061;</i>　{飲ませる|のませる|answer}</div>'+
+            '<div class="problem"><ruby>持<rt>も</rt></ruby>つ　<i class="fa">&#xf061;</i>　{持たせる|もたせる|answer}</div>'+
+            '<div class="problem">あきらめる　<i class="fa">&#xf061;</i>　{あきらめさせる|諦めさせる|answer}</div>'+
+            '<div class="problem"><ruby>来<rt>く</rt></ruby>る　<i class="fa">&#xf061;</i>　{来させる|こさせる|answer}</div>'+
+            '<div class="problem"><ruby>考<rt>かんが</rt></ruby>える　<i class="fa">&#xf061;</i>　{考えさせる|かんがえさせる|answer}</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem"><ruby>習<rt>なら</rt></ruby>う　<i class="fa">&#xf061;</i>　{習わせる|ならわせる|answer}</div>'+
+            '<div class="problem"><ruby>取<rt>と</rt></ruby>る　<i class="fa">&#xf061;</i>　{取らせる|とらせる|answer}</div>'+
+            '<div class="problem"><ruby>拾<rt>ひろ</rt></ruby>う　<i class="fa">&#xf061;</i>　{拾わせる|ひろわせる|answer}</div>'+
+            '<div class="problem"><ruby>帰<rt>かえ</rt></ruby>る　<i class="fa">&#xf061;</i>　{帰らせる|かえらせる|answer}</div>'+
+            '<div class="problem"><ruby>運<rt>はこ</rt></ruby>ぶ　<i class="fa">&#xf061;</i>　{運ばせる|はこばせる|answer}</div>'+
+            '<div class="problem"><ruby>持<rt>も</rt></ruby>っていく　<i class="fa">&#xf061;</i>　{持っていかせる|もっていかせる|もって行かせる|answer}</div>'+
+            '<div class="problem"><ruby>練習<rt>れんしゅう</rt></ruby>する　<i class="fa">&#xf061;</i>　{練習させる|れんしゅうさせる|answer}</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

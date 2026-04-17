@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,76 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～前に／～てから|l17-p6}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Look at the timeline below and describe the sequence of events.</p>'+
+        '<table class="table center">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>A</td>'+
+            '<td>B</td>'+
+            '<td>C</td>'+
+            '<td>D</td>'+
+            '<td>E</td>'+
+            '<td>F</td>'+
+            '<td>G</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>wash hands</td>'+
+            '<td>cook</td>'+
+            '<td>say "itadakimasu"</td>'+
+            '<td>eat meal</td>'+
+            '<td>say "gochisousama"</td>'+
+            '<td>wash dishes</td>'+
+            '<td>brush teeth</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="problem valign-top">'+
+          '(a) & (b)：{料理する|りょうりする|answer}<ruby>前<rt>まえ</rt></ruby>に{手を洗います|てをあらいます|' + Genki.getAlts('{手}を{洗}います', 'て|あら') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem valign-top">'+
+          '(c) & (d)：{ご飯を食べる|ごはんをたべる|' + Genki.getAlts('ご{飯}を{食}べる', 'はん|た') + 'answer}<ruby>前<rt>まえ</rt></ruby>に{「いただきます」と言います|「いただきます」といいます|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '(d) & (e)：{ご飯を食べて|ごはんをたべて|' + Genki.getAlts('ご{飯}を{食}べて', 'はん|た') + 'answer}から{「ごちそうさま」と言います|「ごちそうさま」といいます|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '(f) & (g)：{お皿を洗って|おさらをあらって|' + Genki.getAlts('お{皿}を{洗}って', 'さら|あら') + 'answer}から{歯を磨きます|はをみがきます|' + Genki.getAlts('{歯}を{磨}きます', 'は|みが') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'After locking (the door), I went to bed.<br>'+
+          '{かぎをかけてから寝ました|かぎをかけてからねました|' + Genki.getAlts('{鍵}をかけてから{寝}ました', 'かぎ|ね') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I intend to look for a job after I graduate.<br>'+
+          '{卒業してから仕事を探すつもりです|そつぎょうしてからしごとをさがすつもりです|' + Genki.getAlts('{卒業}してから{仕事}を{探}すつもりです', 'そつぎょう|しごと|さが') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Before going out, I always watch the weather forecast.<br>'+
+          '{出かける前に、いつも天気予報を見ます|でかけるまえに、いつもてんきよほうをみます|' + Genki.getAlts('{出}かける{前}に、いつも{天気予報}を{見}ます', 'で|まえ|てんきよほう|み') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

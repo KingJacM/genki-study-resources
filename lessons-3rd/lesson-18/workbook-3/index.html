@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,51 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using paired {!GRI|intransitive verbs + ている|l18-p2}.',
+      
+      quizlet : 
+      '<div class="count-problems valign-top">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd fa">&#xf054;</span>Describe the picture, using {!GRI|～ています／～ていません|l18-p2}.</p>'+
+        
+        '<div class="center">{!IMG|l18-wb2.png|Room}</div><br>'+
+        
+        '<div class="problem">'+
+          '<ruby>左<rt>ひだり</rt></ruby>の<ruby>窓<rt>まど</rt></ruby>が{開いています|閉まっていません|あいています|しまっていません|answer;width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>右<rt>みぎ</rt></ruby>の<ruby>窓<rt>まど</rt></ruby>が{閉まっています|開いていません|しまっています|開いていません|answer;width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>時計<rt>とけい</rt></ruby>が{壊れています|こわれています|answer;width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>電気<rt>でんき</rt></ruby>が{ついています|消えていません|きえていません|answer;width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Tシャツが{汚れています|よごれています|answer;width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'テレビが{消えています|ついていません|きえています|answer;width:200}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'お<ruby>湯<rt>ゆ</rt></ruby>が{沸いています|わいています|answer;width:200}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

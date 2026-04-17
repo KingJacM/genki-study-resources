@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,59 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the kanji you learned.',
+      
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Fill in the blanks with the appropriate mixes of kanji and hiragana.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem valign-top">{午前中|ごぜんちゅう}は{雨|あめ}が<ruby>降<rt>ふ</rt></ruby>っていました。</div>'+
+        '<div class="problem">{午後|ごご}は{友だち|友達|answer;width:70;hint:ともだち}の{家|いえ}に行って、{話しました|はなしました}。</div>'+
+        '<div class="problem valign-top">この{白い|しろい}<ruby>着物<rt>きもの</rt></ruby>は{少し|すこし}{古い|ふるい}です。</div>'+
+        '<div class="problem">あの人の{名前|なまえ}を{知って|しって}いますか。{書いて|かいて}ください。</div>'+
+        '<div class="problem valign-top">{二時間|にじかん}<ruby>待<rt>ま</rt></ruby>ちましたが、ソラさんは{来ませんでした|きませんでした}。</div>'+
+        '<div class="problem">今、{時間|じかん}がないから、クラスの{後|あと}、{話|はなし}をしましょう。</div>'+
+      '</div><br>'+
+
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Using the kanji you know, translate the sentences into Japanese.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'I wrote a letter to my friend in the afternoon.<br>'+
+          '{%(私は/)午後友だちに手紙を書きました|%(わたしは/)ごごともだちにてがみをかきました|' + Genki.getAlts('{私}は{午後}{友}{達}に{手紙}を{書}きました', 'わたし|ごご|とも|だち|てがみ|か') + Genki.getAlts('{午後}{友}{達}に{手紙}を{書}きました', 'ごご|とも|だち|てがみ|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I read a book for one hour at home.<br>'+
+          '{%(私は/)家で一時間本を読みました|%(わたしは/)いえでいちじかんほんをよみました|' + Genki.getAlts('{私}は{家}で{一時間}{本}を{読}みました', 'わたし|いえ|いちじかん|ほん|よ') + Genki.getAlts('{家}で{一時間}{本}を{読}みました', 'いえ|いちじかん|ほん|よ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'The post office is between the bank and the bookstore.<br>'+
+          '{郵便局は銀行と本屋の間です|ゆうびんきょくはぎんこうとほんやのあいだです|' + Genki.getAlts('{郵便局}は{銀行}と{本屋}の{間}です', 'ゆうびんきょく|ぎんこう|ほんや|あいだ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'My friend is behind the teacher.<br>'+
+          '{%(私の/)友だちは先生の後ろです|%(わたしの/)ともだちはせんせいのうしろです|' + Genki.getAlts('{私}の{友}{だち}は{先生}の{後}ろです', 'わたし|とも|達|せんせい|うし') + Genki.getAlts('{友}{だち}は{先生}の{後}ろです', 'とも|達|せんせい|うし') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'The bus stop is in front of the university.<br>'+
+          '{バス停は大学の前です|バスていはだいがくのまえです|' + Genki.getAlts('バス{停}は{大学}の{前}です', 'てい|だいがく|まえ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I will call you later.<br>'+
+          '{%(私は/)後で電話します|%(わたしは/)あとででんわします|' + Genki.getAlts('{私}は{後}で{電話}します', 'わたし|あと|でんわ') + Genki.getAlts('{後}で{電話}します', 'あと|でんわ') + 'answer}。'+
+        '</div>'+
+      '</div>'
+    });</script>
   </body>
 </html>

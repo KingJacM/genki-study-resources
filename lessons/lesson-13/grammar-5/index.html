@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ～そうです 1 - Lesson 13 | Genki Study Resources</title>
-    <meta name="title" content="Practice: ～そうです 1 - Lesson 13 | Genki Study Resources">
-    <meta name="twitter:title" content="Practice: ～そうです 1 - Lesson 13 | Genki Study Resources">
-    <meta property="og:title" content="Practice: ～そうです 1 - Lesson 13 | Genki Study Resources">
+    <title>Practice: ～そうです 1 - Lesson 13 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Practice: ～そうです 1 - Lesson 13 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Practice: ～そうです 1 - Lesson 13 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Practice: ～そうです 1 - Lesson 13 | Genki Study Resources - 2nd Edition">
     <meta name="description" content="Describe the following items using ～そう.">
     <meta property="og:description" content="Describe the following items using ～そう.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 37, problem III-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 41, problem III-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,161 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : 'Describe the following items using {!GRI|～そう|l13-p3}.',
+
+      quizlet : [
+        {
+          question : 'すし<br>delicious',
+          answers : [
+            'Aこのすしはおいしそうです。',
+            'このすしはおいしいそうです。',
+            'このすしはおいしさそうです。'
+          ]
+        },
+        
+        {
+          question : 'ケーキ<br>sweet',
+          answers : [
+            'Aこのケーキは甘そうです。',
+            'このケーキは甘いそうです。',
+            'このケーキは甘さそうです。'
+          ]
+        },
+        
+        {
+          question : 'カレー<br>spicy',
+          answers : [
+            'Aこのカレーは辛そうです。',
+            'このカレーは辛いそうです。',
+            'このカレーは辛さそうです。'
+          ]
+        },
+        
+        {
+          question : '服<br>old',
+          answers : [
+            'Aこの服は古そうです。',
+            'この服は古いそうです。',
+            'この服は古いです。'
+          ]
+        },
+        
+        {
+          question : '先生<br>strict',
+          answers : [
+            'Aこの先生は厳しそうです。',
+            'この先生は厳しいそうです。',
+            'この先生は厳しいです。'
+          ]
+        },
+        
+        {
+          question : '時計<br>new',
+          answers : [
+            'Aこの時計は新しそうです。',
+            'この時計は新しいそうです。',
+            'この時計は新しいです。'
+          ]
+        },
+        
+        {
+          question : 'やくざ<br>scary',
+          answers : [
+            'Aこのやくざはこわそうです。',
+            'このやくざはこわいそうです。',
+            'このやくざはこわさそうです。'
+          ]
+        },
+        
+        {
+          question : '男の人<br>lonely',
+          answers : [
+            'Aこの男の人はさびしそうです。',
+            'この男の人はさびしいそうです。',
+            'この男の人はきびしそうです。'
+          ]
+        },
+        
+        {
+          question : '女の人<br>glad',
+          answers : [
+            'Aこの女の人はうれしそうです。',
+            'この女の人はうれしいそうです。',
+            'この女の人は親切そうです。'
+          ]
+        },
+        
+        {
+          question : 'おじいさん<br>energetic',
+          answers : [
+            'Aこのおじいさんは元気そうです。',
+            'このおじいさんは元気なそうです。',
+            'このおじいさんは元気いそうです。'
+          ]
+        },
+        
+        {
+          question : 'おばあさん<br>mean',
+          answers : [
+            'Aこのおばあさんはいじわるそうです。',
+            'このおばあさんはいじわるいそうです。',
+            'このおばあさんはわるそうです。'
+          ]
+        },
+        
+        {
+          question : '女の人<br>kind',
+          answers : [
+            'Aこの女の人は親切そうです。',
+            'この女の人は親切なそうです。',
+            'この女の人は親切さそうです。'
+          ]
+        },
+        
+        {
+          question : '弁護士<br>smart',
+          answers : [
+            'Aこの弁護士は頭がよさそうです。',
+            'この弁護士は頭がいいそうです。',
+            'この弁護士は頭がよそうです。'
+          ]
+        },
+        
+        {
+          question : '学生<br>sleepy',
+          answers : [
+            'Aこの学生は眠そうです。',
+            'この学生は眠いそうです。',
+            'この学生は寝そうです。'
+          ]
+        },
+        
+        {
+          question : 'セーター<br>warm',
+          answers : [
+            'Aこのセーターは暖かそうです。',
+            'このセーターは暖かいそうです。',
+            'このセーターは暖かいです。'
+          ]
+        },
+        
+        {
+          question : '子供<br>sad',
+          answers : [
+            'Aこの子供は悲しそうです。',
+            'この子供は悲しいそうです。',
+            'この子供は悲しいです。'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

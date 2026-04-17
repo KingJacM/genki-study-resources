@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,102 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+      quizlet : 
+      '<div class="small-margin">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Listen to the dialogue between a real estate agent and her customer, and choose the appropriate answers.</p>'+
+        '<div class="right">*<ruby>一か月<rt>いっかげつ</rt></ruby> (one month)</div>'+
+        '{!AUDIO|W05-A}'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">{!PLAY|W05-A|7} The house is ({b|a. new / b. old}).</div>'+
+          '<div class="problem">{!PLAY|W05-A|16.5} The house is ({a|a. clean / b. not clean}).</div>'+
+          '<div class="problem">{!PLAY|W05-A|19.5} The house is ({a|a. quiet / b. not quiet}).</div>'+
+          '<div class="problem">{!PLAY|W05-A|25} The rooms are ({b|a. big / b. not big}).</div>'+
+          '<div class="problem">{!PLAY|W05-A|30} There are ({a|a. many / b. not many}) rooms.</div>'+
+          '<div class="problem">{!PLAY|W05-A|34} The rent is ({b|a. 90,400 / b. 94,000}) yen a month.</div>'+
+        '</div><br>'+
+        
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Listen to the TV game show "Who\'s My Date?" Three men want to invite Ms. Suzuki on a date.</p>'+
+        '<div class="right">*おめでとうございます (Congratulations.)</div>'+
+        '{!AUDIO|W05-B}'+
+        
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            '{!PLAY|W05-B|2.5} Fill in the blanks in Japanese.<br><br>'+
+            '<table class="table big-margin center valign-top">'+
+              '<tr style="font-weight:bold;">'+
+                '<td></td>'+
+                '<td>Favorite type</td>'+
+                '<td>What he does on holidays</td>'+
+              '</tr>'+
+
+              '<tr>'+
+                '<td><ruby>吉田<rt>よしだ</rt></ruby></td>'+
+                '<td class="left">{!PLAY|W05-B|18} {やさしい人|やさしいひと|answer}</td>'+
+                '<td class="left">{!PLAY|W05-B|44.5} {テニスをします}。</td>'+
+              '</tr>'+
+        
+              '<tr>'+
+                '<td><ruby>川口<rt>かわぐち</rt></ruby></td>'+
+                '<td class="left">{!PLAY|W05-B|25} {面白い人|おもしろいひと|' + Genki.getAlts('{面白}い{人}', 'おもしろ|ひと') + 'answer}</td>'+
+                '<td class="left">{!PLAY|W05-B|50.5} {友だちと一緒にご飯を食べます|ともだちといっしょにごはんをたべます|' + Genki.getAlts('{友}{達}と{一緒}にご{飯}を{食}べます', 'とも|だち|いっしょ|はん|た') + 'answer}。</td>'+
+              '</tr>'+
+        
+              '<tr>'+
+                '<td><ruby>中山<rt>なかやま</rt></ruby></td>'+
+                '<td class="left">{!PLAY|W05-B|30} {静かな人|しずかなひと|' + Genki.getAlts('{静}かな{人}', 'しず|ひと') + 'answer}</td>'+
+                '<td class="left">{!PLAY|W05-B|56} {家でテレビを見ます|いえでテレビをみます|' + Genki.getAlts('{家}でテレビを{見}ます', 'いえ|み') + 'answer}。</td>'+
+              '</tr>'+
+            '</table>'+
+          '</div>'+
+          
+          '<div class="problem">{!PLAY|W05-B|63} Who did Ms. Suzuki choose?　　({a})</div>'+
+          '<div class="block indent-block">a. <ruby>吉田<rt>よしだ</rt></ruby>　　b.  <ruby>川口<rt>かわぐち</rt></ruby>　　c. <ruby>中山<rt>なかやま</rt></ruby></div>'+
+        '</div><br>'+
+        
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Listen to the interview with Mary and Takeshi and fill in the chart with the following letters:<br>A = likes / B = doesn\'t like very much / C = hates.</p>'+
+        '{!AUDIO|W05-C}'+
+
+        '<table class="table center valign-top">'+
+          '<tr style="font-weight:bold;">'+
+            '<td style="width:80px"></td>'+
+            '<td>J-Pop<br>(Jポップ)</td>'+
+            '<td>Rock<br>(ロック)</td>'+
+            '<td>Classical Music<br>(クラシック)</td>'+
+            '<td>Animation<br>(アニメ)</td>'+
+            '<td>Horror movies<br>(ホラー)</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td class="left">{!PLAY|W05-C|2.5} Mary</td>'+
+            '<td>{!PLAY|W05-C|8}　{A}</td>'+
+            '<td>{!PLAY|W05-C|16}　{B}</td>'+
+            '<td>{!PLAY|W05-C|24.5}　{C}</td>'+
+            '<td>{!PLAY|W05-C|30.5}　{A}</td>'+
+            '<td>―</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td class="left">{!PLAY|W05-C|51} Takeshi</td>'+
+            '<td>{!PLAY|W05-C|61.5}　{B}</td>'+
+            '<td>{!PLAY|W05-C|51}　{A}</td>'+
+            '<td>{!PLAY|W05-C|68}　{A}</td>'+
+            '<td>{!PLAY|W05-C|78}　{A}</td>'+
+            '<td>{!PLAY|W05-C|78}　{A}</td>'+
+          '</tr>'+
+        '</table><br>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

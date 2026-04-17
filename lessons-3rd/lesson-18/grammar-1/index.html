@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,304 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Describe the situations using {!GRI|transitive and intransitive verbs|l18-p1}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'You open the door.',
+            answers : [
+              'Aドアを<ruby>開<rt>あ</rt></ruby>けます。',
+              'ドアが<ruby>開<rt>あ</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : 'The door opens.',
+            answers : [
+              'Aドアが<ruby>開<rt>あ</rt></ruby>きます。',
+              'ドアを<ruby>開<rt>あ</rt></ruby>けます。'
+            ]
+          },
+
+          {
+            question : 'You close the door.',
+            answers : [
+              'Aドアを<ruby>閉<rt>し</rt></ruby>めます。',
+              'ドアが<ruby>閉<rt>し</rt></ruby>まります。'
+            ]
+          },
+
+          {
+            question : 'The door closes.',
+            answers : [
+              'Aドアが<ruby>閉<rt>し</rt></ruby>まります。',
+              'ドアを<ruby>閉<rt>し</rt></ruby>めます。'
+            ]
+          },
+
+          {
+            question : 'You turn on the light.',
+            answers : [
+              'A<ruby>電気<rt>でんき</rt></ruby>をつけます。',
+              '<ruby>電気<rt>でんき</rt></ruby>がつきます。'
+            ]
+          },
+
+          {
+            question : 'The light turns on.',
+            answers : [
+              'A<ruby>電気<rt>でんき</rt></ruby>がつきます。',
+              '<ruby>電気<rt>でんき</rt></ruby>をつけます。'
+            ]
+          },
+
+          {
+            question : 'You put out the candle.',
+            answers : [
+              'Aろうそくを<ruby>消<rt>け</rt></ruby>します。',
+              'ろうそくが<ruby>消<rt>き</rt></ruby>えます。'
+            ]
+          },
+
+          {
+            question : 'The candle goes out.',
+            answers : [
+              'Aろうそくが<ruby>消<rt>き</rt></ruby>えます。',
+              'ろうそくを<ruby>消<rt>け</rt></ruby>します。'
+            ]
+          },
+
+          {
+            question : 'You dirty your clothes.',
+            answers : [
+              'A<ruby>服<rt>ふく</rt></ruby>を<ruby>汚<rt>よご</rt></ruby>します。',
+              '<ruby>服<rt>ふく</rt></ruby>が<ruby>汚<rt>よご</rt></ruby>れます。'
+            ]
+          },
+
+          {
+            question : 'Your clothes get dirty.',
+            answers : [
+              'A<ruby>服<rt>ふく</rt></ruby>が<ruby>汚<rt>よご</rt></ruby>れます。',
+              '<ruby>服<rt>ふく</rt></ruby>を<ruby>汚<rt>よご</rt></ruby>します。'
+            ]
+          },
+
+          {
+            question : 'You break the toy.',
+            answers : [
+              'Aおもちゃを<ruby>壊<rt>こわ</rt></ruby>します。',
+              'おもちゃが<ruby>壊<rt>こわ</rt></ruby>れます。'
+            ]
+          },
+
+          {
+            question : 'The toy breaks.',
+            answers : [
+              'Aおもちゃが<ruby>壊<rt>こわ</rt></ruby>れます。',
+              'おもちゃを<ruby>壊<rt>こわ</rt></ruby>します。'
+            ]
+          },
+
+          {
+            question : 'You put the dog in.',
+            answers : [
+              'A<ruby>犬<rt>いぬ</rt></ruby>を<ruby>入<rt>い</rt></ruby>れます。',
+              '<ruby>犬<rt>いぬ</rt></ruby>が<ruby>入<rt>はい</rt></ruby>ります。'
+            ]
+          },
+
+          {
+            question : 'The dog goes inside.',
+            answers : [
+              'A<ruby>犬<rt>いぬ</rt></ruby>が<ruby>入<rt>はい</rt></ruby>ります。',
+              '<ruby>犬<rt>いぬ</rt></ruby>を<ruby>入<rt>い</rt></ruby>れます。'
+            ]
+          },
+
+          {
+            question : 'You let the cat out.',
+            answers : [
+              'A<ruby>猫<rt>ねこ</rt></ruby>を<ruby>出<rt>だ</rt></ruby>します。',
+              '<ruby>猫<rt>ねこ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ます。'
+            ]
+          },
+
+          {
+            question : 'The cat goes out.',
+            answers : [
+              'A<ruby>猫<rt>ねこ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ます。',
+              '<ruby>猫<rt>ねこ</rt></ruby>を<ruby>出<rt>だ</rt></ruby>します。'
+            ]
+          },
+
+          {
+            question : 'You drop the pen.',
+            answers : [
+              'Aペンを<ruby>落<rt>お</rt></ruby>とします。',
+              'ペンが<ruby>落<rt>お</rt></ruby>ちます。'
+            ]
+          },
+
+          {
+            question : 'The pen falls.',
+            answers : [
+              'Aペンが<ruby>落<rt>お</rt></ruby>ちます。',
+              'ペンを<ruby>落<rt>お</rt></ruby>とします。'
+            ]
+          },
+
+          {
+            question : 'You boil the water.',
+            answers : [
+              'Aお<ruby>湯<rt>ゆ</rt></ruby>を<ruby>沸<rt>わ</rt></ruby>かします。',
+              'お<ruby>湯<rt>ゆ</rt></ruby>が<ruby>沸<rt>わ</rt></ruby>きます。'
+            ]
+          },
+
+          {
+            question : 'The water boils.',
+            answers : [
+              'Aお<ruby>湯<rt>ゆ</rt></ruby>が<ruby>沸<rt>わ</rt></ruby>きます。',
+              'お<ruby>湯<rt>ゆ</rt></ruby>を<ruby>沸<rt>わ</rt></ruby>かします。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            '(a) You open the door.　<i class="fa">&#xf061;</i>　ドアを<ruby>開<rt>あ</rt></ruby>けます。(transitive)<br>'+
+            '(b) The door opens.　<i class="fa">&#xf061;</i>　ドアが<ruby>開<rt>あ</rt></ruby>きます。(intransitive)'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You close the door.<br>'+
+                '{ドアを閉めます|ドアをしめます|answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The door closes.<br>'+
+                '{ドアが閉まります|ドアがしまります|answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You turn on the light.<br>'+
+                '{電気をつけます|でんきをつけます|answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The light turns on.<br>'+
+                '{電気がつきます|でんきがつきます|answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You put out the candle.<br>'+
+                '{ろうそくを消します|ろうそくをけします|answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The candle goes out.<br>'+
+                '{ろうそくが消えます|ろうそくがきえます|answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You dirty your clothes.<br>'+
+                '{服を汚します|ふくをよごします|' + Genki.getAlts('{服}を{汚}します', 'ふく|よご') + 'answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) Your clothes get dirty.<br>'+
+                '{服が汚れます|ふくがよごれます|' + Genki.getAlts('{服}が{汚}れます', 'ふく|よご') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You break the toy.<br>'+
+                '{おもちゃを壊します|おもちゃをこわします|answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The toy breaks.<br>'+
+                '{おもちゃが壊れます|おもちゃがこわれます|answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You put the dog in.<br>'+
+                '{犬を入れます|いぬをいれます|' + Genki.getAlts('{犬}を{入}れます', 'いぬ|い') + 'answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The dog goes inside.<br>'+
+                '{犬が入ります|いぬがはいります|' + Genki.getAlts('{犬}が{入}ります', 'いぬ|はい') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You let the cat out.<br>'+
+                '{猫を出します|ねこをだします|' + Genki.getAlts('{猫}を{出}します', 'ねこ|だ') + 'answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The cat goes out.<br>'+
+                '{猫が出ます|ねこがでます|' + Genki.getAlts('{猫}が{出}ます', 'ねこ|で') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You drop the pen.<br>'+
+                '{ペンを落とします|ペンをおとします|answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The pen falls.<br>'+
+                '{ペンが落ちます|ペンがおちます|answer}。'+
+              '</div>'+
+            '</div>'+
+            
+            '<div class="problem inline-columns">'+
+              '<div>'+
+                '(a) You boil the water.<br>'+
+                '{お湯を沸かします|おゆをわかします|' + Genki.getAlts('お{湯}を{沸}かします', 'ゆ|わ') + 'answer}。'+
+              '</div>'+
+              
+              '<div>'+
+                '(b) The water boils.<br>'+
+                '{お湯が沸きます|おゆがわきます|' + Genki.getAlts('お{湯}が{沸}きます', 'ゆ|わ') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

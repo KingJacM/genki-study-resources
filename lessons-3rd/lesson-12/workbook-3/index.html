@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,69 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～ほうがいいです|l12-p3}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'You\'d better go to a hospital.<br>'+
+          '{病院に行ったほうがいいです%(よ/)|びょういんにいったほうがいいです%(よ/)|' + Genki.getAlts('{病院}に{行}った{ほう}が{い}いです{よ}', 'びょういん|い|方|良|') + Genki.getAlts('{病院}に{行}った{ほう}が{よ}いです{よ}', 'びょういん|い|方|良|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'You\'d better memorize kanji.<br>'+
+          '{漢字を覚えたほうがいいです%(よ/)|かんじをおぼえたほうがいいです%(よ/)|' + Genki.getAlts('{漢字}を{覚}えた{ほう}が{い}いです{よ}', 'かんじ|おぼ|方|良|') + Genki.getAlts('{漢字}を{覚}えた{ほう}が{よ}いです{よ}', 'かんじ|おぼ|方|良|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'You\'d better call your mother more.<br>'+
+          '{お母さんにもっと電話したほうがいいです%(よ/)|おかあさんにもっと電話したほうがいいです%(よ/)|' + Genki.getAlts('お{母}さんにもっと{電話}した{ほう}が{い}いです{よ}', 'かあ|でんわ|方|良|') + Genki.getAlts('お{母}さんにもっと{電話}した{ほう}が{よ}いです{よ}', 'かあ|でんわ|方|良|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'You\'d better not worry.<br>'+
+          '{心配しないほうがいいです%(よ/)|しんぱいしないほうがいいです%(よ/)|' + Genki.getAlts('{心配}しない{ほう}が{い}いです{よ}', 'しんぱい|方|良|') + Genki.getAlts('{心配}しない{ほう}が{よ}いです{よ}', 'しんぱい|方|良|') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'You\'d better not eat too much.<br>'+
+          '{食べすぎないほうがいいです%(よ/)|たべすぎないほうがいいです%(よ/)|' + Genki.getAlts('{食}べすぎない{ほう}が{い}いです{よ}', 'た|方|良|') + Genki.getAlts('{食}べすぎない{ほう}が{よ}いです{よ}', 'た|方|良|') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Give advice using {!GRI|～ほうがいいですよ|l12-p3} by translating the sentences.</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Your friend：あした<ruby>試験<rt>しけん</rt></ruby>があるんです。<br>'+
+            'You：{今日、出かけないほうがいいですよ|きょう、でかけないほうがいいですよ|' + Genki.getAlts('{今日}、{出}かけない{ほう}が{い}いですよ', 'きょう|で|方|良') + Genki.getAlts('{今日}、{出}かけない{ほう}が{よ}いですよ', 'きょう|で|方|良') + 'answer;hint:(You\'d better not go out today.);width:250}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Your friend：おなかがすいたんです。<br>'+
+            'You：{何か食べたほうがいいですよ|なにかたべたほうがいいですよ|' + Genki.getAlts('{何}か{食}べた{ほう}が{い}いですよ', 'なに|た|方|良') + Genki.getAlts('{何}か{食}べた{ほう}が{よ}いですよ', 'なに|た|方|良') + 'answer;hint:(You\'d better eat something.);width:250}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Your friend：かぜをひいたんです。<br>'+
+            'You：{薬を飲んだほうがいいですよ|くすりをのんだほうがいいですよ|' + Genki.getAlts('{薬}を{飲}んだ{ほう}が{い}いですよ', 'くすり|の|方|良') + Genki.getAlts('{薬}を{飲}んだ{ほう}が{よ}いですよ', 'くすり|の|方|良') + 'answer;hint:(You\'d better take medicine.);width:250}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

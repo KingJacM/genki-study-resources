@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,78 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|～ながら|l18-p5}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Create a description from the two actions, using {!GRI|～ながら|l18-p5}.</p>'+
+        '<div class="problem">'+
+          'look at smart phone, cook<br>'+
+          '{スマホを見ながら、料理します|料理しながら、スマホを見ます|' + Genki.getAlts('スマホを{見}ながら、{料理}します', 'み|りょうり') + Genki.getAlts('{料理}しながら、スマホを{見}ます', 'りょうり|み') + 'answer;width:300}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'cry, apologize<br>'+
+          '{泣きながら、謝ります|謝りながら、泣きます|' + Genki.getAlts('{泣}きながら、{謝}ります', 'な|あやま') + Genki.getAlts('{謝}りながら、{泣}きます', 'あやま|な') + 'answer;width:300}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'sing a song, iron<br>'+
+          '{歌を歌いながら、アイロンをかけます|アイロンをかけながら、歌を歌います|' + Genki.getAlts('{歌}を{歌}いながら、アイロンをかけます', 'うた|うた') + Genki.getAlts('アイロンをかけながら、{歌}を{歌}います', 'うた|うた') + 'answer;width:300}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'drink coffee, read a book<br>'+
+          '{コーヒーを飲みながら、本を読みます|本を読みながら、コーヒーを飲みます|' + Genki.getAlts('コーヒーを{飲}みながら、{本}を{読}みます', 'の|ほん|よ') + Genki.getAlts('{本}を{読}みながら、コーヒーを{飲}みます', 'ほん|よ|の') + 'answer;width:300}。'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'I did homework while watching TV.<br>'+
+          '{テレビを見ながら宿題をしました|テレビをみながらしゅくだいをしました|' + Genki.getAlts('テレビを{見}ながら{宿題}をしました', 'み|しゅくだい') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Mary showed me the picture, laughing.<br>'+
+          '{メアリーさんは笑いながら写真を見せてくれました|メアリーさんはわらいながらしゃしんをみせてくれました|' + Genki.getAlts('メアリーさんは{笑}いながら{写真}を{見}せてくれました', 'わら|しゃしん|み') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I think while taking a walk.<br>'+
+          '{散歩しながら考えます|さんぽしながらかんがえます|' + Genki.getAlts('{散歩}しながら{考}えます', 'さんぽ|かんが') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'You had better not walk and eat at the same time.<br>'+
+          '{歩きながら食べないほうがいいですよ|あるきながらたべないほうがいいですよ|' + Genki.getAlts('{歩}きながら{食}べない{ほう}が{い}いですよ', 'ある|た|方|良') + Genki.getAlts('{歩}きながら{食}べない{ほう}が{よ}いですよ', 'ある|た|方|良') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Answer the questions by translating the sentences.</p>'+
+        '<div class="problem">'+
+          'たいてい、<ruby>何<rt>なに</rt></ruby>をしながら<ruby>勉強<rt>べんきょう</rt></ruby>しますか。<br>'+
+          '(I listen to the radio, while I study.)<br>'+
+          '{ラジオを聞きながら、勉強します|ラジオをききながら、べんきょうします|' + Genki.getAlts('ラジオを{聞}きながら、{勉強}します', 'き|べんきょう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>何<rt>なに</rt></ruby>をするのが<ruby>好<rt>す</rt></ruby>きですか。<br>'+
+          '(I like to sing while riding a bicycle.)<br>'+
+          '{歌いながら自転車に乗るのが好きです|うたいながらじてんしゃにのるのがすきです|' + Genki.getAlts('{歌}いながら{自転車}に{乗}るのが{好}きです', 'うた|じてんしゃ|の|す') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

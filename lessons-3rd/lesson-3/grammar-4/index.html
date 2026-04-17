@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,260 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Look at the table and answer the following questions. {!GRI|Click here|l3-p3} to review Particles.<br><br>'+
+      '<table class="center">'+
+        '<tr style="font-weight:bold">'+
+          '<td>Place</td>'+
+          '<td>Object</td>'+
+          '<td>Action</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>マクドナルド</td>'+
+          '<td>ハンバーガー</td>'+
+          '<td><ruby>食<rt>た</rt></ruby>べる</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>うち</td>'+
+          '<td><ruby>音楽<rt>おんがく</rt></ruby></td>'+
+          '<td><ruby>聞<rt>き</rt></ruby>く</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>カフェ</td>'+
+          '<td>コーヒー</td>'+
+          '<td><ruby>飲<rt>の</rt></ruby>む</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>大学<rt>だいがく</rt></ruby></td>'+
+          '<td><ruby>日本語<rt>にほんご</rt></ruby></td>'+
+          '<td><ruby>話<rt>はな</rt></ruby>す</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>図書館<rt>としょかん</rt></ruby></td>'+
+          '<td><ruby>雑誌<rt>ざっし</rt></ruby></td>'+
+          '<td><ruby>読<rt>よ</rt></ruby>む</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>うち</td>'+
+          '<td>テレビ</td>'+
+          '<td><ruby>見<rt>み</rt></ruby>る</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>学校<rt>がっこう</rt></ruby></td>'+
+          '<td>テニス</td>'+
+          '<td>する</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td><ruby>図書館<rt>としょかん</rt></ruby></td>'+
+          '<td><ruby>日本語<rt>にほんご</rt></ruby></td>'+
+          '<td><ruby>勉強<rt>べんきょう</rt></ruby>する</td>'+
+        '</tr>'+
+      '</table>', 'Look at the table and answer the following questions. {!GRI|Click here|l3-p3} to review Particles.'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'メアリーさんは<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みますか。',
+            answers : [
+              'Aはい、読みます。',
+              'いいえ、読みません。',
+              'いいえ、図書館で読みません。うちで読みます。',
+              'いいえ、雑誌を読みません。本を読みます。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはうちでコーヒーを<ruby>飲<rt>の</rt></ruby>みますか。',
+            answers : [
+              'Aいいえ、うちで飲みません。カフェで飲みます。',
+              'いいえ、カフェで飲みません。うちで飲みます。',
+              'いいえ、飲みません。',
+              'はい、飲みます。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはどこでテニスをしますか。',
+            answers : [
+              'A学校でします。',
+              '大学でします。',
+              'うちでします。',
+              'カフェでします。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはカフェで<ruby>何<rt>なに</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みますか。',
+            answers : [
+              'Aコーヒーを飲みます。',
+              'お茶を飲みます。',
+              '水を飲みます。',
+              'ジュースを飲みます。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはうちでテレビを<ruby>見<rt>み</rt></ruby>ますか。',
+            answers : [
+              'Aはい、見ます。',
+              'いいえ、見ません。',
+              'いいえ、うちで見ません。カフェで見ます。',
+              'いいえ、テレビを見ません。本を読みます。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんは<ruby>学校<rt>がっこう</rt></ruby>で<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しますか。',
+            answers : [
+              'Aいいえ、学校で勉強しません。図書館で勉強します。',
+              'いいえ、大学で勉強しません。図書館で勉強します。',
+              'いいえ、勉強しません。',
+              'はい、勉強します。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはどこで<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>しますか。',
+            answers : [
+              'A大学で話します。',
+              '学校で話します。',
+              'カフェで話します。',
+              'マクドナルドで話します。'
+            ]
+          },
+          
+          {
+            question : 'メアリーさんはマクドナルドで<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べますか。',
+            answers : [
+              'Aハンバーガーを食べます。',
+              'アイスクリームを食べます。',
+              'フライドポテトを食べます。',
+              'カレーを食べます。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<table class="table center">'+
+          '<tr style="font-weight:bold">'+
+            '<td>Place</td>'+
+            '<td>Object</td>'+
+            '<td>Action</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>マクドナルド</td>'+
+            '<td>ハンバーガー</td>'+
+            '<td><ruby>食<rt>た</rt></ruby>べる</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>うち</td>'+
+            '<td><ruby>音楽<rt>おんがく</rt></ruby></td>'+
+            '<td><ruby>聞<rt>き</rt></ruby>く</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>カフェ</td>'+
+            '<td>コーヒー</td>'+
+            '<td><ruby>飲<rt>の</rt></ruby>む</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>大学<rt>だいがく</rt></ruby></td>'+
+            '<td><ruby>日本語<rt>にほんご</rt></ruby></td>'+
+            '<td><ruby>話<rt>はな</rt></ruby>す</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>図書館<rt>としょかん</rt></ruby></td>'+
+            '<td><ruby>雑誌<rt>ざっし</rt></ruby></td>'+
+            '<td><ruby>読<rt>よ</rt></ruby>む</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td>うち</td>'+
+            '<td>テレビ</td>'+
+            '<td><ruby>見<rt>み</rt></ruby>る</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>学校<rt>がっこう</rt></ruby></td>'+
+            '<td>テニス</td>'+
+            '<td>する</td>'+
+          '</tr>'+
+
+          '<tr>'+
+            '<td><ruby>図書館<rt>としょかん</rt></ruby></td>'+
+            '<td><ruby>日本語<rt>にほんご</rt></ruby></td>'+
+            '<td><ruby>勉強<rt>べんきょう</rt></ruby>する</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'メアリーさんは<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みますか。<br>'+
+              'はい、{読みます|よみます|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'メアリーさんはうちでコーヒーを<ruby>飲<rt>の</rt></ruby>みますか。<br>'+
+              'いいえ、{家|うち|answer}で{飲みません|のみません|answer}。{カフェ}で{飲みます|のみます|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'メアリーさんはどこでテニスをしますか。<br>'+
+              '{学校|がっこう|answer}で{します}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'メアリーさんはカフェで<ruby>何<rt>なに</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みますか。<br>'+
+              '{コーヒー}を{飲みます|のみます|answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'メアリーさんはうちでテレビを<ruby>見<rt>み</rt></ruby>ますか。<br>'+
+              '{はい、見ます|はい、みます|answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'メアリーさんは<ruby>学校<rt>がっこう</rt></ruby>で<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しますか。<br>'+
+              '{いいえ、学校で勉強しません。図書館で勉強します。|いいえ、がっこうでべんきょうしません。としょかんでべんきょうします。|' + Genki.getAlts('いいえ、{学校}で{勉強}しません。{図書館}で{勉強}します。', 'がっこう|べんきょう|としょかん|べんきょう') + 'answer}'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'メアリーさんはどこで<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>しますか。<br>'+
+              '{大学で話します|だいがくではなします|' + Genki.getAlts('{大学}で{話}します', 'だいがく|はな') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'メアリーさんはマクドナルドで<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べますか。<br>'+
+              '{ハンバーガーを食べます|ハンバーガーをたべます|answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

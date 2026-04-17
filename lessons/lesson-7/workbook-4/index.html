@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Workbook: Describing People - Lesson 7 | Genki Study Resources</title>
-    <meta name="title" content="Workbook: Describing People - Lesson 7 | Genki Study Resources">
-    <meta name="twitter:title" content="Workbook: Describing People - Lesson 7 | Genki Study Resources">
-    <meta property="og:title" content="Workbook: Describing People - Lesson 7 | Genki Study Resources">
+    <title>Workbook: Describing People - Lesson 7 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Workbook: Describing People - Lesson 7 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Workbook: Describing People - Lesson 7 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Workbook: Describing People - Lesson 7 | Genki Study Resources - 2nd Edition">
     <meta name="description" content="Practice describing people in Japanese.">
     <meta property="og:description" content="Practice describing people in Japanese.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I Workbook, page 72, problem I, problem II, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki I Workbook, page 67, problem I, problem II, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,76 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice {!GRI|describing people|l7-p3} in Japanese.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'Yasuo is not tall.<br>'+
+          '{やすおさんは背が高くないです|やすおさんはせがたかくないです|' + Genki.getAlts('やすおさんは{背}が{高}くないです', 'せ|たか') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Yasuo is very bright.<br>'+
+          '{やすおさんは%(とても/すごく)頭がいいです|やすおさんは%(とても/すごく)あたまがいいです|' + Genki.getAlts('やすおさんは{とても}{頭}が{い}いです', 'すごく|あたま|良') + Genki.getAlts('やすおさんは{とても}{頭}が{よ}いです', 'すごく|あたま|良') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Norio is wearing a new T-shirt today.<br>'+
+          '{のりおさんは今日新しいＴシャツを着ています|のりおさんはきょうあたらしいＴシャツをきています|' + Genki.getAlts('のりおさんは{今日}{新}しいＴシャツを{着}ています', 'きょう|あたら|き') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Norio is skinny, but Yasuo is overweight.<br>'+
+          '{のりおさんはやせていますが、やすおさんは太っています|のりおさんはやせていますが、やすおさんはふとっています|answer}。'+
+        '</div>'+
+        
+        '<p class="section-desc">You are an eyewitness testifying in court. Describe the person you saw at the scene of the crime using the past tense.</p>'+
+        '<div class="problem">'+
+          'Height: (Was short)<br>'+
+          '{背が低かったです|せがひくかったです|' + Genki.getAlts('{背}が{低}かったです', 'せ|ひく') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Hair: (Was short)<br>'+
+          '{髪が短かったです|かみがみじかかったです|' + Genki.getAlts('{髪}が{短}かったです', 'かみ|みじか') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Glasses: (Was wearing glasses)<br>'+
+          '{眼鏡をかけていました|めがねをかけていました|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Eyes: (Had small eyes)<br>'+
+          '{目が小さかったです|めがちいさかったです|' + Genki.getAlts('{目}が{小}さかったです', 'め|ちい') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Clothes above the waist: (Was wearing a T-shirt)<br>'+
+          '{Ｔシャツを着ていました|Ｔシャツをきていました|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Clothes below the waist: (Was wearing jeans)<br>'+
+          '{ジーンズをはいていました}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Shoes: (Was not wearing shoes)<br>'+
+          '{靴をはいていませんでした|くつをはいていませんでした|answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,10 +68,422 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>var genkiStr = {
+      affirm : '<div class="t-bold">Change the verb into the <span class="t-green">past affirmative</span>.</div>',
+         neg : '<div class="t-bold">Change the verb into the <span class="t-red">past negative</span>.</div>'
+    };
+      
+    Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Change the following verbs into their {!GRI|past tense forms|l9-p1}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          // affirmative
+          {
+            question : genkiStr.affirm + 'かく',
+            answers : [
+              'Aかいた',
+              'かいだ',
+              'かいて',
+              'かいで'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'はなす',
+            answers : [
+              'Aはなした',
+              'はなしだ',
+              'はなしで',
+              'はなして'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'しぬ',
+            answers : [
+              'Aしんだ',
+              'しんた',
+              'しぬだ',
+              'しぬ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'のむ',
+            answers : [
+              'Aのんだ',
+              'のんた',
+              'のむた',
+              'のむ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'かける',
+            answers : [
+              'Aかけた',
+              'かけだ',
+              'かけで',
+              'かけて'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'いく',
+            answers : [
+              'Aいった',
+              'いっだ',
+              'いいた',
+              'いいだ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'あそぶ',
+            answers : [
+              'Aあそんだ',
+              'あそんた',
+              'あそぶだ',
+              'あそぶ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'つくる',
+            answers : [
+              'Aつくった',
+              'つくっだ',
+              'つくた',
+              'つくだ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'でる',
+            answers : [
+              'Aでた',
+              'でだ',
+              'でった',
+              'でっだ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'あらう',
+            answers : [
+              'Aあらった',
+              'あらっだ',
+              'あらだ',
+              'あらた'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'くる',
+            answers : [
+              'Aきた',
+              'きだ',
+              'くた',
+              'くだ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'ひく',
+            answers : [
+              'Aひいた',
+              'ひいだ',
+              'ひっだ',
+              'ひった'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'まつ',
+            answers : [
+              'Aまった',
+              'まっだ',
+              'また',
+              'まだ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'いそぐ',
+            answers : [
+              'Aいそいだ',
+              'いそいた',
+              'いそっで',
+              'いそって'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'もらう',
+            answers : [
+              'Aもらった',
+              'もらっだ',
+              'もらた',
+              'もらだ'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'おどる',
+            answers : [
+              'Aおどった',
+              'おどっだ',
+              'おどだ',
+              'おどた'
+            ]
+          },
+
+          {
+            question : genkiStr.affirm + 'せんたくする',
+            answers : [
+              'Aせんたくした',
+              'せんたくしだ',
+              'せんたくすった',
+              'せんたくすっだ'
+            ]
+          },
+
+          // negative
+          {
+            question : genkiStr.neg + 'かく',
+            answers : [
+              'Aかかなかった',
+              'かかじゃなかった',
+              'かかない',
+              'かかないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'みる',
+            answers : [
+              'Aみなかった',
+              'みらなかった',
+              'みるじゃなかった',
+              'みらない'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'すてる',
+            answers : [
+              'Aすてなかった',
+              'すてらなかった',
+              'すてるじゃなかった',
+              'すてらじゃない'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'しる',
+            answers : [
+              'Aしらなかった',
+              'しなっかた',
+              'しるじゃなかった',
+              'しらないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'かける',
+            answers : [
+              'Aかけなかった',
+              'かけらなかった',
+              'かけるじゃなかった',
+              'かけないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'はく',
+            answers : [
+              'Aはかなかった',
+              'はきなかった',
+              'はくなかった',
+              'はかないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'はじまる',
+            answers : [
+              'Aはじまらなかった',
+              'はじまなかった',
+              'はじまりなかった',
+              'はじまらないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'つくる',
+            answers : [
+              'Aつくらなかった',
+              'つくりなかった',
+              'つくなかった',
+              'つくらながった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'かえる',
+            answers : [
+              'Aかえらなかった',
+              'かえりなかった',
+              'かえなかった',
+              'かえらなだった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'あらう',
+            answers : [
+              'Aあらわなかった',
+              'あらあなかった',
+              'あらいなかった',
+              'あらなかった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'くる',
+            answers : [
+              'Aこなかった',
+              'くなかった',
+              'くらなかった',
+              'こらなかった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'いう',
+            answers : [
+              'Aいわなかった',
+              'いあなかった',
+              'いいなかった',
+              'いなかった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'やすむ',
+            answers : [
+              'Aやすまなかった',
+              'やすみなかった',
+              'やすなかった',
+              'やすまないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'おぼえる',
+            answers : [
+              'Aおぼえなかった',
+              'おぼえらなかった',
+              'おぼえりなかった',
+              'おぼえらないでした'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'うたう',
+            answers : [
+              'Aうたわなかった',
+              'うたあなかった',
+              'うたいなかった',
+              'うたなかった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'せんたくする',
+            answers : [
+              'Aせんたくしなかった',
+              'せんたくすなかった',
+              'せんたくすらなかった',
+              'せんたくなかった'
+            ]
+          },
+
+          {
+            question : genkiStr.neg + 'うんどうする',
+            answers : [
+              'Aうんどうしなかった',
+              'うんどうすなかった',
+              'うんどうすらなかった',
+              'うんどうなかった'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="columns-2 clear">'+
+          '<div class="count-problems">'+
+            genkiStr.affirm.replace('verb', 'following verbs') + '<br>' +
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                'かく　<i class="fa">&#xf061;</i>　かいた'+
+              '</div>'+
+            '</div>'+
+            '<div class="problem">はなす　<i class="fa">&#xf061;</i>　{話した|はなした|answer}</div>'+
+            '<div class="problem">しぬ　　<i class="fa">&#xf061;</i>　{死んだ|しんだ|answer}</div>'+
+            '<div class="problem">のむ　　<i class="fa">&#xf061;</i>　{飲んだ|のんだ|answer}</div>'+
+            '<div class="problem">かける　<i class="fa">&#xf061;</i>　{かけた}</div>'+
+            '<div class="problem">いく　　<i class="fa">&#xf061;</i>　{行った|いった|answer}</div>'+
+            '<div class="problem">あそぶ　<i class="fa">&#xf061;</i>　{遊んだ|あそんだ|answer}</div>'+
+            '<div class="problem">つくる　<i class="fa">&#xf061;</i>　{作った|つくった|answer}</div>'+
+            '<div class="problem">でる　　<i class="fa">&#xf061;</i>　{出た|でた|answer}</div>'+
+            '<div class="problem">あらう　<i class="fa">&#xf061;</i>　{洗った|あらった|answer}</div>'+
+            '<div class="problem">くる　　<i class="fa">&#xf061;</i>　{来た|きた|answer}</div>'+
+            '<div class="problem">ひく　　<i class="fa">&#xf061;</i>　{弾いた|ひいた|answer}</div>'+
+            '<div class="problem">まつ　　<i class="fa">&#xf061;</i>　{待った|まった|answer}</div>'+
+            '<div class="problem">いそぐ　<i class="fa">&#xf061;</i>　{急いだ|いそいだ|answer}</div>'+
+            '<div class="problem">もらう　<i class="fa">&#xf061;</i>　{もらった}</div>'+
+            '<div class="problem">おどる　<i class="fa">&#xf061;</i>　{踊った|おどった|answer}</div>'+
+            '<div class="problem">せんたくする　<i class="fa">&#xf061;</i>　{洗濯した|せんたくした|answer}</div>'+
+          '</div>'+
+
+          '<div class="count-problems">'+
+            genkiStr.neg.replace('verb', 'following verbs') + '<br>' +
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                'かく　<i class="fa">&#xf061;</i>　かかなかった'+
+              '</div>'+
+            '</div>'+
+            '<div class="problem">みる　　　<i class="fa">&#xf061;</i>　{見なかった|みなかった|answer}</div>'+
+            '<div class="problem">すてる　　<i class="fa">&#xf061;</i>　{捨てなかった|すてなかった|answer}</div>'+
+            '<div class="problem">しる　　　<i class="fa">&#xf061;</i>　{知らなかった|しらなかった|answer}</div>'+
+            '<div class="problem">かける　　<i class="fa">&#xf061;</i>　{かけなかった}</div>'+
+            '<div class="problem">はく　　　<i class="fa">&#xf061;</i>　{はかなかった}</div>'+
+            '<div class="problem">はじまる　<i class="fa">&#xf061;</i>　{始まらなかった|はじまらなかった|answer}</div>'+
+            '<div class="problem">つくる　　<i class="fa">&#xf061;</i>　{作らなかった|つくらなかった|answer}</div>'+
+            '<div class="problem">かえる　　<i class="fa">&#xf061;</i>　{帰らなかった|かえらなかった|answer}</div>'+
+            '<div class="problem">あらう　　<i class="fa">&#xf061;</i>　{洗わなかった|あらわなかった|answer}</div>'+
+            '<div class="problem">くる　　　<i class="fa">&#xf061;</i>　{来なかった|こなかった|answer}</div>'+
+            '<div class="problem">いう　　　<i class="fa">&#xf061;</i>　{言わなかった|いわなかった|answer}</div>'+
+            '<div class="problem">やすむ　　<i class="fa">&#xf061;</i>　{休まなかった|やすまなかった|answer}</div>'+
+            '<div class="problem">おぼえる　<i class="fa">&#xf061;</i>　{覚えなかった|おぼえなかった|answer}</div>'+
+            '<div class="problem">うたう　　<i class="fa">&#xf061;</i>　{歌わなかった|うたわなかった|answer}</div>'+
+            '<div class="problem">せんたくする　<i class="fa">&#xf061;</i>　{洗濯しなかった|せんたくしなかった|answer}</div>'+
+            '<div class="problem">うんどうする　<i class="fa">&#xf061;</i>　{運動しなかった|うんどうしなかった|answer}</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

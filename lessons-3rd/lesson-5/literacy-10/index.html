@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,46 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Match the kanji with the reading.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="inline-columns set-problem-width-med">'+
+          '<div class="problem">({c}) 一日</div>'+
+          '<div class="problem">({g}) 二日</div>'+
+          '<div class="problem">({h}) 三日</div>'+
+          '<div class="problem">({k}) 四日</div>'+
+          '<div class="problem">({a}) 五日</div>'+
+          '<div class="problem">({i}) 六日</div>'+
+          '<div class="problem">({e}) 七日</div>'+
+          '<div class="problem">({j}) 八日</div>'+
+          '<div class="problem">({b}) 九日</div>'+
+          '<div class="problem">({d}) 十日</div>'+
+          '<div class="problem">({f}) 二十日</div>'+
+        '</div>'+
+        
+        '<div class="inline-columns sub-section set-problem-width no-margin">'+
+          '<div class="block">(a) いつか</div>'+
+          '<div class="block">(b) ここのか</div>'+
+          '<div class="block">(c) ついたち</div>'+
+          '<div class="block">(d) とおか</div>'+
+          '<div class="block">(e) なのか</div>'+
+          '<div class="block">(f) はつか</div>'+
+          '<div class="block">(g) ふつか</div>'+
+          '<div class="block">(h) みっか</div>'+
+          '<div class="block">(i) むいか</div>'+
+          '<div class="block">(j) ようか</div>'+
+          '<div class="block">(k) よっか</div>'+
+        '</div>'+
+      '</div>'
+    });</script>
   </body>
 </html>

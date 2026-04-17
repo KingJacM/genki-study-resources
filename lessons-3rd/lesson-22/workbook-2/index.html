@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,68 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using the {!GRI|causative form|l22-p1}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd fa">&#xf054;</span>Using the verbs from the list, make sentences appropriate for the given situations. The sentences should mean "The boss made the subordinate do..."</p>'+
+        
+        '<div class="sub-section center" style="font-size:18px;width:80%;margin:0 auto;">'+
+          '<ruby>捨<rt>す</rt></ruby>てる　　<ruby>手伝<rt>てつだ</rt></ruby>う　　<ruby>着替<rt>きが</rt></ruby>える　　<ruby>拾<rt>ひろ</rt></ruby>う　　コピーを<ruby>取<rt>と</rt></ruby>る<br>'+
+          '<ruby>翻訳<rt>ほんやく</rt></ruby>する　　<ruby>迎<rt>むか</rt></ruby>えに<ruby>来<rt>く</rt></ruby>る　　お<ruby>茶<rt>ちゃ</rt></ruby>をいれる'+
+        '</div><br>'+
+        
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'いらない<ruby>物<rt>もの</rt></ruby>がたくさんありました。<br>'+
+            '<i class="fa">&#xf061;</i>　<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>部下<rt>ぶか</rt></ruby>にいらない<ruby>物<rt>もの</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てさせました。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'よく<ruby>英語<rt>えいご</rt></ruby>の<ruby>手紙<rt>てがみ</rt></ruby>が<ruby>来<rt>き</rt></ruby>ましたが、<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>英語<rt>えいご</rt></ruby>が<ruby>読<rt>よ</rt></ruby>めません。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下に英語の手紙を翻訳させました|ぶちょうはぶかにえいごのてがみをほんやくさせました|' + Genki.getAlts('{部長}は{部下}に{英語}の{手紙}を{翻訳}させました', 'ぶちょう|ぶか|えいご|てがみ|ほんやく') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>部長<rt>ぶちょう</rt></ruby>はのどがかわきました。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下にお茶をいれさせました|ぶちょうはぶかにおちゃをいれさせました|' + Genki.getAlts('{部長}は{部下}にお{茶}をいれさせました', 'ぶちょう|ぶか|ちゃ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby>で<ruby>書類<rt>しょるい</rt></ruby>のコピーを<ruby>取<rt>と</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>がありませんでした。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下に書類のコピーを取らせました|ぶちょうはぶかにしょるいのコピーをとらせました|' + Genki.getAlts('{部長}は{部下}に{書類}のコピーを{取}らせました', 'ぶちょう|ぶか|しょるい|と') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>大<rt>おお</rt></ruby>きい<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>持<rt>も</rt></ruby>って、<ruby>空港<rt>くうこう</rt></ruby>に<ruby>着<rt>つ</rt></ruby>きました。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下に迎えに来させました|ぶちょうはぶかにむかえにこさせました|' + Genki.getAlts('{部長}は{部下}に{迎}えに{来}させました', 'ぶちょう|ぶか|むか|こ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>仕事<rt>しごと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>すぎて、<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>一人<rt>ひとり</rt></ruby>で<ruby>全部<rt>ぜんぶ</rt></ruby>できませんでした。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下に手伝わせました|ぶちょうはぶかにてつだわせました|' + Genki.getAlts('{部長}は{部下}に{手伝}わせました', 'ぶちょう|ぶか|てつだ') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'お<ruby>客<rt>きゃく</rt></ruby>さんに<ruby>会<rt>あ</rt></ruby>いに<ruby>行<rt>い</rt></ruby>く<ruby>予定<rt>よてい</rt></ruby>ですが、<ruby>部下<rt>ぶか</rt></ruby>はTシャツを<ruby>着<rt>き</rt></ruby>ていました。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下に着替えさせました|ぶちょうはぶかにきがえさせました|' + Genki.getAlts('{部長}は{部下}に{着替}えさせました', 'ぶちょう|ぶか|きが') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>急<rt>いそ</rt></ruby>いでいたので、<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>書類<rt>しょるい</rt></ruby>を<ruby>落<rt>お</rt></ruby>としてしまいました。<br>'+
+          '<i class="fa">&#xf061;</i> {部長は部下に書類を拾わせました|ぶちょうはぶかにしょるいをひろわせました|' + Genki.getAlts('{部長}は{部下}に{書類}を{拾}わせました', 'ぶちょう|ぶか|しょるい|ひろ') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

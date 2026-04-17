@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,95 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : ['Read the following people\'s telephone numbers and choose the correct answer.', 'Read the following people\'s phone numbers and write them in Arabic numerals. (e.g. 1, 2, 3..)'],
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'やましたせんせい<br>283-9547',
+            answers : [
+              'Aにはちさんのきゅうごよんなな',
+              'はちにさんのごきゅうよんなな',
+              'ごいちよんのきゅうにさんなな'
+            ]
+          },
+
+          {
+            question : 'だいがく<br>951-0326',
+            answers : [
+              'Aきゅうごいちのゼロさんにろく',
+              'きゅういちごのゼロさんろくに',
+              'きゅうにはちのゼロよんごろく'
+            ]
+          },
+
+          {
+            question : 'せんせい<br>362-4519',
+            answers : [
+              'Aさんろくにのよんごいちきゅう',
+              'ろくさんにのよんごきゅういち',
+              'よんろくごのさんにはちきゅう'
+            ]
+          },
+
+          {
+            question : 'メアリーさん<br>020-6921-4236',
+            answers : [
+              'Aゼロにゼロのろくきゅうにいちのよんにさんろく',
+              'ゼロにゼロのきゅうろくにいちのよんさんにろく',
+              'ゼロにゼロろくきゅうにいちのよんにさんろく'
+            ]
+          },
+
+          {
+            question : 'たけしさん<br>030-8522-1032',
+            answers : [
+              'Aゼロさんゼロのはちごににのいちゼロさんに',
+              'ゼロさんゼロのはちにごにのいちゼロにさん',
+              'ゼロさんゼロはちごににのいちゼロさんに'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            'やましたせんせい<br>にはちさんのきゅうごよんなな<br>'+
+            '{283-9547|2839547|283ー9547|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'だいがく<br>きゅうごいちのゼロさんにろく<br>'+
+            '{951-0326|9510326|951ー0326|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'せんせい<br>さんろくにのよんごいちきゅう<br>'+
+            '{362-4519|3624519|362ー4519|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'メアリーさん<br>ゼロにゼロのろくきゅうにいちのよんにさんろく<br>'+
+            '{020-6921-4236|02069214236|020ー6921ー4236|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'たけしさん<br>ゼロさんゼロのはちごににのいちゼロさんに<br>'+
+            '{030-8522-1032|03085221032|030ー8522ー1032|answer}。'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

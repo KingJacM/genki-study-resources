@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,78 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice what you learned about {!GRI|comparing two items|l10-p1}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'Russia (ロシア) is larger than Canada (カナダ).<br>'+
+          '{ロシアのほうがカナダより大きいです|ロシアのほうがカナダよりおおきいです|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Sundays are more fun than Mondays.<br>'+
+          '{日曜日のほうが月曜日より楽しいです|にちようびのほうがげつようびよりたのしいです|' + Genki.getAlts('{日曜日}のほうが{月曜日}より{楽}しいです', 'にちようび|げつようび|たの') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Takeshi is older than Mary.<br>'+
+          '{たけしさんのほうがメアリーさんより年上です|たけしさんのほうがメアリーさんよりとしうえです|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：Which do you like better, soccer or baseball?<br>'+
+            '{サッカーと野球と%(どっち/どちら)のほうが好きですか|サッカーとやきゅうと%(どっち/どちら)のほうがすきですか|' + Genki.getAlts('サッカーと{野球}と{どっち}のほうが{好}きですか', 'やきゅう|どちら|す') + 'answer}。<br><br><br>'+
+        
+            'A：I like baseball better.<br>'+
+            '{野球のほうが好きです|やきゅうのほうがすきです|' + Genki.getAlts('{野球}のほうが{好}きです', 'やきゅう|す') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Make comparative sentences in Japanese by translating the following sentences.</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：Which is harder (<ruby>大変<rt>たいへん</rt></ruby>), Japanese class or business class?<br>'+
+            '{日本語のクラスとビジネスのクラスと%(どっち/どちら)のほうが大変ですか|にほんごのクラスとビジネスのクラスと%(どっち/どちら)のほうがたいへんですか|' + Genki.getAlts('{日本語}のクラスとビジネスのクラスと{どっち}のほうが{大変}ですか', 'にほんご|どちら|たいへん') + 'answer}。<br><br><br>'+
+
+            'A：Japanese class is harder than business class.<br>'+
+            '{日本語のクラスのほうがビジネスのクラスより大変です|にほんごのクラスのほうがビジネスのクラスよりたいへんです|' + Genki.getAlts('{日本語}のクラスのほうがビジネスのクラスより{大変}です', 'にほんご|たいへん') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：Which do you like better, summer or winter?<br>'+
+            '{夏と冬と%(どっち/どちら)のほうが好きですか|なつとふゆと%(どっち/どちら)のほうがすきですか|' + Genki.getAlts('{夏}と{冬}と{どっち}のほうが{好}きですか', 'なつ|ふゆ|どちら|す') + 'answer}。<br><br><br>'+
+
+            'A：I like summer more than winter.<br>'+
+            '{夏のほうが%(冬より/)好きです|なつのほうが%(ふゆより/)すきです|' + Genki.getAlts('{夏}のほうが{冬}より{好}きです', 'なつ|ふゆ|す') + Genki.getAlts('{夏}のほうが{好}きです', 'なつ|す') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：Which do you think is more difficult, Japanese or Chinese?<br>'+
+            '{日本語と中国語と%(どっち/どちら)のほうが難しいと思いますか|にほんごとちゅうごくごと%(どっち/どちら)のほうがむずかしいとおもいますか|' + Genki.getAlts('{日本語}と{中国語}と{どっち}のほうが{難}しいと{思}いますか', 'にほんご|ちゅうごくご|どちら|むずか|おも') + 'answer}。<br><br><br>'+
+
+            'A：I think Japanese is more difficult than Chinese.<br>'+
+            '{日本語のほうが%(中国語より/)難しいと思います|にほんごのほうが%(ちゅうごくごより/)むずかしいとおもいます|' + Genki.getAlts('{日本語}のほうが{中国語}より{難}しいと{思}います', 'にほんご|ちゅうごくご|むずか|おも') + Genki.getAlts('{日本語}のほうが{難}しいと{思}います', 'にほんご|むずか|おも') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

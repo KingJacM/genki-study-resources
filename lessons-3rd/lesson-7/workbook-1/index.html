@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,146 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice identifying and conjugating the following verbs. {!GRI|Click here|l6-p1} to review Te-form conjugation.',
+      
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd fa">&#xf054;</span>Identify the verbs as u, ru, or irregular verbs and fill in the table below.</p>'+
+      '<table class="table count-problems large-width">'+
+        '<tr class="center">'+
+          '<td></td>'+
+          '<td>u/ru/irregular</td>'+
+          '<td>{!GRI|long form|l3-p1}</td>'+
+          '<td>{!GRI|te-form|l6-p1}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td>e.g. ある</td>'+
+          '<td class="center">u</td>'+
+          '<td class="center">あります</td>'+
+          '<td class="center">あって</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>わかる<rt>分かる</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{分かります|わかります|answer}</td>'+
+          '<td>{分かって|わかって|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem">やる</td>'+
+          '<td>{u}</td>'+
+          '<td>{やります}</td>'+
+          '<td>{やって}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>けす<rt>消す</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{消します|けします|answer}</td>'+
+          '<td>{消して|けして|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>たつ<rt>立つ</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{立ちます|たちます|answer}</td>'+
+          '<td>{立って|たって|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>おきる<rt>起きる</rt></ruby></td>'+
+          '<td>{ru}</td>'+
+          '<td>{起きます|おきます|answer}</td>'+
+          '<td>{起きて|おきて|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>かえる<rt>帰る</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{帰ります|かえります|answer}</td>'+
+          '<td>{帰って|かえって|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>くる<rt>来る</rt></ruby></td>'+
+          '<td>{irregular}</td>'+
+          '<td>{来ます|きます|answer}</td>'+
+          '<td>{来て|きて|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem">する</td>'+
+          '<td>{irregular}</td>'+
+          '<td>{します}</td>'+
+          '<td>{して}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>あそぶ<rt>遊ぶ</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{遊びます|あそびます|answer}</td>'+
+          '<td>{遊んで|あそんで|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>きる<rt>着る</rt></ruby></td>'+
+          '<td>{ru}</td>'+
+          '<td>{着ます|きます|answer}</td>'+
+          '<td>{着て|きて|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem">かぶる</td>'+
+          '<td>{u}</td>'+
+          '<td>{かぶります}</td>'+
+          '<td>{かぶって}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>わすれる<rt>忘れる</rt></ruby></td>'+
+          '<td>{ru}</td>'+
+          '<td>{忘れます|わすれます|answer}</td>'+
+          '<td>{忘れて|わすれて|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem">はく</td>'+
+          '<td>{u}</td>'+
+          '<td>{はきます}</td>'+
+          '<td>{はいて}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>うたう<rt>歌う</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{歌います|うたいます|answer}</td>'+
+          '<td>{歌って|うたって|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>すむ<rt>住む</rt></ruby></td>'+
+          '<td>{u}</td>'+
+          '<td>{住みます|すみます|answer}</td>'+
+          '<td>{住んで|すんで|answer}</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td class="problem"><ruby>けっこんする<rt>結婚する</rt></ruby></td>'+
+          '<td>{irregular}</td>'+
+          '<td>{結婚します|けっこんします|answer}</td>'+
+          '<td>{結婚して|けっこんして|answer}</td>'+
+        '</tr>'+
+      '</table>'
+        
+    });</script>
   </body>
 </html>

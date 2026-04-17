@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources</title>
-    <meta name="title" content="Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources">
-    <meta name="twitter:title" content="Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources">
-    <meta property="og:title" content="Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources">
+    <title>Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Workbook: Past Tense (Verbs) - Lesson 4 | Genki Study Resources - 2nd Edition">
     <meta name="description" content="Complete the following problems using past tense verbs.">
     <meta property="og:description" content="Complete the following problems using past tense verbs.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I Workbook, page 45, problem I, problem II, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki I Workbook, page 40, problem I, problem II, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,76 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|past tense verbs|l4-p4}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">Takeshi did a lot last weekend. Answer the questions about what Takeshi did.</p>'+
+        '<table class="table center">'+
+          '<tr style="font-weight:bold;">'+
+            '<td>Friday</td>'+
+            '<td>Saturday</td>'+
+            '<td>Sunday</td>'+
+          '</tr>'+
+        
+          '<tr>'+
+            '<td>listened to music at home</td>'+
+            '<td>worked part-time at the supermarket</td>'+
+            '<td>watched a movie in town with Mary</td>'+
+          '</tr>'+
+        '</table><br>'+
+        
+        '<div class="problem">'+
+          'たけしさんは金曜日に手紙を書きましたか。<br>'+
+          '{いいえ、%(たけしさんは金曜日に手紙を/)書きませんでした|いいえ、%(たけしさんはきんようびにてがみを/)かきませんでした|' + Genki.getAlts('いいえ、たけしさんは{金曜日}に{手紙}を{書}きませんでした', 'きんようび|てがみ|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'たけしさんは土曜日にどこでアルバイトをしましたか。<br>'+
+          '{%(たけしさんは土曜日に/)スーパーでアルバイトをしました|%(たけしさんはどようびに/)スーパーでアルバイトをしました|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'たけしさんはいつ音楽を聞きましたか。<br>'+
+          '{%(たけしさんは/)金曜日に音楽を聞きました|%(たけしさんは/)きんようびにおんがくをききました|' + Genki.getAlts('{たけしさんは}{金曜日}に{音楽}を{聞}きました', '|きんようび|おんがく|き') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'たけしさんは日曜日に何をしましたか。(fill in the blanks)<br>'+
+          'たけしさんは{日曜日|にちようび|answer}に{町|まち|answer}で{メアリーさん}と{映画|えいが|answer}を{見ました|みました|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'あなたは、週末、何をしましたか。<br>'+
+          '(I met a friend in Yokohama on Saturday. I went shopping at the supermarket on Sunday.)<br>'+
+          '{私は土曜日に横浜で友だちに会いました。日曜日にスーパーで買い物をしました。|わたしはどようびによこはまでともだちにあいました。にちようびにスーパーでかいものをしました。|' + Genki.getAlts('{私}は{土曜日}に{横浜}で{友}{達}に{会}いました。{日曜日}にスーパーで{買い物}をしました。', 'わたし|どようび|よこはま|とも|だち|あ|にちようび|かいもの') + 'answer}'+
+        '</div>'+
+        
+        '<p class="section-desc">Translate the following sentences into Japanese.</p>'+
+        '<div class="problem">'+
+          'Yumi did not take pictures at all.<br>'+
+          '{ゆみさんはぜんぜん写真を撮りませんでした|ゆみさんはぜんぜんしゃしんをとりませんでした|' + Genki.getAlts('ゆみさんはぜんぜん{写真}を{撮}りませんでした', 'しゃしん|と') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I often ate hamburgers when I was a child.<br>'+
+          '{私は子供の時、よくハンバーガーを食べました|わたしはこどものとき、よくハンバーガーをたべました|' + Genki.getAlts('{私}は{子}{供}の{時}、{よ}くハンバーガーを{食}べました', 'わたし|こ|ども|とき|良|た') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Takeshi did not study much when he was in high school.<br>'+
+          '{たけしさんは高校の時、あまり勉強しませんでした|たけしさんはこうこうのとき、あまりべんきょうしませんでした|' + Genki.getAlts('たけしさんは{高校}の{時}、あまり{勉強}しませんでした', 'こうこう|とき|べんきょう') + 'answer}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

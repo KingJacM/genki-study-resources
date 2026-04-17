@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,94 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the problems by reading and writing numbers in Japanese.',
+
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Write the following numbers in Arabic numerals.</p>'+
+      '<div class="count-problems count-alpha columns-2 small-margin clear">'+
+        '<div>'+
+          '<div class="problem">よんひゃくななじゅう　　{470}</div>'+
+          '<div class="problem">はっぴゃくごじゅうさん　{853}</div>'+
+          '<div class="problem">せんさんびゃく　　　　　{1300|1,300|answer}</div>'+
+          '<div class="problem">いちまんななせん　　　　{17000|17,000|answer}</div>'+
+        '</div>'+
+
+        '<div>'+
+          '<div class="problem">さんぜんろっぴゃくじゅうに　　{3612|3,612|answer}</div>'+
+          '<div class="problem">ごせんひゃくきゅうじゅうはち　{5198|5,198|answer}</div>'+
+          '<div class="problem">よんまんろくせんきゅうひゃく　{46900|46,900|answer}</div>'+
+          '<div class="problem">きゅうまんにひゃくじゅう　　　{90210|90,210|answer}</div>'+
+        '</div>'+
+      '</div>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Write the following numbers in <em>hiragana</em>.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          '541<br>'+
+          '{ごひゃくよんじゅういち}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '2,736<br>'+
+          '{にせんななひゃくさんじゅうろく}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '8,900<br>'+
+          '{はっせんきゅうひゃく}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '12,345<br>'+
+          '{いちまんにせんさんびゃくよんじゅうご}'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Look at the pictures and complete the dialogues.</p>'+
+      '<table class="table center">'+
+        '<tr style="font-weight:bold;">'+
+          '<td>{!IMG|3rd-l2-wb1-1.png}</td>'+
+          '<td>{!IMG|3rd-l2-wb1-2.png}</td>'+
+          '<td>{!IMG|3rd-l2-wb1-3.png}</td>'+
+        '</tr>'+
+
+        '<tr>'+
+          '<td>￥160</td>'+
+          '<td>￥24,000</td>'+
+          '<td>￥3,600</td>'+
+        '</tr>'+
+      '</table><br>'+
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：{じてんしゃはいくらですか|自転車はいくらですか|answer}。<br><br><br>'+
+            'A：にまんよんせんえんです。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：かばんはいくらですか。<br><br><br>'+
+            'A：{さんぜんろっぴゃくえんです|三千六百円です|' + Genki.getAlts('{三千六百}{円}です', 'さんぜんろっぴゃく|えん') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'Q：しんぶんはいくらですか。<br><br><br>'+
+            'A：{ひゃくろくじゅうえんです|百六十円です|' + Genki.getAlts('{百六十}{円}です', 'ひゃくろくじゅう|えん') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,105 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : Genki.lang.std_culture + '<br>You may want to read the Culture Note about Japanese Currency (Genki I: p.66) if you haven\'t yet.',
+
+      quizlet : [
+        {
+          question : 'Who appears on the 1,000 yen bill?',
+          answers : [
+            'AHideyo Noguchi',
+            'Hideyo Amamoto',
+            'Hideyo Yamamoto'
+          ]
+        },
+        
+        {
+          question : 'What appears on the 2,000 yen bill?',
+          answers : [
+            'AShurei Gate',
+            'Shuri Castle',
+            'Okinawa'
+          ]
+        },
+        
+        {
+          question : 'Who appears on the 5,000 yen bill?',
+          answers : [
+            'AIchiyoo Higuchi',
+            'Ichiyo Shimizu',
+            'Ichiyo Habuchi'
+          ]
+        },
+        
+        {
+          question : 'Who appears on the 10,000 yen bill.',
+          answers : [
+            'AYukichi Fukuzawa',
+            'Yukichi Chuganji',
+            'Yukichi Watabe'
+          ]
+        },
+        
+        {
+          question : 'Which of these did Hideyo Noguchi do?',
+          answers : [
+            'ADevoted himself to yellow fever research.',
+            'Devoted himself to scarlet fever research.',
+            'Devoted himself to lassa fever research.'
+          ]
+        },
+        
+        {
+          question : 'Where is Shurei Gate located?',
+          answers : [
+            'AShuri Castle in Okinawa.',
+            'Osaka Castle in Osaka.',
+            'Odawara Castle in Odawara.'
+          ]
+        },
+        
+        {
+          question : 'Which of these did Ichiyoo Higuchi do?',
+          answers : [
+            'AShe was a writer and a poet.',
+            'She was a singer and musician.',
+            'She was a dancer and actress.'
+          ]
+        },
+        
+        {
+          question : 'Which of these did Yukichi Fukuzawa do?',
+          answers : [
+            'AHe was a philosopher and founder of Keio University.',
+            'He was an artist and founder of Kyoto University.',
+            'He was a musician and founder of Tokyo University.'
+          ]
+        },
+        
+        {
+          question : 'All bills and coins are the same sizes.',
+          answers : [
+            'Afalse',
+            'true'
+          ]
+        },
+        
+        {
+          question : 'You should always carry some cash on you, because some small businesses do not accept credit card or mobile payments.',
+          answers : [
+            'Atrue',
+            'false'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

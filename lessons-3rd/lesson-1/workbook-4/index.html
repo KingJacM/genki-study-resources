@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,96 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice telling time and reading/writing phone numbers.',
+
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Look at the following pictures and write the answers.</p>'+
+      '<div class="columns-2 clear">'+
+        '<div class="count-problems">'+
+          '<div class="problem">{!IMG|3rd-l1-wb4-1.png|05:00 PM}</div>'+
+          '<div class="problem">{!IMG|3rd-l1-wb4-2.png|09:00 AM}</div>'+
+          '<div class="problem">{!IMG|3rd-l1-wb4-3.png|12:30 PM}</div>'+
+          '<div class="problem">{!IMG|3rd-l1-wb4-4.png|04:30 AM}</div>'+
+        '</div>'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：いまなんじですか。<br>'+
+              'A：{ごごごじです|午後五時です|' + Genki.getAlts('{午後}{五時}です', 'ごご|ごじ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：いまなんじですか。<br>'+
+              'A：{ごぜんくじです|午前九時です|' + Genki.getAlts('{午前}{九時}です', 'ごぜん|くじ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：いまなんじですか。<br>'+
+              'A：{ごごじゅうにじはんです|午後十二時半です|' + Genki.getAlts('{午後}{十二時}{半}です', 'ごご|じゅうにじ|はん') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+          
+          '<div class="problem">'+
+            '<div class="inner-problem">'+
+              'Q：いまなんじですか。<br>'+
+              'A：{ごぜんよじはんです|午前四時半です|' + Genki.getAlts('{午前}{四時}{半}です', 'ごぜん|よじ|はん') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Write down the phone numbers in both Japanese and Arabic numerals.</p>'+
+      '<div class="columns-2 count-problems clear">'+
+        '<div>'+
+          '<p class="section-desc">Write the following phone numbers in Japanese.</p>'+
+          '<div class="problem">'+
+            '030-3564-1782<br>'+
+            '{ぜろさんぜろさんごろくよんいちななはちに|ぜろさんぜろのさんごろくよんのいちななはちに|' + Genki.getAlts('{ゼロ}さん{ゼロ}さんごろくよんいちななはちに', 'ぜろ|ぜろ') + Genki.getAlts('{ゼロ}さん{ゼロ}のさんごろくよんのいちななはちに', 'ぜろ|ぜろ') + 'answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            '244-1095<br>'+
+            '{によんよんいちぜろきゅうご|によんよんのいちぜろきゅうご|によんよんいちゼロきゅうご|によんよんのいちゼロきゅうご|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            '368-7120<br>'+
+            '{さんろくはちなないちにぜろ|さんろくはちのなないちにぜろ|さんろくはちなないちにゼロ|さんろくはちのなないちにゼロ|answer}。'+
+          '</div>'+
+        '</div>'+
+
+        '<div>'+
+          '<p class="section-desc">Write the following phone numbers in Arabic numerals.</p>'+
+          '<div class="problem">'+
+            'ゼロにゼロのろくきゅうにいちのよんにさんろく<br>'+
+            '{020-6921-4236|02069214236|020ー6921ー4236|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'きゅうごいちのゼロさんにろく<br>'+
+            '{951-0326|9510326|951ー0326|answer}。'+
+          '</div>'+
+        
+          '<div class="problem">'+
+            'にはちさんのきゅうごよんなな<br>'+
+            '{283-9547|2839547|283ー9547|answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>

@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,74 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|Adjective + する|l21-p4}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences.</p>'+
+        '<div class="problem">'+
+          'I have to make the room clean because my parents will come.<br>'+
+          '{両親が来るので、部屋をきれいにしなければいけません|りょうしんがくるので、へやをきれいにしなければいけません|' + Genki.getAlts('{両親}が{来}るので、{部屋}を{きれい}にしなければいけません', 'りょうしん|く|へや|綺麗') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'There is a lot of vocabulary we have to memorize. Please make it less.<br>'+
+          '{覚えなければいけない単語がたくさんあります。少なくしてください。|おぼえなければいけないたんごがたくさんあります。すくなくしてください。|' + Genki.getAlts('{覚}えなければいけない{単語}がたくさんあります。{少}なくしてください。', 'おぼ|たんご|すく') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Twenty thousand yen is too much (lit., too expensive). Would you please make it cheaper?<br>'+
+          '{二万円は高すぎます。安くしてくれませんか。|にまんえんはたかすぎます。やすくしてくれませんか。|' + Genki.getAlts('{二万円}は{高}すぎます。{安}くしてくれませんか。', 'にまんえん|たか|やす') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'If I were the mayor (<ruby>市長<rt>しちょう</rt></ruby>), I would make the town safer.<br>'+
+          '{私が市長だったら、町を%(もっと/)安全にします|わたしがしちょうだったら、まちを%(もっと/)あんぜんにします|' + Genki.getAlts('{私}が{市長}だったら、{町}を{もっと}{安全}にします', 'わたし|しちょう|まち||あんぜん') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'My dog made my room messy while I was not at home.<br>'+
+          '{留守の間に、犬が私の部屋をめちゃくちゃにしました|るすのあいだに、いぬがわたしのへやをめちゃくちゃにしました|' + Genki.getAlts('{留守}の{間}に、{犬}が{私}の{部屋}をめちゃくちゃにしました', 'るす|あいだ|いぬ|わたし|へや') + 'answer}。'+
+        '</div>'+
+      '</div><br>'+
+
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>What would you want to do if you were the following people? Translate the sentences, using {!GRI|adjective + する|l21-p4}.</p>'+
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'a Japanese teacher<br>'+
+            '(If I were a Japanese teacher, I would want to make a lot more homework.)<br>'+
+            '<i class="fa">&#xf061;</i>　<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby>だったら、もっと<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>多<rt>おお</rt></ruby>くしたいです。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'the president of a company<br>'+
+          '(If I were a company president, I would want to make vacations longer.)<br>'+
+          '{社長だったら、休みを長くしたいです|しゃちょうだったら、やすみをながくしたいです|' + Genki.getAlts('{社長}だったら、{休}みを{長}くしたいです', 'しゃちょう|やす|なが') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'the president<br>'+
+          '(If I were the president, I would make rich people\'s taxes higher.)<br>'+
+          '{大統領だったら、お金持ちの税金を高くします|だいとうりょうだったら、おかねもちのぜいきんをたかくします|' + Genki.getAlts('{大統領}だったら、お{金持}ちの{税金}を{高}くします', 'だいとうりょう|かねもち|ぜいきん|たか') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'the landlord<br>'+
+          '(If I were the landlord, I would make rent cheaper.)<br>'+
+          '{大家さんだったら、家賃を安くします|おおやさんだったら、やちんをやすくします|' + Genki.getAlts('{大家}さんだったら、{家賃}を{安}くします', 'おおや|やちん|やす') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

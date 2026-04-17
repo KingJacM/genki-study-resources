@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,12 +68,119 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the recordings and complete the following problems using hiragana.',
+      
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Listen to the recording and choose the correct <em>hiragana</em> word by marking it with O.</p>'+
+      '{!AUDIO|WY-1}'+
+      
+      '<div class="count-problems inline-problem large-space">'+
+        '<div class="problem"><span class="button-top">{!PLAY|WY-1|14}</span>'+
+          '<div class="side-border">'+
+            'a. ({O}) かき<br><br>'+
+            'b. ({||width:21}) かぎ'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem"><span class="button-top">{!PLAY|WY-1|19}</span>'+
+          '<div class="side-border">'+
+            'a. ({O}) ぶんか<br><br>'+
+            'b. ({||width:21}) ふんか'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem"><span class="button-top">{!PLAY|WY-1|23.7}</span>'+
+          '<div class="side-border">'+
+            'a. ({||width:21}) にんしん<br><br>'+
+            'b. ({O}) にんじん'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem"><span class="button-top">{!PLAY|WY-1|29}</span>'+
+          '<div class="side-border">'+
+            'a. ({O}) けんぽう<br><br>'+
+            'b. ({||width:21}) けんぼう'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Listen to the recording carefully and fill in the boxes with <em>hiragana</em>.</p>'+
+      '{!AUDIO|WY-2}'+
+      
+      '<div class="count-problems columns-2 clear">'+
+        '<div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-2|1.5}</span><span class="kana-box">{ま}</span><span class="kana-box">{ど}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-2|6.5}</span><span class="kana-box">{ち}</span><span class="kana-box">{ず}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-2|11.3}</span><span class="kana-box">{さ}</span><span class="kana-box">{ん}</span><span class="kana-box">{ぽ}</span></div>'+
+        '</div>'+
+
+        '<div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-2|16.5}</span><span class="kana-box">{も}</span><span class="kana-box">{ん}</span><span class="kana-box">{だ}</span><span class="kana-box">{い}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-2|21.5}</span><span class="kana-box">{し}</span><span class="kana-box">{ん}</span><span class="kana-box">{ぱ}</span><span class="kana-box">{い}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-2|26.7}</span><span class="kana-box">{が}</span><span class="kana-box">{い}</span><span class="kana-box">{こ}</span><span class="kana-box">{く}</span><span class="kana-box">{じ}</span><span class="kana-box">{ん}</span></div>'+
+        '</div>'+
+      '</div>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">III</span>Listen to the recording and choose the correct <em>hiragana</em> word by marking it with O.</p>'+
+      '{!AUDIO|WY-3}'+
+      
+      '<div class="count-problems inline-problem large-space">'+
+        '<div class="problem"><span class="button-top">{!PLAY|WY-3|1.7}</span>'+
+          '<div class="side-border">'+
+            'a. ({||width:21}) しょみ<br><br>'+
+            'b. ({O}) しゅみ'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem"><span class="button-top">{!PLAY|WY-3|6.5}</span>'+
+          '<div class="side-border">'+
+            'a. ({O}) じんじゃ<br><br>'+
+            'b. ({||width:21}) じんじょ'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem"><span class="button-top">{!PLAY|WY-3|11.5}</span>'+
+          '<div class="side-border">'+
+            'a. ({||width:21}) りよかん<br><br>'+
+            'b. ({O}) りょかん'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem"><span class="button-top">{!PLAY|WY-3|16.5}</span>'+
+          '<div class="side-border">'+
+            'a. ({O}) きやく<br><br>'+
+            'b. ({||width:21}) きゃく'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">IV</span>Listen to the recording and fill in the boxes with <em>hiragana</em>.</p>'+
+      '<div><strong>TIP:</strong> <em>You can write small hiragana by prefixing it with x. (ex: type xya, xyu, xyo)</em></div>'+
+      '{!AUDIO|WY-4}'+
+      
+      '<div class="count-problems columns-2 clear">'+
+        '<div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-4|2}</span><span class="kana-box">{い}</span><span class="kana-box">{し}</span><span class="kana-box small-box">{ゃ}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-4|7}</span><span class="kana-box">{じ}</span><span class="kana-box">{し}</span><span class="kana-box small-box">{ょ}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-4|11.7}</span><span class="kana-box">{お}</span><span class="kana-box">{ち}</span><span class="kana-box small-box">{ゃ}</span></div>'+
+        '</div>'+
+
+        '<div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-4|16.7}</span><span class="kana-box">{き}</span><span class="kana-box small-box">{ょ}</span><span class="kana-box">{ね}</span><span class="kana-box">{ん}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-4|21.7}</span><span class="kana-box">{し}</span><span class="kana-box small-box">{ゅ}</span><span class="kana-box">{く}</span><span class="kana-box">{だ}</span><span class="kana-box">{い}</span></div>'+
+          '<div class="problem"><span class="button-top">{!PLAY|WY-4|26.7}</span><span class="kana-box">{ひ}</span><span class="kana-box small-box">{ゃ}</span><span class="kana-box">{く}</span><span class="kana-box">{え}</span><span class="kana-box">{ん}</span></div>'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
     <style>
       .button-top {
         vertical-align:top;

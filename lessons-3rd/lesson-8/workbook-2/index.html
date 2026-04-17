@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,10 +68,96 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>
+    // for assigning the current day to problem II-1
+    var genkiCurrentDay = new Date().getDay();
+    var genkiEnDay = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'][genkiCurrentDay],
+        genkiJpDay = ['日', '月', '火', '水', '木', '金', '土'][genkiCurrentDay],
+        genkiJpDayFuri = ['にち', 'げつ', 'か', 'すい', 'もく', 'きん', 'ど'][genkiCurrentDay];
+      
+    Genki.generateQuiz({
+      type : 'fill',
+      info : 'Practice using short forms in {!GRI|informal speech|l8-p2}.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Make {!GRI|informal|l8-p2} question sentences using the cues and answer them in the negative.</p>'+
+        '<div class="example-problem inline-columns">'+
+          '(Will you) study Japanese today?<br>'+
+          '<div>Q：{今日|きょう|answer}、{日本語|にほんご|answer}を{勉強する|べんきょうする|answer}?</div>'+
+          '<div>A：ううん、{勉強|べんきょう|answer}しない。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '(Do you) often ride a bus?<br>'+
+          '<div>Q：{よくバスに乗る|よくバスにのる|' + Genki.getAlts('{よ}くバスに{乗}る', '良|の') + 'answer;width:238}?</div>'+
+          '<div>A：{ううん、乗らない|ううん、のらない|answer;width:196}。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '(Do you) speak Japanese every day.<br>'+
+          '<div>Q：{毎日日本語を話す|まいにちにほんごをはなす|' + Genki.getAlts('{毎日}{日本語}を{話}す', 'まいにち|にほんご|はな') + 'answer;width:238}?</div>'+
+          '<div>A：{ううん、話さない|ううん、はなさない|answer;width:196}。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '(Do you) have homework today?<br>'+
+          '<div>Q：{今日宿題がある|きょうしゅくだいがある|' + Genki.getAlts('{今日}{宿題}がある', 'きょう|しゅくだい') + 'answer;width:238}?</div>'+
+          '<div>A：{ううん、ない||width:196}。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '(Will you) go out this weekend?<br>'+
+          '<div>Q：{今週の週末、出かける|こんしゅうのしゅうまつ、でかける|' + Genki.getAlts('{今週}の{週末}、{出}かける', 'こんしゅう|しゅうまつ|で') + 'answer;width:238}?</div>'+
+          '<div>A：{ううん、出かけない|ううん、でかけない|answer;width:196}。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          'Are you free tomorrow?<br>'+
+          '<div>Q：{あした暇|あしたひま|' + Genki.getAlts('{明日}{暇}', 'あした|ひま') + 'answer;width:238}?</div>'+
+          '<div>A：{ううん、暇じゃない|ううん、ひまじゃない|answer;width:196}。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          'Are you Japanese?<br>'+
+          '<div>Q：{日本人|にほんじん|answer;width:238}?</div>'+
+          '<div>A：{ううん、日本人じゃない|ううん、にほんじんじゃない|answer;width:196}。</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          'Is it hot?<br>'+
+          '<div>Q：{暑い|あつい|answer;width:238}?</div>'+
+          '<div>A：{ううん、暑くない|ううん、あつくない|answer;width:196}。</div>'+
+        '</div>'+
+      '</div><br>'+
+      
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Answer the following questions in {!GRI|informal speech|l8-p2}.</p>'+
+        '<div class="problem">'+
+          '<ruby>今日<rt>きょう</rt></ruby>は<ruby>何曜日<rt>なんようび</rt></ruby>？<br>'+
+          '(Today is ' + genkiEnDay + 'day.)<br>'+
+          '{%(今日は/)' + genkiJpDay + '曜日|%(きょうは/)' + genkiJpDayFuri + 'ようび|' + Genki.getAlts('{今日}は{' + genkiJpDay + '曜日}', 'きょう|' + genkiJpDayFuri + 'ようび') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'どんな<ruby>食べ物<rt>たべもの</rt></ruby>がきらい？<br>'+
+          '(I dislike Fish.)<br>'+
+          '{魚がきらい|さかながきらい|' + Genki.getAlts('{魚}が{嫌}い', 'さかな|きら') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<ruby>今週<rt>こんしゅう</rt></ruby>の<ruby>週末<rt>しゅうまつ</rt></ruby>、<ruby>何<rt>なに</rt></ruby>をする？<br>'+
+          '(This weekend, I\'ll do shopping.)<br>'+
+          '{%(今週の週末、/)買い物をする|%(こんしゅうのしゅうまつ、/)かいものをする|' + Genki.getAlts('{今週}の{週末}、{買い物}をする', 'こんしゅう|しゅうまつ|かいもの') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

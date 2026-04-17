@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Workbook: Questions - Lesson 17 | Genki Study Resources</title>
-    <meta name="title" content="Workbook: Questions - Lesson 17 | Genki Study Resources">
-    <meta name="twitter:title" content="Workbook: Questions - Lesson 17 | Genki Study Resources">
-    <meta property="og:title" content="Workbook: Questions - Lesson 17 | Genki Study Resources">
-    <meta name="description" content="Answer the following questions in Japanese by translating the sentences.">
-    <meta property="og:description" content="Answer the following questions in Japanese by translating the sentences.">
+    <title>Workbook: Questions - Lesson 17 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Workbook: Questions - Lesson 17 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Workbook: Questions - Lesson 17 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Workbook: Questions - Lesson 17 | Genki Study Resources - 2nd Edition">
+    <meta name="description" content="Answer the following questions in Japanese by translating the given cues.">
+    <meta property="og:description" content="Answer the following questions in Japanese by translating the given cues.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II Workbook, page 49, problem I, problem II, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki II Workbook, page 50, problem I, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,56 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Answer the following questions in Japanese by translating the given cues.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="section-desc">日本語で答えてください。</p>'+
+        '<div class="problem">'+
+          '卒業したら、何をしようと思っていますか。<br>'+
+          '(I am intending to get a full-time job at a travel agency.)<br>'+
+          '{旅行会社に就職しようと思っています|りょこうがいしゃにしゅうしょくしようとおもっています|' + Genki.getAlts('{旅行会社}に{就職}しようと{思}っています', 'りょこうがいしゃ|しゅうしょく|おも') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '宝くじに当たったら、何がしたいですか。<br>'+
+          '(I want to travel to various countries.)<br>'+
+          '{いろいろな国を旅行したいです|いろいろなくにをりょこうしたいです|' + Genki.getAlts('{色々}な{国}を{旅行}したいです', 'いろいろ|くに|りょこう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'クラスメートについて何か知っていますか。<small>(Use ～そうです.)</small><br>'+
+          '(Yes. I heard Sally (サリー) broke up with her boyfriend.)<br>'+
+          '{はい。サリーさんは彼と別れたそうです。|はい。サリーさんはかれとわかれたそうです。|' + Genki.getAlts('はい。サリーさんは{彼}と{別}れたそうです。', 'かれ|わか') + 'answer}'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '最近どんなニュースがありましたか。<small>(Use ～によると……そうです.)</small><br>'+
+          '(According to the TV news, recently, there have been earthquakes in various places.)<br>'+
+          '{テレビのニュースによると、最近、いろいろな所で地震があったそうです|テレビのニュースによると、さいきん、いろいろなところでじしんがあったそうです|' + Genki.getAlts('テレビのニュースによると、{最近}、{色々}な{所}で{地震}があったそうです', 'さいきん|いろいろ|ところ|じしん') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'きのう寝る前に何をしましたか。<br>'+
+          '(I practiced kanji.)<br>'+
+          '{漢字を練習しました|かんじをれんしゅうしました|' + Genki.getAlts('{漢字}を{練習}しました', 'かんじ|れんしゅう') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'この宿題が終わってから、何をするつもりですか。<br>'+
+          '(I plan to exercise.)<br>'+
+          '{運動するつもりです|うんどうするつもりです|answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

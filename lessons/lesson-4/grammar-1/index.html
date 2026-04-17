@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: Xがあります／います - Lesson 4 | Genki Study Resources</title>
-    <meta name="title" content="Practice: Xがあります／います - Lesson 4 | Genki Study Resources">
-    <meta name="twitter:title" content="Practice: Xがあります／います - Lesson 4 | Genki Study Resources">
-    <meta property="og:title" content="Practice: Xがあります／います - Lesson 4 | Genki Study Resources">
-    <meta name="description" content="Look at the picture and tell what you see, using あります or います.">
-    <meta property="og:description" content="Look at the picture and tell what you see, using あります or います.">
+    <title>Practice: Ｘがあります - Lesson 4 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Practice: Ｘがあります - Lesson 4 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Practice: Ｘがあります - Lesson 4 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Practice: Ｘがあります - Lesson 4 | Genki Study Resources - 2nd Edition">
+    <meta name="description" content="Look at Takeshi's schedule for the week below and answer the following questions.">
+    <meta property="og:description" content="Look at Takeshi's schedule for the week below and answer the following questions.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 115, problem I-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 116, problem I-C, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,151 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : 'Look at Takeshi\'s schedule for the week below and answer the following questions using {!GRI|Xがあります|l4-p1}.<br><br>'+
+      '<table class="center" style="width:500px">'+
+        '<tr style="font-weight:bold">'+
+          '<td>Day</td>'+
+          '<td>School</td>'+
+          '<td>After School</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Monday</td>'+
+          '<td>French English Computer</td>'+
+          '<td></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Tuesday</td>'+
+          '<td>History</td>'+
+          '<td>Club activity</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Wednesday</td>'+
+          '<td>French English Computer</td>'+
+          '<td></td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Thursday</td>'+
+          '<td>History</td>'+
+          '<td>Club activity</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Friday</td>'+
+          '<td>English (TEST)</td>'+
+          '<td>Party</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Saturday</td>'+
+          '<td>NO SCHOOL</td>'+
+          '<td>Date</td>'+
+        '</tr>'+
+        
+        '<tr>'+
+          '<td style="font-weight:bold">Sunday</td>'+
+          '<td>NO SCHOOL</td>'+
+          '<td>Part-time job</td>'+
+        '</tr>'+
+      '</table>',
+
+      quizlet : [
+        {
+          question : '月曜日にフランス語のクラスがありますか。',
+          answers : [
+            'Aはい、あります。',
+            'いいえ、ありません。'
+          ]
+        },
+        
+        {
+          question : '月曜日に英語のクラスがありますか。',
+          answers : [
+            'Aはい、あります。',
+            'いいえ、ありません。'
+          ]
+        },
+        
+        {
+          question : '火曜日にコンピューターのクラスがありますか。',
+          answers : [
+            'Aいいえ、ありません。',
+            'はい、あります。'
+          ]
+        },
+        
+        {
+          question : '木曜日にフランス語のクラスがありますか。',
+          answers : [
+            'Aいいえ、ありません。',
+            'はい、あります。'
+          ]
+        },
+        
+        {
+          question : '土曜日にクラスがありますか。',
+          answers : [
+            'Aいいえ、ありません。',
+            'はい、あります。'
+          ]
+        },
+        
+        {
+          question : '水曜日に何がありますか。',
+          answers : [
+            'Aフランス語のクラスと英語のクラスとコンピューターのクラスがあります。',
+            'フランス語のクラスがあります。英語のクラスがあります。コンピューターのクラスがあります。',
+            'フランス語と英語とコンピューターのクラスがあります。'
+          ]
+        },
+        
+        {
+          question : '金曜日に何がありますか。',
+          answers : [
+            'A英語のテストとパーティーがあります。',
+            '英語のクラスとパーティーがあります。',
+            '英語とパーティーがあります。'
+          ]
+        },
+        
+        {
+          question : '日曜日に何がありますか。',
+          answers : [
+            'Aアルバイトがあります。',
+            'アルバイトがありません。',
+            'アルバイトがありました。'
+          ]
+        },
+        
+        {
+          question : '火曜日に何がありますか。',
+          answers : [
+            'A歴史のクラスとサークルがあります。',
+            '歴史とサークルがあります。',
+            '歴史のサークルがあります。'
+          ]
+        },
+        
+        {
+          question : '土曜日に何がありますか。',
+          answers : [
+            'Aデートがあります。',
+            'デートがありません。',
+            'デートがありました。'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

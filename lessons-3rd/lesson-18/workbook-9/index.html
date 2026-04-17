@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,64 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Listen to the audio and answer the questions.',
+      
+    quizlet : 
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Listen to the dialogue between a mother and a daughter. Mark each of the following statements with O if true, or with X if false.</p>'+
+    '<div class="right">*クッキー (cookie)　カップラーメン (ramen in a cup)</div>'+
+    '{!AUDIO|W18-A}'+
+        
+    '<div class="count-problems small-margin">'+
+      '<div class="problem">{!PLAY|W18-A|9} ({X}) The daughter had dinner with her friend.</div>'+
+      '<div class="problem">{!PLAY|W18-A|47} ({X}) Tanaka ate the cookies.</div>'+
+      '<div class="problem">{!PLAY|W18-A|29} ({O}) Her father ate the noodles.</div>'+
+      '<div class="problem">{!PLAY|W18-A|58} ({O}) The daughter regrets that she did not buy anything at the convenience store.</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>Professor Yamashita called the customer service section of a computer company. Listen to the dialogue, and fill in the form.</p>'+
+    '<div class="right">*カスタマーサービス (customer service)　ライト (light)　スクリーン (computer screen)　<ruby>原因<rt>げんいん</rt></ruby> (cause)</div>'+
+    '{!AUDIO|W18-B}'+
     
+    '<div class="sub-section count-problems" style="width:80%;margin:0 auto;">'+
+      '<h3 class="center">カスタマーサービス</h3>'+
+      '<div class="indent-block">'+
+        '<div class="problem valign-top">{!PLAY|W18-B|19} <ruby>赤<rt>あか</rt></ruby>いライト [{off|on/off}]</div>'+
+        '<div class="problem">{!PLAY|W18-B|30} スクリーン [{off|on/off}]</div>'+
+        '<div class="problem">'+
+          '{!PLAY|W18-B|48} <ruby>原因<rt>げんいん</rt></ruby>：<br>'+
+          '{スイッチを押していませんでした|スイッチをおしていませんでした|answer}。'+
+        '</div>'+
+      '</div>'+
+    '</div><br>'+
+
+    '<p class="sectionDesc3rd"><span class="sectionNumber3rd">C</span>Listen to the dialogue between Ms. Mori and Mr. Tanaka, and answer the following questions in Japanese.</p>'+
+    '{!AUDIO|W18-C}'+
+        
+    '<div class="count-problems">'+
+      '<div class="problem">'+
+        '{!PLAY|W18-C|3} <ruby>田中<rt>たなか</rt></ruby>さんは<ruby>仕事<rt>しごと</rt></ruby>の<ruby>後<rt>あと</rt></ruby>、<ruby>何<rt>なに</rt></ruby>をしていますか。<br>'+
+        '{英語の学校に行っています|えいごのがっこうにいっています|' + Genki.getAlts('{英語}の{学校}に{行}っています', 'えいご|がっこう|い') + 'answer}。'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W18-C|22} ロンドンでどんな<ruby>経験<rt>けいけん</rt></ruby>をしましたか。<br>'+
+        '{英語ができなくて、飛行機に乗り遅れました|えいごができなくて、ひこうきにのりおくれました|' + Genki.getAlts('{英語}ができなくて、{飛行機}に{乗}り{遅}れました', 'えいご|ひこうき|の|おく') + 'answer}。'+
+      '</div>'+
+        
+      '<div class="problem">'+
+        '{!PLAY|W18-C|45} <ruby>何<rt>なに</rt></ruby>をすればよかったと<ruby>言<rt>い</rt></ruby>っていましたか。<br>'+
+        '{学生の時にもっと勉強しておけばよかったと言っていました|がくせいのときにもっとべんきょうしておけばよかったといっていました|' + Genki.getAlts('{学生}の{時}にもっと{勉強}しておけば{よ}かったと{言}っていました', 'がくせい|とき|べんきょう|良|い') + 'answer}。'+
+      '</div>'+
+    '</div><br>'
+      
+    });</script>
   </body>
 </html>

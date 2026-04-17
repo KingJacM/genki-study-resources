@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,181 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'The following is what happened to you as a result of an action you took or didn\'t take. Express your regret using {!GRI|～ばよかったです|l18-p6}.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'didn\'t bring an umbrella　<i class="fa">&#xf061;</i>　got rained on',
+            answers : [
+              'Aかさを<ruby>持<rt>も</rt></ruby>ってくればよかったです。',
+              'かさを<ruby>持<rt>も</rt></ruby>ってくるばよかったです。',
+              'かさを<ruby>持<rt>も</rt></ruby>ってくらばよかったです。',
+              'かさを<ruby>持<rt>も</rt></ruby>ってきてばよかったです。'
+            ]
+          },
+
+          {
+            question : 'didn\'t study　<i class="fa">&#xf061;</i>　got a bad score',
+            answers : [
+              'A<ruby>勉強<rt>べんきょう</rt></ruby>すればよかったです。',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>しればよかったです。',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>するばよかったです。',
+              '<ruby>勉強<rt>べんきょう</rt></ruby>してばよかったです。'
+            ]
+          },
+
+          {
+            question : 'didn\'t brush teeth　<i class="fa">&#xf061;</i>　got cavities',
+            answers : [
+              'A<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>けばよかったです。',
+              '<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>くばよかったです。',
+              '<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>きばよかったです。',
+              '<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>いでばよかったです。'
+            ]
+          },
+
+          {
+            question : 'didn\'t make a reservation　<i class="fa">&#xf061;</i>　no vacancies at the hotel',
+            answers : [
+              'Aホテルを<ruby>予約<rt>よやく</rt></ruby>すればよかったです。',
+              'ホテルを<ruby>予約<rt>よやく</rt></ruby>しればよかったです。',
+              'ホテルを<ruby>予約<rt>よやく</rt></ruby>するばよかったです。',
+              'ホテルを<ruby>予約<rt>よやく</rt></ruby>してばよかったです。'
+            ]
+          },
+
+          {
+            question : 'didn\'t take a shower　<i class="fa">&#xf061;</i>　stink',
+            answers : [
+              'Aシャワーを<ruby>浴<rt>あ</rt></ruby>びればよかったです。',
+              'シャワーを<ruby>浴<rt>あ</rt></ruby>びるばよかったです。',
+              'シャワーを<ruby>浴<rt>あ</rt></ruby>びらばよかったです。',
+              'シャワーを<ruby>浴<rt>あ</rt></ruby>びてばよかったです。'
+            ]
+          },
+
+          {
+            question : 'didn\'t make friends　<i class="fa">&#xf061;</i>　lonely',
+            answers : [
+              'A<ruby>友<rt>とも</rt></ruby>だちを<ruby>作<rt>つく</rt></ruby>ればよかったです。',
+              '<ruby>友<rt>とも</rt></ruby>だちを<ruby>作<rt>つく</rt></ruby>るばよかったです。',
+              '<ruby>友<rt>とも</rt></ruby>だちを<ruby>作<rt>つく</rt></ruby>らばよかったです。',
+              '<ruby>友<rt>とも</rt></ruby>だちを<ruby>作<rt>つく</rt></ruby>ってばよかったです。'
+            ]
+          },
+
+          {
+            question : 'ate too much　<i class="fa">&#xf061;</i>　stomach hurts',
+            answers : [
+              'A<ruby>食<rt>た</rt></ruby>べすぎなければよかったです。',
+              '<ruby>食<rt>た</rt></ruby>べすぎないければよかったです。',
+              '<ruby>食<rt>た</rt></ruby>べすぎなばよかったです。',
+              '<ruby>食<rt>た</rt></ruby>べすぎなくてばよかったです。'
+            ]
+          },
+
+          {
+            question : 'bought too much　<i class="fa">&#xf061;</i>　got no money left',
+            answers : [
+              'A<ruby>買<rt>か</rt></ruby>いすぎなければよかったです。',
+              '<ruby>買<rt>か</rt></ruby>いすぎないければよかったです。',
+              '<ruby>買<rt>か</rt></ruby>いすぎなばよかったです。',
+              '<ruby>買<rt>か</rt></ruby>いすぎなくてばよかったです。'
+            ]
+          },
+
+          {
+            question : 'stayed up late watching TV　<i class="fa">&#xf061;</i>　overslept',
+            answers : [
+              'A<ruby>夜<rt>よる</rt></ruby><ruby>遅<rt>おそ</rt></ruby>くテレビを<ruby>見<rt>み</rt></ruby>なければよかったです。',
+              '<ruby>夜<rt>よる</rt></ruby><ruby>遅<rt>おそ</rt></ruby>くテレビを<ruby>見<rt>み</rt></ruby>ないければよかったです。',
+              '<ruby>夜<rt>よる</rt></ruby><ruby>遅<rt>おそ</rt></ruby>くテレビを<ruby>見<rt>み</rt></ruby>なばよかったです。',
+              '<ruby>夜<rt>よる</rt></ruby><ruby>遅<rt>おそ</rt></ruby>くテレビを<ruby>見<rt>み</rt></ruby>なくてばよかったです。'
+            ]
+          },
+
+          {
+            question : 'got into a fight with a friend　<i class="fa">&#xf061;</i>　now he\'s got a new friend',
+            answers : [
+              'A<ruby>友<rt>とも</rt></ruby>だちとけんかしなければよかったです。',
+              '<ruby>友<rt>とも</rt></ruby>だちとけんかしないければよかったです。',
+              '<ruby>友<rt>とも</rt></ruby>だちとけんかしなばよかったです。',
+              '<ruby>友<rt>とも</rt></ruby>だちとけんかしなくてばよかったです。'
+            ]
+          }
+        ],
+        
+        
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'didn\'t bring an umbrella　<i class="fa">&#xf061;</i>　got rained on<br>'+
+            '<i class="fa">&#xf061;</i>　かさを<ruby>持<rt>も</rt></ruby>ってくればよかったです。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'didn\'t study　<i class="fa">&#xf061;</i>　got a bad score<br>'+
+              '{勉強すればよかったです|べんきょうすればよかったです|' + Genki.getAlts('{勉強}すれば{よ}かったです', 'べんきょう|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'didn\'t brush teeth　<i class="fa">&#xf061;</i>　got cavities<br>'+
+              '{歯を磨けばよかったです|はをみがけばよかったです|' + Genki.getAlts('{歯}を{磨}けば{よ}かったです', 'は|みが|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'didn\'t make a reservation　<i class="fa">&#xf061;</i>　no vacancies at the hotel<br>'+
+              '{ホテルを予約すればよかったです|ホテルをよやくすればよかったです|' + Genki.getAlts('ホテルを{予約}すれば{よ}かったです', 'よやく|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'didn\'t take a shower　<i class="fa">&#xf061;</i>　stink<br>'+
+              '{シャワーを浴びればよかったです|シャワーをあびればよかったです|' + Genki.getAlts('シャワーを{浴}びれば{よ}かったです', 'あ|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'didn\'t make friends　<i class="fa">&#xf061;</i>　lonely<br>'+
+              '{友だちを作ればよかったです|ともだちをつくればよかったです|' + Genki.getAlts('{友}{だち}を{作}れば{よ}かったです', 'とも|達|つく|良') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'ate too much　<i class="fa">&#xf061;</i>　stomach hurts<br>'+
+              '{食べすぎなければよかったです|たべすぎなければよかったです|' + Genki.getAlts('{食}べすぎなければ{よ}かったです', 'た|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'bought too much　<i class="fa">&#xf061;</i>　got no money left<br>'+
+              '{買いすぎなければよかったです|かいすぎなければよかったです|' + Genki.getAlts('{買}いすぎなければ{よ}かったです', 'か|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'stayed up late watching TV　<i class="fa">&#xf061;</i>　overslept<br>'+
+              '{夜遅くテレビを見なければよかったです|よるおそくテレビをみなければよかったです|' + Genki.getAlts('{夜}{遅}くテレビを{見}なければ{よ}かったです', 'よる|おそ|み|良') + 'answer}。'+
+            '</div>'+
+            
+            '<div class="problem">'+
+              'got into a fight with a friend　<i class="fa">&#xf061;</i>　now he\'s got a new friend<br>'+
+              '{友だちとけんかしなければよかったです|ともだちとけんかしなければよかったです|' + Genki.getAlts('{友}{だち}とけんかしなければ{よ}かったです', 'とも|達|良') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
   </body>
 </html>

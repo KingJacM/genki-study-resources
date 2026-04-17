@@ -2,15 +2,15 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources</title>
-    <meta name="title" content="Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources">
-    <meta name="twitter:title" content="Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources">
-    <meta property="og:title" content="Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources">
+    <title>Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources - 2nd Edition</title>
+    <meta name="title" content="Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources - 2nd Edition">
+    <meta name="twitter:title" content="Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources - 2nd Edition">
+    <meta property="og:title" content="Practice: Number+も／Number+しか+Negative - Lesson 14 | Genki Study Resources - 2nd Edition">
     <meta name="description" content="Describe Mary or John's actions using ～も or ～しか.">
     <meta property="og:description" content="Describe Mary or John's actions using ～も or ～しか.">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 65, page 66, problem V-B, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 69, problem V-B, japanese, quizzes, exercises, 2nd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
   <body>
     
     <header>
-      <h1><a href="../../../" id="home-link" class="edition-icon">Genki Study Resources</a></h1>
+      <h1><a href="../../../" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
       <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
     </header>
     
@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,77 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
     <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'multi',
+      info : 'Describe Mary or John\'s actions using {!GRI|～も|l14-p5} or {!GRI|～しか|l14-p5}.',
+
+      quizlet : [
+        {
+          question : 'メアリー／勉強しました／4 hours<br>ジョン／勉強しました／30 minutes',
+          answers : [
+            'Aメアリーさんは四時間も勉強しました。',
+            'メアリーさんは四時間勉強しました。',
+            'Aジョンさんは三十分しか勉強しませんでした。',
+            'ジョンさんは三十分勉強しませんでした。'
+          ]
+        },
+        
+        {
+          question : 'メアリー／食べました／1 hamburger<br>ジョン／食べました／4 hamburgers',
+          answers : [
+            'Aメアリーさんはハンバーガーを一個しか食べませんでした。',
+            'メアリーさんはハンバーガーを四個も食べました。',
+            'Aジョンさんはハンバーガーを四個も食べました。',
+            'ジョンさんはハンバーガーを一個しか食べませんでした。'
+          ]
+        },
+        
+        {
+          question : 'メアリー／読みました／1 book<br>ジョン／読みました／6 books',
+          answers : [
+            'Aメアリーさんは本を一冊しか読みませんでした。',
+            'メアリーさんは本を一冊読みませんでした。',
+            'Aジョンさんは本を六冊も読みました。',
+            'ジョンさんは本を六冊読みました。'
+          ]
+        },
+        
+        {
+          question : 'メアリー／持っています／50 DVDs<br>ジョン／持っています／2 DVDs',
+          answers : [
+            'AメアリーさんはＤＶＤを五十枚も持っています。',
+            'メアリーさんはＤＶＤを二枚しか持っていません。',
+            'AジョンさんはＤＶＤを二枚しか持っていません。',
+            'ジョンさんはＤＶＤを五十枚も持っています。'
+          ]
+        },
+        
+        {
+          question : 'メアリー／飲みました／3 juice<br>ジョン／飲みました／1 juice',
+          answers : [
+            'Aメアリーさんはジュースを三本も飲みました。',
+            'メアリーさんはジュースを三個も飲みました。',
+            'Aジョンさんはジュースを一本しか飲みませんでした。',
+            'ジョンさんはジュースを一個しか飲みませんでした。'
+          ]
+        },
+        
+        {
+          question : 'メアリー／寝ます／11 hours<br>ジョン／寝ます／5 hours',
+          answers : [
+            'Aメアリーさんは十一時間も寝ます。',
+            'メアリーさんは十一時間寝ます。',
+            'Aジョンさんは五時間しか寝ません。',
+            'ジョンさんは五時間寝ません。'
+          ]
+        }
+      ]
+    });</script>
   </body>
 </html>

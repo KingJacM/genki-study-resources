@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,9 +68,49 @@
       </ul>
     </footer>
     
-    <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/2nd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Using the kanji you know, translate the sentences into Japanese.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'I like red color and blue color.<br>'+
+          '{%(私は/)赤と青が好きです|%(わたしは/)あかとあおがすきです|' + Genki.getAlts('{私}は{赤}と{青}が{好}きです', 'わたし|あか|あお|す') + Genki.getAlts('{赤}と{青}が{好}きです', 'あか|あお|す') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'Let\'s go to see a movie in the near future.<br>'+
+          '{今度、映画に行きましょう|こんど、えいがにいきましょう|' + Genki.getAlts('{今度}、{映画}に{行}きましょう', 'こんど|えいが|い') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I don\'t like getting up early in the morning.<br>'+
+          '{%(私は/)朝早く起きるのが好きじゃないです|%(わたしは/)あさはやくおきるのがすきじゃないです|' + Genki.getAlts('{私}は{朝}{早}く{起}きるのが{好}きじゃないです', 'わたし|あさ|はや|お|す') + Genki.getAlts('{朝}{早}く{起}きるのが{好}きじゃないです', 'あさ|はや|お|す') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I don\'t want to separate from you.<br>'+
+          '{%(私は/)あなたと別れたくないです|%(わたしは/)あなたとわかれたくないです|' + Genki.getAlts('{私}はあなたと{別}れたくないです', 'わたし|わか') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'May I use a telephone?<br>'+
+          '{電話を使ってもいいですか|でんわをつかってもいいですか|' + Genki.getAlts('{電話}を{使}っても{い}いですか', 'でんわ|つか|良') + Genki.getAlts('{電話}を{使}っても{よ}いですか', 'でんわ|つか|良') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'I have to work this weekend.<br>'+
+          '{%(私は/)今週の週末、働かなければいけません|%(わたしは/)こんしゅうのしゅうまつ、はたらなければいけません|' + Genki.getAlts('{私}は{今週}の{週末}、{働}かなければいけません', 'わたし|こんしゅう|しゅうまつ|はたら') + Genki.getAlts('{今週}の{週末}、{働}かなければいけません', 'こんしゅう|しゅうまつ|はたら') + 'answer}。'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

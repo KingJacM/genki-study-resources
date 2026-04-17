@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,82 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Answer the following questions in Japanese by translating the sentences.',
+      
+      quizlet : 
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span><ruby>日本語<rt>にほんご</rt></ruby>で<ruby>答<rt>こた</rt></ruby>えてください。</p>'+
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>親<rt>おや</rt></ruby>になったら、<ruby>子供<rt>こども</rt></ruby>に<ruby>何<rt>なに</rt></ruby>を<ruby>習<rt>なら</rt></ruby>わせたいですか。<br>'+
+            '(I would want to make [my child] learn karate.)<br>'+
+            '{空手を習わせたいです|からてをならわせたいです|' + Genki.getAlts('{空手}を{習}わせたいです', 'からて|なら') + 'answer}。<br><br><br>'+
+            'どうしてですか。<br>'+
+            '(Because I want [them] to become a strong person.)<br>'+
+            '{強い人になってほしいからです|つよいひとになってほしいからです|' + Genki.getAlts('{強}い{人}になってほしいからです', 'つよ|ひと') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'どうすれば、いい<ruby>成績<rt>せいせき</rt></ruby>が<ruby>取<rt>と</rt></ruby>れると<ruby>思<rt>おも</rt></ruby>いますか。<br>'+
+            '(If you prepare for and review lessons, I think you can get good grades.)<br>'+
+            '{予習と復習をすれば、いい成績が取れると思います|よしゅうとふくしゅうをすれば、いいせいせきがとれるとおもいます|' + Genki.getAlts('{予習}と{復習}をすれば、{い}い{成績}が{取}れると{思}います', 'よしゅう|ふくしゅう|良|せいせき|と|おも') + Genki.getAlts('{予習}と{復習}をすれば、{よ}い{成績}が{取}れると{思}います', 'よしゅう|ふくしゅう|良|せいせき|と|おも') + 'answer}。<br><br><br>'+
+            'あなたはそれをしていますか。<br>'+
+            '(Yes, I\'m doing it.)<br>'+
+            '{はい、しています}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            'どんな<ruby>人<rt>ひと</rt></ruby>になりたいですか。<small>(Use ～のような.)</small><br>'+
+            '(I want to become a person like my mother.)<br>'+
+            '{母のような人になりたいです|ははのようなひとになりたいです|' + Genki.getAlts('{母}のような{人}になりたいです', 'はは|ひと') + 'answer}。<br><br><br>'+
+            'どうしてですか。<br>'+
+            '(Because she is smart, and often knows all sorts of things.)<br>'+
+            '{母は頭がよくて、いろいろなことをよく知っているからです|はははあたまがよくて、いろいろなことをよくしっているからです|' + Genki.getAlts('{母}は{頭}が{よ}くて、{色々}なことをよく{知}っているからです', 'はは|あたま|良|いろいろ|し') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>高校<rt>こうこう</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、あなたの<ruby>親<rt>おや</rt></ruby>はあなたに<ruby>何<rt>なに</rt></ruby>をさせてくれましたか。<br>'+
+            '(When I was in high school, [my parents] let me go to my friend\'s house to stay overnight.)<br>'+
+            '{高校の時、友だちの家に泊まりに行かせてくれました|こうこうのとき、ともだちのいえにとまりにいかせてくれました|' + Genki.getAlts('{高校}の{時}、{友}{達}の{家}に{泊}まりに{行}かせてくれました', 'こうこう|とき|とも|だち|いえ|と|い') + 'answer}。<br><br><br>'+
+            '<ruby>何<rt>なに</rt></ruby>をさせてくれませんでしたか。<br>'+
+            '([They] didn\'t let me work a part-time job.)<br>'+
+            '{アルバイトをさせてくれませんでした}。'+
+          '</div>'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<div class="count-problems">'+
+        '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span><ruby>日本語<rt>にほんご</rt></ruby>で<ruby>答<rt>こた</rt></ruby>えてください。<br>Translate the following sentences about what teachers/parents made/let you do when you were a child.</p>'+
+        '<div class="problem">'+
+          'When I was in elementary school, the teacher made us write a report for the book we had read once a week.<br>'+
+          '{小学校の時、先生は一週間に一回、読んだ本のレポートを書かせました|しょうがっこうのとき、せんせいはいっしゅうかんにいっかい、よんだほんのレポートをかかせました|' + Genki.getAlts('{小学校}の{時}、{先生}は{一週間}に{一回}、{読}んだ{本}のレポートを{書}かせました', 'しょうがっこう|とき|せんせい|いっしゅうかん|いっかい|よ|ほん|か') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'At home, my mother would always tell me "Do your homework early."<br>'+
+          '{家では、母はいつも私に「早く宿題をしなさい」と言いました|いえでは、はははいつもわたしに「はやくしゅくだいをしなさい」といいました|' + Genki.getAlts('{家}では、{母}はいつも{私}に「{早}く{宿題}をしなさい」と{言}いました', 'いえ|はは|わたし|はや|しゅくだい|い') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'But if I finished my homework, [she] would let me play games for 30 minutes...<br>'+
+          '{でも宿題が終わったら、ゲームを三十分させてくれました|でもしゅくだいがおわったら、ゲームをさんじゅっぷんさせてくれました|' + Genki.getAlts('でも{宿題}が{終}わったら、ゲームを{三十分}させてくれました', 'しゅくだい|お|さんじゅっぷん') + 'answer}。……'+
+        '</div>'+
+      '</div>'
+        
+    });</script>
   </body>
 </html>

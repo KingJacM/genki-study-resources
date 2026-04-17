@@ -47,25 +47,7 @@
     </div>
     
     <div id="content">
-      <div class="content-block">
-        <h2 class="title center" id="notice">This Page Has Been Removed</h2>
-        
-        <div class="center" style="font-size:16px;"><i class="fa" style="font-size:62px;">&#xf119;</i></div>
-        
-        <p class="center" style="font-size:16px;">This page has been taken down at the request of The Japan Times. You can learn more about why this page isn't available anymore <a href="https://ko-fi.com/post/Update-Regarding-Genki-and-Quartet-Study-Resources-Y8Y21M1F5E" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">If you would like to contest this decision, please considering respectfully reaching out to The Japan Times to let them know how valuable this resource was to your Japanese studies and their textbooks. You can contact them directly on their official website <a href="https://bookclub.japantimes.co.jp/en/contact/" target="_blank">here</a>.</p>
-        
-        <p class="center" style="font-size:16px;">Thank you for your support and I am very sorry for this inconvenience.</p>
-        <br>
-        <h3 class="sub-title" id="actions">Website Actions</h3>
-        <div id="link-list" class="normal-block indent-block">
-          <span><a id="link-edition" href="../../../"><i class="fa">&#xf112;</i>Return to the Homepage</a></span>
-          <span><a id="link-settings" href="#" download="Genki Exercise Score Data.txt"><i class="fa">&#xf019;</i>Download Your Exercise Score Data</a></span>
-          <script>document.getElementById('link-settings').href = 'data:text/plain;charset=utf-8,' + (storageOK && localStorage.Results ? encodeURIComponent(localStorage.Results.replace(/\n/g, '\r\n')) : '');</script>
-        </div><br>
-    </div>
-      <div id="exercise" class="content-block" style="display:none;">
+      <div id="exercise" class="content-block">
         <div id="quiz-result"></div>
         <div id="quiz-zone" class="clear"></div>
         <div id="quiz-timer" class="center"></div>
@@ -86,11 +68,108 @@
       </ul>
     </footer>
     
-
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
     <script src="../../../resources/javascript/exercises/3rd-ed.min.js"></script>
     <script src="../../../resources/javascript/genki.min.js"></script>
     <script src="../../../resources/javascript/sync.js"></script>
-    <script src="../../../resources/javascript/all.min.js"></script>    
-    
+    <script src="../../../resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      type : 'fill',
+      info : 'Complete the following problems using {!GRI|Nounも|l2-p5} and {!GRI|Nounじゃないです|l2-p6}.',
+
+      quizlet : 
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">I</span>Translate the following sentences into Japanese. Use {!GRI|も|l2-p5} after the underlined phrases.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem inline-columns">'+
+          '<div>'+
+            'Ms. Tanaka is Japanese.<br>'+
+            '{たなかさんはにほんじんです|たなかさんは日本人です|answer}。'+
+          '</div>'+
+          
+          '<div>'+
+            '<span class="ul">Mr. Yoshida</span> is Japanese, too.<br>'+
+            '{よしださんもにほんじんです|よしださんも日本人です|answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '<div>'+
+            'Ms. Tanaka is 20 years old.<br>'+
+            '{たなかさんははたちです|たなかさんは二十歳です|' + Genki.getAlts('たなかさんはにじ{ゅ}っさいです', '') + 'answer}。'+
+          '</div>'+
+          
+          '<div>'+
+            '<span class="ul">Mr. Yoshida</span> is 20 years old, too.<br>'+
+            '{よしださんもはたちです|よしださんも二十歳です|' + Genki.getAlts('よしださんもにじ{ゅ}っさいです', '') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '<div>'+
+            'This umbrella is 2,000 yen.<br>'+
+            '{このかさはにせんえんです|この傘は二千円です|' + Genki.getAlts('この{傘}は{二千円}です', 'かさ|にせんえん') + 'answer}。'+
+          '</div>'+
+          
+          '<div>'+
+            '<span class="ul">That umbrella</span> is 2,000 yen, too.<br>'+
+            '{%(その/あの)かさもにせんえんです|%(その/あの)傘も二千円です。|' + Genki.getAlts('{その}{傘}も{二千円}です。', 'あの|かさ|にせんえん') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '<div>'+
+            'This is my bicycle.<br>'+
+            '{これはわたしのじてんしゃです|これは私の自転車です|' + Genki.getAlts('これは{私}の{自転車}です', 'わたし|じてんしゃ') + 'answer}。'+
+          '</div>'+
+          
+          '<div>'+
+            '<span class="ul">That</span> is my bicycle, too.<br>'+
+            '{%(それ/あれ)もわたしのじてんしゃです|%(それ/あれ)も私の自転車です|' + Genki.getAlts('{それ}も{私}の{自転車}です', 'あれ|わたし|じてんしゃ') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+        
+        '<div class="problem inline-columns">'+
+          '<div>'+
+            'Takeshi\'s major is history.<br>'+
+            '{たけしさんのせんこうはれきしです|たけしさんの専攻は歴史です|' + Genki.getAlts('たけしさんの{専攻}は{歴史}です', 'せんこう|れきし') + 'answer}。'+
+          '</div>'+
+          
+          '<div>'+
+            '<span class="ul">My major</span> is history, too.<br>'+
+            '{わたしのせんこうもれきしです|私の専攻も歴史です|' + Genki.getAlts('{私}の{専攻}も{歴史}です', 'わたし|せんこう|れきし') + 'answer}。'+
+          '</div>'+
+        '</div>'+
+      '</div><br>'+
+        
+      '<p class="sectionDesc3rd"><span class="sectionNumber3rd">II</span>Answer the following questions in the {!GRI|negative|l2-p6}.</p>'+
+      '<div class="count-problems">'+
+        '<div class="problem">'+
+          'たけしさんはかいしゃいんですか。<br>'+
+          'いいえ、{%(たけしさんは/)かいしゃいんじゃないです|%(たけしさんは/)会社員じゃないです|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'たけしさんはアメリカじんですか。<br>'+
+          '{いいえ、%(たけしさんは/)アメリカじんじゃないです|いいえ、%(たけしさんは/)アメリカ人じゃないです|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'たけしさんのせんこうはけいざいですか。<br>'+
+          '{いいえ、%(たけしさんのせんこうは/)けいざいじゃないです|いいえ、%(たけしさんの専攻は/)経済じゃないです|' + Genki.getAlts('いいえ、たけしさんの{専攻}は{経済}じゃないです', 'せんこう|けいざい') + 'answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'これはたけしさんのかさですか。(ゆいのかさ)<br>'+
+          '{いいえ、たけしさんのかさじゃないです|いいえ、たけしさんの傘じゃないです|answer}。'+
+        '</div>'+
+        
+        '<div class="problem">'+
+          'これはたけしさんのほんですか。(けんのほん)<br>'+
+          '{いいえ、たけしさんのほんじゃないです|いいえ、たけしさんの本じゃないです|answer}。'+
+        '</div>'+
+      '</div>'
+      
+    });</script>
   </body>
 </html>
